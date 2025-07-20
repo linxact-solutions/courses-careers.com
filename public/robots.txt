@@ -1,0 +1,70 @@
+# Robots.txt for Courses & Careers
+# Updated: July 2025
+
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the site
+# Prioritize important content for indexing
+
+# Allow access to key sections
+Allow: /postgraduate/
+Allow: /undergraduate/
+Allow: /further-education/
+Allow: /jobs-and-careers/
+Allow: /student-advice/
+Allow: /online-magazines/
+
+# Allow access to important pages
+Allow: /privacy-policy
+Allow: /terms-of-service
+Allow: /accessibility-statement
+
+# Allow CSS, JS, and image files for proper rendering
+Allow: /images/
+Allow: /_astro/
+Allow: /favicon.ico
+Allow: /site.webmanifest
+
+# Disallow crawling of certain directories if they exist
+Disallow: /admin/
+Disallow: /private/
+Disallow: /test/
+Disallow: /temp/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Disallow crawling of certain file types
+Disallow: /*.log$
+Disallow: /*.tmp$
+Disallow: /*.backup$
+
+# Special instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block aggressive crawlers that might overload the server
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://www.courses-careers.com/sitemap.xml
+Sitemap: https://www.courses-careers.com/rss.xml
+
+# Additional metadata for search engines
+# Host: https://www.courses-careers.com

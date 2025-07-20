@@ -1,0 +1,179 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+export function getStaticPaths() {
+  const subjects = [
+    { slug: 'business-studies', title: 'Business Studies', description: 'Explore business studies courses and career opportunities in management, finance, and commerce.' },
+    { slug: 'gcse-courses', title: 'GCSE Courses', description: 'Find GCSE courses and examination information for secondary school students.' },
+    { slug: 'a-level-courses', title: 'A-Level Courses', description: 'Discover A-Level courses and university preparation programs.' },
+    { slug: 'btec-courses', title: 'BTEC Courses', description: 'Learn about BTEC qualifications and vocational training programs.' },
+    { slug: 'health-and-beauty', title: 'Health and Beauty', description: 'Explore courses in hairdressing, beauty therapy, and wellness.' },
+    { slug: 'information-technology', title: 'Information Technology', description: 'Discover IT courses, programming, and computer science programs.' },
+    { slug: 'engineering', title: 'Engineering', description: 'Find engineering courses and technical training programs.' },
+    { slug: 'sports-science', title: 'Sports Science', description: 'Explore sports science, fitness, and physical education courses.' },
+    { slug: 'media-studies', title: 'Media Studies', description: 'Discover media, journalism, and communication courses.' },
+    { slug: 'hospitality-management', title: 'Hospitality Management', description: 'Learn about hotel, catering, and hospitality management courses.' },
+    { slug: 'foundation-degree-courses', title: 'Foundation Degree Courses', description: 'Find foundation degree programs and higher education pathways.' },
+    { slug: 'diploma-courses', title: 'Diploma Courses', description: 'Explore diploma qualifications and vocational training programs.' },
+    { slug: 'hnc-hnd-courses', title: 'HNC/HND Courses', description: 'Discover Higher National Certificate and Diploma courses.' },
+    { slug: 'nvq-courses', title: 'NVQ Courses', description: 'Learn about National Vocational Qualifications and work-based learning.' },
+    { slug: 'distance-learning', title: 'Distance Learning', description: 'Explore online and distance learning opportunities.' },
+    { slug: 'qualifications', title: 'Qualifications Guide', description: 'Understand different qualification types and progression routes.' },
+    { slug: 'guide-to-colleges', title: 'Guide to Colleges', description: 'Find the right further education college for your needs.' },
+    { slug: 'art-and-design-diplomas', title: 'Art and Design Diplomas', description: 'Explore creative arts and design qualification programs.' },
+    { slug: 'art-and-design-in-higher-education', title: 'Art and Design in Higher Education', description: 'Discover university-level art and design courses.' },
+    { slug: 'btec-foundation-diploma-in-art-and-design', title: 'BTEC Foundation Diploma in Art and Design', description: 'Learn about foundation courses in creative arts.' },
+    { slug: 'millinery-something-different', title: 'Millinery - Something Different', description: 'Explore the unique craft of hat making and millinery.' },
+    { slug: 'diploma-in-contruction-and-built-environment', title: 'Construction and Built Environment', description: 'Find construction, building, and surveying courses.' },
+    { slug: 'science-subjects', title: 'Science Subjects', description: 'Explore biology, chemistry, physics, and applied science courses.' },
+    { slug: 'language-learning', title: 'Language Learning', description: 'Discover modern foreign languages and linguistics courses.' },
+    { slug: 'fashion-design', title: 'Fashion Design', description: 'Learn about fashion design, textiles, and garment construction.' },
+    { slug: 'fashion-design-courses', title: 'Fashion Design Courses', description: 'Comprehensive guide to fashion design education and careers.' },
+    { slug: 'another-record-year-for-gcse-results', title: 'Another Record Year for GCSE Results', description: 'Analysis of GCSE examination performance and trends.' }
+  ];
+
+  return subjects.map(subject => ({
+    params: { subject: subject.slug },
+    props: { subject }
+  }));
+}
+
+const { subject } = Astro.props;
+---
+
+<Layout 
+  title={`${subject.title} - Further Education Subject Guide`}
+  description={subject.description}
+  section="further-education"
+>
+  <div class="bg-gray-50 min-h-screen">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold mb-4">{subject.title}</h1>
+          <p class="text-xl text-green-100 max-w-3xl mx-auto">{subject.description}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Course Overview</h2>
+            <div class="prose prose-lg max-w-none">
+              <p class="text-gray-700 mb-4">
+                {subject.title} offers excellent opportunities for students looking to develop practical skills and knowledge in this field. Our comprehensive guide covers everything you need to know about studying {subject.title.toLowerCase()} at further education level.
+              </p>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">What You'll Study</h3>
+              <p class="text-gray-700 mb-4">
+                Courses in {subject.title.toLowerCase()} typically cover both theoretical knowledge and practical skills. You'll learn from experienced instructors and gain hands-on experience through workshops, projects, and industry placements.
+              </p>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Entry Requirements</h3>
+              <ul class="list-disc pl-6 text-gray-700 mb-4">
+                <li>Minimum of 4 GCSEs at grade C or above (including English and Mathematics)</li>
+                <li>Relevant work experience may be considered</li>
+                <li>Portfolio of work (where applicable)</li>
+                <li>Interview may be required</li>
+              </ul>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Career Opportunities</h3>
+              <p class="text-gray-700 mb-4">
+                Graduates in {subject.title.toLowerCase()} can pursue various career paths including roles in industry, further study at university level, or progression to higher apprenticeships. The skills developed are highly valued by employers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Course Finder -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Find {subject.title} Courses</h2>
+            <form class="space-y-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Course Level</label>
+                  <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option>All Levels</option>
+                    <option>Level 1 (GCSE equivalent)</option>
+                    <option>Level 2 (A-Level equivalent)</option>
+                    <option>Level 3 (Foundation degree)</option>
+                    <option>BTEC National</option>
+                    <option>NVQ</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Study Mode</label>
+                  <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option>All Modes</option>
+                    <option>Full-time</option>
+                    <option>Part-time</option>
+                    <option>Evening</option>
+                    <option>Distance Learning</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Location</label>
+                <input type="text" placeholder="Enter postcode or town" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+              </div>
+              
+              <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                Search Courses
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <!-- Quick Links -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/further-education/college-profiles" class="text-green-600 hover:text-green-800">College Profiles</a></li>
+              <li><a href="/further-education/subject-guide/qualifications" class="text-green-600 hover:text-green-800">Qualifications Guide</a></li>
+              <li><a href="/further-education/subject-guide/distance-learning" class="text-green-600 hover:text-green-800">Distance Learning</a></li>
+              <li><a href="/jobs-and-careers/career-sectors" class="text-green-600 hover:text-green-800">Career Sectors</a></li>
+              <li><a href="/student-advice/student-finance" class="text-green-600 hover:text-green-800">Student Finance</a></li>
+            </ul>
+          </div>
+
+          <!-- Featured Courses -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Featured Courses</h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-green-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Level 3 Extended Diploma</h4>
+                <p class="text-sm text-gray-600">2-year full-time program equivalent to 3 A-levels</p>
+              </div>
+              <div class="border-l-4 border-green-500 pl-4">
+                <h4 class="font-semibold text-gray-900">BTEC National Certificate</h4>
+                <p class="text-sm text-gray-600">1-year program for career-focused learning</p>
+              </div>
+              <div class="border-l-4 border-green-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Foundation Degree</h4>
+                <p class="text-sm text-gray-600">Work-based learning with university progression</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Support -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Need Help?</h3>
+            <p class="text-gray-600 mb-4">Our education advisors are here to help you find the right course.</p>
+            <a href="/student-advice" class="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+              Get Advice
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout> 

@@ -1,0 +1,160 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+export function getStaticPaths() {
+  const subjects = [
+    { slug: 'computer-science', title: 'Computer Science', description: 'Explore advanced computer science programs, artificial intelligence, and software engineering.' },
+    { slug: 'marketing', title: 'Marketing', description: 'Discover marketing masters programs, digital marketing, and strategic communication.' },
+    { slug: 'medicine', title: 'Medicine', description: 'Learn about postgraduate medical programs, specializations, and research opportunities.' },
+    { slug: 'arts-humanities', title: 'Arts and Humanities', description: 'Explore creative arts, literature, history, and cultural studies at postgraduate level.' },
+    { slug: 'sciences', title: 'Sciences', description: 'Discover research-based science programs in biology, chemistry, physics, and applied sciences.' },
+    { slug: 'geography', title: 'Geography', description: 'Study human geography, environmental science, and geospatial technologies.' },
+    { slug: 'mba-courses', title: 'MBA Courses', description: 'Find Master of Business Administration programs for executive leadership.' },
+    { slug: 'counselling', title: 'Counselling', description: 'Explore counselling psychology, therapy training, and mental health programs.' },
+    { slug: 'renewable-energy', title: 'Renewable Energy', description: 'Study sustainable energy systems, green technology, and environmental engineering.' },
+    { slug: 'international-relations', title: 'International Relations', description: 'Learn about global politics, diplomacy, and international development.' },
+    { slug: 'criminology', title: 'Criminology', description: 'Explore criminal justice, forensic science, and criminological research.' },
+    { slug: 'politics', title: 'Politics', description: 'Study political science, public policy, and governmental systems.' },
+    { slug: 'data-science', title: 'Data Science', description: 'Master data analytics, machine learning, and business intelligence.' },
+    { slug: 'environmental-science', title: 'Environmental Science', description: 'Research environmental sustainability, climate change, and ecological systems.' },
+    { slug: 'social-work', title: 'Social Work', description: 'Develop advanced social work practice and community intervention skills.' },
+    { slug: 'neuroscience', title: 'Neuroscience', description: 'Study brain function, neurological disorders, and cognitive research.' },
+    { slug: 'education', title: 'Education', description: 'Advance your teaching career with educational leadership and pedagogy programs.' }
+  ];
+
+  return subjects.map(subject => ({
+    params: { subject: subject.slug },
+    props: { subject }
+  }));
+}
+
+const { subject } = Astro.props;
+---
+
+<Layout 
+  title={`${subject.title} - Postgraduate Subject Guide`}
+  description={subject.description}
+  section="postgraduate"
+>
+  <div class="bg-gray-50 min-h-screen">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold mb-4">{subject.title}</h1>
+          <p class="text-xl text-blue-100 max-w-3xl mx-auto">{subject.description}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Postgraduate Study in {subject.title}</h2>
+            <div class="prose prose-lg max-w-none">
+              <p class="text-gray-700 mb-4">
+                Postgraduate study in {subject.title.toLowerCase()} offers advanced research opportunities and specialized knowledge that can accelerate your career. Whether you're looking to deepen your expertise or change career direction, our programs provide the academic rigor and practical experience you need.
+              </p>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Program Types</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="bg-blue-50 p-4 rounded-lg">
+                  <h4 class="font-semibold text-blue-900 mb-2">Master's Degrees</h4>
+                  <p class="text-sm text-blue-800">Taught programs with coursework and dissertation</p>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-lg">
+                  <h4 class="font-semibold text-blue-900 mb-2">Research Degrees</h4>
+                  <p class="text-sm text-blue-800">MPhil and PhD programs for independent research</p>
+                </div>
+              </div>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Entry Requirements</h3>
+              <ul class="list-disc pl-6 text-gray-700 mb-4">
+                <li>Good honours degree (2:1 or above) in relevant subject</li>
+                <li>English language proficiency (for international students)</li>
+                <li>Research proposal (for research degrees)</li>
+                <li>Professional experience may be considered</li>
+                <li>References from academic or professional sources</li>
+              </ul>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Career Prospects</h3>
+              <p class="text-gray-700 mb-4">
+                Postgraduates in {subject.title.toLowerCase()} are highly sought after by employers for their advanced analytical skills, research capabilities, and subject expertise. Career paths include senior roles in industry, academia, research institutions, and consultancy.
+              </p>
+            </div>
+          </div>
+
+          <!-- Research Areas -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Research Areas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h4 class="font-semibold text-gray-900 mb-2">Emerging Technologies</h4>
+                <p class="text-sm text-gray-600">Cutting-edge research in innovative methodologies and applications</p>
+              </div>
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h4 class="font-semibold text-gray-900 mb-2">Applied Research</h4>
+                <p class="text-sm text-gray-600">Practical applications solving real-world problems</p>
+              </div>
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h4 class="font-semibold text-gray-900 mb-2">Interdisciplinary Studies</h4>
+                <p class="text-sm text-gray-600">Cross-disciplinary research addressing complex challenges</p>
+              </div>
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h4 class="font-semibold text-gray-900 mb-2">Policy and Practice</h4>
+                <p class="text-sm text-gray-600">Research informing policy development and professional practice</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <!-- Quick Links -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/postgraduate/university-profiles" class="text-blue-600 hover:text-blue-800">University Profiles</a></li>
+              <li><a href="/postgraduate/mba-courses" class="text-blue-600 hover:text-blue-800">MBA Courses</a></li>
+              <li><a href="/student-advice/student-finance" class="text-blue-600 hover:text-blue-800">Funding & Finance</a></li>
+              <li><a href="/jobs-and-careers/career-sectors" class="text-blue-600 hover:text-blue-800">Career Sectors</a></li>
+              <li><a href="/student-advice" class="text-blue-600 hover:text-blue-800">Student Advice</a></li>
+            </ul>
+          </div>
+
+          <!-- Funding Information -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Funding Options</h3>
+            <div class="space-y-4">
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-blue-900 mb-2">Research Councils</h4>
+                <p class="text-sm text-blue-800">Funding for PhD and research degrees</p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-blue-900 mb-2">University Scholarships</h4>
+                <p class="text-sm text-blue-800">Merit-based awards and bursaries</p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <h4 class="font-semibold text-blue-900 mb-2">Industry Sponsorship</h4>
+                <p class="text-sm text-blue-800">Employer-funded study programs</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Application Support -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Application Support</h3>
+            <p class="text-gray-600 mb-4">Need help with your postgraduate application? Our advisors can guide you through the process.</p>
+            <a href="/student-advice" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+              Get Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout> 

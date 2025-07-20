@@ -1,0 +1,416 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CourseCard from '../../components/CourseCard.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
+---
+
+<Layout 
+	title="MBA Courses - Master of Business Administration Programs"
+	description="Comprehensive guide to MBA programs in the UK. Discover full-time, part-time, executive, and online MBA courses with detailed information on requirements and career prospects."
+	keywords="MBA courses, Master of Business Administration, executive MBA, part-time MBA, online MBA, business school, management education"
+	section="postgraduate"
+>
+	<!-- Breadcrumb -->
+	<nav class="bg-gray-50 py-3" aria-label="Breadcrumb">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-blue-600 hover:text-blue-800">Home</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li><a href="/postgraduate" class="text-blue-600 hover:text-blue-800">Postgraduate</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li class="text-gray-900">MBA Courses</li>
+			</ol>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					MBA Courses
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+					Master of Business Administration - Transform your career with the world's most prestigious business qualification
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/postgraduate/subject-guide/7228-mba-courses" class="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+						MBA Course Guide
+					</a>
+					<a href="#mba-search" class="bg-blue-500 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-400 transition-colors">
+						Find MBA Programs
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- MBA Search Section -->
+	<section id="mba-search" class="bg-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-blue-50 rounded-lg p-8">
+				<h2 class="text-2xl font-bold text-center mb-8 text-blue-800">Find Your Perfect MBA Program</h2>
+				<form class="max-w-4xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+						<div>
+							<label for="mba_type" class="block text-sm font-medium text-gray-700 mb-2">MBA Type</label>
+							<select id="mba_type" name="mba_type" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<option value="">Select Type</option>
+								<option value="full-time">Full-time MBA</option>
+								<option value="part-time">Part-time MBA</option>
+								<option value="executive">Executive MBA</option>
+								<option value="online">Online MBA</option>
+								<option value="global">Global MBA</option>
+							</select>
+						</div>
+						<div>
+							<label for="duration" class="block text-sm font-medium text-gray-700 mb-2">Duration</label>
+							<select id="duration" name="duration" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<option value="">Any Duration</option>
+								<option value="1-year">1 Year</option>
+								<option value="2-year">2 Years</option>
+								<option value="18-months">18 Months</option>
+								<option value="flexible">Flexible</option>
+							</select>
+						</div>
+						<div>
+							<label for="location" class="block text-sm font-medium text-gray-700 mb-2">Location</label>
+							<select id="location" name="location" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<option value="">Any Location</option>
+								<option value="london">London</option>
+								<option value="manchester">Manchester</option>
+								<option value="birmingham">Birmingham</option>
+								<option value="edinburgh">Edinburgh</option>
+								<option value="cambridge">Cambridge</option>
+								<option value="oxford">Oxford</option>
+							</select>
+						</div>
+						<div>
+							<label for="specialization" class="block text-sm font-medium text-gray-700 mb-2">Specialization</label>
+							<select id="specialization" name="specialization" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<option value="">General MBA</option>
+								<option value="finance">Finance</option>
+								<option value="marketing">Marketing</option>
+								<option value="strategy">Strategy</option>
+								<option value="healthcare">Healthcare</option>
+								<option value="technology">Technology</option>
+								<option value="entrepreneurship">Entrepreneurship</option>
+							</select>
+						</div>
+					</div>
+					<div class="flex flex-col sm:flex-row gap-4">
+						<input 
+							type="text" 
+							placeholder="Search MBA programs..." 
+							class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+						/>
+						<button 
+							type="submit" 
+							class="bg-blue-600 text-white px-8 py-2 rounded-md font-semibold hover:bg-blue-700 transition-colors"
+						>
+							Search MBAs
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content Section -->
+	<section class="py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+				<!-- Main Content -->
+				<div class="lg:col-span-2">
+					<div class="bg-white rounded-lg shadow-sm p-8">
+						<div class="flex items-start gap-6 mb-8">
+							<div class="flex-1">
+								<h2 class="text-2xl font-bold text-gray-900 mb-4">Why Choose an MBA?</h2>
+								<p class="text-gray-700 mb-4">
+									Many students move from school to university to read a subject that interests them, or in which they excelled at school. And it is still the case that employers value the intellect and ability that a good first degree can demonstrate.
+								</p>
+								<p class="text-gray-700 mb-4">
+									However, as the job market becomes increasingly competitive, more graduates are choosing to pursue an MBA to enhance their career prospects. An MBA provides strategic thinking skills, leadership development, and a comprehensive understanding of business operations.
+								</p>
+								<p class="text-gray-700 mb-6">
+									Whether you're looking to advance in your current field, change careers, or start your own business, an MBA can provide the knowledge, skills, and network to achieve your goals.
+								</p>
+							</div>
+							<div class="flex-shrink-0">
+								<OptimizedImage 
+									src="/images/stories/postgraduate_images/postgrad_home_mbas.jpg"
+									alt="MBA students in discussion"
+									width={150}
+									height={118}
+									class="rounded-lg"
+								/>
+							</div>
+						</div>
+
+						<!-- MBA Types -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Types of MBA Programs</h3>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">Full-time MBA</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Intensive 1-2 year program for career changers and those seeking rapid advancement.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• Immersive learning experience</li>
+										<li>• Strong peer networks</li>
+										<li>• Internship opportunities</li>
+										<li>• Campus-based learning</li>
+									</ul>
+								</div>
+								
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">Part-time MBA</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Flexible program for working professionals who want to continue their career while studying.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• Evening and weekend classes</li>
+										<li>• Apply learning immediately</li>
+										<li>• Maintain income while studying</li>
+										<li>• 2-4 year duration</li>
+									</ul>
+								</div>
+								
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">Executive MBA</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Designed for senior managers and executives with significant work experience.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• 10+ years experience required</li>
+										<li>• Weekend intensive format</li>
+										<li>• Senior-level networking</li>
+										<li>• Strategic leadership focus</li>
+									</ul>
+								</div>
+								
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">Online MBA</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Flexible distance learning for maximum convenience and global accessibility.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• Study from anywhere</li>
+										<li>• Self-paced learning</li>
+										<li>• Lower cost option</li>
+										<li>• Virtual collaboration</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Career Outcomes -->
+						<div class="bg-blue-50 rounded-lg p-6">
+							<h3 class="text-xl font-semibold text-blue-800 mb-4">Career Outcomes</h3>
+							<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+								<div class="text-center">
+									<div class="text-2xl font-bold text-blue-600 mb-2">87%</div>
+									<p class="text-sm text-gray-700">Career advancement within 2 years</p>
+								</div>
+								<div class="text-center">
+									<div class="text-2xl font-bold text-blue-600 mb-2">£15k+</div>
+									<p class="text-sm text-gray-700">Average salary increase</p>
+								</div>
+								<div class="text-center">
+									<div class="text-2xl font-bold text-blue-600 mb-2">93%</div>
+									<p class="text-sm text-gray-700">Employment rate post-graduation</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div class="lg:col-span-1">
+					<!-- Featured Business Schools -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Featured Business Schools</h3>
+						<div class="space-y-4">
+							<div class="border border-gray-200 rounded-lg p-4">
+								<h4 class="font-semibold text-gray-900 mb-2">London Business School</h4>
+								<p class="text-sm text-gray-600 mb-2">Ranked #1 MBA in Europe</p>
+								<div class="flex justify-between text-sm">
+									<span class="text-gray-500">Duration:</span>
+									<span class="font-medium">15-21 months</span>
+								</div>
+							</div>
+							
+							<div class="border border-gray-200 rounded-lg p-4">
+								<h4 class="font-semibold text-gray-900 mb-2">Oxford Saïd Business School</h4>
+								<p class="text-sm text-gray-600 mb-2">World-renowned MBA program</p>
+								<div class="flex justify-between text-sm">
+									<span class="text-gray-500">Duration:</span>
+									<span class="font-medium">12 months</span>
+								</div>
+							</div>
+							
+							<div class="border border-gray-200 rounded-lg p-4">
+								<h4 class="font-semibold text-gray-900 mb-2">Cambridge Judge Business School</h4>
+								<p class="text-sm text-gray-600 mb-2">Innovative MBA curriculum</p>
+								<div class="flex justify-between text-sm">
+									<span class="text-gray-500">Duration:</span>
+									<span class="font-medium">12 months</span>
+								</div>
+							</div>
+							
+							<div class="border border-gray-200 rounded-lg p-4">
+								<h4 class="font-semibold text-gray-900 mb-2">Imperial College Business School</h4>
+								<p class="text-sm text-gray-600 mb-2">Technology-focused MBA</p>
+								<div class="flex justify-between text-sm">
+									<span class="text-gray-500">Duration:</span>
+									<span class="font-medium">12 months</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- MBA Application Tips -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Application Tips</h3>
+						<ul class="space-y-3 text-sm">
+							<li class="flex items-start gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+								<span>Start applications 12-18 months before your intended start date</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+								<span>Prepare for GMAT/GRE exams well in advance</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+								<span>Craft compelling personal statements showcasing leadership</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+								<span>Secure strong professional references</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+								<span>Research school culture and values thoroughly</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- MBA Funding -->
+					<div class="bg-white rounded-lg shadow-sm p-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">MBA Funding Options</h3>
+						<div class="space-y-3">
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Scholarships</h4>
+								<p class="text-xs text-gray-600">Merit-based awards from business schools</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Career Development Loans</h4>
+								<p class="text-xs text-gray-600">Government-backed loans for professional development</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Employer Sponsorship</h4>
+								<p class="text-xs text-gray-600">Company funding for employee development</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Private Loans</h4>
+								<p class="text-xs text-gray-600">Bank loans and alternative financing</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- MBA Specializations -->
+	<section class="bg-gray-50 py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">MBA Specializations</h2>
+				<p class="text-gray-700 max-w-3xl mx-auto">
+					Choose a specialization that aligns with your career goals and interests. Many programs offer core business education plus specialized tracks.
+				</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h3 class="text-lg font-semibold text-blue-600 mb-3">Finance & Investment</h3>
+					<ul class="text-sm text-gray-600 space-y-1">
+						<li>• Corporate Finance</li>
+						<li>• Investment Banking</li>
+						<li>• Private Equity</li>
+						<li>• Risk Management</li>
+					</ul>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h3 class="text-lg font-semibold text-blue-600 mb-3">Marketing & Strategy</h3>
+					<ul class="text-sm text-gray-600 space-y-1">
+						<li>• Digital Marketing</li>
+						<li>• Brand Management</li>
+						<li>• Strategic Planning</li>
+						<li>• Consumer Behavior</li>
+					</ul>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h3 class="text-lg font-semibold text-blue-600 mb-3">Technology & Innovation</h3>
+					<ul class="text-sm text-gray-600 space-y-1">
+						<li>• Digital Transformation</li>
+						<li>• Technology Management</li>
+						<li>• Innovation Strategy</li>
+						<li>• Data Analytics</li>
+					</ul>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h3 class="text-lg font-semibold text-blue-600 mb-3">Healthcare Management</h3>
+					<ul class="text-sm text-gray-600 space-y-1">
+						<li>• Healthcare Operations</li>
+						<li>• Medical Technology</li>
+						<li>• Healthcare Policy</li>
+						<li>• Pharmaceutical Management</li>
+					</ul>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h3 class="text-lg font-semibold text-blue-600 mb-3">Entrepreneurship</h3>
+					<ul class="text-sm text-gray-600 space-y-1">
+						<li>• Startup Development</li>
+						<li>• Venture Capital</li>
+						<li>• Innovation Management</li>
+						<li>• Business Plan Development</li>
+					</ul>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h3 class="text-lg font-semibold text-blue-600 mb-3">International Business</h3>
+					<ul class="text-sm text-gray-600 space-y-1">
+						<li>• Global Strategy</li>
+						<li>• Cross-cultural Management</li>
+						<li>• International Trade</li>
+						<li>• Emerging Markets</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="bg-blue-600 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-2xl font-bold mb-4">Ready to Start Your MBA Journey?</h2>
+			<p class="text-xl mb-8 max-w-2xl mx-auto">
+				Discover the MBA program that's right for you. Explore our comprehensive course guide and take the first step toward advancing your career.
+			</p>
+			<a 
+				href="/postgraduate/subject-guide/7228-mba-courses" 
+				class="inline-block bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
+			>
+				View Complete MBA Guide
+			</a>
+		</div>
+	</section>
+</Layout>

@@ -1,0 +1,179 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+export function getStaticPaths() {
+  const sectors = [
+    { slug: 'healthcare', title: 'Healthcare', description: 'Explore careers in medicine, nursing, and healthcare administration.' },
+    { slug: 'technology', title: 'Technology', description: 'Discover opportunities in software development, IT, and digital innovation.' },
+    { slug: 'finance', title: 'Finance', description: 'Learn about banking, investment, and financial services careers.' },
+    { slug: 'education', title: 'Education', description: 'Teaching, training, and educational administration opportunities.' },
+    { slug: 'engineering', title: 'Engineering', description: 'Civil, mechanical, electrical, and software engineering careers.' },
+    { slug: 'legal', title: 'Legal', description: 'Law, paralegal, and legal services career paths.' },
+    { slug: 'creative', title: 'Creative Industries', description: 'Arts, media, design, and creative sector opportunities.' }
+  ];
+
+  return sectors.map(sector => ({
+    params: { sector: sector.slug },
+    props: { sector }
+  }));
+}
+
+const { sector } = Astro.props;
+---
+
+<Layout 
+  title={`${sector.title} Careers - Career Sectors Guide`}
+  description={sector.description}
+  section="jobs-and-careers"
+>
+  <div class="bg-gray-50 min-h-screen">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-orange-600 to-orange-700 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold mb-4">{sector.title} Careers</h1>
+          <p class="text-xl text-orange-100 max-w-3xl mx-auto">{sector.description}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Career Opportunities in {sector.title}</h2>
+            <div class="prose prose-lg max-w-none">
+              <p class="text-gray-700 mb-4">
+                The {sector.title.toLowerCase()} sector offers diverse career opportunities for graduates and professionals at all levels. From entry-level positions to senior management roles, this dynamic field provides excellent prospects for career growth and professional development.
+              </p>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Career Paths</h3>
+              <p class="text-gray-700 mb-4">
+                {sector.title} careers span various specializations and roles, offering opportunities for both generalists and specialists. Whether you're just starting your career or looking to make a change, there are pathways suited to different backgrounds and interests.
+              </p>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Skills & Qualifications</h3>
+              <div class="bg-orange-50 p-6 rounded-lg mb-6">
+                <h4 class="font-semibold text-orange-900 mb-3">Essential Skills:</h4>
+                <ul class="list-disc pl-6 text-orange-800">
+                  <li>Strong communication and interpersonal skills</li>
+                  <li>Problem-solving and analytical thinking</li>
+                  <li>Relevant technical or professional qualifications</li>
+                  <li>Adaptability and continuous learning mindset</li>
+                  <li>Project management and organizational skills</li>
+                </ul>
+              </div>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Salary & Benefits</h3>
+              <p class="text-gray-700 mb-4">
+                {sector.title} professionals typically enjoy competitive salaries and comprehensive benefits packages. Career progression often leads to significant salary increases and additional responsibilities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Job Types -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Popular Job Roles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-orange-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-orange-900 mb-3">Entry Level</h3>
+                <p class="text-sm text-orange-800 mb-3">Perfect for recent graduates and career changers</p>
+                <ul class="text-sm text-orange-700 space-y-1">
+                  <li>• Graduate trainee programs</li>
+                  <li>• Assistant positions</li>
+                  <li>• Junior analyst roles</li>
+                </ul>
+              </div>
+              <div class="bg-orange-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-orange-900 mb-3">Mid-Level</h3>
+                <p class="text-sm text-orange-800 mb-3">For experienced professionals seeking advancement</p>
+                <ul class="text-sm text-orange-700 space-y-1">
+                  <li>• Senior specialist roles</li>
+                  <li>• Team leader positions</li>
+                  <li>• Project manager roles</li>
+                </ul>
+              </div>
+              <div class="bg-orange-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-orange-900 mb-3">Senior Level</h3>
+                <p class="text-sm text-orange-800 mb-3">Leadership and executive opportunities</p>
+                <ul class="text-sm text-orange-700 space-y-1">
+                  <li>• Department head roles</li>
+                  <li>• Director positions</li>
+                  <li>• C-suite executive roles</li>
+                </ul>
+              </div>
+              <div class="bg-orange-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-orange-900 mb-3">Consulting</h3>
+                <p class="text-sm text-orange-800 mb-3">Independent and freelance opportunities</p>
+                <ul class="text-sm text-orange-700 space-y-1">
+                  <li>• Freelance consultant</li>
+                  <li>• Contract specialist</li>
+                  <li>• Independent advisor</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <!-- Quick Stats -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Sector Overview</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Growth Rate:</span>
+                <span class="font-medium text-green-600">Above Average</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Job Openings:</span>
+                <span class="font-medium text-gray-900">High</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Entry Salary:</span>
+                <span class="font-medium text-gray-900">£25-35k</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Experience Salary:</span>
+                <span class="font-medium text-gray-900">£45-65k</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Employers -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Top Employers</h3>
+            <div class="space-y-3">
+              <div class="border-l-4 border-orange-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Major Corporations</h4>
+                <p class="text-sm text-gray-600">Large companies with structured career paths</p>
+              </div>
+              <div class="border-l-4 border-orange-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Public Sector</h4>
+                <p class="text-sm text-gray-600">Government agencies and public organizations</p>
+              </div>
+              <div class="border-l-4 border-orange-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Startups & SMEs</h4>
+                <p class="text-sm text-gray-600">Dynamic smaller companies and growing businesses</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Career Resources -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Career Resources</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/jobs-and-careers/job-search" class="text-orange-600 hover:text-orange-800">Job Search Guide</a></li>
+              <li><a href="/postgraduate/subject-guide" class="text-orange-600 hover:text-orange-800">Relevant Qualifications</a></li>
+              <li><a href="/student-advice/student-finance" class="text-orange-600 hover:text-orange-800">Funding Your Studies</a></li>
+              <li><a href="/further-education/college-profiles" class="text-orange-600 hover:text-orange-800">Training Programs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout> 

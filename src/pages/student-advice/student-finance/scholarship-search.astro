@@ -1,0 +1,626 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="Scholarship Search Tool - Find UK University Scholarships & Bursaries" description="Search thousands of UK scholarships, bursaries and grants for 2025. Filter by subject, university, eligibility criteria and award amount. Free scholarship matching tool for students.">
+  <div class="bg-gradient-to-br from-red-50 to-rose-100 min-h-screen">
+    
+    <!-- Breadcrumb -->
+    <div class="bg-white py-4 border-b">
+      <div class="container mx-auto px-4">
+        <nav class="text-sm text-gray-600">
+          <a href="/" class="hover:text-red-600">Home</a>
+          <span class="mx-2">></span>
+          <a href="/student-advice" class="hover:text-red-600">Student Advice</a>
+          <span class="mx-2">></span>
+          <a href="/student-advice/student-finance" class="hover:text-red-600">Student Finance</a>
+          <span class="mx-2">></span>
+          <span class="text-red-600">Scholarship Search</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Article Header -->
+    <div class="bg-red-600 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">UK Scholarship Search Tool</h1>
+          <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto">
+            Find scholarships, bursaries and grants worth £1000s to help fund your university education
+          </p>
+          <div class="mt-8 text-red-100">
+            <span class="text-sm">Updated: July 2025</span>
+            <span class="mx-2">•</span>
+            <span class="text-sm">3,500+ opportunities listed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Content -->
+    <article class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-6xl mx-auto">
+          
+          <!-- Introduction -->
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8 max-w-4xl mx-auto">
+            <p class="text-lg text-gray-700 mb-6">
+              With university costs continuing to rise, scholarships and bursaries have never been more valuable. The good news is that there are thousands of funding opportunities available - the challenge is finding the ones you're eligible for.
+            </p>
+            
+            <p class="text-lg text-gray-700 mb-6">
+              Our comprehensive scholarship search tool helps you discover funding opportunities from universities, charities, professional bodies, and private organizations across the UK. From small book grants to full tuition coverage, every bit of funding helps reduce your student debt.
+            </p>
+            
+            <p class="text-lg text-gray-700">
+              Use the search filters below to find scholarships matched to your specific circumstances, and remember - you miss 100% of the scholarships you don't apply for!
+            </p>
+          </div>
+
+          <!-- Key Statistics -->
+          <div class="bg-red-50 rounded-lg p-8 mb-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">UK Scholarship Statistics 2025</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-red-600 mb-2">£500m+</div>
+                <p class="text-gray-700">Total scholarship funding available</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-red-600 mb-2">73%</div>
+                <p class="text-gray-700">Of students don't apply for available funding</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-red-600 mb-2">£3,200</div>
+                <p class="text-gray-700">Average scholarship award</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-red-600 mb-2">12</div>
+                <p class="text-gray-700">Average applications per student</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Search Tool -->
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">Search for Scholarships</h2>
+            
+            <form class="space-y-6" id="scholarship-search-form">
+              
+              <!-- Row 1: Study Level and Subject -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-gray-700 font-semibold mb-2">Study Level</label>
+                  <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:border-red-600 focus:outline-none">
+                    <option value="">All Levels</option>
+                    <option value="undergraduate">Undergraduate</option>
+                    <option value="postgraduate-taught">Postgraduate Taught</option>
+                    <option value="postgraduate-research">Postgraduate Research</option>
+                    <option value="phd">PhD/Doctoral</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label class="block text-gray-700 font-semibold mb-2">Subject Area</label>
+                  <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:border-red-600 focus:outline-none">
+                    <option value="">All Subjects</option>
+                    <option value="arts-humanities">Arts & Humanities</option>
+                    <option value="business">Business & Management</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="law">Law</option>
+                    <option value="medicine">Medicine & Healthcare</option>
+                    <option value="sciences">Sciences</option>
+                    <option value="social-sciences">Social Sciences</option>
+                    <option value="technology">Technology & Computing</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Row 2: University and Award Type -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-gray-700 font-semibold mb-2">University/Region</label>
+                  <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:border-red-600 focus:outline-none">
+                    <option value="">All Universities</option>
+                    <option value="london">London Universities</option>
+                    <option value="russell-group">Russell Group</option>
+                    <option value="scotland">Scottish Universities</option>
+                    <option value="wales">Welsh Universities</option>
+                    <option value="northern-ireland">Northern Ireland</option>
+                    <option value="specific">Specific University...</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label class="block text-gray-700 font-semibold mb-2">Award Type</label>
+                  <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:border-red-600 focus:outline-none">
+                    <option value="">All Types</option>
+                    <option value="merit">Academic Merit</option>
+                    <option value="need">Financial Need</option>
+                    <option value="sport">Sports Scholarships</option>
+                    <option value="music">Music/Arts</option>
+                    <option value="diversity">Diversity & Inclusion</option>
+                    <option value="international">International Students</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Row 3: Amount and Eligibility -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-gray-700 font-semibold mb-2">Minimum Award Amount</label>
+                  <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:border-red-600 focus:outline-none">
+                    <option value="">Any Amount</option>
+                    <option value="500">£500+</option>
+                    <option value="1000">£1,000+</option>
+                    <option value="2500">£2,500+</option>
+                    <option value="5000">£5,000+</option>
+                    <option value="10000">£10,000+</option>
+                    <option value="full">Full Tuition</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label class="block text-gray-700 font-semibold mb-2">Special Eligibility</label>
+                  <select class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:border-red-600 focus:outline-none">
+                    <option value="">No Special Requirements</option>
+                    <option value="care-leaver">Care Leavers</option>
+                    <option value="disabled">Disabled Students</option>
+                    <option value="mature">Mature Students</option>
+                    <option value="first-generation">First in Family</option>
+                    <option value="refugee">Refugee Status</option>
+                    <option value="single-parent">Single Parents</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Search Button -->
+              <div class="text-center">
+                <button type="submit" class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition duration-300 font-semibold">
+                  Search Scholarships
+                </button>
+              </div>
+              
+            </form>
+          </div>
+
+          <!-- Featured Scholarships -->
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">Featured Scholarships - July 2025</h2>
+            
+            <div class="space-y-6">
+              
+              <!-- Scholarship 1 -->
+              <div class="border-l-4 border-red-600 pl-6 pb-6 border-b">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold text-gray-800">The Bright Futures Scholarship</h3>
+                  <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Open Now</span>
+                </div>
+                <p class="text-red-600 font-semibold mb-2">£5,000 per year</p>
+                <p class="text-gray-700 mb-3">
+                  For UK students from households with income under £35,000 studying STEM subjects at any UK university. Covers all undergraduate years.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Undergraduate</span>
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">STEM</span>
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Need-based</span>
+                </div>
+                <p class="text-sm text-gray-600">Deadline: 31 August 2025</p>
+              </div>
+              
+              <!-- Scholarship 2 -->
+              <div class="border-l-4 border-red-600 pl-6 pb-6 border-b">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold text-gray-800">Excellence in Engineering Awards</h3>
+                  <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Open Now</span>
+                </div>
+                <p class="text-red-600 font-semibold mb-2">£3,000 per year + mentoring</p>
+                <p class="text-gray-700 mb-3">
+                  For female students pursuing engineering degrees. Includes industry mentorship, paid internships, and networking opportunities with leading engineering firms.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Undergraduate</span>
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Engineering</span>
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Women</span>
+                </div>
+                <p class="text-sm text-gray-600">Deadline: 15 September 2025</p>
+              </div>
+              
+              <!-- Scholarship 3 -->
+              <div class="border-l-4 border-red-600 pl-6 pb-6 border-b">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold text-gray-800">Care Leavers University Grant</h3>
+                  <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">Closing Soon</span>
+                </div>
+                <p class="text-red-600 font-semibold mb-2">£2,000 per year + £500 setup grant</p>
+                <p class="text-gray-700 mb-3">
+                  Supporting care leavers at university with annual funding plus additional support for laptops, books, and accommodation deposits.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">All Levels</span>
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">All Subjects</span>
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Care Leavers</span>
+                </div>
+                <p class="text-sm text-gray-600">Deadline: 30 July 2025</p>
+              </div>
+              
+              <!-- Scholarship 4 -->
+              <div class="border-l-4 border-red-600 pl-6">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold text-gray-800">Global Leaders MBA Scholarship</h3>
+                  <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Open Now</span>
+                </div>
+                <p class="text-red-600 font-semibold mb-2">50% tuition fee reduction</p>
+                <p class="text-gray-700 mb-3">
+                  For exceptional candidates applying to MBA programs at top UK business schools. Based on leadership potential, academic excellence, and career achievements.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-3">
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Postgraduate</span>
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">MBA</span>
+                  <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Merit-based</span>
+                </div>
+                <p class="text-sm text-gray-600">Deadline: Rolling admissions</p>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Types of Scholarships Guide -->
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">Types of Scholarships Available</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+              <div class="space-y-6">
+                <div class="border-l-4 border-red-600 pl-6">
+                  <h3 class="text-lg font-semibold text-gray-800 mb-3">Academic Excellence</h3>
+                  <p class="text-gray-700 mb-2">
+                    Awarded based on outstanding academic achievement, typically requiring A*AA or equivalent at A-level.
+                  </p>
+                  <p class="text-sm text-gray-600">Average award: £2,000-£5,000/year</p>
+                </div>
+                
+                <div class="border-l-4 border-red-600 pl-6">
+                  <h3 class="text-lg font-semibold text-gray-800 mb-3">Subject-Specific</h3>
+                  <p class="text-gray-700 mb-2">
+                    For students pursuing particular subjects, often in areas with skills shortages like STEM, nursing, or teaching.
+                  </p>
+                  <p class="text-sm text-gray-600">Average award: £1,000-£3,000/year</p>
+                </div>
+                
+                <div class="border-l-4 border-red-600 pl-6">
+                  <h3 class="text-lg font-semibold text-gray-800 mb-3">Sports Scholarships</h3>
+                  <p class="text-gray-700 mb-2">
+                    For talented athletes who can compete at university level, including funding, coaching, and facilities access.
+                  </p>
+                  <p class="text-sm text-gray-600">Average award: £1,500-£5,000/year + benefits</p>
+                </div>
+              </div>
+              
+              <div class="space-y-6">
+                <div class="border-l-4 border-red-600 pl-6">
+                  <h3 class="text-lg font-semibold text-gray-800 mb-3">Widening Participation</h3>
+                  <p class="text-gray-700 mb-2">
+                    Supporting underrepresented groups including first-generation students, care leavers, and those from low-income backgrounds.
+                  </p>
+                  <p class="text-sm text-gray-600">Average award: £1,000-£3,500/year</p>
+                </div>
+                
+                <div class="border-l-4 border-red-600 pl-6">
+                  <h3 class="text-lg font-semibold text-gray-800 mb-3">International Scholarships</h3>
+                  <p class="text-gray-700 mb-2">
+                    For overseas students studying in the UK, often covering partial tuition fees or living costs.
+                  </p>
+                  <p class="text-sm text-gray-600">Average award: £3,000-£15,000/year</p>
+                </div>
+                
+                <div class="border-l-4 border-red-600 pl-6">
+                  <h3 class="text-lg font-semibold text-gray-800 mb-3">Professional/Industry</h3>
+                  <p class="text-gray-700 mb-2">
+                    Funded by companies or professional bodies, often including work placements or job guarantees.
+                  </p>
+                  <p class="text-sm text-gray-600">Average award: £2,000-£8,000/year</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Application Tips -->
+          <div class="bg-red-50 rounded-lg p-8 mb-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">Scholarship Application Tips</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Do's</h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-green-600 mr-2">✓</span>
+                    <span>Start searching early - many deadlines are before university applications</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-green-600 mr-2">✓</span>
+                    <span>Apply for multiple scholarships to increase success chances</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-green-600 mr-2">✓</span>
+                    <span>Tailor each application to specific criteria</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-green-600 mr-2">✓</span>
+                    <span>Get references early and brief your referees well</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-green-600 mr-2">✓</span>
+                    <span>Keep copies of all applications and correspondence</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-green-600 mr-2">✓</span>
+                    <span>Follow up if you don't hear back within stated timeframes</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">Don'ts</h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-2">✗</span>
+                    <span>Don't use the same essay for every application</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-2">✗</span>
+                    <span>Don't exaggerate achievements or lie on applications</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-2">✗</span>
+                    <span>Don't miss deadlines - late applications rarely accepted</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-2">✗</span>
+                    <span>Don't ignore small scholarships - they add up</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-2">✗</span>
+                    <span>Don't pay for scholarship search services</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-red-600 mr-2">✗</span>
+                    <span>Don't give up after rejections - keep applying</span>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Major Scholarship Providers -->
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">Where to Find Scholarships</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">University Sources</h3>
+                <div class="space-y-3">
+                  <div class="bg-red-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-gray-800">University Websites</h4>
+                    <p class="text-gray-700 text-sm">Check individual university scholarship pages for institution-specific awards</p>
+                  </div>
+                  <div class="bg-red-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-gray-800">Department Awards</h4>
+                    <p class="text-gray-700 text-sm">Many academic departments offer subject-specific scholarships</p>
+                  </div>
+                  <div class="bg-red-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-gray-800">Alumni Associations</h4>
+                    <p class="text-gray-700 text-sm">Former students often fund scholarships for current students</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-4">External Sources</h3>
+                <div class="space-y-3">
+                  <div class="bg-red-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-gray-800">Charitable Trusts</h4>
+                    <p class="text-gray-700 text-sm">Sutton Trust, Leverhulme Trust, and hundreds of smaller charities</p>
+                  </div>
+                  <div class="bg-red-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-gray-800">Professional Bodies</h4>
+                    <p class="text-gray-700 text-sm">Industry organizations supporting future professionals</p>
+                  </div>
+                  <div class="bg-red-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-gray-800">Corporate Sponsors</h4>
+                    <p class="text-gray-700 text-sm">Major companies offering scholarships, often with job opportunities</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Scholarship Calendar -->
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">Scholarship Application Calendar</h2>
+            
+            <div class="space-y-6">
+              
+              <div class="border-l-4 border-red-600 pl-6">
+                <h3 class="text-lg font-semibold text-gray-800">September - November</h3>
+                <p class="text-gray-700">Research scholarships, prepare documents, request references. Many prestigious scholarships open applications.</p>
+              </div>
+              
+              <div class="border-l-4 border-red-600 pl-6">
+                <h3 class="text-lg font-semibold text-gray-800">December - January</h3>
+                <p class="text-gray-700">Major scholarship deadlines. Submit applications for academic excellence and early-bird awards.</p>
+              </div>
+              
+              <div class="border-l-4 border-red-600 pl-6">
+                <h3 class="text-lg font-semibold text-gray-800">February - March</h3>
+                <p class="text-gray-700">University-specific scholarship deadlines. Interview period for competitive scholarships.</p>
+              </div>
+              
+              <div class="border-l-4 border-red-600 pl-6">
+                <h3 class="text-lg font-semibold text-gray-800">April - May</h3>
+                <p class="text-gray-700">Final scholarship deadlines. Results announced for many schemes. Acceptance deadlines.</p>
+              </div>
+              
+              <div class="border-l-4 border-red-600 pl-6">
+                <h3 class="text-lg font-semibold text-gray-800">June - August</h3>
+                <p class="text-gray-700">Late application opportunities. Clearing scholarships. Prepare for next year's applications.</p>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Success Stories -->
+          <div class="bg-red-50 rounded-lg p-8 mb-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">Scholarship Success Stories</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <div class="bg-white rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    ES
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-800">Emma, Sheffield</h3>
+                    <p class="text-sm text-gray-600">Engineering Student</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-2">
+                  "I applied for 15 scholarships and won 3, totaling £7,500 per year. The effort was absolutely worth it - I'll graduate with £20,000 less debt!"
+                </p>
+                <p class="text-sm text-red-600 font-semibold">Won: Excellence Award, Women in STEM, Local Trust Grant</p>
+              </div>
+              
+              <div class="bg-white rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    JM
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-800">James, Manchester</h3>
+                    <p class="text-sm text-gray-600">Medicine Student</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-2">
+                  "As a care leaver, I thought university was impossible. Multiple bursaries and scholarships now cover all my costs plus living expenses."
+                </p>
+                <p class="text-sm text-red-600 font-semibold">Won: Care Leaver Bursary, NHS Bursary, University Grant</p>
+              </div>
+              
+              <div class="bg-white rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    PT
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-800">Priya, London</h3>
+                    <p class="text-sm text-gray-600">Business Student</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-2">
+                  "My scholarship includes mentoring and a guaranteed internship. The connections I've made are just as valuable as the financial support."
+                </p>
+                <p class="text-sm text-red-600 font-semibold">Won: Corporate Leadership Scholarship</p>
+              </div>
+              
+              <div class="bg-white rounded-lg p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    AT
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-800">Alex, Edinburgh</h3>
+                    <p class="text-sm text-gray-600">Sports Science Student</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-2">
+                  "My athletics scholarship covers fees and includes professional coaching. I can pursue my degree while training at an elite level."
+                </p>
+                <p class="text-sm text-red-600 font-semibold">Won: Full Sports Scholarship Package</p>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Call to Action -->
+          <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-red-600 mb-6">Start Your Scholarship Search Today</h2>
+            
+            <p class="text-gray-700 mb-6">
+              Don't let the cost of university hold you back from achieving your dreams. Thousands of scholarships go unclaimed each year simply because students don't apply. Whether you're an academic high-achiever, talented athlete, aspiring engineer, or first-generation student, there are funding opportunities waiting for you.
+            </p>
+            
+            <p class="text-gray-700 mb-6">
+              Remember, even small scholarships add up. A £1,000 award might not seem like much compared to tuition fees, but it could cover your textbooks for the entire degree, or several months of food shopping. Every pound you don't have to borrow is a pound you won't pay interest on.
+            </p>
+            
+            <p class="text-gray-700 mb-8">
+              Use our search tool above to find scholarships matched to your profile, and start applying today. The time you invest now could save you thousands in the long run.
+            </p>
+            
+            <div class="bg-red-50 rounded-lg p-6">
+              <h3 class="text-lg font-semibold text-red-600 mb-4">Quick Action Steps</h3>
+              <ol class="space-y-2 text-gray-700">
+                <li>1. Use the search tool to find relevant scholarships</li>
+                <li>2. Create a spreadsheet to track deadlines and requirements</li>
+                <li>3. Start gathering documents (transcripts, references)</li>
+                <li>4. Set aside time each week for applications</li>
+                <li>5. Apply for at least 10 scholarships to maximize chances</li>
+              </ol>
+              
+              <div class="mt-6 flex flex-wrap gap-4">
+                <a href="/student-advice/student-finance/bursaries-and-scholarships" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300">
+                  Learn About Bursaries
+                </a>
+                <a href="/student-advice/student-finance" class="bg-white text-red-600 border border-red-600 px-6 py-3 rounded-lg hover:bg-red-50 transition duration-300">
+                  More Finance Guides
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Articles -->
+          <div class="mt-12 max-w-4xl mx-auto">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">Related Articles</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <a href="/student-advice/student-finance/student-loans-guide" class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                <h4 class="text-lg font-semibold text-red-600 mb-2">Student Loans Explained</h4>
+                <p class="text-gray-600">Understand how student loans work and what you'll repay</p>
+              </a>
+              <a href="/student-advice/student-finance/budgeting-tips" class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                <h4 class="text-lg font-semibold text-red-600 mb-2">Student Budgeting</h4>
+                <p class="text-gray-600">Make your money stretch further with smart budgeting</p>
+              </a>
+              <a href="/student-advice/student-finance/hardship-funds" class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                <h4 class="text-lg font-semibold text-red-600 mb-2">Emergency Funding</h4>
+                <p class="text-gray-600">Support available if you're struggling financially</p>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+  </div>
+</Layout>
+
+<style>
+  /* Form styling */
+  select:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+</style>

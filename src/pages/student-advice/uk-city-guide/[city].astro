@@ -1,0 +1,160 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+export function getStaticPaths() {
+  const cities = [
+    { slug: 'york', title: 'York', description: 'Historic city with world-class universities and rich cultural heritage.' },
+    { slug: 'durham', title: 'Durham', description: 'Medieval city home to one of England\'s oldest universities.' },
+    { slug: 'cambridge', title: 'Cambridge', description: 'World-renowned university city with stunning architecture.' },
+    { slug: 'canterbury', title: 'Canterbury', description: 'Historic cathedral city with excellent student facilities.' },
+    { slug: 'liverpool', title: 'Liverpool', description: 'Vibrant cultural city with diverse student population.' },
+    { slug: 'bristol', title: 'Bristol', description: 'Dynamic city combining academic excellence with creative industries.' },
+    { slug: 'bath', title: 'Bath', description: 'UNESCO World Heritage city with prestigious universities.' },
+    { slug: 'city-quiz', title: 'City Quiz', description: 'Find your perfect university city with our interactive quiz.' }
+  ];
+
+  return cities.map(city => ({
+    params: { city: city.slug },
+    props: { city }
+  }));
+}
+
+const { city } = Astro.props;
+---
+
+<Layout 
+  title={`${city.title} - UK City Guide`}
+  description={city.description}
+  section="student-advice"
+>
+  <div class="bg-gray-50 min-h-screen">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-600 to-indigo-700 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold mb-4">{city.title}</h1>
+          <p class="text-xl text-indigo-100 max-w-3xl mx-auto">{city.description}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Living in {city.title}</h2>
+            <div class="prose prose-lg max-w-none">
+              <p class="text-gray-700 mb-4">
+                {city.title} offers an exceptional student experience with its unique blend of academic excellence, cultural attractions, and vibrant social life. Whether you're considering undergraduate or postgraduate study, this city provides the perfect environment for your educational journey.
+              </p>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Universities & Colleges</h3>
+              <p class="text-gray-700 mb-4">
+                {city.title} hosts some of the UK's most prestigious educational institutions, offering a wide range of undergraduate and postgraduate programs across various disciplines. The city's academic reputation attracts students from around the world.
+              </p>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Student Life</h3>
+              <p class="text-gray-700 mb-4">
+                The student community in {city.title} is vibrant and diverse, with numerous clubs, societies, and activities to suit every interest. From sports teams to cultural societies, there's something for everyone to get involved in.
+              </p>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Cost of Living</h3>
+              <div class="bg-indigo-50 p-6 rounded-lg mb-6">
+                <h4 class="font-semibold text-indigo-900 mb-3">Average Monthly Costs:</h4>
+                <ul class="list-disc pl-6 text-indigo-800">
+                  <li>Accommodation: £400-£800</li>
+                  <li>Food & Groceries: £150-£250</li>
+                  <li>Transportation: £50-£100</li>
+                  <li>Entertainment: £100-£200</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- City Features -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Why Choose {city.title}?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-indigo-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-indigo-900 mb-3">Academic Excellence</h3>
+                <p class="text-sm text-indigo-800">World-class universities with outstanding teaching and research facilities</p>
+              </div>
+              <div class="bg-indigo-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-indigo-900 mb-3">Cultural Heritage</h3>
+                <p class="text-sm text-indigo-800">Rich history and cultural attractions providing inspiration beyond the classroom</p>
+              </div>
+              <div class="bg-indigo-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-indigo-900 mb-3">Student Support</h3>
+                <p class="text-sm text-indigo-800">Comprehensive support services for international and domestic students</p>
+              </div>
+              <div class="bg-indigo-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-indigo-900 mb-3">Career Opportunities</h3>
+                <p class="text-sm text-indigo-800">Strong links with industry and excellent graduate employment prospects</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <!-- Quick Facts -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Quick Facts</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Population:</span>
+                <span class="font-medium text-gray-900">200,000+</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Student Population:</span>
+                <span class="font-medium text-gray-900">30,000+</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Universities:</span>
+                <span class="font-medium text-gray-900">2-3</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Transport Links:</span>
+                <span class="font-medium text-gray-900">Excellent</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transportation -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Getting Around</h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-indigo-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Public Transport</h4>
+                <p class="text-sm text-gray-600">Comprehensive bus network and train connections</p>
+              </div>
+              <div class="border-l-4 border-indigo-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Cycling</h4>
+                <p class="text-sm text-gray-600">Bike-friendly city with dedicated cycle paths</p>
+              </div>
+              <div class="border-l-4 border-indigo-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Walking</h4>
+                <p class="text-sm text-gray-600">Compact city center perfect for walking</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Cities -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Other Cities</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/student-advice/uk-city-guide/cambridge" class="text-indigo-600 hover:text-indigo-800">Cambridge</a></li>
+              <li><a href="/student-advice/uk-city-guide/oxford" class="text-indigo-600 hover:text-indigo-800">Oxford</a></li>
+              <li><a href="/student-advice/uk-city-guide/durham" class="text-indigo-600 hover:text-indigo-800">Durham</a></li>
+              <li><a href="/student-advice/uk-city-guide/york" class="text-indigo-600 hover:text-indigo-800">York</a></li>
+              <li><a href="/student-advice/uk-city-guide/city-quiz" class="text-indigo-600 hover:text-indigo-800">Take Our City Quiz</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout> 

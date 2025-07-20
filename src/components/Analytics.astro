@@ -1,0 +1,51 @@
+---
+// Analytics integration component
+export interface Props {
+  ga4?: {
+    measurementId: string;
+  };
+  matomo?: {
+    url: string;
+    siteId: string;
+  };
+  hubspot?: {
+    portalId: string;
+  };
+  intercom?: {
+    appId: string;
+  };
+  optimizely?: {
+    projectId: string;
+  };
+}
+
+const { ga4, matomo, hubspot, intercom, optimizely } = Astro.props;
+
+// Build config object
+const config = {
+  ...(ga4 && { ga4 }),
+  ...(matomo && { matomo }),
+  ...(hubspot && { hubspot }),
+  ...(intercom && { intercom }),
+  ...(optimizely && { optimizely }),
+};
+---
+
+<script define:vars={{ config }}>
+  // Initialize analytics with config
+  document.addEventListener('DOMContentLoaded', async () => {
+    const { initializeAnalytics } = await import('../lib/analytics');
+    initializeAnalytics(config);
+  });
+  
+  // Track page views on navigation
+  document.addEventListener('astro:page-load', async () => {
+    const { getAnalytics } = await import('../lib/analytics');
+    const analytics = getAnalytics();
+    if (analytics) {
+      analytics.trackPageView();
+    }
+  });
+</script>
+
+<!-- Analytics noscript fallback removed to prevent display issues -->

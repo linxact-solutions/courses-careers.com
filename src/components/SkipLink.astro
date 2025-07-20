@@ -1,0 +1,82 @@
+---
+export interface Props {
+  href?: string;
+  text?: string;
+  className?: string;
+}
+
+const { 
+  href = '#main-content', 
+  text = 'Skip to main content',
+  className = ''
+} = Astro.props;
+---
+
+<a 
+  href={href} 
+  class={`skip-link ${className}`}
+  aria-label={text}
+>
+  {text}
+</a>
+
+<style>
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .skip-link:focus {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    opacity: 1;
+    transform: translateY(0);
+    outline: none;
+    border-color: #3b82f6;
+  }
+
+  .skip-link:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .skip-link:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .skip-link {
+      background: #000;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+    
+    .skip-link:focus {
+      background: #fff;
+      color: #000;
+      border-color: #000;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .skip-link {
+      transition: none;
+    }
+  }
+</style>

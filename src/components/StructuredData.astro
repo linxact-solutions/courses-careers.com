@@ -1,0 +1,341 @@
+---
+/**
+ * Comprehensive Structured Data Component for courses-careers.com
+ * Generates JSON-LD structured data for different page types
+ */
+
+import { SITE_CONFIG, generateBreadcrumbs, getPageType, extractArticleMetadata } from '../utils/seo.js';
+
+export interface Props {
+  url: string;
+  title: string;
+  description: string;
+  type?: string;
+  article?: {
+    title: string;
+    description: string;
+    content?: string;
+    publishDate?: string;
+    modifiedDate?: string;
+    author?: string;
+    image?: string;
+    keywords?: string[];
+  };
+  university?: {
+    name: string;
+    description: string;
+    location?: string;
+    founded?: string;
+    website?: string;
+    logo?: string;
+  };
+  course?: {
+    name: string;
+    description: string;
+    provider: string;
+    duration?: string;
+    level?: string;
+    subject?: string;
+  };
+  job?: {
+    title: string;
+    description: string;
+    company?: string;
+    location?: string;
+    salary?: string;
+    employmentType?: string;
+  };
+}
+
+const { 
+  url, 
+  title, 
+  description, 
+  type,
+  article,
+  university,
+  course,
+  job
+} = Astro.props;
+
+const canonicalUrl = `${SITE_CONFIG.url}${url}`;
+const pageType = type || getPageType(url);
+const breadcrumbs = generateBreadcrumbs(url);
+const currentDate = new Date().toISOString();
+
+// Base organization schema
+const organizationSchema = {
+  "@type": "Organization",
+  "@id": `${SITE_CONFIG.url}#organization`,
+  "name": SITE_CONFIG.organization.name,
+  "url": SITE_CONFIG.organization.url,
+  "logo": {
+    "@type": "ImageObject",
+    "url": SITE_CONFIG.organization.logo,
+    "width": 200,
+    "height": 60
+  },
+  "sameAs": SITE_CONFIG.organization.sameAs,
+  "description": SITE_CONFIG.description,
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "GB",
+    "addressRegion": "England"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "areaServed": "GB",
+    "availableLanguage": "English"
+  }
+};
+
+// Base website schema
+const websiteSchema = {
+  "@type": "WebSite",
+  "@id": `${SITE_CONFIG.url}#website`,
+  "url": SITE_CONFIG.url,
+  "name": SITE_CONFIG.name,
+  "description": SITE_CONFIG.description,
+  "publisher": {
+    "@id": `${SITE_CONFIG.url}#organization`
+  },
+  "inLanguage": "en-GB",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${SITE_CONFIG.url}/search?q={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+
+// Breadcrumb schema
+const breadcrumbSchema = {
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map(breadcrumb => ({
+    "@type": "ListItem",
+    "position": breadcrumb.position,
+    "name": breadcrumb.name,
+    "item": `${SITE_CONFIG.url}${breadcrumb.url}`
+  }))
+};
+
+// Build schemas array based on page type
+const schemas = [organizationSchema, websiteSchema, breadcrumbSchema];
+
+// Add WebPage schema for all pages
+const webPageSchema = {
+  "@type": "WebPage",
+  "@id": `${canonicalUrl}#webpage`,
+  "url": canonicalUrl,
+  "name": title,
+  "description": description,
+  "isPartOf": {
+    "@id": `${SITE_CONFIG.url}#website`
+  },
+  "about": {
+    "@id": `${SITE_CONFIG.url}#organization`
+  },
+  "datePublished": currentDate,
+  "dateModified": currentDate,
+  "inLanguage": "en-GB"
+};
+
+// Add specific schemas based on page type
+switch (pageType) {
+  case 'homepage':
+    // Enhanced organization for homepage
+    schemas[0] = {
+      ...organizationSchema,
+      "@type": ["Organization", "EducationalOrganization"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Educational Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "University Course Information",
+              "description": "Comprehensive guide to UK university courses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Career Guidance",
+              "description": "Professional career advice and job search assistance"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Student Finance Advice",
+              "description": "Information on student funding and financial support"
+            }
+          }
+        ]
+      }
+    };
+    break;
+
+  case 'article':
+    if (article) {
+      const articleMetadata = extractArticleMetadata(article.content || '');
+      
+      const articleSchema = {
+        "@type": "BlogPosting",
+        "@id": `${canonicalUrl}#article`,
+        "headline": article.title,
+        "description": article.description,
+        "url": canonicalUrl,
+        "datePublished": article.publishDate || articleMetadata.publishDate || currentDate,
+        "dateModified": article.modifiedDate || currentDate,
+        "author": {
+          "@type": "Person",
+          "name": article.author || articleMetadata.author,
+          "url": SITE_CONFIG.url
+        },
+        "publisher": {
+          "@id": `${SITE_CONFIG.url}#organization`
+        },
+        "mainEntityOfPage": {
+          "@id": `${canonicalUrl}#webpage`
+        },
+        "inLanguage": "en-GB",
+        "articleSection": breadcrumbs.length > 1 ? breadcrumbs[1].name : "Education",
+        "keywords": article.keywords || [],
+        "wordCount": article.content ? article.content.split(/\s+/).length : undefined
+      };
+
+      if (article.image) {
+        articleSchema.image = {
+          "@type": "ImageObject",
+          "url": article.image,
+          "width": 1200,
+          "height": 630
+        };
+      }
+
+      schemas.push(articleSchema);
+    }
+    break;
+
+  case 'university':
+    if (university) {
+      const universitySchema = {
+        "@type": "EducationalOrganization",
+        "@id": `${canonicalUrl}#university`,
+        "name": university.name,
+        "description": university.description,
+        "url": university.website || canonicalUrl,
+        "foundingDate": university.founded,
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": university.location,
+          "addressCountry": "GB"
+        },
+        "sameAs": university.website ? [university.website] : []
+      };
+
+      if (university.logo) {
+        universitySchema.logo = {
+          "@type": "ImageObject",
+          "url": university.logo
+        };
+      }
+
+      schemas.push(universitySchema);
+    }
+    break;
+
+  case 'career':
+    if (job) {
+      const jobSchema = {
+        "@type": "JobPosting",
+        "@id": `${canonicalUrl}#job`,
+        "title": job.title,
+        "description": job.description,
+        "hiringOrganization": {
+          "@type": "Organization",
+          "name": job.company || "Various Employers",
+          "sameAs": SITE_CONFIG.url
+        },
+        "jobLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": job.location || "United Kingdom",
+            "addressCountry": "GB"
+          }
+        },
+        "datePosted": currentDate,
+        "employmentType": job.employmentType || "FULL_TIME",
+        "industry": "Education",
+        "occupationalCategory": job.title
+      };
+
+      if (job.salary) {
+        jobSchema.baseSalary = {
+          "@type": "MonetaryAmount",
+          "currency": "GBP",
+          "value": {
+            "@type": "QuantitativeValue",
+            "value": job.salary
+          }
+        };
+      }
+
+      schemas.push(jobSchema);
+    }
+    break;
+}
+
+// Add course schema if provided
+if (course) {
+  const courseSchema = {
+    "@type": "CourseInstance",
+    "@id": `${canonicalUrl}#course`,
+    "name": course.name,
+    "description": course.description,
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": course.provider
+    },
+    "courseMode": "classroom",
+    "inLanguage": "en-GB",
+    "offers": {
+      "@type": "Offer",
+      "category": "educational"
+    }
+  };
+
+  if (course.duration) {
+    courseSchema.duration = course.duration;
+  }
+
+  if (course.level) {
+    courseSchema.educationalLevel = course.level;
+  }
+
+  if (course.subject) {
+    courseSchema.about = course.subject;
+  }
+
+  schemas.push(courseSchema);
+}
+
+schemas.push(webPageSchema);
+
+// Create the JSON-LD script content
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": schemas
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd, null, 2)}></script>

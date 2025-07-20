@@ -1,0 +1,427 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
+
+const coursesAndCareersMagazines = [
+  {
+    id: 'ccuk_29.2',
+    title: 'Courses & Careers UK - Volume 29.2',
+    subtitle: 'Your Complete Guide to UK Higher Education',
+    description: 'Comprehensive coverage of undergraduate courses, university profiles, and career pathways. This issue features in-depth analysis of emerging fields, student finance guidance, and exclusive interviews with university admissions officers.',
+    coverImage: '/images/stories/emagazine_thumbnails/ccuk_29.2.jpg',
+    publishDate: '2024-06-15',
+    readTime: '45 min read',
+    featured: true,
+    url: '/images/stories/online-magazines/emags/ccuk_29.2/ccuk_29.2.htm',
+    highlights: [
+      'University Application Process 2024',
+      'Student Finance Guide',
+      'Career Prospects in Technology',
+      'International Student Opportunities'
+    ]
+  },
+  {
+    id: 'ccuk_29.3',
+    title: 'Courses & Careers UK - Volume 29.3',
+    subtitle: 'Career Guidance for the Modern Student',
+    description: 'Expert advice on career planning, skill development, and navigating the competitive job market. Features real student success stories, industry insights, and practical guidance for career changers.',
+    coverImage: '/images/stories/emagazine_thumbnails/ccuk_29.3.jpg',
+    publishDate: '2024-09-15',
+    readTime: '40 min read',
+    featured: true,
+    url: '/images/stories/online-magazines/emags/ccuk_29.3/ccuk_29.3.htm',
+    highlights: [
+      'Building a Professional Network',
+      'Interview Skills Masterclass',
+      'Emerging Career Opportunities',
+      'Work-Life Balance Strategies'
+    ]
+  },
+  {
+    id: 'ccuk_29.4',
+    title: 'Courses & Careers UK - Volume 29.4',
+    subtitle: 'Future-Ready Education and Careers',
+    description: 'Exploring the latest trends in higher education and emerging career paths. This issue focuses on digital transformation, sustainability careers, and preparing for the future job market.',
+    coverImage: '/images/stories/emagazine_thumbnails/ccuk_29.4.jpg',
+    publishDate: '2024-12-15',
+    readTime: '50 min read',
+    featured: true,
+    url: '/images/stories/online-magazines/emags/ccuk_29.4/ccuk_29.4.htm',
+    highlights: [
+      'Digital Skills for the Future',
+      'Sustainability Career Paths',
+      'Remote Work Opportunities',
+      'Entrepreneurship in Education'
+    ]
+  },
+  {
+    id: 'ccuk_30.1',
+    title: 'Courses & Careers UK - Volume 30.1',
+    subtitle: 'New Year, New Opportunities',
+    description: 'Start 2025 with confidence! This special issue provides comprehensive guidance for the new academic year, featuring updated course information, career forecasts, and motivational success stories.',
+    coverImage: '/images/stories/emagazine_thumbnails/ccuk_30.1_cover.jpg',
+    publishDate: '2025-01-15',
+    readTime: '55 min read',
+    featured: true,
+    url: '#',
+    highlights: [
+      '2025 Course Guide',
+      'Career Forecast & Trends',
+      'Student Success Stories',
+      'New Year Motivation'
+    ]
+  }
+];
+
+const categories = [
+  { name: 'Course Selection', icon: '📚' },
+  { name: 'University Profiles', icon: '🏫' },
+  { name: 'Career Guidance', icon: '🎯' },
+  { name: 'Student Finance', icon: '💰' },
+  { name: 'Application Process', icon: '📝' },
+  { name: 'Success Stories', icon: '⭐' }
+];
+---
+
+<BaseLayout 
+  title="Courses & Careers UK Magazine"
+  description="Discover comprehensive guidance for undergraduate students and career changers. Our flagship magazine features course selection advice, university profiles, and career development strategies."
+>
+  <div class="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50">
+    <!-- Breadcrumb -->
+    <nav class="bg-white border-b border-pink-200" aria-label="Breadcrumb">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li>
+            <a href="/" class="text-pink-600 hover:text-pink-800">Home</a>
+          </li>
+          <li class="text-gray-500">/</li>
+          <li>
+            <a href="/online-magazines" class="text-pink-600 hover:text-pink-800">Online Magazines</a>
+          </li>
+          <li class="text-gray-500">/</li>
+          <li class="text-gray-900 font-medium">Courses & Careers UK</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-r from-pink-600 via-purple-600 to-pink-700">
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+              Courses & Careers UK
+            </h1>
+            <p class="text-xl text-pink-100 mb-8 leading-relaxed">
+              Your comprehensive guide to UK higher education and career development. Expert insights, practical advice, and inspiring stories to help you navigate your educational and professional journey.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button 
+                onclick="document.getElementById('latest-issues').scrollIntoView({ behavior: 'smooth' })"
+                class="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors shadow-lg"
+              >
+                Read Latest Issue
+              </button>
+              <button 
+                onclick="document.getElementById('magazine-archive').scrollIntoView({ behavior: 'smooth' })"
+                class="bg-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-400 transition-colors shadow-lg border-2 border-pink-400"
+              >
+                Browse Archive
+              </button>
+            </div>
+          </div>
+          <div class="lg:text-right">
+            <div class="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <h3 class="text-2xl font-bold text-white mb-4">What's Inside</h3>
+              <div class="grid grid-cols-2 gap-4">
+                {categories.map(category => (
+                  <div class="text-center">
+                    <div class="text-3xl mb-2">{category.icon}</div>
+                    <div class="text-pink-100 text-sm font-medium">{category.name}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Issues Section -->
+    <section id="latest-issues" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Latest Issues
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Stay up-to-date with our most recent publications featuring the latest insights in higher education and career development
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {coursesAndCareersMagazines.filter(mag => mag.featured).map((magazine, index) => (
+            <div class={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-pink-100 ${index === 0 ? 'lg:col-span-2' : ''}`}>
+              <div class={`grid ${index === 0 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'} gap-6 p-6`}>
+                <div class="relative overflow-hidden rounded-xl">
+                  <OptimizedImage 
+                    src={magazine.coverImage} 
+                    alt={magazine.title}
+                    class={`w-full ${index === 0 ? 'h-80' : 'h-64'} object-cover group-hover:scale-105 transition-transform duration-300`}
+                  />
+                  <div class="absolute top-4 right-4">
+                    <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Latest
+                    </span>
+                  </div>
+                </div>
+                
+                <div class={`flex flex-col ${index === 0 ? 'justify-center' : ''}`}>
+                  <h3 class={`${index === 0 ? 'text-2xl' : 'text-xl'} font-bold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors`}>
+                    {magazine.title}
+                  </h3>
+                  <p class={`${index === 0 ? 'text-lg' : 'text-base'} text-pink-600 font-medium mb-3`}>
+                    {magazine.subtitle}
+                  </p>
+                  <p class="text-gray-600 mb-4 flex-grow">
+                    {magazine.description}
+                  </p>
+                  
+                  <div class="mb-4">
+                    <h4 class="text-sm font-semibold text-gray-900 mb-2">Featured Content:</h4>
+                    <ul class="space-y-1">
+                      {magazine.highlights.map(highlight => (
+                        <li class="text-sm text-gray-600 flex items-center">
+                          <span class="w-2 h-2 bg-pink-400 rounded-full mr-2 flex-shrink-0"></span>
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>{new Date(magazine.publishDate).toLocaleDateString('en-GB', { 
+                      day: 'numeric', 
+                      month: 'long', 
+                      year: 'numeric' 
+                    })}</span>
+                    <span>{magazine.readTime}</span>
+                  </div>
+                  
+                  <div class="flex gap-3">
+                    <a 
+                      href={magazine.url} 
+                      class="flex-1 bg-pink-600 text-white text-center py-3 px-4 rounded-lg hover:bg-pink-700 transition-colors font-medium"
+                    >
+                      Read Now
+                    </a>
+                    <button 
+                      onclick={`shareMagazine('${magazine.id}')`}
+                      class="bg-gray-100 text-gray-700 px-4 py-3 rounded-lg hover:bg-gray-200 transition-colors"
+                      aria-label={`Share ${magazine.title}`}
+                    >
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Magazine Archive -->
+    <section id="magazine-archive" class="py-16 bg-gradient-to-r from-pink-50 to-purple-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Complete Archive
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Access all past issues of Courses & Careers UK magazine
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {coursesAndCareersMagazines.map(magazine => (
+            <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-pink-100 group">
+              <div class="relative overflow-hidden rounded-t-xl">
+                <OptimizedImage 
+                  src={magazine.coverImage} 
+                  alt={magazine.title}
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                  <p class="text-sm font-medium">{magazine.subtitle}</p>
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
+                  {magazine.title}
+                </h3>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-3">
+                  <span>{new Date(magazine.publishDate).toLocaleDateString('en-GB', { 
+                    month: 'short', 
+                    year: 'numeric' 
+                  })}</span>
+                  <span>{magazine.readTime}</span>
+                </div>
+                <a 
+                  href={magazine.url} 
+                  class="w-full bg-pink-600 text-white text-center py-2 px-4 rounded-lg hover:bg-pink-700 transition-colors font-medium text-sm block"
+                >
+                  Read Issue
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="py-16 bg-gradient-to-r from-pink-600 to-purple-600">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Never Miss an Issue
+        </h2>
+        <p class="text-xl text-pink-100 mb-8">
+          Subscribe to receive notifications when new issues of Courses & Careers UK are published
+        </p>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-md mx-auto">
+          <form class="space-y-4">
+            <input 
+              type="email" 
+              placeholder="Enter your email address"
+              class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-pink-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+              required
+            />
+            <div class="flex items-center space-x-2 text-pink-100 text-sm">
+              <input type="checkbox" id="terms" class="rounded border-white/20" required />
+              <label for="terms">I agree to the <a href="/terms-of-service" class="underline hover:text-white">Terms of Service</a></label>
+            </div>
+            <button 
+              type="submit"
+              class="w-full bg-white text-pink-600 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors"
+            >
+              Subscribe Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Share magazine functionality
+    function shareMagazine(magazineId) {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Courses & Careers UK Magazine',
+          text: 'Check out this informative magazine issue!',
+          url: window.location.href
+        });
+      } else {
+        // Fallback for browsers without native sharing
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+          alert('Link copied to clipboard!');
+        });
+      }
+    }
+    
+    // Handle newsletter subscription
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      alert(`Thank you for subscribing with ${email}! You'll receive notifications about new Courses & Careers UK issues.`);
+      e.target.reset();
+    });
+    
+    // Smooth scrolling for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+  
+  <style>
+    /* Custom animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .magazine-card {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    
+    .magazine-card:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+    
+    .magazine-card:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+    
+    /* Enhanced hover effects */
+    .group:hover .magazine-card {
+      transform: translateY(-5px);
+    }
+    
+    /* Responsive typography */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+      }
+    }
+    
+    /* Accessibility improvements */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    /* Focus states */
+    button:focus,
+    a:focus {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+    
+    /* Loading state */
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+  </style>
+</BaseLayout>

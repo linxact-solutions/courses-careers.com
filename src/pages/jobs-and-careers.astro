@@ -1,0 +1,309 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+    title="Jobs and Careers - Find Your Perfect Career Path"
+    description="Discover career opportunities, job search guidance, and professional development resources for students and graduates in the UK."
+    keywords="jobs, careers, employment, job search, career guidance, graduate jobs, UK employment, career advice"
+    section="jobs-and-careers"
+>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-600 via-purple-700 to-purple-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+                        Find Your Perfect Career Path
+                    </h1>
+                    <p class="text-xl text-purple-100 mb-8">
+                        Whether you're a school leaver or recent graduate, we'll help you navigate the job market and discover exciting career opportunities that match your skills and aspirations.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a 
+                            href="/jobs-and-careers/job-search" 
+                            class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-center"
+                        >
+                            Start Job Search
+                        </a>
+                        <a 
+                            href="/jobs-and-careers/career-sectors" 
+                            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors text-center"
+                        >
+                            Explore Careers
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <img 
+                        src="/images/banners/banner-kbs-courses-careers.jpg" 
+                        alt="Young professionals in modern office environment" 
+                        class="rounded-lg shadow-2xl"
+                        width="600"
+                        height="400"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    Your Career Journey Starts Here
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Get personalized career guidance and job search support to help you secure your ideal position in today's competitive job market.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Career Service -->
+                <div class="text-center p-6 bg-purple-50 rounded-lg">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0H8m8 0v2a2 2 0 01-2 2H10a2 2 0 01-2-2V6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">FREE Career Service</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Let recruiters find you! Fill out our form and get matched with relevant job opportunities.
+                    </p>
+                    <a 
+                        href="/jobs-and-careers/job-search/7651-job-vacancy-form"
+                        class="inline-block bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
+                    >
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Career Advice -->
+                <div class="text-center p-6 bg-purple-50 rounded-lg">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Career Exploration</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Discover different career paths and learn what it takes to succeed in various industries.
+                    </p>
+                    <a 
+                        href="/jobs-and-careers/career-sectors"
+                        class="inline-block bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
+                    >
+                        Explore Careers
+                    </a>
+                </div>
+
+                <!-- CV & Interview Support -->
+                <div class="text-center p-6 bg-purple-50 rounded-lg">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">CV & Interview Tips</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Professional guidance on creating compelling CVs and succeeding in job interviews.
+                    </p>
+                    <a 
+                        href="/jobs-and-careers/career-sectors"
+                        class="inline-block bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
+                    >
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- Job Market Insights -->
+                <div class="text-center p-6 bg-purple-50 rounded-lg">
+                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Market Insights</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Stay informed about employment trends and opportunities in the modern job market.
+                    </p>
+                    <a 
+                        href="/jobs-and-careers/job-search"
+                        class="inline-block bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors"
+                    >
+                        View Trends
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Career Sectors -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    Popular Career Sectors
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Explore career opportunities across various industries and find the perfect match for your skills and interests.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Legal Sector -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Legal Careers</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        From solicitors to barristers, explore opportunities in the legal profession and understand the path to qualification.
+                    </p>
+                    <a 
+                        href="/jobs-and-careers/career-sectors/7599-what-does-a-solicitor-do"
+                        class="text-purple-600 hover:text-purple-700 font-medium"
+                    >
+                        Learn about solicitor careers →
+                    </a>
+                </div>
+
+                <!-- International Opportunities -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Global Careers</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Discover international job opportunities and how UK graduates are finding success abroad.
+                    </p>
+                    <a 
+                        href="/jobs-and-careers/career-sectors/7953-uk-graduates-flock-to-china-for-job-opportunities"
+                        class="text-purple-600 hover:text-purple-700 font-medium"
+                    >
+                        Explore international opportunities →
+                    </a>
+                </div>
+
+                <!-- Workplace Rights -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Workplace Rights</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Understand your rights as an employee and important workplace legislation that affects you.
+                    </p>
+                    <a 
+                        href="/jobs-and-careers/career-sectors/7982-uk-employers-could-be-breaking-the-law-over-interns-pay"
+                        class="text-purple-600 hover:text-purple-700 font-medium"
+                    >
+                        Know your rights →
+                    </a>
+                </div>
+
+                <!-- Economic Insights -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Economic Trends</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Stay informed about economic trends and how they affect employment and career opportunities.
+                    </p>
+                    <a 
+                        href="/jobs-and-careers/career-sectors/7945-employers-and-employees-work-together-through-the-recession"
+                        class="text-purple-600 hover:text-purple-700 font-medium"
+                    >
+                        Read economic insights →
+                    </a>
+                </div>
+
+                <!-- Industry Development -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Industry News</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Keep up with industry developments and new business opportunities across different sectors.
+                    </p>
+                    <a 
+                        href="/jobs-and-careers/career-sectors/8007-ramesh-dewan-to-build-new-hotel-at-luton-airport"
+                        class="text-purple-600 hover:text-purple-700 font-medium"
+                    >
+                        Read industry news →
+                    </a>
+                </div>
+
+                <!-- More Careers -->
+                <div class="bg-purple-600 text-white rounded-lg p-6 hover:bg-purple-700 transition-colors">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold">Explore More Careers</h3>
+                    </div>
+                    <p class="text-purple-100 mb-4">
+                        Discover hundreds of career opportunities across all industries and find your perfect match.
+                    </p>
+                    <a 
+                        href="/jobs-and-careers/career-sectors"
+                        class="inline-block bg-white text-purple-600 px-4 py-2 rounded-md font-medium hover:bg-purple-50 transition-colors"
+                    >
+                        View All Careers
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">
+                Ready to Launch Your Career?
+            </h2>
+            <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                Join thousands of students and graduates who have found their ideal career path with our comprehensive guidance and support.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                    href="/jobs-and-careers/job-search/7651-job-vacancy-form"
+                    class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
+                >
+                    Register for Job Opportunities
+                </a>
+                <a 
+                    href="/jobs-and-careers/career-sectors"
+                    class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                    Browse Career Guides
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>

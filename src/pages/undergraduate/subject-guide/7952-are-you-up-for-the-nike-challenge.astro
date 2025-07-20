@@ -1,0 +1,332 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const title = "Are You Up for the Nike Challenge? - Elite Sports Programme";
+const description = "Learn about exciting opportunities available through the Nike Challenge programme for aspiring student athletes and sports enthusiasts.";
+const keywords = "Nike Challenge, student athletes, sports programme, university sport, elite training, sports opportunities";
+---
+
+<Layout 
+	title={title}
+	description={description}
+	keywords={keywords}
+	section="undergraduate"
+>
+	<!-- Breadcrumb Navigation -->
+	<nav class="bg-gray-100 py-4">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-gray-500 hover:text-orange-600">Home</a></li>
+				<li class="text-gray-400">/</li>
+				<li><a href="/undergraduate" class="text-gray-500 hover:text-orange-600">Undergraduate</a></li>
+				<li class="text-gray-400">/</li>
+				<li><a href="/undergraduate/subject-guide" class="text-gray-500 hover:text-orange-600">Subject Guide</a></li>
+				<li class="text-gray-400">/</li>
+				<li class="text-orange-600 font-medium">Are You Up for the Nike Challenge?</li>
+			</ol>
+		</div>
+	</nav>
+
+	<!-- Challenge Hero -->
+	<section class="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-4xl md:text-6xl font-bold mb-6">
+				Are You Up for the Nike Challenge?
+			</h1>
+			<p class="text-xl md:text-2xl mb-8 text-orange-100">
+				Push your limits, unlock your potential, and join the elite
+			</p>
+			<div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 inline-block">
+				<p class="text-lg">The ultimate test of athletic excellence and academic achievement</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Article Content -->
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+				<div class="p-8 md:p-12">
+					<!-- Introduction -->
+					<div class="prose prose-lg max-w-none mb-12">
+						<p class="text-xl text-gray-700 leading-relaxed">
+							The Nike Challenge represents the ultimate test for student athletes who dare to push beyond their limits. This intensive programme challenges participants to excel in both athletic performance and academic achievement, creating the next generation of elite athletes and leaders.
+						</p>
+					</div>
+
+					<!-- What is the Nike Challenge -->
+					<div class="mb-12">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">What is the Nike Challenge?</h2>
+						
+						<div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg p-8 mb-8">
+							<p class="text-lg text-gray-700 mb-4">
+								The Nike Challenge is an elite programme designed to identify and develop the most promising student athletes across the UK. Participants face rigorous physical, mental, and academic challenges that test their dedication, resilience, and potential for greatness.
+							</p>
+							<div class="flex items-center text-orange-600 font-semibold">
+								<svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+								</svg>
+								Only the most dedicated will succeed
+							</div>
+						</div>
+
+						<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+							<div class="bg-blue-50 rounded-lg p-6 text-center">
+								<div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-blue-900 mb-2">Physical Excellence</h3>
+								<p class="text-blue-800 text-sm">Elite athletic performance and conditioning</p>
+							</div>
+							
+							<div class="bg-green-50 rounded-lg p-6 text-center">
+								<div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-green-900 mb-2">Mental Fortitude</h3>
+								<p class="text-green-800 text-sm">Psychological resilience and leadership</p>
+							</div>
+							
+							<div class="bg-purple-50 rounded-lg p-6 text-center">
+								<div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+									<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-purple-900 mb-2">Academic Achievement</h3>
+								<p class="text-purple-800 text-sm">Maintaining excellence in studies</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Challenge Components -->
+					<div class="mb-12">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Challenge Components</h2>
+						
+						<div class="space-y-8">
+							<!-- Physical Challenges -->
+							<div class="bg-red-50 rounded-lg p-6">
+								<h3 class="text-2xl font-bold text-red-900 mb-4">Physical Challenges</h3>
+								<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+									<div>
+										<h4 class="font-semibold text-red-900 mb-3">Endurance Tests</h4>
+										<ul class="text-red-800 space-y-1 text-sm">
+											<li>• Marathon running challenges</li>
+											<li>• Multi-sport endurance events</li>
+											<li>• Altitude training programmes</li>
+											<li>• Recovery and adaptation testing</li>
+										</ul>
+									</div>
+									<div>
+										<h4 class="font-semibold text-red-900 mb-3">Strength & Power</h4>
+										<ul class="text-red-800 space-y-1 text-sm">
+											<li>• Olympic lifting competitions</li>
+											<li>• Sport-specific power tests</li>
+											<li>• Functional movement assessments</li>
+											<li>• Injury prevention protocols</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Mental Challenges -->
+							<div class="bg-blue-50 rounded-lg p-6">
+								<h3 class="text-2xl font-bold text-blue-900 mb-4">Mental Challenges</h3>
+								<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+									<div>
+										<h4 class="font-semibold text-blue-900 mb-3">Psychological Tests</h4>
+										<ul class="text-blue-800 space-y-1 text-sm">
+											<li>• Pressure performance situations</li>
+											<li>• Team leadership challenges</li>
+											<li>• Decision-making under stress</li>
+											<li>• Motivation and goal-setting</li>
+										</ul>
+									</div>
+									<div>
+										<h4 class="font-semibold text-blue-900 mb-3">Strategic Thinking</h4>
+										<ul class="text-blue-800 space-y-1 text-sm">
+											<li>• Game strategy development</li>
+											<li>• Problem-solving scenarios</li>
+											<li>• Quick adaptation challenges</li>
+											<li>• Communication under pressure</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Academic Challenges -->
+							<div class="bg-green-50 rounded-lg p-6">
+								<h3 class="text-2xl font-bold text-green-900 mb-4">Academic Challenges</h3>
+								<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+									<div>
+										<h4 class="font-semibold text-green-900 mb-3">Time Management</h4>
+										<ul class="text-green-800 space-y-1 text-sm">
+											<li>• Balancing training and study</li>
+											<li>• Intensive study periods</li>
+											<li>• Research project completion</li>
+											<li>• Presentation and communication</li>
+										</ul>
+									</div>
+									<div>
+										<h4 class="font-semibold text-green-900 mb-3">Knowledge Application</h4>
+										<ul class="text-green-800 space-y-1 text-sm">
+											<li>• Sports science integration</li>
+											<li>• Performance analysis</li>
+											<li>• Nutrition and recovery</li>
+											<li>• Technology in sport</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Selection Process -->
+					<div class="mb-12">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Selection Process</h2>
+						
+						<div class="bg-orange-50 rounded-lg p-6">
+							<h3 class="text-xl font-semibold text-orange-900 mb-4">Are You Eligible?</h3>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+								<div>
+									<h4 class="font-semibold text-orange-900 mb-3">Athletic Requirements</h4>
+									<ul class="text-orange-800 space-y-2">
+										<li>• Competing at regional or national level</li>
+										<li>• Demonstrated improvement trajectory</li>
+										<li>• Commitment to training regimen</li>
+										<li>• Injury-free status</li>
+									</ul>
+								</div>
+								<div>
+									<h4 class="font-semibold text-orange-900 mb-3">Academic Standards</h4>
+									<ul class="text-orange-800 space-y-2">
+										<li>• Minimum 3.0 GPA requirement</li>
+										<li>• Full-time university enrollment</li>
+										<li>• Good academic standing</li>
+										<li>• Time management skills</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Rewards and Recognition -->
+					<div class="mb-12">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Rewards and Recognition</h2>
+						
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+							<div class="bg-yellow-50 rounded-lg p-6">
+								<h3 class="text-xl font-semibold text-yellow-900 mb-4">Winners Receive</h3>
+								<ul class="text-yellow-800 space-y-2">
+									<li>• Full sports scholarship</li>
+									<li>• Elite coaching access</li>
+									<li>• International training opportunities</li>
+									<li>• Professional development mentoring</li>
+									<li>• Alumni network access</li>
+								</ul>
+							</div>
+							
+							<div class="bg-purple-50 rounded-lg p-6">
+								<h3 class="text-xl font-semibold text-purple-900 mb-4">All Participants Gain</h3>
+								<ul class="text-purple-800 space-y-2">
+									<li>• Advanced training experience</li>
+									<li>• Performance assessment</li>
+									<li>• Networking opportunities</li>
+									<li>• Personal development</li>
+									<li>• Industry recognition</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Application Process -->
+					<div class="mb-12">
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">How to Apply</h2>
+						
+						<div class="bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg p-6">
+							<h3 class="text-xl font-bold mb-4">Ready to Take the Challenge?</h3>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+								<div>
+									<h4 class="font-semibold mb-3">Application Requirements</h4>
+									<ul class="text-orange-100 space-y-1 text-sm">
+										<li>• Completed application form</li>
+										<li>• Academic transcripts</li>
+										<li>• Athletic performance records</li>
+										<li>• Coach recommendations</li>
+										<li>• Personal statement</li>
+									</ul>
+								</div>
+								<div>
+									<h4 class="font-semibold mb-3">Selection Timeline</h4>
+									<ul class="text-orange-100 space-y-1 text-sm">
+										<li>• Applications due: March 1st</li>
+										<li>• Initial screening: March 15th</li>
+										<li>• Physical assessments: April 1st</li>
+										<li>• Final selection: April 15th</li>
+										<li>• Programme begins: May 1st</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Call to Action -->
+					<div class="bg-gray-50 rounded-lg p-8 text-center">
+						<h3 class="text-2xl font-bold text-gray-900 mb-4">The Challenge Awaits</h3>
+						<p class="text-lg text-gray-700 mb-6">
+							Only those who dare to push beyond their limits will discover their true potential. The Nike Challenge is not just about winning – it's about becoming the best version of yourself.
+						</p>
+						<div class="flex flex-col sm:flex-row justify-center gap-4">
+							<div class="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold">
+								Apply Now
+							</div>
+							<div class="bg-gray-200 text-gray-700 px-8 py-3 rounded-lg font-semibold">
+								Learn More
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Related Articles -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Related Articles</h2>
+				<p class="text-xl text-gray-600">Explore more about Nike programmes and university sport</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">
+						<a href="/undergraduate/subject-guide/7950-nike-select-girls-change-the-face-of-uk-university-sport.html" class="hover:text-orange-600">Nike Select Girls Change UK University Sport</a>
+					</h3>
+					<p class="text-gray-600 mb-4">How Nike Select Girls are transforming UK university sport with innovative programs.</p>
+					<a href="/undergraduate/subject-guide/7950-nike-select-girls-change-the-face-of-uk-university-sport.html" class="text-orange-600 font-medium hover:text-orange-700">Read More →</a>
+				</div>
+				
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">
+						<a href="/undergraduate/subject-guide/7951-a-year-in-the-life-of-the-nike-selects.html" class="hover:text-orange-600">A Year in the Life of Nike Selects</a>
+					</h3>
+					<p class="text-gray-600 mb-4">Follow the journey of elite student athletes through their transformative year.</p>
+					<a href="/undergraduate/subject-guide/7951-a-year-in-the-life-of-the-nike-selects.html" class="text-orange-600 font-medium hover:text-orange-700">Read More →</a>
+				</div>
+				
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">
+						<a href="/undergraduate/subject-guide" class="hover:text-orange-600">Browse All Subject Guides</a>
+					</h3>
+					<p class="text-gray-600 mb-4">Explore our complete collection of undergraduate subject guides.</p>
+					<a href="/undergraduate/subject-guide" class="text-orange-600 font-medium hover:text-orange-700">Browse All →</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

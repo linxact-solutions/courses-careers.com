@@ -1,0 +1,292 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+	{
+		id: 1,
+		title: "New Association of Business Executives diplomas to fit UK Qualifications and Credit Framework",
+		link: "/further-education/subject-guide/8067-new-association-of-business-executives-diplomas-to-fit-uk-qualifications-and-credit-framework.html"
+	},
+	{
+		id: 2,
+		title: "The 14-19 diploma",
+		link: "/further-education/subject-guide/8066-the-14-19-diploma.html"
+	},
+	{
+		id: 3,
+		title: "What is a diploma?",
+		link: "/further-education/subject-guide/8065-what-is-a-diploma.html"
+	},
+	{
+		id: 4,
+		title: "Look beyond university for a route into accounting",
+		link: "/further-education/subject-guide/8062-look-beyond-university-for-a-route-into-accounting.html"
+	},
+	{
+		id: 5,
+		title: "Is a degree really necessary?",
+		link: "/further-education/subject-guide/8045-is-a-degree-really-necessary.html"
+	},
+	{
+		id: 6,
+		title: "Will home study suit my learning style?",
+		link: "/further-education/subject-guide/8044-will-home-study-suit-my-learning-style.html"
+	},
+	{
+		id: 7,
+		title: "5 reasons to consider a bookkeeping and accounting career",
+		link: "/further-education/subject-guide/8042-5-reasons-to-consider-a-bookkeeping-and-accounting-career.html"
+	},
+	{
+		id: 8,
+		title: "5 Reasons Why Distance Learning Could Help You Get Your Ideal Job",
+		link: "/further-education/subject-guide/8041-5-reasons-why-distance-learning-could-help-you-get-your-ideal-job.html"
+	},
+	{
+		id: 9,
+		title: "Energy and Engineering - Norfolk bids to host one of the UK's first University Technical Colleges",
+		link: "/further-education/subject-guide/8038-energy-and-engineering-norfolk-bids-to-host-one-of-the-uks-first-university-technical-colleges.html"
+	},
+	{
+		id: 10,
+		title: "Full steam ahead for university technical colleges",
+		link: "/further-education/subject-guide/8037-full-steam-ahead-for-university-technical-colleges.html"
+	},
+	{
+		id: 11,
+		title: "Fashion Design Courses",
+		link: "/further-education/subject-guide/7360-fashion-design-courses"
+	},
+	{
+		id: 12,
+		title: "Another Record Year for GCSE Results",
+		link: "/further-education/subject-guide/8010-another-record-year-for-gcse-results"
+	}
+];
+---
+
+<Layout title="Subject Guide - Further Education - Courses and Careers">
+	<div class="bg-gradient-to-b from-green-50 to-white">
+		<!-- Breadcrumb -->
+		<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-blue-600 hover:text-blue-800">Home</a></li>
+				<li class="text-gray-500">></li>
+				<li><a href="/further-education" class="text-blue-600 hover:text-blue-800">Further Education</a></li>
+				<li class="text-gray-500">></li>
+				<li class="text-gray-900 font-medium">Subject Guide</li>
+			</ol>
+		</nav>
+
+		<!-- Header -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+					Further Education Subject Guide
+				</h1>
+				<p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+					Explore comprehensive guides and articles about Further Education courses, qualifications, and career paths. 
+					Find the information you need to make informed decisions about your educational journey.
+				</p>
+			</div>
+		</section>
+
+		<!-- Course Search Section -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+			<div class="bg-white rounded-lg shadow-lg p-6">
+				<h2 class="text-xl font-semibold text-gray-900 mb-4">Find Specific Courses</h2>
+				<form class="space-y-4">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+						<!-- Subject Keyword -->
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Select Subject Keyword</label>
+							<select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+								<option value="">All Subjects</option>
+								<option value="accountancy">Accountancy</option>
+								<option value="administration">Administration</option>
+								<option value="art">Art</option>
+								<option value="business_studies">Business Studies</option>
+								<option value="catering">Catering</option>
+								<option value="computer_science">Computer Science</option>
+								<option value="construction">Construction</option>
+								<option value="design">Design</option>
+								<option value="engineering">Engineering</option>
+								<option value="fashion_design">Fashion Design</option>
+								<option value="health_and_beauty">Hairdressing and Beauty</option>
+								<option value="hospitality_management">Hotel and Hospitality Management</option>
+								<option value="information_technology">Information Technology</option>
+								<option value="media_studies">Media Studies</option>
+								<option value="nursing">Nursing</option>
+								<option value="performing_arts">Performing Arts</option>
+								<option value="sports_science">Sports Science</option>
+								<option value="teaching">Teaching</option>
+								<option value="tourism">Tourism</option>
+							</select>
+						</div>
+
+						<!-- Course Level -->
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Select Course Level</label>
+							<select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+								<option value="">All Levels</option>
+								<option value="gcse">GCSE</option>
+								<option value="nvq">NVQ</option>
+								<option value="diploma">Diploma</option>
+								<option value="btec">BTEC or OCR Nationals</option>
+								<option value="as_a_level">AS and A Level</option>
+								<option value="international_baccalaureate">International Baccalaureate</option>
+								<option value="hnc_hnd">HNC and HND</option>
+								<option value="foundation_degree">Foundation Degree</option>
+							</select>
+						</div>
+
+						<!-- Study Mode -->
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Select Study Mode</label>
+							<select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+								<option value="">All Modes</option>
+								<option value="fulltime">Full-time</option>
+								<option value="parttime">Part-time</option>
+								<option value="online">Online</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Text Search -->
+					<div>
+						<input type="text" placeholder="Search articles..." class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+					</div>
+
+					<!-- Search Button -->
+					<div>
+						<button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+							Search
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<!-- Articles List -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="bg-white rounded-lg shadow-lg">
+				<!-- Table Header -->
+				<div class="px-6 py-4 border-b border-gray-200">
+					<h2 class="text-xl font-semibold text-gray-900">Subject Guide Articles</h2>
+				</div>
+
+				<!-- Filter Controls -->
+				<div class="px-6 py-4 border-b border-gray-200 bg-gray-50">
+					<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+						<div class="flex items-center gap-4">
+							<label class="text-sm text-gray-700">Title Filter:</label>
+							<input type="text" placeholder="Filter by title..." class="px-3 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+						</div>
+						<div class="flex items-center gap-4">
+							<label class="text-sm text-gray-700">Display:</label>
+							<select class="px-3 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+								<option value="10">10</option>
+								<option value="15">15</option>
+								<option value="20">20</option>
+								<option value="25">25</option>
+								<option value="50">50</option>
+								<option value="100">100</option>
+								<option value="0">All</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- Articles Table -->
+				<div class="overflow-x-auto">
+					<table class="w-full">
+						<thead class="bg-green-600 text-white">
+							<tr>
+								<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider w-16">#</th>
+								<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+									<button class="hover:text-green-200">Article Title</button>
+								</th>
+							</tr>
+						</thead>
+						<tbody class="bg-white divide-y divide-gray-200">
+							{articles.map((article, index) => (
+								<tr class={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+									<td class="px-6 py-4 text-sm text-gray-900 text-right">{article.id}</td>
+									<td class="px-6 py-4 text-sm">
+										<a href={article.link} class="text-green-600 hover:text-green-800 font-medium">
+											{article.title}
+										</a>
+									</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+
+				<!-- Pagination -->
+				<div class="px-6 py-4 border-t border-gray-200 bg-gray-50">
+					<div class="flex items-center justify-between">
+						<div class="text-sm text-gray-700">
+							Showing 1 to {articles.length} of {articles.length} articles
+						</div>
+						<div class="flex items-center gap-2">
+							<button class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-100 disabled:opacity-50" disabled>
+								Previous
+							</button>
+							<button class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-100 disabled:opacity-50" disabled>
+								Next
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Featured Content -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<!-- Popular Subjects -->
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Popular Subjects</h3>
+					<ul class="space-y-2 text-sm">
+						<li><a href="/further-education/subject-guide/business-studies" class="text-green-600 hover:text-green-800">Business Studies</a></li>
+						<li><a href="/further-education/subject-guide/information-technology" class="text-green-600 hover:text-green-800">Information Technology</a></li>
+						<li><a href="/further-education/subject-guide/health-and-beauty" class="text-green-600 hover:text-green-800">Health and Beauty</a></li>
+						<li><a href="/further-education/subject-guide/engineering" class="text-green-600 hover:text-green-800">Engineering</a></li>
+						<li><a href="/further-education/subject-guide/7360-fashion-design-courses" class="text-green-600 hover:text-green-800">Fashion Design</a></li>
+						<li><a href="/further-education/subject-guide/hospitality-management" class="text-green-600 hover:text-green-800">Hospitality Management</a></li>
+						<li><a href="/further-education/subject-guide/media-studies" class="text-green-600 hover:text-green-800">Media Studies</a></li>
+						<li><a href="/further-education/subject-guide/sports-science" class="text-green-600 hover:text-green-800">Sports Science</a></li>
+					</ul>
+				</div>
+
+				<!-- Course Levels -->
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Course Levels</h3>
+					<ul class="space-y-2 text-sm">
+						<li><a href="/further-education/subject-guide/gcse-courses" class="text-green-600 hover:text-green-800">GCSE Courses</a></li>
+						<li><a href="/further-education/subject-guide/a-level-courses" class="text-green-600 hover:text-green-800">A-Level Courses</a></li>
+						<li><a href="/further-education/subject-guide/btec-courses" class="text-green-600 hover:text-green-800">BTEC Courses</a></li>
+						<li><a href="/further-education/subject-guide/nvq-courses" class="text-green-600 hover:text-green-800">NVQ Courses</a></li>
+						<li><a href="/further-education/subject-guide/diploma-courses" class="text-green-600 hover:text-green-800">Diploma Courses</a></li>
+						<li><a href="/further-education/subject-guide/hnc-hnd-courses" class="text-green-600 hover:text-green-800">HNC/HND Courses</a></li>
+						<li><a href="/further-education/subject-guide/foundation-degree-courses" class="text-green-600 hover:text-green-800">Foundation Degrees</a></li>
+					</ul>
+				</div>
+
+				<!-- Quick Links -->
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Quick Links</h3>
+					<ul class="space-y-2 text-sm">
+						<li><a href="/further-education/college-profiles" class="text-green-600 hover:text-green-800">College Profiles</a></li>
+						<li><a href="/further-education/subject-guide/qualifications" class="text-green-600 hover:text-green-800">Qualifications Guide</a></li>
+						<li><a href="/further-education/subject-guide/distance-learning" class="text-green-600 hover:text-green-800">Distance Learning</a></li>
+						<li><a href="/jobs-and-careers/career-sectors" class="text-green-600 hover:text-green-800">Career Sectors</a></li>
+						<li><a href="/student-advice/student-finance" class="text-green-600 hover:text-green-800">Student Finance</a></li>
+						<li><a href="/student-advice" class="text-green-600 hover:text-green-800">Student Advice</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
+</Layout>

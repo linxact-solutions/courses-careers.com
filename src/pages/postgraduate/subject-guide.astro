@@ -1,0 +1,249 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CourseCard from '../../components/CourseCard.astro';
+---
+
+<Layout 
+	title="Postgraduate Subject Guide - Comprehensive Course Information"
+	description="Complete guide to postgraduate subjects including masters and doctoral programs. Explore entry requirements, career prospects, and course content across all disciplines."
+	keywords="postgraduate subjects, masters degrees, doctoral programs, PhD courses, subject guide, postgraduate study, academic disciplines"
+	section="postgraduate"
+>
+	<!-- Breadcrumb -->
+	<nav class="bg-gray-50 py-3" aria-label="Breadcrumb">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-blue-600 hover:text-blue-800">Home</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li><a href="/postgraduate" class="text-blue-600 hover:text-blue-800">Postgraduate</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li class="text-gray-900">Subject Guide</li>
+			</ol>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Postgraduate Subject Guide
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+					Explore comprehensive guides to postgraduate subjects. Find detailed information about entry requirements, career prospects, and course content.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Course Search Section -->
+	<section class="bg-white py-8">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-blue-50 rounded-lg p-6">
+				<h2 class="text-xl font-bold text-center mb-6 text-blue-800">Search Postgraduate Subjects</h2>
+				<form class="max-w-2xl mx-auto">
+					<div class="flex flex-col sm:flex-row gap-4">
+						<input 
+							type="text" 
+							placeholder="Search subjects..." 
+							class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+						/>
+						<button 
+							type="submit" 
+							class="bg-blue-600 text-white px-8 py-2 rounded-md font-semibold hover:bg-blue-700 transition-colors"
+						>
+							Search
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<section class="py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="mb-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">Popular Postgraduate Subjects</h2>
+				<p class="text-gray-700 mb-8">
+					Discover the most sought-after postgraduate subjects with comprehensive guides covering everything from application requirements to career outcomes.
+				</p>
+			</div>
+
+			<!-- Subject Categories -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<CourseCard 
+					title="Art and Design Courses"
+					description="Explore postgraduate programs in fine arts, graphic design, and creative disciplines. Learn about portfolio requirements and career paths."
+					href="/postgraduate/subject-guide/7221-postgraduate-art-and-design-courses"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="MBA Courses"
+					description="Comprehensive guide to Master of Business Administration programs, including executive MBAs and specialized business degrees."
+					href="/postgraduate/subject-guide/7228-mba-courses"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="Computer Science"
+					description="Advanced computing programs covering artificial intelligence, software engineering, cybersecurity, and data science."
+					href="/postgraduate/subject-guide/7234-postgraduate-courses-in-computer-science-"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="Electronic & Electrical Engineering"
+					description="Specialized engineering programs in electronics, telecommunications, and power systems engineering."
+					href="/postgraduate/subject-guide/7253-postgraduate-courses-in-electronic-and-electrical-engineering"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="Engineering Courses"
+					description="Comprehensive guide to postgraduate engineering programs across all disciplines and specializations."
+					href="/postgraduate/subject-guide/7254-postgraduate-engineering-courses"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="Finance Courses"
+					description="Advanced finance programs including investment banking, corporate finance, and financial risk management."
+					href="/postgraduate/subject-guide/7260-postgraduate-courses-in-finance"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="Graphic Design"
+					description="Creative postgraduate programs in visual communication, digital design, and multimedia arts."
+					href="/postgraduate/subject-guide/7274-postgraduate-courses-in-graphic-design"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="Law Courses"
+					description="Legal education at postgraduate level including LLM programs, legal practice courses, and specialized law degrees."
+					href="/postgraduate/subject-guide/7328-postgraduate-law-courses"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="Psychology"
+					description="Advanced psychology programs covering clinical, educational, forensic, and research psychology."
+					href="/postgraduate/subject-guide/7340-postgraduate-courses-in-psychology"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="Publishing"
+					description="Specialized programs in publishing, editorial work, and media production for the modern publishing industry."
+					href="/postgraduate/subject-guide/7343-postgraduate-courses-in-publishing"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="Social Sciences"
+					description="Interdisciplinary programs in sociology, anthropology, political science, and related social science fields."
+					href="/postgraduate/subject-guide/7345-postgraduate-courses-in-the-social-sciences"
+					color="blue"
+				/>
+				
+				<CourseCard 
+					title="Tourism Studies"
+					description="Specialized programs in tourism management, hospitality, and sustainable tourism development."
+					href="/postgraduate/subject-guide/7350-postgraduate-courses-in-tourism"
+					color="blue"
+				/>
+			</div>
+
+			<!-- Career and Study Information -->
+			<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h3 class="text-xl font-semibold text-blue-800 mb-4">Career Guidance</h3>
+					<CourseCard 
+						title="Film and Television Careers"
+						description="Comprehensive guide to breaking into the competitive world of film and television production."
+						href="/postgraduate/subject-guide/7401-how-to-get-into-a-career-in-film-and-television"
+						color="blue"
+					/>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h3 class="text-xl font-semibold text-blue-800 mb-4">Study Options</h3>
+					<CourseCard 
+						title="International Study"
+						description="Exploring international postgraduate opportunities and their benefits for UK graduates."
+						href="/postgraduate/subject-guide/7946-international-study-a-good-option-for-uk-graduates"
+						color="blue"
+					/>
+				</div>
+			</div>
+
+			<!-- Events Section -->
+			<div class="mt-12 bg-blue-50 rounded-lg p-8">
+				<h3 class="text-2xl font-bold text-blue-800 mb-4">Upcoming Events</h3>
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<h4 class="text-xl font-semibold text-gray-900 mb-2">
+						<a href="/postgraduate/subject-guide/8008-the-postgraduate-study-fair-2025" class="text-blue-600 hover:text-blue-800">
+							Postgraduate Study Fair 2025
+						</a>
+					</h4>
+					<p class="text-gray-700">
+						Join the UK's largest postgraduate education fair. Meet university representatives, discover funding opportunities, and get expert advice on your postgraduate application. This comprehensive event covers all subject areas and study modes.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Choose Postgraduate Study -->
+	<section class="bg-gray-50 py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">Why Choose Postgraduate Study?</h2>
+				<p class="text-gray-700 max-w-3xl mx-auto">
+					Postgraduate study offers numerous benefits for your career and personal development. Here are the key advantages:
+				</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Career Advancement</h3>
+					<p class="text-gray-700">
+						Enhance your career prospects with specialized knowledge and advanced qualifications that employers value highly.
+					</p>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Specialized Expertise</h3>
+					<p class="text-gray-700">
+						Develop deep expertise in your chosen field through advanced research and specialized coursework.
+					</p>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Professional Networks</h3>
+					<p class="text-gray-700">
+						Build valuable professional networks with peers, academics, and industry professionals in your field.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

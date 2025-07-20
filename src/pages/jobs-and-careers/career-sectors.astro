@@ -1,0 +1,276 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const careerArticles = [
+    {
+        title: "What does a solicitor do?",
+        description: "Studying Law for a career as a solicitor offers the chance to combine intellectual challenge, interest and variety with the opportunity to work with and for people.",
+        url: "/jobs-and-careers/career-sectors/7599-what-does-a-solicitor-do",
+        category: "Legal",
+        difficulty: "Graduate Level",
+        featured: true
+    },
+    {
+        title: "UK graduates flock to China for job opportunities",
+        description: "Discover how UK graduates are finding success in the Chinese job market and the opportunities available abroad.",
+        url: "/jobs-and-careers/career-sectors/7953-uk-graduates-flock-to-china-for-job-opportunities",
+        category: "International",
+        difficulty: "Graduate Level",
+        featured: true
+    },
+    {
+        title: "UK employers could be breaking the law over interns' pay",
+        description: "Important information about intern rights and workplace legislation that affects students and recent graduates.",
+        url: "/jobs-and-careers/career-sectors/7982-uk-employers-could-be-breaking-the-law-over-interns-pay",
+        category: "Workplace Rights",
+        difficulty: "All Levels",
+        featured: true
+    },
+    {
+        title: "Employers and employees work together through economic challenges",
+        description: "Understanding how economic trends affect employment and career opportunities in today's job market.",
+        url: "/jobs-and-careers/career-sectors/7945-employers-and-employees-work-together-through-the-recession",
+        category: "Economic Insights",
+        difficulty: "All Levels",
+        featured: false
+    },
+    {
+        title: "New hotel development at London Luton Airport",
+        description: "Industry news and development opportunities in the hospitality and construction sectors.",
+        url: "/jobs-and-careers/career-sectors/8007-ramesh-dewan-to-build-new-hotel-at-luton-airport",
+        category: "Industry News",
+        difficulty: "All Levels",
+        featured: false
+    }
+];
+
+const categories = [
+    { name: "Legal", count: 1, color: "bg-blue-100 text-blue-800" },
+    { name: "International", count: 1, color: "bg-green-100 text-green-800" },
+    { name: "Workplace Rights", count: 1, color: "bg-red-100 text-red-800" },
+    { name: "Economic Insights", count: 1, color: "bg-yellow-100 text-yellow-800" },
+    { name: "Industry News", count: 1, color: "bg-purple-100 text-purple-800" }
+];
+---
+
+<Layout 
+    title="Career Sectors - Explore Different Career Paths"
+    description="Discover career opportunities across various industries and sectors. Get expert guidance on different career paths and what it takes to succeed."
+    keywords="career sectors, career paths, job opportunities, career guidance, industry careers, professional development"
+    section="jobs-and-careers"
+>
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+                    Career Sectors
+                </h1>
+                <p class="text-xl text-purple-100 max-w-3xl mx-auto">
+                    Explore different career paths and discover what it takes to succeed in various industries. From legal careers to international opportunities, find your perfect match.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-gray-50 py-4" aria-label="Breadcrumb">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-sm text-gray-600">
+                <li>
+                    <a href="/" class="hover:text-purple-600 transition-colors">Home</a>
+                </li>
+                <li>
+                    <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </li>
+                <li>
+                    <a href="/jobs-and-careers" class="hover:text-purple-600 transition-colors">Jobs and Careers</a>
+                </li>
+                <li>
+                    <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </li>
+                <li class="text-gray-900 font-medium">Career Sectors</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-gray-50 rounded-lg p-6 mb-8">
+                        <h2 class="text-lg font-semibold text-gray-900 mb-4">Browse by Category</h2>
+                        <div class="space-y-2">
+                            {categories.map((category) => (
+                                <button class="w-full text-left px-3 py-2 rounded-md hover:bg-gray-200 transition-colors flex items-center justify-between">
+                                    <span class="text-gray-700">{category.name}</span>
+                                    <span class={`px-2 py-1 rounded-full text-xs font-medium ${category.color}`}>
+                                        {category.count}
+                                    </span>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <h2 class="text-lg font-semibold text-gray-900 mb-4">Quick Links</h2>
+                        <div class="space-y-3">
+                            <a href="/jobs-and-careers/job-search" class="block text-purple-600 hover:text-purple-700 transition-colors">
+                                Job Search Resources
+                            </a>
+                            <a href="/jobs-and-careers/job-search/7651-job-vacancy-form" class="block text-purple-600 hover:text-purple-700 transition-colors">
+                                Register for Job Opportunities
+                            </a>
+                            <a href="/student-advice" class="block text-purple-600 hover:text-purple-700 transition-colors">
+                                Student Advice
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="lg:col-span-3">
+                    <!-- Featured Articles -->
+                    <div class="mb-12">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">Featured Career Articles</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {careerArticles.filter(article => article.featured).map((article) => (
+                                <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden">
+                                    <div class="p-6">
+                                        <div class="flex items-center justify-between mb-3">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                                                {article.category}
+                                            </span>
+                                            <span class="text-sm text-gray-500">{article.difficulty}</span>
+                                        </div>
+                                        <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-purple-600 transition-colors">
+                                            <a href={article.url}>{article.title}</a>
+                                        </h3>
+                                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">{article.description}</p>
+                                        <a 
+                                            href={article.url}
+                                            class="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium text-sm"
+                                        >
+                                            Read Article
+                                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+
+                    <!-- All Articles -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">All Career Articles</h2>
+                        <div class="space-y-6">
+                            {careerArticles.map((article, index) => (
+                                <article class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6 border border-gray-200">
+                                    <div class="flex items-start justify-between">
+                                        <div class="flex-1 min-w-0">
+                                            <div class="flex items-center mb-2">
+                                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800 mr-3">
+                                                    {article.category}
+                                                </span>
+                                                <span class="text-sm text-gray-500">{article.difficulty}</span>
+                                            </div>
+                                            <h3 class="text-lg font-semibold text-gray-900 mb-2 hover:text-purple-600 transition-colors">
+                                                <a href={article.url}>{article.title}</a>
+                                            </h3>
+                                            <p class="text-gray-600 text-sm mb-4">{article.description}</p>
+                                            <a 
+                                                href={article.url}
+                                                class="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium text-sm"
+                                            >
+                                                Read Full Article
+                                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="ml-4 flex-shrink-0">
+                                            <span class="inline-flex items-center justify-center w-8 h-8 bg-purple-100 text-purple-600 rounded-full text-sm font-medium">
+                                                {index + 1}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </article>
+                            ))}
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="mt-12 flex justify-center">
+                        <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <span class="sr-only">Previous</span>
+                                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                1
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-purple-50 text-sm font-medium text-purple-600">
+                                2
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                                3
+                            </a>
+                            <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                <span class="sr-only">Next</span>
+                                <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-12 bg-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">
+                Ready to Start Your Career Journey?
+            </h2>
+            <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                Get personalized career guidance and connect with employers looking for talented graduates like you.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                    href="/jobs-and-careers/job-search/7651-job-vacancy-form"
+                    class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
+                >
+                    Register for Job Opportunities
+                </a>
+                <a 
+                    href="/jobs-and-careers/job-search"
+                    class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                    Browse Job Search Resources
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+</style>

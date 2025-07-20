@@ -1,0 +1,604 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="UK City Guide - Courses & Careers">
+  <div class="bg-gradient-to-br from-red-50 to-rose-100 min-h-screen">
+    <!-- Header Section -->
+    <div class="bg-red-600 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">UK City Guide</h1>
+          <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto">
+            Discover the best student cities in the UK, from living costs to nightlife and career opportunities
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white py-4 border-b">
+      <div class="container mx-auto px-4">
+        <nav class="text-sm text-gray-600">
+          <a href="/" class="hover:text-red-600">Home</a>
+          <span class="mx-2">></span>
+          <a href="/student-advice" class="hover:text-red-600">Student Advice</a>
+          <span class="mx-2">></span>
+          <span class="text-red-600">UK City Guide</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-lg text-gray-700 mb-8">
+            Choosing where to study is one of the most important decisions you'll make as a student. From historic university towns to vibrant metropolitan cities, the UK offers diverse experiences for every type of student.
+          </p>
+          
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-red-600 mb-4">City Selection Factors</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div class="text-center">
+                <div class="bg-red-100 rounded-lg p-4 mb-2">
+                  <svg class="w-8 h-8 text-red-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <p class="text-gray-600 font-semibold">Location</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-red-100 rounded-lg p-4 mb-2">
+                  <svg class="w-8 h-8 text-red-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                  </svg>
+                </div>
+                <p class="text-gray-600 font-semibold">Cost of Living</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-red-100 rounded-lg p-4 mb-2">
+                  <svg class="w-8 h-8 text-red-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                  </svg>
+                </div>
+                <p class="text-gray-600 font-semibold">Universities</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-red-100 rounded-lg p-4 mb-2">
+                  <svg class="w-8 h-8 text-red-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293H15M9 10V9a4 4 0 118 0v1M9 10v10a1 1 0 001 1h4a1 1 0 001-1V10"></path>
+                  </svg>
+                </div>
+                <p class="text-gray-600 font-semibold">Nightlife</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Student Cities -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">Top Student Cities</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- London -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white p-6">
+              <h3 class="text-2xl font-bold mb-2">London</h3>
+              <p class="text-red-100">The UK's capital and largest student city</p>
+            </div>
+            <div class="p-6">
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">£18,000</div>
+                  <div class="text-sm text-gray-600">Annual Living Cost</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">40+</div>
+                  <div class="text-sm text-gray-600">Universities</div>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">World-class universities</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Excellent career opportunities</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Incredible cultural diversity</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-red-500 mr-2">✗</span>
+                  <span class="text-gray-700">High cost of living</span>
+                </div>
+              </div>
+              <div class="mt-6">
+                <a href="/student-advice/uk-city-guide/london" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300 inline-block">
+                  Explore London
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Manchester -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white p-6">
+              <h3 class="text-2xl font-bold mb-2">Manchester</h3>
+              <p class="text-red-100">Vibrant northern city with rich culture</p>
+            </div>
+            <div class="p-6">
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">£12,000</div>
+                  <div class="text-sm text-gray-600">Annual Living Cost</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">5</div>
+                  <div class="text-sm text-gray-600">Universities</div>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Affordable living costs</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Amazing nightlife</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Strong music scene</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Great transport links</span>
+                </div>
+              </div>
+              <div class="mt-6">
+                <a href="/student-advice/uk-city-guide/manchester" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300 inline-block">
+                  Explore Manchester
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Birmingham -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white p-6">
+              <h3 class="text-2xl font-bold mb-2">Birmingham</h3>
+              <p class="text-red-100">UK's second-largest city</p>
+            </div>
+            <div class="p-6">
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">£11,500</div>
+                  <div class="text-sm text-gray-600">Annual Living Cost</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">5</div>
+                  <div class="text-sm text-gray-600">Universities</div>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Central location</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Diverse communities</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Growing job market</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Excellent shopping</span>
+                </div>
+              </div>
+              <div class="mt-6">
+                <a href="/student-advice/uk-city-guide/birmingham" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300 inline-block">
+                  Explore Birmingham
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Edinburgh -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white p-6">
+              <h3 class="text-2xl font-bold mb-2">Edinburgh</h3>
+              <p class="text-red-100">Scotland's historic capital</p>
+            </div>
+            <div class="p-6">
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">£13,500</div>
+                  <div class="text-sm text-gray-600">Annual Living Cost</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">4</div>
+                  <div class="text-sm text-gray-600">Universities</div>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Beautiful historic city</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">World-famous festivals</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Prestigious universities</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-red-500 mr-2">✗</span>
+                  <span class="text-gray-700">Can be expensive</span>
+                </div>
+              </div>
+              <div class="mt-6">
+                <a href="/student-advice/uk-city-guide/edinburgh" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300 inline-block">
+                  Explore Edinburgh
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Liverpool -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white p-6">
+              <h3 class="text-2xl font-bold mb-2">Liverpool</h3>
+              <p class="text-red-100">City of music and culture</p>
+            </div>
+            <div class="p-6">
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">£10,500</div>
+                  <div class="text-sm text-gray-600">Annual Living Cost</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">3</div>
+                  <div class="text-sm text-gray-600">Universities</div>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Very affordable</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Rich musical heritage</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Friendly locals</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">UNESCO World Heritage</span>
+                </div>
+              </div>
+              <div class="mt-6">
+                <a href="/student-advice/uk-city-guide/liverpool" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300 inline-block">
+                  Explore Liverpool
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bristol -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white p-6">
+              <h3 class="text-2xl font-bold mb-2">Bristol</h3>
+              <p class="text-red-100">Creative and innovative city</p>
+            </div>
+            <div class="p-6">
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">£14,000</div>
+                  <div class="text-sm text-gray-600">Annual Living Cost</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-red-600">2</div>
+                  <div class="text-sm text-gray-600">Universities</div>
+                </div>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Creative atmosphere</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Great tech scene</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Close to countryside</span>
+                </div>
+                <div class="flex items-center">
+                  <span class="text-green-500 mr-2">✓</span>
+                  <span class="text-gray-700">Strong graduate employment</span>
+                </div>
+              </div>
+              <div class="mt-6">
+                <a href="/student-advice/uk-city-guide/bristol" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300 inline-block">
+                  Explore Bristol
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost Comparison -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">Cost of Living Comparison</h2>
+        
+        <div class="max-w-6xl mx-auto">
+          <div class="bg-red-50 rounded-lg p-8">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b border-red-200">
+                    <th class="text-left py-4 px-6 text-red-600 font-bold">City</th>
+                    <th class="text-left py-4 px-6 text-red-600 font-bold">Accommodation</th>
+                    <th class="text-left py-4 px-6 text-red-600 font-bold">Food & Drink</th>
+                    <th class="text-left py-4 px-6 text-red-600 font-bold">Transport</th>
+                    <th class="text-left py-4 px-6 text-red-600 font-bold">Total Monthly</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-red-100">
+                    <td class="py-4 px-6 font-semibold">London</td>
+                    <td class="py-4 px-6">£800-£1,200</td>
+                    <td class="py-4 px-6">£300-£450</td>
+                    <td class="py-4 px-6">£150-£200</td>
+                    <td class="py-4 px-6 font-bold text-red-600">£1,500</td>
+                  </tr>
+                  <tr class="border-b border-red-100">
+                    <td class="py-4 px-6 font-semibold">Manchester</td>
+                    <td class="py-4 px-6">£400-£600</td>
+                    <td class="py-4 px-6">£250-£350</td>
+                    <td class="py-4 px-6">£50-£80</td>
+                    <td class="py-4 px-6 font-bold text-red-600">£1,000</td>
+                  </tr>
+                  <tr class="border-b border-red-100">
+                    <td class="py-4 px-6 font-semibold">Birmingham</td>
+                    <td class="py-4 px-6">£350-£550</td>
+                    <td class="py-4 px-6">£240-£320</td>
+                    <td class="py-4 px-6">£60-£90</td>
+                    <td class="py-4 px-6 font-bold text-red-600">£960</td>
+                  </tr>
+                  <tr class="border-b border-red-100">
+                    <td class="py-4 px-6 font-semibold">Edinburgh</td>
+                    <td class="py-4 px-6">£450-£700</td>
+                    <td class="py-4 px-6">£280-£380</td>
+                    <td class="py-4 px-6">£40-£70</td>
+                    <td class="py-4 px-6 font-bold text-red-600">£1,125</td>
+                  </tr>
+                  <tr class="border-b border-red-100">
+                    <td class="py-4 px-6 font-semibold">Liverpool</td>
+                    <td class="py-4 px-6">£300-£500</td>
+                    <td class="py-4 px-6">£220-£300</td>
+                    <td class="py-4 px-6">£40-£60</td>
+                    <td class="py-4 px-6 font-bold text-red-600">£875</td>
+                  </tr>
+                  <tr>
+                    <td class="py-4 px-6 font-semibold">Bristol</td>
+                    <td class="py-4 px-6">£500-£750</td>
+                    <td class="py-4 px-6">£270-£370</td>
+                    <td class="py-4 px-6">£50-£80</td>
+                    <td class="py-4 px-6 font-bold text-red-600">£1,167</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- University Towns -->
+    <section class="py-16 bg-red-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">Classic University Towns</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Oxford -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Oxford</h3>
+            <p class="text-gray-600 mb-4">Historic university city with world-renowned institutions</p>
+            <div class="text-2xl font-bold text-red-600 mb-2">£13,000</div>
+            <p class="text-sm text-gray-600 mb-6">Annual living cost</p>
+            <a href="/student-advice/uk-city-guide/oxford" class="text-red-600 hover:text-red-800 transition duration-300">Learn More</a>
+          </div>
+
+          <!-- Cambridge -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Cambridge</h3>
+            <p class="text-gray-600 mb-4">Academic excellence in a picturesque setting</p>
+            <div class="text-2xl font-bold text-red-600 mb-2">£12,500</div>
+            <p class="text-sm text-gray-600 mb-6">Annual living cost</p>
+            <a href="/student-advice/uk-city-guide/cambridge" class="text-red-600 hover:text-red-800 transition duration-300">Learn More</a>
+          </div>
+
+          <!-- Bath -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Bath</h3>
+            <p class="text-gray-600 mb-4">Beautiful Georgian city with excellent universities</p>
+            <div class="text-2xl font-bold text-red-600 mb-2">£11,800</div>
+            <p class="text-sm text-gray-600 mb-6">Annual living cost</p>
+            <a href="/student-advice/uk-city-guide/bath" class="text-red-600 hover:text-red-800 transition duration-300">Learn More</a>
+          </div>
+
+          <!-- York -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3a2 2 0 002 2h4a2 2 0 002-2v-3M8 14l4-4 4 4M8 14l-2-2m6 2l2-2"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">York</h3>
+            <p class="text-gray-600 mb-4">Medieval city with modern student facilities</p>
+            <div class="text-2xl font-bold text-red-600 mb-2">£10,500</div>
+            <p class="text-sm text-gray-600 mb-6">Annual living cost</p>
+            <a href="/student-advice/uk-city-guide/york" class="text-red-600 hover:text-red-800 transition duration-300">Learn More</a>
+          </div>
+
+          <!-- Canterbury -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Canterbury</h3>
+            <p class="text-gray-600 mb-4">Historic cathedral city with vibrant student life</p>
+            <div class="text-2xl font-bold text-red-600 mb-2">£9,800</div>
+            <p class="text-sm text-gray-600 mb-6">Annual living cost</p>
+            <a href="/student-advice/uk-city-guide/canterbury" class="text-red-600 hover:text-red-800 transition duration-300">Learn More</a>
+          </div>
+
+          <!-- Durham -->
+          <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+            <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Durham</h3>
+            <p class="text-gray-600 mb-4">Prestigious university in a stunning setting</p>
+            <div class="text-2xl font-bold text-red-600 mb-2">£10,200</div>
+            <p class="text-sm text-gray-600 mb-6">Annual living cost</p>
+            <a href="/student-advice/uk-city-guide/durham" class="text-red-600 hover:text-red-800 transition duration-300">Learn More</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- City Selection Quiz -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-red-600 mb-8">Find Your Perfect Student City</h2>
+          <p class="text-lg text-gray-700 mb-8">
+            Not sure which city is right for you? Take our interactive quiz to discover your ideal student destination.
+          </p>
+          
+          <div class="bg-red-50 rounded-lg p-8 mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">What matters most to you?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <input type="checkbox" id="affordable" class="mr-3 text-red-600">
+                  <label for="affordable" class="text-gray-700">Affordable cost of living</label>
+                </div>
+                <div class="flex items-center">
+                  <input type="checkbox" id="nightlife" class="mr-3 text-red-600">
+                  <label for="nightlife" class="text-gray-700">Vibrant nightlife scene</label>
+                </div>
+                <div class="flex items-center">
+                  <input type="checkbox" id="career" class="mr-3 text-red-600">
+                  <label for="career" class="text-gray-700">Career opportunities</label>
+                </div>
+                <div class="flex items-center">
+                  <input type="checkbox" id="culture" class="mr-3 text-red-600">
+                  <label for="culture" class="text-gray-700">Cultural attractions</label>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <input type="checkbox" id="transport" class="mr-3 text-red-600">
+                  <label for="transport" class="text-gray-700">Good transport links</label>
+                </div>
+                <div class="flex items-center">
+                  <input type="checkbox" id="historic" class="mr-3 text-red-600">
+                  <label for="historic" class="text-gray-700">Historic architecture</label>
+                </div>
+                <div class="flex items-center">
+                  <input type="checkbox" id="diversity" class="mr-3 text-red-600">
+                  <label for="diversity" class="text-gray-700">Diverse community</label>
+                </div>
+                <div class="flex items-center">
+                  <input type="checkbox" id="countryside" class="mr-3 text-red-600">
+                  <label for="countryside" class="text-gray-700">Access to countryside</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <a href="/student-advice/uk-city-guide/city-quiz" class="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition duration-300 text-lg font-semibold">
+            Find My Perfect City
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</Layout>
+
+<style>
+  /* Red color scheme styling */
+  .bg-red-gradient {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  }
+  
+  .text-red-primary {
+    color: #dc2626;
+  }
+  
+  .border-red-primary {
+    border-color: #dc2626;
+  }
+  
+  /* Hover effects */
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Card styling */
+  .card-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card-shadow:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+</style>

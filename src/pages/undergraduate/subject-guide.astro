@@ -1,0 +1,333 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Undergraduate Subject Guide - Degree Course Information";
+const description = "Browse comprehensive guides to undergraduate subjects and degree courses. Find detailed information about accountancy, business, engineering, and more degree options.";
+const keywords = "undergraduate subjects, degree courses, subject guides, accountancy, business, engineering, university courses";
+---
+
+<Layout 
+	title={title}
+	description={description}
+	keywords={keywords}
+	section="undergraduate"
+>
+	<!-- Breadcrumb Navigation -->
+	<nav class="bg-gray-100 py-4">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-gray-500 hover:text-orange-600">Home</a></li>
+				<li class="text-gray-400">/</li>
+				<li><a href="/undergraduate" class="text-gray-500 hover:text-orange-600">Undergraduate</a></li>
+				<li class="text-gray-400">/</li>
+				<li class="text-orange-600 font-medium">Subject Guide</li>
+			</ol>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-orange-600 to-orange-700 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Undergraduate Subject Guide
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 text-orange-100">
+					Comprehensive guides to degree courses and university subjects
+				</p>
+				<div class="max-w-2xl mx-auto">
+					<div class="bg-white rounded-lg p-4 shadow-lg">
+						<input 
+							type="text" 
+							placeholder="Search subjects, courses, or topics..."
+							class="w-full px-4 py-2 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Subject Categories -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Popular Subject Areas</h2>
+				<p class="text-xl text-gray-600">Explore guides for the most popular undergraduate subjects</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<!-- Accountancy -->
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+							<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 ml-3">Accountancy & Finance</h3>
+					</div>
+					<p class="text-gray-600 mb-4">Comprehensive guides to accounting and finance degree courses, career prospects, and professional qualifications.</p>
+					<a href="/undergraduate/subject-guide/7107-accountancy-courses-how-to-choose.html" class="text-orange-600 font-medium hover:text-orange-700">
+						Explore Accountancy Courses →
+					</a>
+				</div>
+
+				<!-- Business -->
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+							<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 ml-3">Business Studies</h3>
+					</div>
+					<p class="text-gray-600 mb-4">Discover business degree options, from management to entrepreneurship, with insights into UK business schools.</p>
+					<a href="/undergraduate/subject-guide/7114-business-courses-in-the-uk.html" class="text-orange-600 font-medium hover:text-orange-700">
+						Explore Business Courses →
+					</a>
+				</div>
+
+				<!-- Engineering -->
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+							<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 ml-3">Engineering</h3>
+					</div>
+					<p class="text-gray-600 mb-4">Explore engineering disciplines from civil to aerospace, with course information and career pathways.</p>
+					<a href="/undergraduate/subject-guide/7126-engineering-courses-in-the-uk.html" class="text-orange-600 font-medium hover:text-orange-700">
+						Explore Engineering Courses →
+					</a>
+				</div>
+
+				<!-- Creative Arts -->
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+							<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0V1a1 1 0 011-1h2a1 1 0 011 1v3M7 4H5a1 1 0 00-1 1v16a1 1 0 001 1h14a1 1 0 001-1V5a1 1 0 00-1-1h-2M7 4h10M9 9h6m-6 4h6m-6 4h6"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 ml-3">Creative Arts</h3>
+					</div>
+					<p class="text-gray-600 mb-4">Discover creative degree options including photography, painting, and design through flexible learning.</p>
+					<a href="/undergraduate/subject-guide/7979-flexible-photography-and-painting-degrees-now-available-via-distance-learning.html" class="text-orange-600 font-medium hover:text-orange-700">
+						Explore Creative Arts Courses →
+					</a>
+				</div>
+
+				<!-- Sports Science -->
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+							<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 ml-3">Sports Science</h3>
+					</div>
+					<p class="text-gray-600 mb-4">Learn about sports science degrees, including exciting opportunities through programs like Nike Select.</p>
+					<a href="/undergraduate/subject-guide/7950-nike-select-girls-change-the-face-of-uk-university-sport.html" class="text-orange-600 font-medium hover:text-orange-700">
+						Explore Sports Science Courses →
+					</a>
+				</div>
+
+				<!-- Academic Updates -->
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+							<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 ml-3">Academic Updates</h3>
+					</div>
+					<p class="text-gray-600 mb-4">Stay informed with the latest developments in higher education, funding, and academic achievements.</p>
+					<a href="/undergraduate/subject-guide/7943-government-makes-university-budget-cuts-but-science-students-wont-lose-out.html" class="text-orange-600 font-medium hover:text-orange-700">
+						Read Latest Updates →
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- All Articles -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">All Subject Guide Articles</h2>
+				<p class="text-xl text-gray-600">Browse our complete collection of undergraduate subject guides</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<!-- Article 1 -->
+				<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<div class="flex items-center mb-2">
+							<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Accountancy</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">
+							<a href="/undergraduate/subject-guide/7107-accountancy-courses-how-to-choose.html" class="hover:text-orange-600">
+								Accountancy Courses - How to Choose
+							</a>
+						</h3>
+						<p class="text-gray-600 mb-4">The AAT and ACCA explain the myths created around accountancy courses and the career of an accountant.</p>
+						<a href="/undergraduate/subject-guide/7107-accountancy-courses-how-to-choose.html" class="text-orange-600 font-medium hover:text-orange-700">
+							Read More →
+						</a>
+					</div>
+				</article>
+
+				<!-- Article 2 -->
+				<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<div class="flex items-center mb-2">
+							<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Business</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">
+							<a href="/undergraduate/subject-guide/7114-business-courses-in-the-uk.html" class="hover:text-orange-600">
+								Business Courses in the UK
+							</a>
+						</h3>
+						<p class="text-gray-600 mb-4">Comprehensive guide to business degree options and career opportunities in the UK.</p>
+						<a href="/undergraduate/subject-guide/7114-business-courses-in-the-uk.html" class="text-orange-600 font-medium hover:text-orange-700">
+							Read More →
+						</a>
+					</div>
+				</article>
+
+				<!-- Article 3 -->
+				<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<div class="flex items-center mb-2">
+							<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Engineering</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">
+							<a href="/undergraduate/subject-guide/7126-engineering-courses-in-the-uk.html" class="hover:text-orange-600">
+								Engineering Courses in the UK
+							</a>
+						</h3>
+						<p class="text-gray-600 mb-4">Explore engineering disciplines and find the right degree program for your career goals.</p>
+						<a href="/undergraduate/subject-guide/7126-engineering-courses-in-the-uk.html" class="text-orange-600 font-medium hover:text-orange-700">
+							Read More →
+						</a>
+					</div>
+				</article>
+
+				<!-- Article 4 -->
+				<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<div class="flex items-center mb-2">
+							<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Policy</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">
+							<a href="/undergraduate/subject-guide/7943-government-makes-university-budget-cuts-but-science-students-wont-lose-out.html" class="hover:text-orange-600">
+								University Budget Cuts - Science Students Won't Lose Out
+							</a>
+						</h3>
+						<p class="text-gray-600 mb-4">Government makes university budget cuts but science students won't lose out.</p>
+						<a href="/undergraduate/subject-guide/7943-government-makes-university-budget-cuts-but-science-students-wont-lose-out.html" class="text-orange-600 font-medium hover:text-orange-700">
+							Read More →
+						</a>
+					</div>
+				</article>
+
+				<!-- Article 5 -->
+				<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<div class="flex items-center mb-2">
+							<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Sports</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">
+							<a href="/undergraduate/subject-guide/7950-nike-select-girls-change-the-face-of-uk-university-sport.html" class="hover:text-orange-600">
+								Nike Select Girls Change UK University Sport
+							</a>
+						</h3>
+						<p class="text-gray-600 mb-4">Nike Select girls change the face of UK university sport with innovative programs.</p>
+						<a href="/undergraduate/subject-guide/7950-nike-select-girls-change-the-face-of-uk-university-sport.html" class="text-orange-600 font-medium hover:text-orange-700">
+							Read More →
+						</a>
+					</div>
+				</article>
+
+				<!-- Article 6 -->
+				<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<div class="flex items-center mb-2">
+							<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Sports</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">
+							<a href="/undergraduate/subject-guide/7951-a-year-in-the-life-of-the-nike-selects.html" class="hover:text-orange-600">
+								A Year in the Life of the Nike Selects
+							</a>
+						</h3>
+						<p class="text-gray-600 mb-4">Follow the journey of elite student athletes through their transformative year.</p>
+						<a href="/undergraduate/subject-guide/7951-a-year-in-the-life-of-the-nike-selects.html" class="text-orange-600 font-medium hover:text-orange-700">
+							Read More →
+						</a>
+					</div>
+				</article>
+
+				<!-- Article 7 -->
+				<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<div class="flex items-center mb-2">
+							<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Sports</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">
+							<a href="/undergraduate/subject-guide/7952-are-you-up-for-the-nike-challenge.html" class="hover:text-orange-600">
+								Are You Up for the Nike Challenge?
+							</a>
+						</h3>
+						<p class="text-gray-600 mb-4">Learn about exciting opportunities available through the Nike Challenge program.</p>
+						<a href="/undergraduate/subject-guide/7952-are-you-up-for-the-nike-challenge.html" class="text-orange-600 font-medium hover:text-orange-700">
+							Read More →
+						</a>
+					</div>
+				</article>
+
+				<!-- Article 8 -->
+				<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<div class="flex items-center mb-2">
+							<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Creative Arts</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">
+							<a href="/undergraduate/subject-guide/7979-flexible-photography-and-painting-degrees-now-available-via-distance-learning.html" class="hover:text-orange-600">
+								Flexible Photography and Painting Degrees via Distance Learning
+							</a>
+						</h3>
+						<p class="text-gray-600 mb-4">Flexible photography and painting degrees now available via distance learning.</p>
+						<a href="/undergraduate/subject-guide/7979-flexible-photography-and-painting-degrees-now-available-via-distance-learning.html" class="text-orange-600 font-medium hover:text-orange-700">
+							Read More →
+						</a>
+					</div>
+				</article>
+
+				<!-- Article 9 -->
+				<article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<div class="flex items-center mb-2">
+							<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Academic</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">
+							<a href="/undergraduate/subject-guide/8003-students-achieve-record-pass-rate-for-scottish-highers.html" class="hover:text-orange-600">
+								Students Achieve Record Pass Rate for Scottish Highers
+							</a>
+						</h3>
+						<p class="text-gray-600 mb-4">Students achieve record pass rate for Scottish Highers with excellent results.</p>
+						<a href="/undergraduate/subject-guide/8003-students-achieve-record-pass-rate-for-scottish-highers.html" class="text-orange-600 font-medium hover:text-orange-700">
+							Read More →
+						</a>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+</Layout>

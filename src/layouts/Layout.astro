@@ -1,0 +1,293 @@
+---
+import '../styles/minimal.css';
+import FaviconMeta from '../components/FaviconMeta.astro';
+import Analytics from '../components/Analytics.astro';
+import CookieManager from '../components/CookieManager.astro';
+import StructuredData from '../components/StructuredData.astro';
+// Breadcrumb removed
+import { getCanonicalUrl } from '../utils/seo.js';
+
+export interface Props {
+	title: string;
+	description?: string;
+	keywords?: string;
+	ogImage?: string;
+	canonicalURL?: string;
+	section?: string;
+	showBreadcrumbs?: boolean;
+	structuredData?: {
+		type?: string;
+		article?: any;
+		university?: any;
+		course?: any;
+		job?: any;
+	};
+}
+
+const { 
+	title, 
+	description = "Courses and Careers - UK's leading guide to university courses, college programs, and career opportunities",
+	keywords = "university courses, college programs, career advice, UK education, further education, undergraduate, postgraduate",
+	ogImage = "/images/og-image.jpg",
+	canonicalURL = getCanonicalUrl(Astro.url.pathname),
+	section = "",
+	showBreadcrumbs = true,
+	structuredData = {}
+} = Astro.props;
+
+const currentYear = new Date().getFullYear();
+---
+
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="generator" content={Astro.generator} />
+	<meta name="robots" content="index, follow" />
+	<meta name="description" content={description} />
+	<meta name="keywords" content={keywords} />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={Astro.url} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:image" content={ogImage} />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content={Astro.url} />
+	<meta property="twitter:title" content={title} />
+	<meta property="twitter:description" content={description} />
+	<meta property="twitter:image" content={ogImage} />
+
+	<title>{title}</title>
+	<link rel="canonical" href={canonicalURL} />
+	
+	<!-- Sitemap -->
+	<link rel="sitemap" href="/sitemap.xml" type="application/xml" title="Sitemap" />
+	
+	<!-- RSS Feeds -->
+	<link href="/rss.xml" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+	<link href="/atom.xml" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+	
+	<FaviconMeta />
+	
+	<!-- Structured Data -->
+	<StructuredData 
+		url={Astro.url.pathname}
+		title={title}
+		description={description}
+		{...structuredData}
+	/>
+	
+	<!-- Analytics Configuration -->
+	<Analytics 
+		ga4={{ measurementId: "G-XXXXXXXXXX" }}
+		matomo={{ url: "https://analytics.courses-careers.com/", siteId: "1" }}
+		hubspot={{ portalId: "XXXXXXXX" }}
+		intercom={{ appId: "xxxxxxxx" }}
+		optimizely={{ projectId: "XXXXXXXXX" }}
+	/>
+	
+	<!-- Ensure navbar is flush with top -->
+	<style>
+		/* Reset to ensure no space above navbar */
+		html {
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+		
+		/* Ensure header is flush with top of viewport */
+		body > header:first-child {
+			margin: 0;
+			padding: 0;
+			position: relative;
+		}
+		
+		/* Hide noscript elements that might cause spacing */
+		noscript {
+			display: none;
+		}
+	</style>
+</head>
+
+<body class="min-h-screen bg-white flex flex-col">
+	<!-- Header -->
+	<header class="bg-black shadow-lg border-b border-gray-700 relative">
+		<!-- Skip to content link - positioned within header for proper z-index -->
+		<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50">
+			Skip to main content
+		</a>
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between h-16 lg:h-20">
+				<!-- Logo -->
+				<div class="flex-shrink-0">
+					<a href="/" class="flex items-center">
+						<img 
+							src="/images/header/cc_logo.png" 
+							alt="Courses & Careers" 
+							class="h-10 lg:h-12 w-auto"
+						/>
+					</a>
+				</div>
+
+				<!-- Desktop Navigation -->
+				<nav class="hidden lg:flex lg:items-center lg:space-x-8" aria-label="Main navigation">
+					<a href="/further-education" class="text-white hover:text-green-400 px-3 py-2 text-sm font-medium transition-colors">
+						Further Education
+					</a>
+					<a href="/undergraduate" class="text-white hover:text-orange-400 px-3 py-2 text-sm font-medium transition-colors">
+						Undergraduate
+					</a>
+					<a href="/postgraduate" class="text-white hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors">
+						Postgraduate
+					</a>
+					<a href="/jobs-and-careers" class="text-white hover:text-purple-400 px-3 py-2 text-sm font-medium transition-colors">
+						Jobs & Careers
+					</a>
+					<a href="/student-advice" class="text-white hover:text-red-400 px-3 py-2 text-sm font-medium transition-colors">
+						Student Advice
+					</a>
+				</nav>
+
+				<!-- Mobile menu button -->
+				<button type="button" class="lg:hidden p-2 rounded-md text-white hover:text-gray-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400" aria-expanded="false" id="mobile-menu-button">
+					<span class="sr-only">Open main menu</span>
+					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<!-- Mobile Navigation -->
+		<div class="lg:hidden hidden" id="mobile-menu">
+			<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black border-t border-gray-700">
+				<a href="/further-education" class="block px-3 py-2 text-base font-medium text-white hover:text-green-400 hover:bg-gray-800 rounded-md">
+					Further Education
+				</a>
+				<a href="/undergraduate" class="block px-3 py-2 text-base font-medium text-white hover:text-orange-400 hover:bg-gray-800 rounded-md">
+					Undergraduate
+				</a>
+				<a href="/postgraduate" class="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 hover:bg-gray-800 rounded-md">
+					Postgraduate
+				</a>
+				<a href="/jobs-and-careers" class="block px-3 py-2 text-base font-medium text-white hover:text-purple-400 hover:bg-gray-800 rounded-md">
+					Jobs & Careers
+				</a>
+				<a href="/student-advice" class="block px-3 py-2 text-base font-medium text-white hover:text-red-400 hover:bg-gray-800 rounded-md">
+					Student Advice
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<main id="main-content" class="flex-grow">
+		<slot />
+	</main>
+
+	<!-- Footer -->
+	<footer class="bg-gray-900 text-white mt-auto">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+				<!-- Further Education -->
+				<div>
+					<h3 class="text-green-400 font-semibold mb-4">Further Education</h3>
+					<ul class="space-y-2 text-sm">
+						<li><a href="/further-education/subject-guide" class="text-gray-300 hover:text-green-400 transition-colors">Subject Guide</a></li>
+						<li><a href="/further-education/college-profiles" class="text-gray-300 hover:text-green-400 transition-colors">College Profiles</a></li>
+					</ul>
+				</div>
+
+				<!-- Undergraduate -->
+				<div>
+					<h3 class="text-orange-400 font-semibold mb-4">Undergraduate</h3>
+					<ul class="space-y-2 text-sm">
+						<li><a href="/undergraduate/subject-guide" class="text-gray-300 hover:text-orange-400 transition-colors">Subject Guide</a></li>
+						<li><a href="/undergraduate/university-profiles" class="text-gray-300 hover:text-orange-400 transition-colors">University Profiles</a></li>
+					</ul>
+				</div>
+
+				<!-- Postgraduate -->
+				<div>
+					<h3 class="text-blue-400 font-semibold mb-4">Postgraduate</h3>
+					<ul class="space-y-2 text-sm">
+						<li><a href="/postgraduate/subject-guide" class="text-gray-300 hover:text-blue-400 transition-colors">Subject Guide</a></li>
+						<li><a href="/postgraduate/university-profiles" class="text-gray-300 hover:text-blue-400 transition-colors">University Profiles</a></li>
+						<li><a href="/postgraduate/mba-courses" class="text-gray-300 hover:text-blue-400 transition-colors">MBA Courses</a></li>
+					</ul>
+				</div>
+
+				<!-- Jobs & Careers -->
+				<div>
+					<h3 class="text-purple-400 font-semibold mb-4">Jobs & Careers</h3>
+					<ul class="space-y-2 text-sm">
+						<li><a href="/jobs-and-careers/career-sectors" class="text-gray-300 hover:text-purple-400 transition-colors">Career Sectors</a></li>
+						<li><a href="/jobs-and-careers/job-search" class="text-gray-300 hover:text-purple-400 transition-colors">Job Search</a></li>
+					</ul>
+				</div>
+
+				<!-- Student Advice -->
+				<div>
+					<h3 class="text-red-400 font-semibold mb-4">Student Advice</h3>
+					<ul class="space-y-2 text-sm">
+						<li><a href="/student-advice/student-finance" class="text-gray-300 hover:text-red-400 transition-colors">Student Finance</a></li>
+						<li><a href="/student-advice/uk-city-guide" class="text-gray-300 hover:text-red-400 transition-colors">UK City Guide</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Bottom Footer -->
+			<div class="mt-8 pt-8 border-t border-gray-800">
+				<div class="flex flex-col md:flex-row justify-between items-center">
+					<div class="text-sm text-gray-400">
+						<p>&copy; {currentYear} BigChoice Group Ltd. All rights reserved.</p>
+					</div>
+					<div class="flex space-x-6 mt-4 md:mt-0">
+						<a href="/privacy-policy" class="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+						<a href="/terms-of-service" class="text-sm text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+						<a href="/contact" class="text-sm text-gray-400 hover:text-white transition-colors">Contact Us</a>
+						<button onclick="window.dispatchEvent(new Event('showCookieConsent'))" class="text-sm text-gray-400 hover:text-white transition-colors">
+							Cookie Preferences
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Cookie Consent Manager -->
+	<CookieManager />
+
+	<script>
+		// Mobile menu toggle
+		const mobileMenuButton = document.getElementById('mobile-menu-button');
+		const mobileMenu = document.getElementById('mobile-menu');
+
+		mobileMenuButton?.addEventListener('click', () => {
+			const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+			mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
+			mobileMenu?.classList.toggle('hidden');
+		});
+
+		// Close mobile menu on window resize
+		window.addEventListener('resize', () => {
+			if (window.innerWidth >= 1024) {
+				mobileMenu?.classList.add('hidden');
+				mobileMenuButton?.setAttribute('aria-expanded', 'false');
+			}
+		});
+	</script>
+</body>
+</html>

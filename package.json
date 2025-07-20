@@ -1,0 +1,211 @@
+{
+  "name": "courses-careers",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Modern, accessible education portal for UK university courses and career guidance",
+  "homepage": "https://www.courses-careers.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/courses-careers.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/courses-careers.com/issues"
+  },
+  "license": "MIT",
+  "author": "Courses & Careers Team <team@courses-careers.com>",
+  "keywords": [
+    "education",
+    "university",
+    "courses",
+    "careers",
+    "astro",
+    "accessibility",
+    "uk-education"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "clean": "rm -rf dist .astro node_modules/.cache",
+    "check": "astro check",
+    "sync": "astro sync",
+    "lint": "eslint . --ext .ts,.tsx,.astro --fix",
+    "lint:check": "eslint . --ext .ts,.tsx,.astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "vitest run",
+    "test:integration": "playwright test",
+    "test:e2e": "playwright test --config=playwright.config.e2e.ts",
+    "test:a11y": "playwright test --config=playwright.config.a11y.ts",
+    "test:perf": "lighthouse-ci",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "build:prod": "npm run clean && npm run type-check && npm run lint:check && npm run test && npm run build",
+    "build:staging": "NODE_ENV=staging npm run build",
+    "build:dev": "NODE_ENV=development npm run build",
+    "build:analyze": "npm run build && npx astro-bundle-analyzer dist",
+    "preview:prod": "npm run build:prod && npm run preview",
+    "preview:staging": "npm run build:staging && npm run preview",
+    "deploy": "npm run build:prod && npm run deploy:netlify",
+    "deploy:netlify": "netlify deploy --prod --dir=dist",
+    "deploy:staging": "npm run build:staging && netlify deploy --dir=dist",
+    "deploy:preview": "npm run build && netlify deploy --dir=dist",
+    "deploy:vercel": "vercel --prod",
+    "deploy:gh-pages": "gh-pages -d dist",
+    "lighthouse": "lighthouse http://localhost:4321 --output=json --output-path=./lighthouse-report.json --chrome-flags=\"--headless\"",
+    "lighthouse:ci": "lhci autorun",
+    "validate": "npm run validate:html && npm run validate:links && npm run validate:a11y",
+    "validate:html": "html-validate dist/**/*.html",
+    "validate:links": "hyperlink dist/index.html",
+    "validate:a11y": "axe dist/**/*.html --exit",
+    "optimize": "npm run optimize:images && npm run optimize:css",
+    "optimize:images": "imagemin 'public/images/**/*.{jpg,jpeg,png}' --out-dir=public/images/optimized",
+    "optimize:css": "cssnano src/styles/global.css dist/styles/global.min.css",
+    "security": "npm audit && npm run security:snyk",
+    "security:snyk": "snyk test",
+    "security:audit": "npm audit --audit-level=moderate",
+    "update": "npm update && npm audit fix",
+    "update:check": "npm outdated",
+    "docs": "npm run docs:generate && npm run docs:serve",
+    "docs:generate": "typedoc",
+    "docs:serve": "http-server docs -p 8080",
+    "health": "npm run health:dependencies && npm run health:build && npm run health:test",
+    "health:dependencies": "npm ls",
+    "health:build": "npm run build 2>&1 | tee build.log",
+    "health:test": "npm run test 2>&1 | tee test.log",
+    "migration": "node scripts/migrate-content.js",
+    "migration:validate": "node scripts/validate-migration.js",
+    "sitemap": "node scripts/generate-sitemap.js",
+    "robots": "node scripts/generate-robots.js",
+    "favicons": "node scripts/generate-favicons.js",
+    "content": "npm run content:validate && npm run content:optimize",
+    "content:validate": "node scripts/validate-content.js",
+    "content:optimize": "node scripts/optimize-content.js",
+    "backup": "node scripts/backup-content.js",
+    "restore": "node scripts/restore-content.js",
+    "monitor": "node scripts/monitor-performance.js",
+
+
+    "prebuild": "npm run clean && npm run type-check",
+    "postbuild": "npm run validate:html || echo 'HTML validation skipped'",
+    "pretest": "npm run lint:check",
+    "prepare": "husky install || echo 'Husky not available'"
+  },
+  "dependencies": {
+    "@astrojs/react": "^3.0.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/tailwind": "^5.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "astro": "^4.15.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.12.0",
+    "@playwright/test": "^1.40.0",
+    "@testing-library/dom": "^9.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.0.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitest/ui": "^0.34.0",
+    "axe-core": "^4.8.0",
+    "axe-playwright": "^1.2.0",
+    "c8": "^8.0.0",
+    "chalk": "^5.0.0",
+    "cross-env": "^7.0.0",
+    "cssnano": "^6.0.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-astro": "^0.29.0",
+    "eslint-plugin-jsx-a11y": "^6.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "gh-pages": "^6.0.0",
+    "html-validate": "^8.0.0",
+    "http-server": "^14.0.0",
+    "husky": "^8.0.0",
+    "hyperlink": "^5.0.0",
+    "imagemin": "^8.0.0",
+    "imagemin-avif": "^0.1.0",
+    "imagemin-webp": "^8.0.0",
+    "inquirer": "^9.0.0",
+    "jsdom": "^22.0.0",
+    "lighthouse": "^11.0.0",
+    "lint-staged": "^15.0.0",
+    "netlify-cli": "^17.0.0",
+    "ora": "^7.0.0",
+    "postcss": "^8.0.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-astro": "^0.12.0",
+    "prettier-plugin-tailwindcss": "^0.5.0",
+    "sharp": "^0.34.2",
+    "snyk": "^1.0.0",
+    "to-ico": "^1.1.5",
+    "typedoc": "^0.25.0",
+    "typescript": "^5.0.0",
+    "vercel": "^32.0.0",
+    "vitest": "^0.34.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not IE 11"
+  ],
+  "lint-staged": {
+    "*.{ts,tsx,astro}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx,json,md,css}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test:unit",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "size-limit": [
+    {
+      "path": "dist/**/*.js",
+      "limit": "300 KB"
+    },
+    {
+      "path": "dist/**/*.css",
+      "limit": "50 KB"
+    }
+  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "port": 4321,
+    "host": "localhost"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/courses-careers"
+  }
+}

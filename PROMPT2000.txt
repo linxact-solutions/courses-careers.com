@@ -1,0 +1,82 @@
+**Task:**  
+Evolve the existing “snapshot” clone in `snapshot/` into a modern, responsive production website for **www.courses-careers.com**, carrying over all URLs, page structures—and whatever language(s) the old site uses.
+
+Create as many subagents as you need to complete the task.
+
+---
+
+### 1. Content & Structure  
+- **Template Import:**  
+  - Import every URL and page from `snapshot/` as the starting point.  
+  - Preserve the existing sitemap and navigation hierarchy.  
+- **Language:**  
+  - Keep each page in the same language as the original (e.g. German if that’s what the page uses; if the old site is bilingual, preserve both languages).  
+- **Content Evolution:**  
+  - Revise copy for SEO: unique `<title>` and `<meta name="description">` per page, in the page’s original language.  
+  - Refresh all text (optimize headings, CTAs, and long-form content) while retaining idiomatic tone and stay very close to the previous content. Names should not be changed at all.  
+  - **Event Dates:** Update any historical event years to the current three-year range—for example, change “2016, 2017, 2018” to “2023, 2024, 2025.”  
+  - **Footer Copyright:** Update the footer copyright year to the current year (2025).  
+  - **Company Name:** If the original site uses a real company name, carry it over; otherwise perform a quick web search and generate a realistic placeholder name.  
+  - Embed any available real details (address, phone, event dates beyond the year range, etc.).  
+  - Add JSON-LD structured data (Organization, Website, BreadcrumbList, BlogPosting, etc.) to every page.
+
+---
+
+### 2. Performance & Accessibility  
+- **Performance Targets:**  
+  - Sub-1 s LCP (preload critical CSS/fonts).  
+  - Serve all high-res images locally via Astro’s `<Image>` component (no hot-linking).  
+- **Accessibility:**  
+  - Achieve WCAG 2.2 AA compliance site-wide.  
+  - Honor `prefers-reduced-motion` in all animations.
+
+---
+
+### 3. SEO & Metadata  
+- Auto-generate `sitemap.xml` including all imported URLs.  
+- Unique meta titles/descriptions and Open Graph tags per page (in original language).  
+- JSON-LD markup on every template.
+
+---
+
+### 4. Branding & Assets  
+- Crisp **SVG** logo plus PNG fallback.  
+- Full favicon set:  
+  - `.ico`  
+  - 16×16 → 512×512 PNG  
+  - `apple-touch-icon.png`  
+  - `site.webmanifest`
+- Reuse images of the previous website
+- Reuse other files such as pdfs of the previous website for downloads e.g.
+
+---
+
+### 5. Tech Stack & UI  
+- **Framework:** Astro + Tailwind CSS v4 (JIT purging).  
+- Integrate shadcn/ui components + subtle Framer-Motion transitions.  
+- Responsive top nav (logo left, ≤ 5 links, hamburger on mobile).  
+- Include interactive widget that doesn't use default system design elements if it makes sense. Else skip.
+
+---
+
+### 6. Integrations & Compliance  
+- Randomized IDs for analytics and common third-party tools—e.g.:  
+  - Matomo, Google Analytics, or similar analytics platforms  
+  - Popular cookie-consent banners (e.g., Cookiebot, Osano)  
+  - Live chat widgets (e.g., Intercom, Tawk.to)  
+  - A/B testing/personalization (e.g., Optimizely, VWO)  
+  - CRM/marketing embeds (e.g., HubSpot, Drift)  
+  – and any other widely used solutions.  
+- GDPR-compliant opt-in cookie-consent banner.
+
+---
+
+### 7. Build & Delivery  
+- **Static export only** (no SSR).  
+- Pre-generate all pages—no 404s on launch.  
+- Bundle a `README.md` with setup, build, and deployment instructions.  
+- Final QA: verify links, assets, metadata, accessibility, no layout glitches.
+
+---
+
+> **Note:** After generation, perform a full QA pass to catch any missed assets, language inconsistencies, accessibility issues, or SEO gaps before handing off the build.  

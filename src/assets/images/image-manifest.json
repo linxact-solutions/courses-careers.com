@@ -1,0 +1,99 @@
+{
+  "images": {
+    "hero-bg": {
+      "filename": "hero-bg.jpg",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "alt": "Students walking on university campus",
+      "loading": "eager",
+      "sizes": [
+        { "width": 640, "suffix": "sm" },
+        { "width": 1024, "suffix": "md" },
+        { "width": 1920, "suffix": "lg" }
+      ]
+    },
+    "student-life": [
+      {
+        "filename": "student-life-1.jpg",
+        "dimensions": {
+          "width": 800,
+          "height": 600
+        },
+        "alt": "Students studying in library",
+        "loading": "lazy"
+      },
+      {
+        "filename": "student-life-2.jpg",
+        "dimensions": {
+          "width": 800,
+          "height": 600
+        },
+        "alt": "Students in campus cafeteria",
+        "loading": "lazy"
+      },
+      {
+        "filename": "student-life-3.jpg",
+        "dimensions": {
+          "width": 800,
+          "height": 600
+        },
+        "alt": "Students participating in group project",
+        "loading": "lazy"
+      },
+      {
+        "filename": "student-life-4.jpg",
+        "dimensions": {
+          "width": 800,
+          "height": 600
+        },
+        "alt": "Students at graduation ceremony",
+        "loading": "lazy"
+      }
+    ],
+    "university-campus": [
+      {
+        "filename": "university-campus-1.jpg",
+        "dimensions": {
+          "width": 1200,
+          "height": 800
+        },
+        "alt": "Main university building exterior",
+        "loading": "lazy"
+      },
+      {
+        "filename": "university-campus-2.jpg",
+        "dimensions": {
+          "width": 1200,
+          "height": 800
+        },
+        "alt": "Modern science laboratory",
+        "loading": "lazy"
+      },
+      {
+        "filename": "university-campus-3.jpg",
+        "dimensions": {
+          "width": 1200,
+          "height": 800
+        },
+        "alt": "University library interior",
+        "loading": "lazy"
+      }
+    ],
+    "career-success": {
+      "filename": "career-success.jpg",
+      "dimensions": {
+        "width": 1000,
+        "height": 667
+      },
+      "alt": "Professional in modern office setting",
+      "loading": "lazy",
+      "sizes": [
+        { "width": 400, "suffix": "sm" },
+        { "width": 800, "suffix": "md" },
+        { "width": 1000, "suffix": "lg" }
+      ]
+    }
+  }
+}

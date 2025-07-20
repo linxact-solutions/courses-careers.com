@@ -1,0 +1,254 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Undergraduate Courses and University Degrees";
+const description = "Explore undergraduate degree courses and university programs in the UK. Find subject guides, university profiles, and comprehensive information about bachelor's degree options.";
+const keywords = "undergraduate courses, university degrees, bachelor's degree, UK universities, subject guides, university profiles";
+---
+
+<Layout 
+	title={title}
+	description={description}
+	keywords={keywords}
+	section="undergraduate"
+>
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-orange-600 to-orange-700 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Undergraduate Courses & University Degrees
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 text-orange-100">
+					Discover your perfect degree course and university with our comprehensive guides
+				</p>
+				<div class="flex flex-col sm:flex-row justify-center gap-4">
+					<a href="/undergraduate/subject-guide" class="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
+						Browse Subject Guides
+					</a>
+					<a href="/undergraduate/university-profiles" class="bg-orange-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-900 transition-colors">
+						University Profiles
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Course Search Section -->
+	<section class="py-12 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Find Your Perfect Course</h2>
+				<p class="text-xl text-gray-600">Search through thousands of undergraduate courses and degree programs</p>
+			</div>
+			
+			<div class="max-w-4xl mx-auto bg-gray-50 rounded-lg p-8">
+				<form class="space-y-6">
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div>
+							<label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
+								Subject Area
+							</label>
+							<select id="subject" name="subject" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+								<option value="">Select a subject</option>
+								<option value="accountancy">Accountancy</option>
+								<option value="business">Business Studies</option>
+								<option value="computer_science">Computer Science</option>
+								<option value="engineering">Engineering</option>
+								<option value="english">English Literature</option>
+								<option value="history">History</option>
+								<option value="law">Law</option>
+								<option value="medicine">Medicine</option>
+								<option value="psychology">Psychology</option>
+								<option value="sciences">Sciences</option>
+							</select>
+						</div>
+						
+						<div>
+							<label for="study_mode" class="block text-sm font-medium text-gray-700 mb-2">
+								Study Mode
+							</label>
+							<select id="study_mode" name="study_mode" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500">
+								<option value="">Select study mode</option>
+								<option value="fulltime">Full-time</option>
+								<option value="parttime">Part-time</option>
+								<option value="online">Online</option>
+								<option value="distance">Distance Learning</option>
+							</select>
+						</div>
+					</div>
+					
+					<div>
+						<label for="search" class="block text-sm font-medium text-gray-700 mb-2">
+							Search Keywords
+						</label>
+						<input 
+							type="text" 
+							id="search" 
+							name="search" 
+							placeholder="Enter course title, university, or keywords..."
+							class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+						/>
+					</div>
+					
+					<div class="text-center">
+						<button type="submit" class="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+							Search Courses
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content Sections -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+				<!-- Subject Guides -->
+				<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+					<div class="bg-orange-600 text-white p-6">
+						<h2 class="text-2xl font-bold mb-2">Subject Guides</h2>
+						<p class="text-orange-100">Comprehensive guides to undergraduate subjects and degree options</p>
+					</div>
+					<div class="p-6">
+						<div class="space-y-4">
+							<div class="border-l-4 border-orange-500 pl-4">
+								<h3 class="font-semibold text-gray-900">Popular Subject Areas</h3>
+								<ul class="mt-2 space-y-2 text-sm text-gray-600">
+									<li><a href="/undergraduate/subject-guide/7107-accountancy-courses-how-to-choose.html" class="hover:text-orange-600">Accountancy Courses - How to Choose</a></li>
+									<li><a href="/undergraduate/subject-guide/7114-business-courses-in-the-uk.html" class="hover:text-orange-600">Business Courses in the UK</a></li>
+									<li><a href="/undergraduate/subject-guide/7126-engineering-courses-in-the-uk.html" class="hover:text-orange-600">Engineering Courses in the UK</a></li>
+								</ul>
+							</div>
+							<div class="border-l-4 border-orange-500 pl-4">
+								<h3 class="font-semibold text-gray-900">Latest Updates</h3>
+								<ul class="mt-2 space-y-2 text-sm text-gray-600">
+									<li><a href="/undergraduate/subject-guide/7943-government-makes-university-budget-cuts-but-science-students-wont-lose-out.html" class="hover:text-orange-600">University Budget Cuts & Science Students</a></li>
+									<li><a href="/undergraduate/subject-guide/8003-students-achieve-record-pass-rate-for-scottish-highers.html" class="hover:text-orange-600">Record Pass Rate for Scottish Highers</a></li>
+									<li><a href="/undergraduate/subject-guide/7979-flexible-photography-and-painting-degrees-now-available-via-distance-learning.html" class="hover:text-orange-600">Flexible Photography & Painting Degrees</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="mt-6">
+							<a href="/undergraduate/subject-guide" class="bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+								View All Subject Guides
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- University Profiles -->
+				<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+					<div class="bg-orange-600 text-white p-6">
+						<h2 class="text-2xl font-bold mb-2">University Profiles</h2>
+						<p class="text-orange-100">Detailed profiles of UK universities and their undergraduate programs</p>
+					</div>
+					<div class="p-6">
+						<div class="space-y-4">
+							<div class="border-l-4 border-orange-500 pl-4">
+								<h3 class="font-semibold text-gray-900">Featured Universities</h3>
+								<ul class="mt-2 space-y-2 text-sm text-gray-600">
+									<li><a href="/undergraduate/university-profiles/7493-university-of-wales-aberystwyth.html" class="hover:text-orange-600">University of Wales, Aberystwyth</a></li>
+									<li><a href="/undergraduate/university-profiles/7502-the-west-midlands-consortium-teaching.html" class="hover:text-orange-600">The West Midlands Consortium Teaching</a></li>
+								</ul>
+							</div>
+							<div class="border-l-4 border-orange-500 pl-4">
+								<h3 class="font-semibold text-gray-900">What You'll Find</h3>
+								<ul class="mt-2 space-y-2 text-sm text-gray-600">
+									<li>• Course offerings and specializations</li>
+									<li>• Campus facilities and student life</li>
+									<li>• Entry requirements and application process</li>
+									<li>• Graduate employment statistics</li>
+									<li>• Student support services</li>
+								</ul>
+							</div>
+						</div>
+						<div class="mt-6">
+							<a href="/undergraduate/university-profiles" class="bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+								View All University Profiles
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Featured Content -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Articles</h2>
+				<p class="text-xl text-gray-600">Latest insights and updates from the world of undergraduate education</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<!-- Article 1 -->
+				<div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Nike Select Girls Transform UK University Sport</h3>
+						<p class="text-gray-600 mb-4">Discover how Nike Select Girls are changing the landscape of university sport across the UK with innovative programs and opportunities.</p>
+						<div class="flex items-center justify-between">
+							<a href="/undergraduate/subject-guide/7950-nike-select-girls-change-the-face-of-uk-university-sport.html" class="text-orange-600 font-medium hover:text-orange-700">Read More</a>
+							<span class="text-sm text-gray-500">Sports Science</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Article 2 -->
+				<div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">A Year in the Life of Nike Selects</h3>
+						<p class="text-gray-600 mb-4">Follow the journey of elite student athletes through their transformative year in the Nike Select program.</p>
+						<div class="flex items-center justify-between">
+							<a href="/undergraduate/subject-guide/7951-a-year-in-the-life-of-the-nike-selects.html" class="text-orange-600 font-medium hover:text-orange-700">Read More</a>
+							<span class="text-sm text-gray-500">Sports Science</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Article 3 -->
+				<div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+					<div class="p-6">
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Are You Up for the Nike Challenge?</h3>
+						<p class="text-gray-600 mb-4">Learn about the exciting opportunities available through the Nike Challenge program for aspiring student athletes.</p>
+						<div class="flex items-center justify-between">
+							<a href="/undergraduate/subject-guide/7952-are-you-up-for-the-nike-challenge.html" class="text-orange-600 font-medium hover:text-orange-700">Read More</a>
+							<span class="text-sm text-gray-500">Sports Science</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Statistics Section -->
+	<section class="py-16 bg-orange-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">By the Numbers</h2>
+				<p class="text-xl text-gray-600">Key statistics about undergraduate education in the UK</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+				<div class="text-center">
+					<div class="text-4xl font-bold text-orange-600 mb-2">150+</div>
+					<div class="text-gray-700">Universities</div>
+				</div>
+				<div class="text-center">
+					<div class="text-4xl font-bold text-orange-600 mb-2">37,000+</div>
+					<div class="text-gray-700">Course Options</div>
+				</div>
+				<div class="text-center">
+					<div class="text-4xl font-bold text-orange-600 mb-2">2.3M</div>
+					<div class="text-gray-700">Students</div>
+				</div>
+				<div class="text-center">
+					<div class="text-4xl font-bold text-orange-600 mb-2">85%</div>
+					<div class="text-gray-700">Graduate Employment</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

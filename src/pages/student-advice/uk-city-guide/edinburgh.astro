@@ -1,0 +1,545 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="Edinburgh Student Guide - Courses & Careers">
+  <div class="bg-gradient-to-br from-red-50 to-rose-100 min-h-screen">
+    <!-- Header Section -->
+    <div class="bg-red-600 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Edinburgh Student Guide</h1>
+          <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto">
+            Scotland's historic capital - where ancient castle meets world-class education and vibrant festivals
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white py-4 border-b">
+      <div class="container mx-auto px-4">
+        <nav class="text-sm text-gray-600">
+          <a href="/" class="hover:text-red-600">Home</a>
+          <span class="mx-2">></span>
+          <a href="/student-advice" class="hover:text-red-600">Student Advice</a>
+          <span class="mx-2">></span>
+          <a href="/student-advice/uk-city-guide" class="hover:text-red-600">UK City Guide</a>
+          <span class="mx-2">></span>
+          <span class="text-red-600">Edinburgh</span>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- City Overview -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">City Overview</h2>
+            <p class="text-gray-700 mb-4">
+              Edinburgh, Scotland's capital, is a city of incredible contrasts - from the medieval Old Town to the Georgian New Town, from the ancient castle to cutting-edge research facilities. It's consistently ranked as one of the best student cities in the UK and the world.
+            </p>
+            <p class="text-gray-700 mb-4">
+              With a population of around 540,000, Edinburgh manages to feel both cosmopolitan and intimate. The city hosts the world's largest arts festival, boasts some of the UK's top universities, and offers stunning natural beauty with Arthur's Seat right in the city centre.
+            </p>
+            <div class="bg-red-50 rounded-lg p-6 mt-6">
+              <h3 class="text-xl font-bold text-red-600 mb-3">Student Population</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li>• Total students: 60,000+</li>
+                <li>• International students: 18,000+</li>
+                <li>• Universities and colleges: 4 major institutions</li>
+                <li>• Student satisfaction rate: 89%</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Universities and Colleges -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Universities and Colleges</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Major Universities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>The University of Edinburgh</strong> - Scotland's most prestigious university, founded in 1582, consistently ranked in world's top 20. Strong in medicine, sciences, humanities, and social sciences</li>
+                  <li>• <strong>Heriot-Watt University</strong> - Specializes in business, engineering, design and physical sciences. Beautiful campus setting and strong industry links</li>
+                  <li>• <strong>Edinburgh Napier University</strong> - Modern university with focus on employability, excellent for business, computing, creative industries and health</li>
+                  <li>• <strong>Queen Margaret University</strong> - Specialist institution for health sciences, social sciences, and creative arts, located just outside the city</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Notable Schools & Colleges</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Edinburgh College of Art</strong> - Part of University of Edinburgh, renowned for fine art and design</li>
+                  <li>• <strong>Royal College of Surgeons Edinburgh</strong> - Historic medical institution</li>
+                  <li>• <strong>Edinburgh Business School</strong> - Part of Heriot-Watt, global reach</li>
+                  <li>• <strong>Scotland's Rural College (SRUC)</strong> - Agriculture and rural studies</li>
+                  <li>• <strong>Edinburgh College</strong> - Further education with progression routes</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Cost of Living -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Cost of Living Breakdown</h2>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b border-gray-200">
+                    <th class="text-left py-3 px-4 font-bold text-gray-800">Category</th>
+                    <th class="text-left py-3 px-4 font-bold text-gray-800">Monthly Cost</th>
+                    <th class="text-left py-3 px-4 font-bold text-gray-800">Annual Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Accommodation (shared)</td>
+                    <td class="py-3 px-4">£400-£600</td>
+                    <td class="py-3 px-4">£4,800-£7,200</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Accommodation (studio)</td>
+                    <td class="py-3 px-4">£700-£1,000</td>
+                    <td class="py-3 px-4">£8,400-£12,000</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Food & Groceries</td>
+                    <td class="py-3 px-4">£180-£280</td>
+                    <td class="py-3 px-4">£2,160-£3,360</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Transport (Bus pass)</td>
+                    <td class="py-3 px-4">£55-£60</td>
+                    <td class="py-3 px-4">£660-£720</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Entertainment & Social</td>
+                    <td class="py-3 px-4">£100-£200</td>
+                    <td class="py-3 px-4">£1,200-£2,400</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Books & Supplies</td>
+                    <td class="py-3 px-4">£35-£55</td>
+                    <td class="py-3 px-4">£420-£660</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Personal & Miscellaneous</td>
+                    <td class="py-3 px-4">£50-£100</td>
+                    <td class="py-3 px-4">£600-£1,200</td>
+                  </tr>
+                  <tr class="font-bold">
+                    <td class="py-3 px-4">Total</td>
+                    <td class="py-3 px-4 text-red-600">£820-£1,295</td>
+                    <td class="py-3 px-4 text-red-600">£9,840-£15,540</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bg-yellow-50 rounded-lg p-4 mt-6">
+              <p class="text-sm text-yellow-800">
+                <strong>Note:</strong> Edinburgh is more expensive than other Scottish cities but cheaper than London. Festival season (August) sees higher prices.
+              </p>
+            </div>
+          </section>
+
+          <!-- Student Accommodation -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Student Accommodation Areas</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Central Areas</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Old Town:</strong> Historic heart, near University of Edinburgh, £500-£800/month</li>
+                  <li>• <strong>New Town:</strong> Georgian elegance, central location, £550-£850/month</li>
+                  <li>• <strong>Grassmarket:</strong> Lively area with pubs and restaurants, £500-£750/month</li>
+                  <li>• <strong>Cowgate:</strong> Student nightlife hub, £450-£700/month</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Popular Student Areas</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Marchmont:</strong> Traditional student area, Victorian tenements, £400-£600/month</li>
+                  <li>• <strong>Bruntsfield:</strong> Trendy area near the Meadows, £450-£650/month</li>
+                  <li>• <strong>Newington:</strong> Close to King's Buildings campus, £400-£600/month</li>
+                  <li>• <strong>Tollcross:</strong> Central, good transport links, £425-£625/month</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Further Out</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Leith:</strong> Up-and-coming port area, creative scene, £375-£550/month</li>
+                  <li>• <strong>Morningside:</strong> Affluent suburb, quiet, £425-£625/month</li>
+                  <li>• <strong>Gorgie/Dalry:</strong> Affordable, good bus routes, £350-£500/month</li>
+                  <li>• <strong>Portobello:</strong> Seaside suburb, 20 mins to centre, £375-£525/month</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Student Halls</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>University accommodation:</strong> Best for first years, £110-£200/week</li>
+                  <li>• <strong>Unite Students:</strong> Multiple locations, £130-£220/week</li>
+                  <li>• <strong>Collegiate:</strong> Premium student housing, £150-£250/week</li>
+                  <li>• <strong>Private halls:</strong> Various options across the city, £120-£200/week</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Transport -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Transport Links and Getting Around</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Public Transport</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Buses:</strong> Lothian Buses excellent network, student discount available</li>
+                  <li>• <strong>Trams:</strong> Line from airport to city centre via West End</li>
+                  <li>• <strong>Trains:</strong> Waverley and Haymarket stations for UK connections</li>
+                  <li>• <strong>Cycling:</strong> Just Eat Cycles bike hire, expanding cycle lanes</li>
+                  <li>• <strong>Walking:</strong> Compact city centre, most areas walkable</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Student Travel Discounts</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Student Ridacard:</strong> Unlimited bus travel from £47/month</li>
+                  <li>• <strong>16-25 Railcard:</strong> 1/3 off train fares</li>
+                  <li>• <strong>Young Scot Card:</strong> Various discounts for under 26s</li>
+                  <li>• <strong>CitySmart Card:</strong> Pay-as-you-go for buses and trams</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Connections</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Edinburgh Airport:</strong> 30 mins by tram/bus, European flights</li>
+                  <li>• <strong>Glasgow:</strong> 50 minutes by train (every 15 mins)</li>
+                  <li>• <strong>London:</strong> 4.5 hours by train, 1.5 hours flight</li>
+                  <li>• <strong>Highlands:</strong> 3+ hours for hiking and scenery</li>
+                  <li>• <strong>St Andrews:</strong> 1.5 hours by bus</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Student Life -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Student Life and Nightlife</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Nightlife Areas</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Cowgate:</strong> Underground student bars and clubs</li>
+                  <li>• <strong>George Street:</strong> Upmarket bars and cocktails</li>
+                  <li>• <strong>Grassmarket:</strong> Historic pubs and live music</li>
+                  <li>• <strong>Royal Mile:</strong> Tourist-friendly but some hidden gems</li>
+                  <li>• <strong>Lothian Road:</strong> Clubs and late-night venues</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Popular Venues</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>The Hive:</strong> Legendary student nightclub</li>
+                  <li>• <strong>Sneaky Pete's:</strong> Underground music venue</li>
+                  <li>• <strong>The Liquid Room:</strong> Live music and club nights</li>
+                  <li>• <strong>Cabaret Voltaire:</strong> Alternative club in old vaults</li>
+                  <li>• <strong>Sandy Bell's:</strong> Traditional Scottish music pub</li>
+                  <li>• <strong>Bannerman's:</strong> Rock and metal venue</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Festivals & Events</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Edinburgh Festival Fringe:</strong> World's largest arts festival (August)</li>
+                  <li>• <strong>Edinburgh International Festival:</strong> High culture (August)</li>
+                  <li>• <strong>Hogmanay:</strong> World-famous New Year celebration</li>
+                  <li>• <strong>Beltane Fire Festival:</strong> Celtic celebration (April)</li>
+                  <li>• <strong>Edinburgh International Film Festival:</strong> June</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Student Activities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Arthur's Seat:</strong> Extinct volcano for hiking</li>
+                  <li>• <strong>The Meadows:</strong> Large park for sports and BBQs</li>
+                  <li>• <strong>Student unions:</strong> Teviot (world's oldest), Potterrow, EUSA</li>
+                  <li>• <strong>Sports:</strong> Commonwealth Pool, university facilities</li>
+                  <li>• <strong>Societies:</strong> Over 300 student societies</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Employment -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Part-time Work Opportunities</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Common Student Jobs</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Tourism/Hospitality:</strong> £9-12/hour in hotels, restaurants</li>
+                  <li>• <strong>Festival work:</strong> £10-15/hour during August</li>
+                  <li>• <strong>Retail:</strong> £9-11/hour on Princes Street, malls</li>
+                  <li>• <strong>Tour guides:</strong> £12-20/hour for walking tours</li>
+                  <li>• <strong>Bar work:</strong> £9-11/hour + tips</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Key Employment Sectors</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Financial Services:</strong> Major UK financial centre</li>
+                  <li>• <strong>Tourism:</strong> Year-round opportunities</li>
+                  <li>• <strong>Tech/Digital:</strong> Growing tech hub, "Silicon Glen"</li>
+                  <li>• <strong>Life Sciences:</strong> BioQuarter research park</li>
+                  <li>• <strong>Publishing:</strong> Traditional publishing centre</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Graduate Opportunities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• Average graduate salary: £23,000-£27,000</li>
+                  <li>• Strong finance and professional services sector</li>
+                  <li>• Growing start-up ecosystem</li>
+                  <li>• Public sector opportunities (Scottish Government)</li>
+                  <li>• Research and academia positions</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Safety -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Safety Information</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">General Safety</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• Edinburgh is one of the UK's safest cities</li>
+                  <li>• Well-lit city centre with CCTV coverage</li>
+                  <li>• Visible police presence, especially during festivals</li>
+                  <li>• Safe public transport system</li>
+                  <li>• Active campus security at all universities</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Safety Tips</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• Be aware of pickpockets during festival season</li>
+                  <li>• Take care on cobbled streets when wet</li>
+                  <li>• Use licensed taxis or Uber late at night</li>
+                  <li>• Lock bikes securely - theft is common</li>
+                  <li>• Avoid the Meadows after dark</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Emergency Contacts</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Emergency:</strong> 999 or 112</li>
+                  <li>• <strong>Police Scotland:</strong> 101 (non-emergency)</li>
+                  <li>• <strong>NHS 24:</strong> 111 (health advice)</li>
+                  <li>• <strong>Samaritans:</strong> 116 123 (emotional support)</li>
+                  <li>• <strong>University security:</strong> Check your institution</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Weather -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Weather and Climate</h2>
+            <div class="space-y-4">
+              <p class="text-gray-700">
+                Edinburgh has a temperate maritime climate. It can be windy (it's nicknamed "Auld Reekie"), and weather can change quickly. The city is actually drier than many UK cities, but always be prepared for rain!
+              </p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-blue-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Spring</h4>
+                  <p class="text-2xl font-bold text-blue-600">7-13°C</p>
+                  <p class="text-sm text-gray-600">March - May</p>
+                </div>
+                <div class="bg-yellow-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Summer</h4>
+                  <p class="text-2xl font-bold text-yellow-600">14-19°C</p>
+                  <p class="text-sm text-gray-600">June - August</p>
+                </div>
+                <div class="bg-orange-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Autumn</h4>
+                  <p class="text-2xl font-bold text-orange-600">8-14°C</p>
+                  <p class="text-sm text-gray-600">Sept - November</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Winter</h4>
+                  <p class="text-2xl font-bold text-gray-600">1-7°C</p>
+                  <p class="text-sm text-gray-600">Dec - February</p>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 rounded-lg p-4 mt-4">
+                <p class="text-sm text-blue-800">
+                  <strong>Tip:</strong> Invest in a good windproof jacket and comfortable walking shoes. Layers are essential as you'll be walking between warm buildings and cool streets.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Cultural Attractions -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Cultural Attractions and Things to Do</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Historic Sites</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Edinburgh Castle:</strong> Iconic fortress (student discount available)</li>
+                  <li>• <strong>Palace of Holyroodhouse:</strong> Queen's Scottish residence</li>
+                  <li>• <strong>Royal Mile:</strong> Historic street connecting castle to palace</li>
+                  <li>• <strong>Real Mary King's Close:</strong> Underground medieval streets</li>
+                  <li>• <strong>St Giles' Cathedral:</strong> Historic church on Royal Mile</li>
+                  <li>• <strong>Calton Hill:</strong> Monuments and panoramic views</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Museums & Galleries</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>National Museum of Scotland:</strong> Diverse collections (free)</li>
+                  <li>• <strong>Scottish National Gallery:</strong> Fine art collection (free)</li>
+                  <li>• <strong>National Gallery of Modern Art:</strong> Contemporary works (free)</li>
+                  <li>• <strong>Writers' Museum:</strong> Literary heritage (free)</li>
+                  <li>• <strong>Camera Obscura:</strong> Optical illusions and views</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Outdoor Activities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Arthur's Seat:</strong> Hike to 251m summit</li>
+                  <li>• <strong>Portobello Beach:</strong> Seaside walks and cafes</li>
+                  <li>• <strong>Royal Botanic Garden:</strong> 70 acres of gardens (free)</li>
+                  <li>• <strong>Water of Leith Walkway:</strong> Riverside path through city</li>
+                  <li>• <strong>Pentland Hills:</strong> Hiking 20 minutes from centre</li>
+                  <li>• <strong>Cramond Island:</strong> Tidal island adventure</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <!-- Quick Facts -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-6 sticky top-4">
+            <h3 class="text-xl font-bold text-red-600 mb-4">Quick Facts</h3>
+            <dl class="space-y-3">
+              <div>
+                <dt class="font-semibold text-gray-700">Population</dt>
+                <dd class="text-gray-600">540,000</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Students</dt>
+                <dd class="text-gray-600">60,000+</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Universities</dt>
+                <dd class="text-gray-600">4 major</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Average Rent</dt>
+                <dd class="text-gray-600">£450-£700/month</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Famous For</dt>
+                <dd class="text-gray-600">Festivals, History, Education</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">UNESCO Site</dt>
+                <dd class="text-gray-600">World Heritage City</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Emergency</dt>
+                <dd class="text-gray-600">999 or 112</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Cost Calculator -->
+          <div class="bg-red-50 rounded-lg shadow-lg p-6 mb-6">
+            <h3 class="text-xl font-bold text-red-600 mb-4">Monthly Budget Calculator</h3>
+            <div class="space-y-3">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Accommodation Type</label>
+                <select class="w-full p-2 border border-gray-300 rounded">
+                  <option>Shared Flat (£450)</option>
+                  <option>Student Halls (£550)</option>
+                  <option>Studio Flat (£800)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Lifestyle</label>
+                <select class="w-full p-2 border border-gray-300 rounded">
+                  <option>Budget (£350)</option>
+                  <option>Moderate (£500)</option>
+                  <option>Comfortable (£700)</option>
+                </select>
+              </div>
+              <div class="pt-3 border-t border-red-200">
+                <p class="text-lg font-bold text-red-600">Estimated Total: £800-£1,500/month</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- University Links -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-red-600 mb-4">University Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://www.ed.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  University of Edinburgh →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.hw.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  Heriot-Watt University →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.napier.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  Edinburgh Napier →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.qmu.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  Queen Margaret University →
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Sticky sidebar on desktop */
+  @media (min-width: 1024px) {
+    .sticky {
+      position: sticky;
+      top: 1rem;
+    }
+  }
+</style>

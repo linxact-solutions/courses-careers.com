@@ -1,0 +1,116 @@
+---
+/**
+ * Breadcrumb Navigation Component
+ * Provides hierarchical navigation with proper accessibility and SEO
+ */
+
+import { generateBreadcrumbs } from '../utils/seo.js';
+
+export interface Props {
+  url: string;
+  customBreadcrumbs?: Array<{
+    name: string;
+    url: string;
+  }>;
+  className?: string;
+}
+
+const { url, customBreadcrumbs, className = '' } = Astro.props;
+
+// Use custom breadcrumbs if provided, otherwise generate from URL
+const breadcrumbs = customBreadcrumbs || generateBreadcrumbs(url);
+
+// Don't show breadcrumbs for homepage
+if (url === '/' || breadcrumbs.length <= 1) {
+  return null;
+}
+---
+
+<nav aria-label="Breadcrumb" class={`breadcrumb-nav ${className}`}>
+  <ol class="flex flex-wrap items-center gap-2 text-sm text-gray-600">
+    {breadcrumbs.map((breadcrumb, index) => {
+      const isLast = index === breadcrumbs.length - 1;
+      
+      return (
+        <li class="flex items-center gap-2">
+          {index > 0 && (
+            <svg 
+              class="w-4 h-4 text-gray-400" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                stroke-width="2" 
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          )}
+          
+          {isLast ? (
+            <span 
+              class="font-medium text-gray-900"
+              aria-current="page"
+            >
+              {breadcrumb.name}
+            </span>
+          ) : (
+            <a 
+              href={breadcrumb.url}
+              class="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
+              rel={index === 0 ? 'home' : undefined}
+            >
+              {breadcrumb.name}
+            </a>
+          )}
+        </li>
+      );
+    })}
+  </ol>
+</nav>
+
+<style>
+  .breadcrumb-nav {
+    margin-bottom: 1rem;
+  }
+  
+  .breadcrumb-nav ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .breadcrumb-nav li {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .breadcrumb-nav {
+      font-size: 0.875rem;
+    }
+    
+    .breadcrumb-nav svg {
+      width: 0.875rem;
+      height: 0.875rem;
+    }
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .breadcrumb-nav a {
+      text-decoration: underline;
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .breadcrumb-nav a {
+      transition: none;
+    }
+  }
+</style>

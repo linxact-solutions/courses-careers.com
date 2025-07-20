@@ -1,0 +1,585 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+const structuredData = {
+  type: 'university',
+  university: {
+    name: 'Newman University',
+    description: 'A Catholic university offering personalized education with strong values, exceptional student support, and a commitment to social justice and community engagement.',
+    location: 'Birmingham, West Midlands',
+    founded: '1968',
+    website: 'https://www.newman.ac.uk',
+    logo: '/images/stories/college-images/newman-university-college/nm.jpg'
+  },
+  course: {
+    name: 'Postgraduate Programs',
+    description: 'Innovative postgraduate programs in education, theology, social sciences, and business',
+    provider: 'Newman University',
+    level: 'Postgraduate',
+    subject: 'Multiple disciplines'
+  }
+};
+---
+
+<Layout 
+	title="Newman University Birmingham - Postgraduate Programs and Catholic Education"
+	description="Discover Newman University's postgraduate programs in Birmingham. Learn about our values-driven education, small class sizes, exceptional support, and strong community focus."
+	keywords="Newman University, Birmingham university, postgraduate education, Catholic university, teacher training, theology programs, social justice"
+	section="postgraduate"
+	structuredData={structuredData}
+>
+	<!-- Breadcrumb -->
+	<nav class="bg-gray-50 py-3" aria-label="Breadcrumb">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-blue-600 hover:text-blue-800">Home</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li><a href="/postgraduate" class="text-blue-600 hover:text-blue-800">Postgraduate</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li><a href="/postgraduate/university-profiles" class="text-blue-600 hover:text-blue-800">University Profiles</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li class="text-gray-900">Newman University</li>
+			</ol>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<div class="flex items-center justify-center mb-6">
+					<OptimizedImage 
+						src="/images/stories/college-images/newman-university-college/nm.jpg"
+						alt="Newman University logo"
+						width={200}
+						height={120}
+						class="bg-white rounded-lg p-4"
+					/>
+				</div>
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Newman University
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+					Values-Driven Education in the Heart of Birmingham
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<section class="py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+				<!-- Main Content -->
+				<div class="lg:col-span-2">
+					<div class="bg-white rounded-lg shadow-sm p-8">
+						<h2 class="text-2xl font-bold text-gray-900 mb-6">A University with a Mission</h2>
+						
+						<p class="text-gray-700 mb-4">
+							Newman University is a distinctive Catholic university in Birmingham, offering a unique blend of academic excellence and values-driven education. Named after Cardinal John Henry Newman, the institution embodies his vision of education that develops the whole person - intellectually, morally, and spiritually.
+						</p>
+
+						<p class="text-gray-700 mb-4">
+							Since its founding in 1968, Newman has grown from a teacher training college into a full university, while maintaining its commitment to small class sizes, personalized support, and a strong sense of community. The university's Catholic ethos welcomes students of all faiths and none, fostering an inclusive environment where everyone can thrive.
+						</p>
+
+						<p class="text-gray-700 mb-6">
+							Located in Bartley Green, just eight miles southwest of Birmingham city center, Newman offers the perfect balance of a peaceful campus setting with easy access to one of the UK's most vibrant cities. The university is particularly renowned for its programs in education, theology, psychology, and social work.
+						</p>
+
+						<!-- University History and Mission -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">History and Heritage</h3>
+							<div class="bg-blue-50 rounded-lg p-6">
+								<p class="text-gray-700 mb-4">
+									Newman University began as Newman College of Education in 1968, established by the Archdiocese of Birmingham to train Catholic teachers. Over the decades, it has evolved significantly while staying true to its founding principles.
+								</p>
+								<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+									<div>
+										<h4 class="font-semibold text-blue-800 mb-2">Key Milestones</h4>
+										<ul class="text-sm text-gray-700 space-y-1">
+											<li>• 1968: Founded as Newman College</li>
+											<li>• 1990: Expanded beyond teacher training</li>
+											<li>• 2007: Gained degree-awarding powers</li>
+											<li>• 2008: Became Newman University College</li>
+											<li>• 2013: Achieved full university status</li>
+										</ul>
+									</div>
+									<div>
+										<h4 class="font-semibold text-blue-800 mb-2">Core Values</h4>
+										<ul class="text-sm text-gray-700 space-y-1">
+											<li>• Human dignity and respect</li>
+											<li>• Social justice and equality</li>
+											<li>• Academic excellence</li>
+											<li>• Community engagement</li>
+											<li>• Personal development</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Postgraduate Programs -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Postgraduate Programs</h3>
+							<div class="space-y-4">
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">Education and Teacher Training</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Leading programs for aspiring and current educators, with strong school partnerships.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• PGCE Primary Education</li>
+										<li>• PGCE Secondary Education (various subjects)</li>
+										<li>• MA Education</li>
+										<li>• MA Educational Leadership</li>
+										<li>• MA Special Educational Needs</li>
+									</ul>
+								</div>
+								
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">Theology and Philosophy</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Explore faith, ethics, and philosophy in contemporary contexts.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• MA Theology</li>
+										<li>• MA Philosophy, Religion and Education</li>
+										<li>• MA Catholic School Leadership</li>
+										<li>• Postgraduate Certificate in Theology</li>
+									</ul>
+								</div>
+								
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">Psychology and Counselling</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Professional development for mental health and wellbeing practitioners.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• MSc Psychology</li>
+										<li>• MA Counselling Studies</li>
+										<li>• MA Drama and Movement Therapy</li>
+										<li>• Professional Doctorate in Counselling Psychology</li>
+									</ul>
+								</div>
+
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">Business and Management</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Ethical business education with a focus on sustainable practices.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• MBA Business Administration</li>
+										<li>• MA Human Resource Management</li>
+										<li>• MSc Management and Leadership</li>
+										<li>• Postgraduate Certificate in Business</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Research Excellence -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Research Excellence</h3>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<div class="bg-gray-50 rounded-lg p-4">
+									<h4 class="font-semibold text-gray-900 mb-2">Research Centers</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Newman Research Centre</li>
+										<li>• Centre for Educational Research</li>
+										<li>• Institute for Leadership and Management</li>
+										<li>• Centre for Theology and Philosophy</li>
+									</ul>
+								</div>
+								<div class="bg-gray-50 rounded-lg p-4">
+									<h4 class="font-semibold text-gray-900 mb-2">Research Themes</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Social justice and inequality</li>
+										<li>• Educational innovation</li>
+										<li>• Faith and contemporary society</li>
+										<li>• Mental health and wellbeing</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Campus Facilities -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Campus and Facilities</h3>
+							<div class="bg-gray-50 rounded-lg p-6">
+								<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+									<div>
+										<h4 class="font-semibold text-gray-900 mb-2">Academic Facilities</h4>
+										<ul class="text-sm text-gray-700 space-y-1">
+											<li>• Modern teaching rooms and lecture theaters</li>
+											<li>• Specialist psychology laboratories</li>
+											<li>• Drama and performance studios</li>
+											<li>• Well-equipped IT suites</li>
+											<li>• Professional practice rooms</li>
+										</ul>
+									</div>
+									
+									<div>
+										<h4 class="font-semibold text-gray-900 mb-2">Student Facilities</h4>
+										<ul class="text-sm text-gray-700 space-y-1">
+											<li>• Extensive library with study spaces</li>
+											<li>• Modern fitness suite and sports hall</li>
+											<li>• Student union and social spaces</li>
+											<li>• Multi-faith prayer rooms</li>
+											<li>• On-campus accommodation</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Student Life -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Student Life and Community</h3>
+							<p class="text-gray-700 mb-4">
+								Newman University prides itself on its close-knit community where everyone knows your name. With around 3,000 students, the university offers a supportive environment where students can build lasting friendships and receive personalized attention from staff.
+							</p>
+							<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Student Societies</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Academic societies</li>
+										<li>• Sports clubs</li>
+										<li>• Drama and arts groups</li>
+										<li>• Faith groups</li>
+										<li>• Volunteering projects</li>
+									</ul>
+								</div>
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Support Services</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Personal academic tutors</li>
+										<li>• Counselling services</li>
+										<li>• Disability support</li>
+										<li>• Careers guidance</li>
+										<li>• Financial advice</li>
+									</ul>
+								</div>
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Community Links</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Local school partnerships</li>
+										<li>• Community volunteering</li>
+										<li>• Charity fundraising</li>
+										<li>• Social enterprise projects</li>
+										<li>• Faith community connections</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Location and Birmingham -->
+						<div class="bg-blue-50 rounded-lg p-6">
+							<h3 class="text-xl font-semibold text-blue-800 mb-4">Location Advantages</h3>
+							<p class="text-gray-700 mb-4">
+								Newman University enjoys an ideal location in Bartley Green, offering a peaceful campus environment while being just 20 minutes from Birmingham city center by public transport.
+							</p>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Campus Location</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• 10-acre green campus</li>
+										<li>• Quiet residential area</li>
+										<li>• Regular bus services to city center</li>
+										<li>• Close to Selly Oak and University of Birmingham</li>
+										<li>• Easy access to M5 motorway</li>
+									</ul>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Birmingham Benefits</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• UK's second largest city</li>
+										<li>• Major cultural and arts scene</li>
+										<li>• Excellent shopping and dining</li>
+										<li>• Strong job market</li>
+										<li>• International airport nearby</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div class="lg:col-span-1">
+					<!-- Quick Facts -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Quick Facts</h3>
+						<div class="space-y-3">
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Founded:</span>
+								<span class="text-sm font-medium">1968</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Location:</span>
+								<span class="text-sm font-medium">Birmingham, UK</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Students:</span>
+								<span class="text-sm font-medium">3,000+</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Student:Staff Ratio:</span>
+								<span class="text-sm font-medium">13:1</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Campus Size:</span>
+								<span class="text-sm font-medium">10 acres</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Rankings and Recognition -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Recognition & Awards</h3>
+						<ul class="space-y-2 text-sm">
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>TEF Silver Award for Teaching Excellence</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>Top 10 for Student Satisfaction (NSS)</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>Outstanding OFSTED rating for Teacher Training</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>Green Flag Award for campus sustainability</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Entry Requirements -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Entry Requirements</h3>
+						<div class="space-y-3">
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Academic Requirements</h4>
+								<p class="text-xs text-gray-600">2:2 degree or above in relevant field</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Professional Experience</h4>
+								<p class="text-xs text-gray-600">Relevant experience considered for some programs</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">English Language</h4>
+								<p class="text-xs text-gray-600">IELTS 6.5 overall (6.0 in each component)</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Additional Requirements</h4>
+								<p class="text-xs text-gray-600">DBS check for education programs</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Fees and Funding -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Fees & Funding</h3>
+						<div class="space-y-3">
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">UK Students</h4>
+								<p class="text-xs text-gray-600">£7,500 - £9,500 per year</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">International Students</h4>
+								<p class="text-xs text-gray-600">£12,000 - £14,000 per year</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Funding Options</h4>
+								<p class="text-xs text-gray-600">Scholarships, bursaries, and payment plans available</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Contact Information -->
+					<div class="bg-white rounded-lg shadow-sm p-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Contact Information</h3>
+						<div class="space-y-3">
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">Admissions Office</h4>
+								<p class="text-xs text-gray-600">admissions@newman.ac.uk</p>
+								<p class="text-xs text-gray-600">0121 476 1181</p>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">Postgraduate Office</h4>
+								<p class="text-xs text-gray-600">postgraduate@newman.ac.uk</p>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">International Office</h4>
+								<p class="text-xs text-gray-600">international@newman.ac.uk</p>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">Address</h4>
+								<p class="text-xs text-gray-600">
+									Newman University<br/>
+									Genners Lane<br/>
+									Bartley Green<br/>
+									Birmingham B32 3NT<br/>
+									United Kingdom
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Notable Alumni -->
+	<section class="bg-gray-50 py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-2xl font-bold text-center mb-8">Notable Alumni and Success Stories</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="flex items-start gap-4">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+							<span class="text-blue-600 font-bold text-xl">EP</span>
+						</div>
+						<div>
+							<h3 class="font-semibold text-gray-900 mb-1">Emma Patterson</h3>
+							<p class="text-sm text-gray-600 mb-2">MA Education, 2019</p>
+							<p class="text-sm text-gray-700">
+								"The personalized support at Newman was incredible. My dissertation on inclusive education led to a leadership role in Birmingham's education department."
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="flex items-start gap-4">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+							<span class="text-blue-600 font-bold text-xl">JO</span>
+						</div>
+						<div>
+							<h3 class="font-semibold text-gray-900 mb-1">James O'Brien</h3>
+							<p class="text-sm text-gray-600 mb-2">PGCE Secondary, 2020</p>
+							<p class="text-sm text-gray-700">
+								"The teacher training at Newman prepared me exceptionally well. The placement schools were excellent, and I secured a job before graduating."
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="flex items-start gap-4">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+							<span class="text-blue-600 font-bold text-xl">SK</span>
+						</div>
+						<div>
+							<h3 class="font-semibold text-gray-900 mb-1">Sarah Khan</h3>
+							<p class="text-sm text-gray-600 mb-2">MSc Psychology, 2021</p>
+							<p class="text-sm text-gray-700">
+								"Newman's focus on values and ethics in psychology gave me a unique perspective that employers really value. The small class sizes meant great access to professors."
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- International Students -->
+	<section class="bg-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-2xl font-bold text-center mb-8">International Student Support</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Dedicated Support Services</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start gap-3">
+							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900">Pre-arrival Support</h4>
+								<p class="text-sm text-gray-600">Visa guidance, accommodation assistance, and online orientation</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-3">
+							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900">Airport Collection</h4>
+								<p class="text-sm text-gray-600">Free pickup service from Birmingham Airport for new students</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-3">
+							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900">English Language Support</h4>
+								<p class="text-sm text-gray-600">Free English classes and academic writing workshops</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-3">
+							<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900">Cultural Integration</h4>
+								<p class="text-sm text-gray-600">International student society and cultural celebration events</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="bg-gray-50 rounded-lg p-6">
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">International Community</h3>
+					<p class="text-gray-700 mb-4">
+						Newman University welcomes students from over 30 countries, creating a diverse and inclusive community. Our international students particularly value:
+					</p>
+					<ul class="space-y-2 text-sm">
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+							<span>Small, friendly campus atmosphere</span>
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+							<span>Personalized academic support</span>
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+							<span>Safe campus environment</span>
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+							<span>Multi-faith chaplaincy services</span>
+						</li>
+						<li class="flex items-center gap-2">
+							<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+							<span>Birmingham's multicultural community</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="bg-blue-600 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-2xl font-bold mb-4">Begin Your Journey at Newman University</h2>
+			<p class="text-xl mb-8 max-w-2xl mx-auto">
+				Join our supportive community and experience education that develops your whole person - mind, body, and spirit.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="#" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+					Apply Now
+				</a>
+				<a href="#" class="inline-block bg-blue-500 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-400 transition-colors">
+					Book an Open Day
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>

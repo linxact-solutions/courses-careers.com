@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const structuredData = {
+  type: 'homepage'
+};
+---
+
+<Layout 
+  title="Courses and Careers - UK University Courses, College Programs & Career Guidance"
+  description="UK's leading guide to university courses, college programs, and career opportunities. Find undergraduate, postgraduate courses and expert career guidance."
+  keywords="UK university courses, college programs, career guidance, undergraduate courses, postgraduate courses, student advice, further education"
+  structuredData={structuredData}
+>
+	<div class="bg-gradient-to-b from-blue-50 to-white">
+		<!-- Hero Section -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+					Courses and Careers
+				</h1>
+				<p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+					Your comprehensive guide to UK university courses, college programs, and career opportunities. 
+					Find the perfect path for your future with our expert guidance and resources.
+				</p>
+				<div class="flex flex-wrap justify-center gap-4">
+					<a href="/undergraduate" class="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+						Undergraduate Courses
+					</a>
+					<a href="/postgraduate" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+						Postgraduate Courses
+					</a>
+					<a href="/jobs-and-careers" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+						Career Guidance
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- News and Updates Section -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+				<!-- Main News Column -->
+				<div class="lg:col-span-2">
+					<h2 class="text-3xl font-bold text-gray-900 mb-8">Latest News & Updates</h2>
+					
+					<!-- Tuition Fees Update -->
+					<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+						<h3 class="text-xl font-semibold text-gray-900 mb-4">Tuition Fees Update</h3>
+						<div>
+							<p class="text-gray-700 mb-3">
+								Stay informed about the latest tuition fee changes and financial support options available to students in 2025.
+							</p>
+							<a href="/student-advice/student-finance" class="text-blue-600 hover:text-blue-800 font-medium">Learn more about student finance →</a>
+						</div>
+					</div>
+
+					<!-- News Items -->
+					<div class="space-y-4">
+						<div class="bg-white rounded-lg shadow p-4">
+							<h4 class="font-semibold text-gray-900 mb-2">Student Support and Resources</h4>
+							<p class="text-gray-600 text-sm mb-2">Find comprehensive support for your academic journey, from course selection to career planning.</p>
+							<a href="/student-advice" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Read more →</a>
+						</div>
+						
+						<div class="bg-white rounded-lg shadow p-4">
+							<h4 class="font-semibold text-gray-900 mb-2">Career Opportunities</h4>
+							<p class="text-gray-600 text-sm mb-2">Explore exciting career paths and job opportunities across various industries and sectors.</p>
+							<a href="/jobs-and-careers" class="text-blue-600 hover:text-blue-800 text-sm font-medium">Explore careers →</a>
+						</div>
+						
+						<div class="bg-white rounded-lg shadow p-4">
+							<h4 class="font-semibold text-gray-900 mb-2">University and College Profiles</h4>
+							<p class="text-gray-600 text-sm mb-2">Discover top universities and colleges with our comprehensive institutional profiles.</p>
+							<a href="/undergraduate/university-profiles" class="text-blue-600 hover:text-blue-800 text-sm font-medium">View profiles →</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div class="lg:col-span-1">
+					<!-- Quick Links -->
+					<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+						<h3 class="text-xl font-semibold text-gray-900 mb-4">Quick Links</h3>
+						<ul class="space-y-3">
+							<li><a href="/student-advice/student-finance" class="text-blue-600 hover:text-blue-800 flex items-center"><span class="mr-2">💰</span>Student Finance Guide</a></li>
+							<li><a href="/undergraduate/subject-guide" class="text-blue-600 hover:text-blue-800 flex items-center"><span class="mr-2">📚</span>Subject Guides</a></li>
+							<li><a href="/jobs-and-careers/job-search" class="text-blue-600 hover:text-blue-800 flex items-center"><span class="mr-2">🔍</span>Job Search</a></li>
+						</ul>
+					</div>
+
+					<!-- Featured Universities -->
+					<div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+						<h3 class="text-xl font-semibold text-gray-900 mb-4">Featured Universities</h3>
+						<div class="space-y-4">
+							<div class="text-center">
+								<img src="/images/stories/college-images/aberystwyth.gif" alt="University of Wales, Aberystwyth" class="mx-auto mb-2" />
+								<a href="/undergraduate/university-profiles/university-of-wales-aberystwyth" class="text-sm text-blue-600 hover:text-blue-800">University of Wales, Aberystwyth</a>
+							</div>
+							<div class="text-center">
+								<img src="/images/stories/college-images/manchester-idpm/logo.gif" alt="University of Manchester" class="mx-auto mb-2" />
+								<a href="/postgraduate/university-profiles/university-of-manchester-idpm" class="text-sm text-blue-600 hover:text-blue-800">University of Manchester - IDPM</a>
+							</div>
+							<div class="text-center">
+								<img src="/images/stories/college-images/newman-university-college/nm.jpg" alt="Newman University College" class="mx-auto mb-2" />
+								<a href="/postgraduate/university-profiles/newman-university-college-birmingham" class="text-sm text-blue-600 hover:text-blue-800">Newman University College</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Subject Areas -->
+					<div class="bg-white rounded-lg shadow-lg p-6">
+						<h3 class="text-xl font-semibold text-gray-900 mb-4">Popular Subject Areas</h3>
+						<div class="space-y-2 text-sm">
+							<a href="/postgraduate/subject-guide/computer-science" class="block text-blue-600 hover:text-blue-800">Computer Science</a>
+							<a href="/postgraduate/subject-guide/engineering" class="block text-blue-600 hover:text-blue-800">Engineering</a>
+							<a href="/undergraduate/subject-guide/business-courses" class="block text-blue-600 hover:text-blue-800">Business Studies</a>
+							<a href="/postgraduate/subject-guide/mba-courses" class="block text-blue-600 hover:text-blue-800">MBA Courses</a>
+							<a href="/postgraduate/subject-guide/law-courses" class="block text-blue-600 hover:text-blue-800">Law</a>
+							<a href="/postgraduate/subject-guide/psychology" class="block text-blue-600 hover:text-blue-800">Psychology</a>
+							<a href="/further-education/subject-guide/fashion-design" class="block text-blue-600 hover:text-blue-800">Fashion Design</a>
+							<a href="/postgraduate/subject-guide/tourism" class="block text-blue-600 hover:text-blue-800">Tourism</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section class="bg-gray-50 py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Services</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Further Education -->
+					<div class="bg-white rounded-lg shadow-lg p-6 text-center">
+						<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="text-2xl">🎓</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Further Education</h3>
+						<p class="text-gray-600 mb-4">Explore college courses and professional development programs to advance your career.</p>
+						<a href="/further-education" class="text-green-600 hover:text-green-800 font-medium">Learn more →</a>
+					</div>
+
+					<!-- Undergraduate -->
+					<div class="bg-white rounded-lg shadow-lg p-6 text-center">
+						<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="text-2xl">📚</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Undergraduate</h3>
+						<p class="text-gray-600 mb-4">Find the perfect undergraduate degree program at top UK universities.</p>
+						<a href="/undergraduate" class="text-orange-600 hover:text-orange-800 font-medium">Explore courses →</a>
+					</div>
+
+					<!-- Postgraduate -->
+					<div class="bg-white rounded-lg shadow-lg p-6 text-center">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="text-2xl">🎯</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Postgraduate</h3>
+						<p class="text-gray-600 mb-4">Advance your career with postgraduate degrees and professional qualifications.</p>
+						<a href="/postgraduate" class="text-blue-600 hover:text-blue-800 font-medium">View programs →</a>
+					</div>
+
+					<!-- Jobs & Careers -->
+					<div class="bg-white rounded-lg shadow-lg p-6 text-center">
+						<div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="text-2xl">💼</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Jobs & Careers</h3>
+						<p class="text-gray-600 mb-4">Get expert career guidance and find job opportunities in your field.</p>
+						<a href="/jobs-and-careers" class="text-purple-600 hover:text-purple-800 font-medium">Find jobs →</a>
+					</div>
+
+					<!-- Student Advice -->
+					<div class="bg-white rounded-lg shadow-lg p-6 text-center">
+						<div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="text-2xl">💡</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Student Advice</h3>
+						<p class="text-gray-600 mb-4">Get practical advice on finances, accommodation, and student life.</p>
+						<a href="/student-advice" class="text-red-600 hover:text-red-800 font-medium">Get advice →</a>
+					</div>
+
+					<!-- Resources & Support -->
+					<div class="bg-white rounded-lg shadow-lg p-6 text-center">
+						<div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="text-2xl">📚</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Resources & Support</h3>
+						<p class="text-gray-600 mb-4">Access comprehensive guides, tools, and resources to support your educational journey.</p>
+						<a href="/student-advice" class="text-pink-600 hover:text-pink-800 font-medium">Get support →</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to Action -->
+		<section class="bg-blue-600 text-white py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
+				<p class="text-xl mb-8 max-w-2xl mx-auto">
+					Whether you're looking for your first degree, advancing your career, or seeking new opportunities, we're here to help.
+				</p>
+				<div class="flex flex-wrap justify-center gap-4">
+					<a href="/undergraduate" class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors">
+						Find Courses
+					</a>
+					<a href="/jobs-and-careers/job-search" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-medium transition-colors">
+						Search Jobs
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</Layout>

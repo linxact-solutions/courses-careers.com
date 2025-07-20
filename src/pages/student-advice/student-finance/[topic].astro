@@ -1,0 +1,188 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+export function getStaticPaths() {
+  const topics = [
+    { slug: 'budget-calculator', title: 'Budget Calculator', description: 'Calculate your student living costs and budget for university life.' },
+    { slug: 'tuition-fee-changes', title: 'Tuition Fee Changes', description: 'Stay updated on university tuition fee changes and their impact on students.' },
+    { slug: 'student-loans-guide', title: 'Student Loans Guide', description: 'Complete guide to student loans, repayment, and financial assistance.' },
+    { slug: 'bursaries-and-scholarships', title: 'Bursaries and Scholarships', description: 'Find funding opportunities through bursaries, scholarships, and grants.' },
+    { slug: 'student-loans-overview', title: 'Student Loans Overview', description: 'Understand the different types of student loans and how they work.' },
+    { slug: 'student-loan-repayment', title: 'Student Loan Repayment', description: 'Learn about student loan repayment schedules and options.' },
+    { slug: 'research-grants', title: 'Research Grants', description: 'Find funding for research projects and postgraduate studies.' },
+    { slug: 'phd-funding', title: 'PhD Funding', description: 'Explore funding options for doctoral research and PhD programs.' },
+    { slug: 'hardship-funds', title: 'Hardship Funds', description: 'Emergency financial support for students facing financial difficulties.' },
+    { slug: 'loan-calculator', title: 'Loan Calculator', description: 'Calculate your student loan amounts and repayment schedules.' },
+    { slug: 'money-management-tips', title: 'Money Management Tips', description: 'Practical advice for managing finances as a student.' },
+    { slug: 'financial-difficulties', title: 'Financial Difficulties', description: 'Support and guidance for students experiencing financial hardship.' },
+    { slug: 'merit-based-funding', title: 'Merit-Based Funding', description: 'Academic achievement awards and merit-based financial support.' },
+    { slug: 'interest-rates-explained', title: 'Interest Rates Explained', description: 'Understanding interest rates on student loans and their impact.' },
+    { slug: 'hidden-costs', title: 'Hidden Costs', description: 'Unexpected expenses and hidden costs of university life.' },
+    { slug: 'cost-of-living-calculator', title: 'Cost of Living Calculator', description: 'Estimate living costs for different university locations.' },
+    { slug: 'loan-repayment-calculator', title: 'Loan Repayment Calculator', description: 'Calculate your future loan repayments based on income.' },
+    { slug: 'emergency-funds', title: 'Emergency Funds', description: 'Building and accessing emergency financial resources.' },
+    { slug: 'cost-comparison', title: 'Cost Comparison', description: 'Compare costs between different universities and locations.' },
+    { slug: '2025-updates', title: '2025 Updates', description: 'Latest changes to student finance for the 2025 academic year.' },
+    { slug: 'avoiding-debt-trap', title: 'Avoiding Debt Trap', description: 'Strategies to avoid excessive debt and financial problems.' },
+    { slug: 'freshers-week', title: 'Freshers Week', description: 'Budgeting and financial planning for freshers week activities.' },
+    { slug: 'choosing-a-degree-course', title: 'Choosing a Degree Course', description: 'Financial considerations when selecting your degree program.' },
+    { slug: 'living-in-halls', title: 'Living in Halls', description: 'Costs and financial aspects of university accommodation.' },
+    { slug: 'accommodation-costs', title: 'Accommodation Costs', description: 'Understanding different accommodation options and their costs.' },
+    { slug: 'degree-course-checklist', title: 'Degree Course Checklist', description: 'Financial checklist for choosing the right degree course.' },
+    { slug: 'learning-styles', title: 'Learning Styles', description: 'How different learning styles affect study costs and resources.' },
+    { slug: 'national-union-students', title: 'National Union of Students', description: 'NUS resources and support for student financial welfare.' },
+    { slug: 'private-accommodation', title: 'Private Accommodation', description: 'Financial aspects of private student accommodation.' },
+    { slug: 'bursary-searcher', title: 'Bursary Searcher', description: 'Tool to search for available bursaries and grants.' },
+    { slug: 'benefits-of-university-education', title: 'Benefits of University Education', description: 'Financial and career benefits of higher education investment.' },
+    { slug: 'why-take-gap-year', title: 'Why Take a Gap Year', description: 'Financial benefits and considerations of taking a gap year.' },
+    { slug: 'thinking-about-gap-year', title: 'Thinking About Gap Year', description: 'Financial planning for gap year activities and experiences.' },
+    { slug: 'ucas-clearing-process', title: 'UCAS Clearing Process', description: 'Financial implications of the UCAS clearing process.' },
+    { slug: 'research-proposal-guide', title: 'Research Proposal Guide', description: 'Funding considerations when writing research proposals.' },
+    { slug: 'phd-funding-search', title: 'PhD Funding Search', description: 'Comprehensive search for PhD funding opportunities.' },
+    { slug: 'financial-counselling', title: 'Financial Counselling', description: 'Professional financial advice and counselling for students.' },
+    { slug: 'budgeting-tips', title: 'Budgeting Tips', description: 'Practical budgeting strategies for students.' },
+    { slug: 'scholarship-search', title: 'Scholarship Search', description: 'Find scholarships and funding opportunities.' }
+  ];
+
+  return topics.map(topic => ({
+    params: { topic: topic.slug },
+    props: { topic }
+  }));
+}
+
+const { topic } = Astro.props;
+---
+
+<Layout 
+  title={`${topic.title} - Student Finance`}
+  description={topic.description}
+  section="student-advice"
+>
+  <div class="bg-gray-50 min-h-screen">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-600 to-purple-700 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold mb-4">{topic.title}</h1>
+          <p class="text-xl text-purple-100 max-w-3xl mx-auto">{topic.description}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">{topic.title} Guide</h2>
+            <div class="prose prose-lg max-w-none">
+              <p class="text-gray-700 mb-4">
+                Managing your finances as a student is crucial for a successful university experience. This comprehensive guide covers everything you need to know about {topic.title.toLowerCase()} to help you make informed financial decisions.
+              </p>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Key Information</h3>
+              <p class="text-gray-700 mb-4">
+                Understanding your financial options and responsibilities is essential for planning your education budget effectively. We provide up-to-date information on all aspects of student finance to help you navigate the system.
+              </p>
+              
+              <div class="bg-purple-50 p-6 rounded-lg mb-6">
+                <h4 class="font-semibold text-purple-900 mb-3">Important Points:</h4>
+                <ul class="list-disc pl-6 text-purple-800">
+                  <li>Stay informed about changes to student finance regulations</li>
+                  <li>Plan your budget carefully to avoid financial stress</li>
+                  <li>Take advantage of all available funding opportunities</li>
+                  <li>Seek advice early if you encounter financial difficulties</li>
+                </ul>
+              </div>
+              
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Next Steps</h3>
+              <p class="text-gray-700 mb-4">
+                Ready to take control of your student finances? Use our resources and tools to create a comprehensive financial plan that supports your academic goals and lifestyle needs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tools and Resources -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Financial Tools</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-purple-900 mb-3">Budget Planner</h3>
+                <p class="text-sm text-purple-800 mb-4">Plan your student budget with our interactive calculator</p>
+                <a href="/student-advice/student-finance/budget-calculator" class="text-purple-600 hover:text-purple-800 text-sm font-medium">
+                  Use Calculator →
+                </a>
+              </div>
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-purple-900 mb-3">Funding Finder</h3>
+                <p class="text-sm text-purple-800 mb-4">Search for scholarships, bursaries, and grants</p>
+                <a href="/student-advice/student-finance/bursary-searcher" class="text-purple-600 hover:text-purple-800 text-sm font-medium">
+                  Search Funding →
+                </a>
+              </div>
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-purple-900 mb-3">Loan Calculator</h3>
+                <p class="text-sm text-purple-800 mb-4">Calculate your loan repayments and interest</p>
+                <a href="/student-advice/student-finance/loan-calculator" class="text-purple-600 hover:text-purple-800 text-sm font-medium">
+                  Calculate Loans →
+                </a>
+              </div>
+              <div class="bg-purple-50 p-6 rounded-lg">
+                <h3 class="font-semibold text-purple-900 mb-3">Cost Comparison</h3>
+                <p class="text-sm text-purple-800 mb-4">Compare costs between universities and locations</p>
+                <a href="/student-advice/student-finance/cost-comparison" class="text-purple-600 hover:text-purple-800 text-sm font-medium">
+                  Compare Costs →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <!-- Quick Links -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Quick Links</h3>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/student-advice/student-finance/student-loans-guide" class="text-purple-600 hover:text-purple-800">Student Loans Guide</a></li>
+              <li><a href="/student-advice/student-finance/bursaries-and-scholarships" class="text-purple-600 hover:text-purple-800">Bursaries & Scholarships</a></li>
+              <li><a href="/student-advice/student-finance/budget-calculator" class="text-purple-600 hover:text-purple-800">Budget Calculator</a></li>
+              <li><a href="/student-advice/student-finance/hardship-funds" class="text-purple-600 hover:text-purple-800">Hardship Funds</a></li>
+              <li><a href="/student-advice/student-finance/money-management-tips" class="text-purple-600 hover:text-purple-800">Money Management</a></li>
+            </ul>
+          </div>
+
+          <!-- Financial Support -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Need Help?</h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-purple-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Financial Difficulties</h4>
+                <p class="text-sm text-gray-600">Get support if you're struggling financially</p>
+              </div>
+              <div class="border-l-4 border-purple-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Emergency Funds</h4>
+                <p class="text-sm text-gray-600">Access emergency financial assistance</p>
+              </div>
+              <div class="border-l-4 border-purple-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Financial Counselling</h4>
+                <p class="text-sm text-gray-600">Professional financial advice for students</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Support -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Get Support</h3>
+            <p class="text-gray-600 mb-4">Our student finance advisors are here to help you navigate funding options.</p>
+            <a href="/student-advice/student-finance/financial-counselling" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+              Contact Advisor
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout> 

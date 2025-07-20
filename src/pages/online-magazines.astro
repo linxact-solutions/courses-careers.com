@@ -1,0 +1,430 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SkipLink from '../components/SkipLink.astro';
+import OptimizedImage from '../components/OptimizedImage.astro';
+
+const magazines = [
+  {
+    id: 'ccuk_29.2',
+    title: 'Courses & Careers UK - Volume 29.2',
+    description: 'Comprehensive guide to undergraduate and postgraduate opportunities in the UK',
+    coverImage: '/images/stories/emagazine_thumbnails/ccuk_29.2.jpg',
+    publishDate: '2024-06-15',
+    category: 'Undergraduate',
+    readTime: '45 min read',
+    featured: true,
+    url: '/images/stories/online-magazines/emags/ccuk_29.2/ccuk_29.2.htm'
+  },
+  {
+    id: 'ccuk_29.3',
+    title: 'Courses & Careers UK - Volume 29.3',
+    description: 'Career guidance and course selection for ambitious students',
+    coverImage: '/images/stories/emagazine_thumbnails/ccuk_29.3.jpg',
+    publishDate: '2024-09-15',
+    category: 'Career Guidance',
+    readTime: '40 min read',
+    featured: true,
+    url: '/images/stories/online-magazines/emags/ccuk_29.3/ccuk_29.3.htm'
+  },
+  {
+    id: 'ccuk_29.4',
+    title: 'Courses & Careers UK - Volume 29.4',
+    description: 'Latest trends in higher education and emerging career paths',
+    coverImage: '/images/stories/emagazine_thumbnails/ccuk_29.4.jpg',
+    publishDate: '2024-12-15',
+    category: 'Higher Education',
+    readTime: '50 min read',
+    featured: true,
+    url: '/images/stories/online-magazines/emags/ccuk_29.4/ccuk_29.4.htm'
+  },
+  {
+    id: 'gcc_4.2',
+    title: 'Graduate Careers & Courses - Volume 4.2',
+    description: 'Postgraduate opportunities and professional development',
+    coverImage: '/images/stories/postgraduate_emag_thumbnails/pg_4.2.jpg',
+    publishDate: '2024-07-15',
+    category: 'Postgraduate',
+    readTime: '35 min read',
+    featured: false,
+    url: '/images/stories/online-magazines/emags/gcc_4.2/gcc_4.2.htm'
+  },
+  {
+    id: 'gcc_4.3',
+    title: 'Graduate Careers & Courses - Volume 4.3',
+    description: 'Advanced career strategies and postgraduate pathways',
+    coverImage: '/images/stories/postgraduate_emag_thumbnails/pg_4.3.jpg',
+    publishDate: '2024-10-15',
+    category: 'Postgraduate',
+    readTime: '42 min read',
+    featured: false,
+    url: '/images/stories/online-magazines/emags/gcc_4.3/gcc_4.3.htm'
+  },
+  {
+    id: 'ccuk_30.1',
+    title: 'Courses & Careers UK - Volume 30.1',
+    description: 'New year, new opportunities - Your 2025 education guide',
+    coverImage: '/images/stories/emagazine_thumbnails/ccuk_30.1_cover.jpg',
+    publishDate: '2025-01-15',
+    category: 'New Year Special',
+    readTime: '55 min read',
+    featured: true,
+    url: '#'
+  }
+];
+
+const categories = ['All', 'Undergraduate', 'Postgraduate', 'Career Guidance', 'Higher Education', 'New Year Special'];
+---
+
+<BaseLayout 
+  title="Online Magazines - Digital Publications"
+  description="Explore our comprehensive collection of digital magazines featuring career guidance, course information, and educational insights. Access premium content designed for students and professionals."
+>
+  <div class="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-r from-pink-600 via-purple-600 to-pink-700">
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+            Online Magazines
+          </h1>
+          <p class="text-xl md:text-2xl text-pink-100 max-w-3xl mx-auto mb-8">
+            Discover premium digital publications featuring expert insights, career guidance, and educational opportunities
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button 
+              onclick="document.getElementById('magazine-archive').scrollIntoView({ behavior: 'smooth' })"
+              class="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors shadow-lg"
+            >
+              Browse Archive
+            </button>
+            <button 
+              onclick="document.getElementById('subscription-info').scrollIntoView({ behavior: 'smooth' })"
+              class="bg-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-400 transition-colors shadow-lg border-2 border-pink-400"
+            >
+              Subscribe Now
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Decorative elements -->
+      <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-sm"></div>
+      <div class="absolute bottom-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-sm"></div>
+    </section>
+
+    <!-- Featured Magazines Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Featured Issues
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Our most popular and recent publications covering the latest in education and career development
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {magazines.filter(mag => mag.featured).map(magazine => (
+            <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-pink-100">
+              <div class="relative overflow-hidden rounded-t-2xl">
+                <OptimizedImage 
+                  src={magazine.coverImage} 
+                  alt={magazine.title}
+                  class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div class="absolute top-4 right-4">
+                  <span class="bg-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {magazine.category}
+                  </span>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
+                  {magazine.title}
+                </h3>
+                <p class="text-gray-600 mb-4 line-clamp-3">
+                  {magazine.description}
+                </p>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                  <span>{new Date(magazine.publishDate).toLocaleDateString('en-GB', { 
+                    day: 'numeric', 
+                    month: 'long', 
+                    year: 'numeric' 
+                  })}</span>
+                  <span>{magazine.readTime}</span>
+                </div>
+                <div class="flex gap-3">
+                  <a 
+                    href={magazine.url} 
+                    class="flex-1 bg-pink-600 text-white text-center py-2 px-4 rounded-lg hover:bg-pink-700 transition-colors font-medium"
+                  >
+                    Read Now
+                  </a>
+                  <button 
+                    onclick={`downloadMagazine('${magazine.id}')`}
+                    class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors"
+                    aria-label={`Download ${magazine.title}`}
+                  >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Magazine Archive Section -->
+    <section id="magazine-archive" class="py-16 bg-gradient-to-r from-pink-50 to-purple-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Magazine Archive
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Explore our complete collection of educational and career-focused publications
+          </p>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="flex flex-wrap justify-center gap-2 mb-8">
+          {categories.map(category => (
+            <button 
+              onclick={`filterMagazines('${category}')`}
+              class={`px-4 py-2 rounded-full font-medium transition-colors ${
+                category === 'All' 
+                  ? 'bg-pink-600 text-white' 
+                  : 'bg-white text-pink-600 hover:bg-pink-50'
+              } border border-pink-200`}
+              data-category={category}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        <!-- Magazine Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="magazine-grid">
+          {magazines.map(magazine => (
+            <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-pink-100 magazine-card" data-category={magazine.category}>
+              <div class="relative overflow-hidden rounded-t-xl">
+                <OptimizedImage 
+                  src={magazine.coverImage} 
+                  alt={magazine.title}
+                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                />
+                <div class="absolute top-3 right-3">
+                  <span class="bg-pink-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+                    {magazine.category}
+                  </span>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                  {magazine.title}
+                </h3>
+                <p class="text-gray-600 text-sm mb-3 line-clamp-2">
+                  {magazine.description}
+                </p>
+                <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+                  <span>{new Date(magazine.publishDate).toLocaleDateString('en-GB', { 
+                    day: 'numeric', 
+                    month: 'short', 
+                    year: 'numeric' 
+                  })}</span>
+                  <span>{magazine.readTime}</span>
+                </div>
+                <a 
+                  href={magazine.url} 
+                  class="w-full bg-pink-600 text-white text-center py-2 px-3 rounded-lg hover:bg-pink-700 transition-colors font-medium text-sm block"
+                >
+                  Read Magazine
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section id="subscription-info" class="py-16 bg-gradient-to-r from-pink-600 to-purple-600">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Subscribe to Our Magazines
+        </h2>
+        <p class="text-xl text-pink-100 mb-8">
+          Get instant access to new issues and exclusive content delivered straight to your inbox
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <h3 class="text-xl font-semibold text-white mb-4">
+              <a href="/online-magazines/courses-and-careers" class="hover:text-pink-200 transition-colors">
+                Courses & Careers UK
+              </a>
+            </h3>
+            <p class="text-pink-100 mb-4">
+              Comprehensive guides for undergraduate students and career changers
+            </p>
+            <ul class="text-pink-100 text-sm space-y-2 mb-4">
+              <li>• Course selection guidance</li>
+              <li>• University profiles</li>
+              <li>• Career pathways</li>
+              <li>• Student advice</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <h3 class="text-xl font-semibold text-white mb-4">
+              <a href="/online-magazines/postgraduate-courses-and-careers" class="hover:text-pink-200 transition-colors">
+                Postgraduate Courses & Careers
+              </a>
+            </h3>
+            <p class="text-pink-100 mb-4">
+              Advanced education and professional development insights
+            </p>
+            <ul class="text-pink-100 text-sm space-y-2 mb-4">
+              <li>• Postgraduate opportunities</li>
+              <li>• Research programs</li>
+              <li>• Professional development</li>
+              <li>• Industry insights</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <h3 class="text-2xl font-bold text-white mb-4">Stay Updated</h3>
+          <p class="text-pink-100 mb-6">
+            Subscribe to receive notifications when new issues are published
+          </p>
+          <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <input 
+              type="email" 
+              placeholder="Enter your email address"
+              class="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-pink-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+              required
+            />
+            <button 
+              type="submit"
+              class="bg-white text-pink-600 px-6 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Magazine filtering functionality
+    function filterMagazines(category) {
+      const cards = document.querySelectorAll('.magazine-card');
+      const buttons = document.querySelectorAll('[data-category]');
+      
+      // Update button states
+      buttons.forEach(button => {
+        if (button.dataset.category === category) {
+          button.classList.add('bg-pink-600', 'text-white');
+          button.classList.remove('bg-white', 'text-pink-600');
+        } else {
+          button.classList.remove('bg-pink-600', 'text-white');
+          button.classList.add('bg-white', 'text-pink-600');
+        }
+      });
+      
+      // Filter cards
+      cards.forEach(card => {
+        if (category === 'All' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    
+    // Download magazine functionality
+    function downloadMagazine(magazineId) {
+      // In a real implementation, this would handle PDF downloads
+      alert(`Download feature for ${magazineId} coming soon!`);
+    }
+    
+    // Handle subscription form
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      alert(`Thank you for subscribing with ${email}! You'll receive notifications about new magazine issues.`);
+      e.target.reset();
+    });
+  </script>
+  
+  <style>
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    
+    /* Pink theme customizations */
+    :root {
+      --pink-50: #fdf2f8;
+      --pink-100: #fce7f3;
+      --pink-200: #fbcfe8;
+      --pink-400: #f472b6;
+      --pink-500: #ec4899;
+      --pink-600: #db2777;
+      --pink-700: #be185d;
+    }
+    
+    .bg-gradient-to-r {
+      background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    }
+    
+    .backdrop-blur-sm {
+      backdrop-filter: blur(4px);
+    }
+    
+    /* Smooth scrolling for navigation */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Enhanced hover effects */
+    .magazine-card:hover {
+      transform: translateY(-2px);
+      transition: all 0.3s ease;
+    }
+    
+    /* Custom scrollbar for better UX */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #db2777;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #be185d;
+    }
+  </style>
+</BaseLayout>

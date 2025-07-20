@@ -1,0 +1,48 @@
+/* Minimal CSS for testing */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CSS Reset - MUST come before Tailwind */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh;
+  position: relative;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header positioning - ensure it's flush with top */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Ensure Tailwind is working */
+@layer utilities {
+  .text-brand-primary {
+    color: #3b82f6;
+  }
+}

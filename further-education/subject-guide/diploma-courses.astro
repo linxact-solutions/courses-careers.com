@@ -1,0 +1,703 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import InfoSection from '../../components/InfoSection.astro';
+import CourseCard from '../../components/CourseCard.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<Layout title="Diploma Courses Guide | Further Education" description="Comprehensive guide to diploma qualifications including types, levels, subjects, and career progression opportunities">
+  <Hero 
+    title="Diploma Courses Guide"
+    subtitle="Flexible qualifications for academic and vocational success"
+    backgroundImage="/images/further-education-bg.jpg"
+    theme="green"
+  />
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-green-800 mb-6">Understanding Diploma Qualifications</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          Diplomas are versatile qualifications that bridge the gap between academic and vocational learning. They come in various forms and levels, offering structured pathways for students aged 16-19 who want focused study with practical application.
+        </p>
+
+        <div class="bg-green-50 border-l-4 border-green-600 p-6 mb-8">
+          <p class="text-green-800 font-semibold">
+            Diplomas can be standalone qualifications or combined with other courses like A-Levels or apprenticeships, providing flexibility in your education journey.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mt-8">
+          <div>
+            <h3 class="text-xl font-bold text-green-800 mb-4">Types of Diplomas</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">▸</span>
+                <div>
+                  <strong>Level 3 Diplomas:</strong> A-Level equivalent qualifications
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">▸</span>
+                <div>
+                  <strong>T Level Diplomas:</strong> New technical diplomas with work placements
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">▸</span>
+                <div>
+                  <strong>Professional Diplomas:</strong> Industry-specific qualifications
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">▸</span>
+                <div>
+                  <strong>Access Diplomas:</strong> Route to university for mature students
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-green-800 mb-4">Diploma Levels</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">✓</span>
+                <div>
+                  <strong>Level 1:</strong> Foundation level (GCSE grades 3-1 equivalent)
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">✓</span>
+                <div>
+                  <strong>Level 2:</strong> GCSE equivalent (grades 9-4)
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">✓</span>
+                <div>
+                  <strong>Level 3:</strong> A-Level equivalent
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-600 mr-2">✓</span>
+                <div>
+                  <strong>Level 4/5:</strong> Higher education level (HNC/HND)
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Popular Diploma Subjects"
+    theme="green"
+  >
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-bold text-green-800 mb-3">Business & Finance</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• Business Administration</li>
+          <li>• Accounting & Finance</li>
+          <li>• Marketing</li>
+          <li>• Human Resources</li>
+          <li>• Retail Management</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-bold text-green-800 mb-3">Health & Care</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• Health & Social Care</li>
+          <li>• Childcare & Education</li>
+          <li>• Dental Nursing</li>
+          <li>• Pharmacy Services</li>
+          <li>• Mental Health Support</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-bold text-green-800 mb-3">Creative & Digital</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• Digital Media Production</li>
+          <li>• Graphic Design</li>
+          <li>• Photography</li>
+          <li>• Games Development</li>
+          <li>• Fashion & Textiles</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-bold text-green-800 mb-3">Technical & Trade</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• Construction</li>
+          <li>• Electrical Installation</li>
+          <li>• Plumbing</li>
+          <li>• Motor Vehicle</li>
+          <li>• Engineering</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-bold text-green-800 mb-3">Service Industries</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• Hospitality & Catering</li>
+          <li>• Travel & Tourism</li>
+          <li>• Hair & Beauty</li>
+          <li>• Sports & Fitness</li>
+          <li>• Public Services</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-bold text-green-800 mb-3">STEM Subjects</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• Applied Science</li>
+          <li>• Laboratory Techniques</li>
+          <li>• Environmental Science</li>
+          <li>• Animal Management</li>
+          <li>• Agriculture</li>
+        </ul>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">T Levels: The New Technical Diplomas</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <p class="text-lg text-gray-700 mb-6">
+            T Levels are new 2-year courses that combine classroom learning with a substantial industry placement of at least 45 days.
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-xl font-bold text-green-800 mb-4">T Level Subjects</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">▸</span>
+                  <span>Digital Production, Design & Development</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">▸</span>
+                  <span>Education & Childcare</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">▸</span>
+                  <span>Health & Science</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">▸</span>
+                  <span>Construction & Built Environment</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">▸</span>
+                  <span>Engineering & Manufacturing</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">▸</span>
+                  <span>Business & Administration</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-green-800 mb-4">T Level Benefits</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>Equivalent to 3 A-Levels</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>Designed with employers</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>Substantial work experience</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>UCAS points for university</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>Industry-recognised qualification</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <span>English & maths included if needed</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Course Structure and Content"
+    theme="green"
+  >
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Typical Course Structure</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Core Units:</strong> Essential knowledge for the sector
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Specialist Units:</strong> Focused study in chosen area
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Work Experience:</strong> Practical application of skills
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Project Work:</strong> Real-world scenarios and problems
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Skills Development:</strong> Both technical and soft skills
+            </div>
+          </li>
+        </ul>
+        
+        <h3 class="text-xl font-bold text-green-800 mb-4 mt-6">Study Time</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Full-time: 16-20 hours per week in college</li>
+          <li>• Part-time: 6-8 hours per week (evening/weekend)</li>
+          <li>• Independent study: 10-15 hours per week</li>
+          <li>• Work placement: Varies by qualification</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Learning Methods</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Classroom Learning:</strong> Lectures, discussions, group work
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Practical Work:</strong> Workshops, labs, simulations
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Online Learning:</strong> Virtual classrooms, e-portfolios
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Industry Visits:</strong> Site tours, guest speakers
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Work-Based Learning:</strong> Placements, live projects
+            </div>
+          </li>
+        </ul>
+        
+        <div class="mt-6 p-4 bg-green-50 rounded">
+          <h4 class="font-bold text-green-800 mb-2">Duration Options</h4>
+          <ul class="text-sm space-y-1 text-gray-700">
+            <li>• Standard diploma: 1-2 years</li>
+            <li>• Extended diploma: 2 years</li>
+            <li>• Fast-track: 6-12 months (intensive)</li>
+            <li>• Part-time: 2-3 years</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Entry Requirements</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Level 3 Diplomas</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• 4-5 GCSEs at grade 4/C or above</li>
+            <li>• Including English and Maths</li>
+            <li>• Level 2 qualification in related subject</li>
+            <li>• Interview may be required</li>
+            <li>• Portfolio for creative subjects</li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-green-800 mb-4">T Levels</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• 5 GCSEs at grade 4/C or above</li>
+            <li>• Grade 6 in relevant subjects preferred</li>
+            <li>• Must be able to commit to placement</li>
+            <li>• English and Maths GCSE required</li>
+            <li>• Assessment day may be included</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-8 max-w-4xl mx-auto">
+        <div class="bg-green-50 p-6 rounded-lg">
+          <p class="text-green-800">
+            <strong>Flexible Entry:</strong> Many colleges consider alternative qualifications, work experience, and mature student applications. Always check with individual providers about their specific requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Assessment Methods"
+    theme="green"
+  >
+    <div class="mb-8">
+      <p class="text-lg text-gray-700">
+        Diploma assessments vary by qualification type but typically include a mix of methods to suit different learning styles:
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-bold text-green-800 mb-3">Continuous Assessment</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• Coursework assignments</li>
+          <li>• Practical demonstrations</li>
+          <li>• Portfolio building</li>
+          <li>• Reflective journals</li>
+          <li>• Group projects</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-bold text-green-800 mb-3">Formal Assessment</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• Written examinations</li>
+          <li>• Practical exams</li>
+          <li>• Presentations</li>
+          <li>• Viva voce (oral exams)</li>
+          <li>• Time-constrained tasks</li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-bold text-green-800 mb-3">Work-Based Assessment</h3>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• Employer feedback</li>
+          <li>• Workplace observations</li>
+          <li>• Professional discussions</li>
+          <li>• Work placement reports</li>
+          <li>• Industry projects</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="mt-8 bg-green-50 p-6 rounded-lg">
+      <h3 class="text-xl font-bold text-green-800 mb-4">Grading Systems</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-bold text-green-800 mb-2">Traditional Diplomas</h4>
+          <ul class="text-gray-700 space-y-1">
+            <li>• Pass, Merit, Distinction grades</li>
+            <li>• Some use Pass/Fail only</li>
+            <li>• Credits accumulated for units</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-green-800 mb-2">T Levels</h4>
+          <ul class="text-gray-700 space-y-1">
+            <li>• A*-E grading (like A-Levels)</li>
+            <li>• Overall grade plus component grades</li>
+            <li>• Pass required in all components</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Progression Routes</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <CourseCard 
+          title="Higher Education"
+          description="Progress to university or higher diplomas"
+          features={[
+            "UCAS points for Level 3 diplomas",
+            "Direct entry to related degrees",
+            "Foundation degrees available",
+            "Top-up to full honours degree"
+          ]}
+          theme="green"
+        />
+        <CourseCard 
+          title="Employment"
+          description="Direct routes into your chosen industry"
+          features={[
+            "Industry-ready skills",
+            "Employer connections from placements",
+            "Professional qualifications",
+            "Career progression pathways"
+          ]}
+          theme="green"
+        />
+        <CourseCard 
+          title="Further Training"
+          description="Specialise with additional qualifications"
+          features={[
+            "Higher/degree apprenticeships",
+            "Professional certifications",
+            "Specialist diplomas",
+            "Management training"
+          ]}
+          theme="green"
+        />
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Top Colleges and Providers"
+    theme="green"
+  >
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Leading Diploma Providers</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>Pearson College London</strong>
+              <br><span class="text-sm text-gray-600">Excellent progression rates, industry partnerships</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>Leeds City College</strong>
+              <br><span class="text-sm text-gray-600">Wide range of diplomas, outstanding facilities</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>South Thames Colleges Group</strong>
+              <br><span class="text-sm text-gray-600">Strong employer links, diverse subjects</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>Nottingham College</strong>
+              <br><span class="text-sm text-gray-600">Industry-standard resources, T Level provider</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">What Makes a Good Provider?</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Accreditation:</strong> Recognised awarding bodies</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Resources:</strong> Up-to-date facilities and equipment</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Support:</strong> Tutorial system and career guidance</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Links:</strong> Strong employer and university connections</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Success Rates:</strong> High achievement and progression</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Flexibility:</strong> Full-time, part-time, and online options</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Skills Developed</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Technical Skills</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Sector-specific expertise</li>
+            <li>• Industry software/tools</li>
+            <li>• Practical techniques</li>
+            <li>• Quality standards</li>
+            <li>• Health & safety</li>
+            <li>• Technical documentation</li>
+          </ul>
+        </div>
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Professional Skills</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Communication</li>
+            <li>• Teamwork</li>
+            <li>• Problem-solving</li>
+            <li>• Time management</li>
+            <li>• Customer service</li>
+            <li>• Leadership potential</li>
+          </ul>
+        </div>
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Digital Skills</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Digital literacy</li>
+            <li>• Data handling</li>
+            <li>• Online collaboration</li>
+            <li>• Social media (professional)</li>
+            <li>• Digital marketing basics</li>
+            <li>• Cyber security awareness</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Career Prospects"
+    theme="green"
+  >
+    <div class="mb-8">
+      <p class="text-lg text-gray-700 mb-6">
+        Diploma qualifications open doors to diverse career paths, with many students finding employment directly after completion or progressing to higher education:
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Direct Career Entry</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Business Diplomas:</strong> Admin roles, junior management, sales, marketing assistant
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Health & Care:</strong> Care worker, healthcare assistant, nursery practitioner
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Creative Diplomas:</strong> Junior designer, production assistant, photographer
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Technical:</strong> Technician roles, trades, IT support, lab assistant
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Salary Expectations</h3>
+        <p class="text-gray-700 mb-4">
+          Starting salaries vary by sector:
+        </p>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Entry level: £16,000-£22,000</li>
+          <li>• With experience: £22,000-£30,000</li>
+          <li>• Specialist roles: £25,000-£35,000</li>
+          <li>• Management positions: £30,000-£45,000+</li>
+        </ul>
+        
+        <div class="mt-6 p-4 bg-green-50 rounded">
+          <p class="text-green-800">
+            <strong>Career Progression:</strong> Many diploma graduates see rapid career progression due to their practical skills and work experience.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-8">
+      <h3 class="text-xl font-bold text-green-800 mb-4">Success Stories</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-gray-700">
+            "My Level 3 Business diploma led to a marketing apprenticeship. Five years later, I'm a Marketing Manager earning £35,000." - Sarah, 23
+          </p>
+        </div>
+        <div class="bg-gray-50 p-4 rounded">
+          <p class="text-gray-700">
+            "The T Level in Digital gave me the skills and experience to land a junior developer role straight after college." - James, 19
+          </p>
+        </div>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Related Qualifications</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-bold text-green-800 mb-2">HNC/HND</h3>
+          <p class="text-gray-700 text-sm">
+            Higher National qualifications - Level 4/5 progression from diplomas
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-bold text-green-800 mb-2">Foundation Degrees</h3>
+          <p class="text-gray-700 text-sm">
+            Work-based higher education combining academic study with workplace learning
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-bold text-green-800 mb-2">Apprenticeships</h3>
+          <p class="text-gray-700 text-sm">
+            Combine work with study at various levels from intermediate to degree
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-bold text-green-800 mb-2">Professional Qualifications</h3>
+          <p class="text-gray-700 text-sm">
+            Industry-specific certifications like AAT, CIPD, or PRINCE2
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA 
+    title="Find Your Perfect Diploma Course"
+    description="Explore diploma options that match your career goals and learning style."
+    buttonText="Search Diploma Courses"
+    buttonLink="/further-education/search"
+    theme="green"
+  />
+</Layout>

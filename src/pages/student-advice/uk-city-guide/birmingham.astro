@@ -1,0 +1,552 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="Birmingham Student Guide - Courses & Careers">
+  <div class="bg-gradient-to-br from-red-50 to-rose-100 min-h-screen">
+    <!-- Header Section -->
+    <div class="bg-red-600 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Birmingham Student Guide</h1>
+          <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto">
+            The UK's second city - diverse, dynamic, and perfectly placed at the heart of England
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white py-4 border-b">
+      <div class="container mx-auto px-4">
+        <nav class="text-sm text-gray-600">
+          <a href="/" class="hover:text-red-600">Home</a>
+          <span class="mx-2">></span>
+          <a href="/student-advice" class="hover:text-red-600">Student Advice</a>
+          <span class="mx-2">></span>
+          <a href="/student-advice/uk-city-guide" class="hover:text-red-600">UK City Guide</a>
+          <span class="mx-2">></span>
+          <span class="text-red-600">Birmingham</span>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- City Overview -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">City Overview</h2>
+            <p class="text-gray-700 mb-4">
+              Birmingham is the UK's second-largest city and a major international commercial centre. Known for its industrial heritage, it's now a vibrant, multicultural city with more canals than Venice, excellent shopping, and a thriving food scene that reflects its diverse population.
+            </p>
+            <p class="text-gray-700 mb-4">
+              With a metropolitan population of 4.3 million, Birmingham offers big-city opportunities with a more affordable cost of living than London. The city's central location makes it perfect for exploring the rest of the UK, while its own attractions keep students entertained year-round.
+            </p>
+            <div class="bg-red-50 rounded-lg p-6 mt-6">
+              <h3 class="text-xl font-bold text-red-600 mb-3">Student Population</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li>• Total students: 80,000+</li>
+                <li>• International students: 12,000+</li>
+                <li>• Universities: 5 major institutions</li>
+                <li>• Student satisfaction rate: 85%</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Universities and Colleges -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Universities and Colleges</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Major Universities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>University of Birmingham</strong> - Russell Group member, beautiful Edgbaston campus, strong in engineering, medicine, and business. First UK university to accept students regardless of religion or background</li>
+                  <li>• <strong>Birmingham City University (BCU)</strong> - Modern university with city centre campus, excellent for creative arts, health, business, and computing</li>
+                  <li>• <strong>Aston University</strong> - Known for business, engineering, and health sciences. Triple-accredited business school and strong industry links</li>
+                  <li>• <strong>University College Birmingham</strong> - Specialist in hospitality, culinary arts, tourism, and business</li>
+                  <li>• <strong>Newman University</strong> - Smaller institution focusing on teacher training, humanities, and social sciences</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Notable Schools & Facilities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Birmingham Business School</strong> - One of the UK's oldest business schools</li>
+                  <li>• <strong>Birmingham Medical School</strong> - Dates back to 1825</li>
+                  <li>• <strong>Birmingham School of Art</strong> - Part of BCU, renowned for fine art</li>
+                  <li>• <strong>Royal Birmingham Conservatoire</strong> - Elite music institution</li>
+                  <li>• <strong>Birmingham Dental School</strong> - First UK dental school</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Cost of Living -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Cost of Living Breakdown</h2>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b border-gray-200">
+                    <th class="text-left py-3 px-4 font-bold text-gray-800">Category</th>
+                    <th class="text-left py-3 px-4 font-bold text-gray-800">Monthly Cost</th>
+                    <th class="text-left py-3 px-4 font-bold text-gray-800">Annual Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Accommodation (shared)</td>
+                    <td class="py-3 px-4">£325-£475</td>
+                    <td class="py-3 px-4">£3,900-£5,700</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Accommodation (studio)</td>
+                    <td class="py-3 px-4">£550-£750</td>
+                    <td class="py-3 px-4">£6,600-£9,000</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Food & Groceries</td>
+                    <td class="py-3 px-4">£140-£240</td>
+                    <td class="py-3 px-4">£1,680-£2,880</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Transport (Bus pass)</td>
+                    <td class="py-3 px-4">£55-£65</td>
+                    <td class="py-3 px-4">£660-£780</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Entertainment & Social</td>
+                    <td class="py-3 px-4">£80-£150</td>
+                    <td class="py-3 px-4">£960-£1,800</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Books & Supplies</td>
+                    <td class="py-3 px-4">£30-£50</td>
+                    <td class="py-3 px-4">£360-£600</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Personal & Miscellaneous</td>
+                    <td class="py-3 px-4">£40-£80</td>
+                    <td class="py-3 px-4">£480-£960</td>
+                  </tr>
+                  <tr class="font-bold">
+                    <td class="py-3 px-4">Total</td>
+                    <td class="py-3 px-4 text-red-600">£670-£1,010</td>
+                    <td class="py-3 px-4 text-red-600">£8,040-£12,120</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bg-yellow-50 rounded-lg p-4 mt-6">
+              <p class="text-sm text-yellow-800">
+                <strong>Note:</strong> Birmingham offers excellent value for money, with living costs significantly lower than London and other major UK cities.
+              </p>
+            </div>
+          </section>
+
+          <!-- Student Accommodation -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Student Accommodation Areas</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Near University of Birmingham</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Selly Oak:</strong> The main student area, lively atmosphere, £325-£450/month</li>
+                  <li>• <strong>Harborne:</strong> More upmarket, good restaurants, £375-£525/month</li>
+                  <li>• <strong>Edgbaston:</strong> Close to campus, quieter area, £350-£500/month</li>
+                  <li>• <strong>Bournbrook:</strong> Part of Selly Oak, very student-focused, £325-£425/month</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">City Centre & Near BCU/Aston</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>City Centre:</strong> Modern apartments, near nightlife, £450-£700/month</li>
+                  <li>• <strong>Jewellery Quarter:</strong> Trendy area, creative scene, £425-£625/month</li>
+                  <li>• <strong>Digbeth:</strong> Arts district, vibrant nightlife, £400-£600/month</li>
+                  <li>• <strong>Aston:</strong> Near Aston University, affordable, £325-£475/month</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Other Popular Areas</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Moseley:</strong> Bohemian area, great cafes, £350-£500/month</li>
+                  <li>• <strong>Kings Heath:</strong> Alternative scene, good transport, £325-£450/month</li>
+                  <li>• <strong>Erdington:</strong> North Birmingham, affordable, £300-£400/month</li>
+                  <li>• <strong>Perry Barr:</strong> Near BCU campus, developing area, £325-£450/month</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Student Halls</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>University halls:</strong> Best for first years, £100-£180/week</li>
+                  <li>• <strong>Unite Students:</strong> Multiple locations, £110-£200/week</li>
+                  <li>• <strong>The Pavilion:</strong> Premium student accommodation, £140-£220/week</li>
+                  <li>• <strong>Jennens Court:</strong> City centre location, £120-£190/week</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Transport -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Transport Links and Getting Around</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Public Transport</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Buses:</strong> Extensive network, student discounts available</li>
+                  <li>• <strong>Trains:</strong> Local rail network connects suburbs to city centre</li>
+                  <li>• <strong>Metro:</strong> West Midlands Metro tram expanding</li>
+                  <li>• <strong>Cycling:</strong> Improving cycle lanes, Brompton Bike Hire</li>
+                  <li>• <strong>Walking:</strong> Compact city centre, canal towpaths</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Student Travel Discounts</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>nNetwork Student Card:</strong> Unlimited bus travel from £28/week</li>
+                  <li>• <strong>16-25 Railcard:</strong> 1/3 off train fares</li>
+                  <li>• <strong>Swift Card:</strong> Pay-as-you-go for multiple operators</li>
+                  <li>• <strong>Student Saver tickets:</strong> Term-time passes available</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">National Connections</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>London:</strong> 1 hour 20 mins by train</li>
+                  <li>• <strong>Manchester:</strong> 1 hour 30 mins by train</li>
+                  <li>• <strong>Oxford:</strong> 1 hour by train</li>
+                  <li>• <strong>Bristol:</strong> 1 hour 30 mins by train</li>
+                  <li>• <strong>Birmingham Airport:</strong> 20 mins by train</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Student Life -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Student Life and Nightlife</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Nightlife Areas</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Broad Street:</strong> Main nightlife strip, clubs and bars</li>
+                  <li>• <strong>Digbeth:</strong> Alternative scene, warehouse parties</li>
+                  <li>• <strong>Selly Oak:</strong> Student pubs and house parties</li>
+                  <li>• <strong>Jewellery Quarter:</strong> Trendy bars and restaurants</li>
+                  <li>• <strong>Moseley:</strong> Live music venues, relaxed atmosphere</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Popular Venues</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>O2 Academy Birmingham:</strong> Major music venue</li>
+                  <li>• <strong>The Rainbow:</strong> Warehouse club in Digbeth</li>
+                  <li>• <strong>Snobs:</strong> Alternative music nightclub</li>
+                  <li>• <strong>The Sunflower Lounge:</strong> Live music pub</li>
+                  <li>• <strong>Hare & Hounds:</strong> Kings Heath music venue</li>
+                  <li>• <strong>Lab11:</strong> Underground electronic music</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Cultural Diversity</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Balti Triangle:</strong> Famous for Birmingham's curry houses</li>
+                  <li>• <strong>Chinese Quarter:</strong> Authentic restaurants and shops</li>
+                  <li>• <strong>Cultural festivals:</strong> Diwali, Eid, Caribbean Carnival</li>
+                  <li>• <strong>Food scene:</strong> Reflects city's diversity</li>
+                  <li>• <strong>Religious diversity:</strong> Places of worship for all faiths</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Student Activities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Shopping:</strong> Bullring, Grand Central, Mailbox</li>
+                  <li>• <strong>Sports:</strong> Two football clubs, cricket at Edgbaston</li>
+                  <li>• <strong>Canals:</strong> More than Venice, great for walks</li>
+                  <li>• <strong>Markets:</strong> Birmingham Markets, farmers' markets</li>
+                  <li>• <strong>Student unions:</strong> Guild of Students, various venues</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Employment -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Part-time Work Opportunities</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Common Student Jobs</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Retail:</strong> £9-11/hour at Bullring, retail parks</li>
+                  <li>• <strong>Hospitality:</strong> £9-12/hour + tips in restaurants</li>
+                  <li>• <strong>Call centres:</strong> £10-12/hour, flexible hours</li>
+                  <li>• <strong>Events:</strong> £10-15/hour at NEC, stadiums</li>
+                  <li>• <strong>Campus jobs:</strong> £10-13/hour at universities</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Key Employment Sectors</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Financial Services:</strong> Major banks, HSBC UK headquarters</li>
+                  <li>• <strong>Professional Services:</strong> Big Four accounting firms</li>
+                  <li>• <strong>Manufacturing:</strong> Jaguar Land Rover, aerospace</li>
+                  <li>• <strong>Healthcare:</strong> Queen Elizabeth Hospital, research</li>
+                  <li>• <strong>Digital/Tech:</strong> Growing tech hub, start-ups</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Graduate Opportunities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• Average graduate salary: £22,000-£26,000</li>
+                  <li>• Lower cost of living means good quality of life</li>
+                  <li>• HS2 will improve London connectivity</li>
+                  <li>• Commonwealth Games legacy creating opportunities</li>
+                  <li>• Growing creative and digital sectors</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Safety -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Safety Information</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">General Safety</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• Birmingham has improved safety significantly</li>
+                  <li>• Well-lit main areas and CCTV coverage</li>
+                  <li>• Active police presence in student areas</li>
+                  <li>• Campus security at all universities</li>
+                  <li>• Safe public transport with staff presence</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Safety Tips</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• Avoid quiet areas late at night</li>
+                  <li>• Use well-lit main roads</li>
+                  <li>• Travel in groups when possible</li>
+                  <li>• Keep valuables hidden</li>
+                  <li>• Use licensed taxis or ride-sharing apps</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Emergency Contacts</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Emergency:</strong> 999 or 112</li>
+                  <li>• <strong>West Midlands Police:</strong> 101 (non-emergency)</li>
+                  <li>• <strong>NHS non-emergency:</strong> 111</li>
+                  <li>• <strong>Campus security:</strong> Check your university</li>
+                  <li>• <strong>Birmingham Women's Aid:</strong> 0808 800 0028</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Weather -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Weather and Climate</h2>
+            <div class="space-y-4">
+              <p class="text-gray-700">
+                Birmingham has a temperate maritime climate similar to much of England. The city experiences mild weather year-round, though rain is common. Being inland, it's slightly warmer in summer and cooler in winter than coastal cities.
+              </p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-blue-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Spring</h4>
+                  <p class="text-2xl font-bold text-blue-600">9-15°C</p>
+                  <p class="text-sm text-gray-600">March - May</p>
+                </div>
+                <div class="bg-yellow-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Summer</h4>
+                  <p class="text-2xl font-bold text-yellow-600">16-22°C</p>
+                  <p class="text-sm text-gray-600">June - August</p>
+                </div>
+                <div class="bg-orange-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Autumn</h4>
+                  <p class="text-2xl font-bold text-orange-600">10-15°C</p>
+                  <p class="text-sm text-gray-600">Sept - November</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Winter</h4>
+                  <p class="text-2xl font-bold text-gray-600">2-8°C</p>
+                  <p class="text-sm text-gray-600">Dec - February</p>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 rounded-lg p-4 mt-4">
+                <p class="text-sm text-blue-800">
+                  <strong>Tip:</strong> Birmingham weather is generally mild but unpredictable. Always have an umbrella and dress in layers!
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Cultural Attractions -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Cultural Attractions and Things to Do</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Museums & Galleries</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Birmingham Museum & Art Gallery:</strong> Pre-Raphaelite collection (free)</li>
+                  <li>• <strong>Thinktank Science Museum:</strong> Interactive exhibits</li>
+                  <li>• <strong>National Sea Life Centre:</strong> Marine life exhibits</li>
+                  <li>• <strong>Coffin Works:</strong> Unique industrial heritage</li>
+                  <li>• <strong>Ikon Gallery:</strong> Contemporary art (free)</li>
+                  <li>• <strong>Barber Institute:</strong> Fine arts at UoB (free)</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Entertainment</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Symphony Hall:</strong> World-class acoustics</li>
+                  <li>• <strong>Birmingham Hippodrome:</strong> Major touring shows</li>
+                  <li>• <strong>The REP:</strong> Birmingham Repertory Theatre</li>
+                  <li>• <strong>O2 Academy:</strong> Live music venue</li>
+                  <li>• <strong>Arena Birmingham:</strong> Major concerts and events</li>
+                  <li>• <strong>Electric Cinema:</strong> UK's oldest working cinema</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Unique Attractions</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Cadbury World:</strong> Chocolate factory experience</li>
+                  <li>• <strong>Black Country Living Museum:</strong> Industrial heritage</li>
+                  <li>• <strong>Birmingham Back to Backs:</strong> Historic homes</li>
+                  <li>• <strong>Jewellery Quarter:</strong> Historic manufacturing area</li>
+                  <li>• <strong>Custard Factory:</strong> Creative and digital hub</li>
+                  <li>• <strong>Botanical Gardens:</strong> 15 acres of gardens</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <!-- Quick Facts -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-6 sticky top-4">
+            <h3 class="text-xl font-bold text-red-600 mb-4">Quick Facts</h3>
+            <dl class="space-y-3">
+              <div>
+                <dt class="font-semibold text-gray-700">Population</dt>
+                <dd class="text-gray-600">1.15 million (4.3m metro)</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Students</dt>
+                <dd class="text-gray-600">80,000+</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Universities</dt>
+                <dd class="text-gray-600">5 major</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Average Rent</dt>
+                <dd class="text-gray-600">£350-£550/month</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Famous For</dt>
+                <dd class="text-gray-600">Industry, Diversity, Canals</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Location</dt>
+                <dd class="text-gray-600">Heart of England</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Emergency</dt>
+                <dd class="text-gray-600">999 or 112</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Cost Calculator -->
+          <div class="bg-red-50 rounded-lg shadow-lg p-6 mb-6">
+            <h3 class="text-xl font-bold text-red-600 mb-4">Monthly Budget Calculator</h3>
+            <div class="space-y-3">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Accommodation Type</label>
+                <select class="w-full p-2 border border-gray-300 rounded">
+                  <option>Shared House (£375)</option>
+                  <option>Student Halls (£475)</option>
+                  <option>Studio Flat (£650)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Lifestyle</label>
+                <select class="w-full p-2 border border-gray-300 rounded">
+                  <option>Budget (£300)</option>
+                  <option>Moderate (£425)</option>
+                  <option>Comfortable (£550)</option>
+                </select>
+              </div>
+              <div class="pt-3 border-t border-red-200">
+                <p class="text-lg font-bold text-red-600">Estimated Total: £675-£1,200/month</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- University Links -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-red-600 mb-4">University Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://www.birmingham.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  University of Birmingham →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.bcu.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  Birmingham City University →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.aston.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  Aston University →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.ucb.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  University College Birmingham →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.newman.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  Newman University →
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Sticky sidebar on desktop */
+  @media (min-width: 1024px) {
+    .sticky {
+      position: sticky;
+      top: 1rem;
+    }
+  }
+</style>

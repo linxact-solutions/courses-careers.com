@@ -1,0 +1,571 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
+
+const postgraduateMagazines = [
+  {
+    id: 'gcc_4.2',
+    title: 'Graduate Careers & Courses - Volume 4.2',
+    subtitle: 'Advanced Pathways to Success',
+    description: 'Comprehensive guide to postgraduate opportunities, research programs, and professional development. Features expert interviews, funding opportunities, and career advancement strategies for graduates.',
+    coverImage: '/images/stories/postgraduate_emag_thumbnails/pg_4.2.jpg',
+    publishDate: '2024-07-15',
+    readTime: '35 min read',
+    featured: true,
+    url: '/images/stories/online-magazines/emags/gcc_4.2/gcc_4.2.htm',
+    highlights: [
+      'PhD Application Process',
+      'Research Funding Opportunities',
+      'Career Transition Strategies',
+      'Professional Networking'
+    ]
+  },
+  {
+    id: 'gcc_4.3',
+    title: 'Graduate Careers & Courses - Volume 4.3',
+    subtitle: 'Leadership and Innovation',
+    description: 'Exploring leadership development, innovation in higher education, and emerging career fields. This issue focuses on entrepreneurship, management skills, and building a successful professional profile.',
+    coverImage: '/images/stories/postgraduate_emag_thumbnails/pg_4.3.jpg',
+    publishDate: '2024-10-15',
+    readTime: '42 min read',
+    featured: true,
+    url: '/images/stories/online-magazines/emags/gcc_4.3/gcc_4.3.htm',
+    highlights: [
+      'Leadership Development',
+      'Innovation in Education',
+      'Entrepreneurship Guide',
+      'Professional Branding'
+    ]
+  },
+  {
+    id: 'gcc_5.1',
+    title: 'Graduate Careers & Courses - Volume 5.1',
+    subtitle: 'Global Perspectives',
+    description: 'International opportunities for postgraduate study and career development. Featuring global university partnerships, international research collaborations, and worldwide career prospects.',
+    coverImage: '/images/stories/online-magazines/ccuk_30.5.jpg',
+    publishDate: '2025-01-15',
+    readTime: '48 min read',
+    featured: true,
+    url: '#',
+    highlights: [
+      'International Study Options',
+      'Global Career Opportunities',
+      'Cross-Cultural Skills',
+      'Research Partnerships'
+    ]
+  }
+];
+
+const specializations = [
+  { 
+    name: 'Research & PhD', 
+    icon: '🔬', 
+    description: 'Advanced research opportunities and doctoral programs',
+    count: 45 
+  },
+  { 
+    name: 'MBA & Business', 
+    icon: '💼', 
+    description: 'Business leadership and management development',
+    count: 38 
+  },
+  { 
+    name: 'Professional Development', 
+    icon: '📈', 
+    description: 'Career advancement and skill enhancement',
+    count: 52 
+  },
+  { 
+    name: 'Technology & Innovation', 
+    icon: '💻', 
+    description: 'Cutting-edge technology and innovation programs',
+    count: 41 
+  },
+  { 
+    name: 'Healthcare & Medicine', 
+    icon: '🏥', 
+    description: 'Medical and healthcare career pathways',
+    count: 29 
+  },
+  { 
+    name: 'Education & Teaching', 
+    icon: '🎓', 
+    description: 'Educational leadership and teaching excellence',
+    count: 33 
+  }
+];
+
+const careerLevels = [
+  { level: 'Entry Level', percentage: 25 },
+  { level: 'Mid-Career', percentage: 45 },
+  { level: 'Senior Level', percentage: 20 },
+  { level: 'Executive', percentage: 10 }
+];
+---
+
+<BaseLayout 
+  title="Postgraduate Courses & Careers Magazine"
+  description="Advance your career with our specialized postgraduate magazine. Featuring PhD opportunities, MBA programs, professional development, and expert career guidance for graduate-level professionals."
+>
+  <div class="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50">
+    <!-- Breadcrumb -->
+    <nav class="bg-white border-b border-purple-200" aria-label="Breadcrumb">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li>
+            <a href="/" class="text-purple-600 hover:text-purple-800">Home</a>
+          </li>
+          <li class="text-gray-500">/</li>
+          <li>
+            <a href="/online-magazines" class="text-purple-600 hover:text-purple-800">Online Magazines</a>
+          </li>
+          <li class="text-gray-500">/</li>
+          <li class="text-gray-900 font-medium">Postgraduate Courses & Careers</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-purple-700">
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+              Postgraduate Courses & Careers
+            </h1>
+            <p class="text-xl text-purple-100 mb-8 leading-relaxed">
+              Elevate your career with advanced education and professional development. Expert insights into postgraduate opportunities, research programs, and executive career paths.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button 
+                onclick="document.getElementById('latest-issues').scrollIntoView({ behavior: 'smooth' })"
+                class="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors shadow-lg"
+              >
+                Read Latest Issue
+              </button>
+              <button 
+                onclick="document.getElementById('specializations').scrollIntoView({ behavior: 'smooth' })"
+                class="bg-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 transition-colors shadow-lg border-2 border-purple-400"
+              >
+                Explore Specializations
+              </button>
+            </div>
+          </div>
+          <div class="lg:text-right">
+            <div class="inline-block bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <h3 class="text-2xl font-bold text-white mb-6">Career Readiness</h3>
+              <div class="space-y-4">
+                {careerLevels.map(career => (
+                  <div>
+                    <div class="flex justify-between text-purple-100 text-sm mb-1">
+                      <span>{career.level}</span>
+                      <span>{career.percentage}%</span>
+                    </div>
+                    <div class="w-full bg-purple-800/30 rounded-full h-2">
+                      <div 
+                        class="bg-white h-2 rounded-full transition-all duration-1000"
+                        style={`width: ${career.percentage}%`}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Issues Section -->
+    <section id="latest-issues" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Latest Issues
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Stay informed with our latest publications on postgraduate education and advanced career development
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {postgraduateMagazines.map((magazine, index) => (
+            <div class={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-purple-100 ${index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''}`}>
+              <div class={`${index === 0 ? 'grid grid-cols-1 md:grid-cols-2 gap-6' : 'flex flex-col'} p-6`}>
+                <div class="relative overflow-hidden rounded-xl">
+                  <OptimizedImage 
+                    src={magazine.coverImage} 
+                    alt={magazine.title}
+                    class={`w-full ${index === 0 ? 'h-80' : 'h-48'} object-cover group-hover:scale-105 transition-transform duration-300`}
+                  />
+                  <div class="absolute top-4 right-4">
+                    <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {index === 0 ? 'Featured' : 'Latest'}
+                    </span>
+                  </div>
+                </div>
+                
+                <div class={`flex flex-col ${index === 0 ? 'justify-center' : ''}`}>
+                  <h3 class={`${index === 0 ? 'text-2xl' : 'text-xl'} font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors`}>
+                    {magazine.title}
+                  </h3>
+                  <p class={`${index === 0 ? 'text-lg' : 'text-base'} text-purple-600 font-medium mb-3`}>
+                    {magazine.subtitle}
+                  </p>
+                  <p class="text-gray-600 mb-4 flex-grow">
+                    {magazine.description}
+                  </p>
+                  
+                  <div class="mb-4">
+                    <h4 class="text-sm font-semibold text-gray-900 mb-2">Key Topics:</h4>
+                    <ul class="space-y-1">
+                      {magazine.highlights.map(highlight => (
+                        <li class="text-sm text-gray-600 flex items-center">
+                          <span class="w-2 h-2 bg-purple-400 rounded-full mr-2 flex-shrink-0"></span>
+                          {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <span>{new Date(magazine.publishDate).toLocaleDateString('en-GB', { 
+                      day: 'numeric', 
+                      month: 'long', 
+                      year: 'numeric' 
+                    })}</span>
+                    <span>{magazine.readTime}</span>
+                  </div>
+                  
+                  <div class="flex gap-3">
+                    <a 
+                      href={magazine.url} 
+                      class="flex-1 bg-purple-600 text-white text-center py-3 px-4 rounded-lg hover:bg-purple-700 transition-colors font-medium"
+                    >
+                      Read Now
+                    </a>
+                    <button 
+                      onclick={`bookmarkMagazine('${magazine.id}')`}
+                      class="bg-gray-100 text-gray-700 px-4 py-3 rounded-lg hover:bg-gray-200 transition-colors"
+                      aria-label={`Bookmark ${magazine.title}`}
+                    >
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Specializations Section -->
+    <section id="specializations" class="py-16 bg-gradient-to-r from-purple-50 to-pink-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Specialization Areas
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore diverse postgraduate opportunities across multiple fields and disciplines
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {specializations.map(spec => (
+            <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100 p-6 group">
+              <div class="text-center mb-4">
+                <div class="text-4xl mb-3">{spec.icon}</div>
+                <h3 class="text-xl font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
+                  {spec.name}
+                </h3>
+              </div>
+              <p class="text-gray-600 text-sm mb-4 text-center">
+                {spec.description}
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">{spec.count} programs</span>
+                <button class="text-purple-600 hover:text-purple-800 font-medium text-sm">
+                  Learn More →
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Magazine Archive -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Archive Collection
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Access our complete collection of postgraduate-focused publications
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {postgraduateMagazines.map(magazine => (
+            <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-purple-100 group">
+              <div class="relative overflow-hidden rounded-t-xl">
+                <OptimizedImage 
+                  src={magazine.coverImage} 
+                  alt={magazine.title}
+                  class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                  <p class="text-sm font-medium">{magazine.subtitle}</p>
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                  {magazine.title}
+                </h3>
+                <div class="flex items-center justify-between text-sm text-gray-500 mb-3">
+                  <span>{new Date(magazine.publishDate).toLocaleDateString('en-GB', { 
+                    month: 'short', 
+                    year: 'numeric' 
+                  })}</span>
+                  <span>{magazine.readTime}</span>
+                </div>
+                <a 
+                  href={magazine.url} 
+                  class="w-full bg-purple-600 text-white text-center py-2 px-4 rounded-lg hover:bg-purple-700 transition-colors font-medium text-sm block"
+                >
+                  Read Issue
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Research & Career Resources -->
+    <section class="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+            Research & Career Resources
+          </h2>
+          <p class="text-xl text-purple-100 mb-8">
+            Additional resources to support your postgraduate journey
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <h3 class="text-xl font-semibold text-white mb-4">
+              Research Opportunities
+            </h3>
+            <p class="text-purple-100 mb-4">
+              Discover funding opportunities, research positions, and PhD programs
+            </p>
+            <button class="bg-white text-purple-600 px-6 py-2 rounded-lg font-medium hover:bg-purple-50 transition-colors">
+              Explore Research
+            </button>
+          </div>
+          
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <h3 class="text-xl font-semibold text-white mb-4">
+              Career Services
+            </h3>
+            <p class="text-purple-100 mb-4">
+              Professional development, networking, and career transition support
+            </p>
+            <button class="bg-white text-purple-600 px-6 py-2 rounded-lg font-medium hover:bg-purple-50 transition-colors">
+              Career Support
+            </button>
+          </div>
+          
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+            <h3 class="text-xl font-semibold text-white mb-4">
+              Industry Insights
+            </h3>
+            <p class="text-purple-100 mb-4">
+              Stay updated with industry trends and professional requirements
+            </p>
+            <button class="bg-white text-purple-600 px-6 py-2 rounded-lg font-medium hover:bg-purple-50 transition-colors">
+              Industry News
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Subscribe to Updates
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Get exclusive access to postgraduate insights and career advancement strategies
+        </p>
+        
+        <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-8 border border-purple-200 max-w-md mx-auto">
+          <form class="space-y-4">
+            <input 
+              type="email" 
+              placeholder="Enter your email address"
+              class="w-full px-4 py-3 rounded-lg border border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              required
+            />
+            <select class="w-full px-4 py-3 rounded-lg border border-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+              <option value="">Select your field of interest</option>
+              <option value="research">Research & PhD</option>
+              <option value="business">MBA & Business</option>
+              <option value="professional">Professional Development</option>
+              <option value="technology">Technology & Innovation</option>
+              <option value="healthcare">Healthcare & Medicine</option>
+              <option value="education">Education & Teaching</option>
+            </select>
+            <div class="flex items-center space-x-2 text-gray-600 text-sm">
+              <input type="checkbox" id="terms" class="rounded border-purple-300" required />
+              <label for="terms">I agree to receive updates and agree to the <a href="/terms-of-service" class="text-purple-600 underline hover:text-purple-800">Terms of Service</a></label>
+            </div>
+            <button 
+              type="submit"
+              class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            >
+              Subscribe Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Bookmark magazine functionality
+    function bookmarkMagazine(magazineId) {
+      const bookmarks = JSON.parse(localStorage.getItem('bookmarkedMagazines') || '[]');
+      if (!bookmarks.includes(magazineId)) {
+        bookmarks.push(magazineId);
+        localStorage.setItem('bookmarkedMagazines', JSON.stringify(bookmarks));
+        alert('Magazine bookmarked successfully!');
+      } else {
+        alert('Magazine is already bookmarked.');
+      }
+    }
+    
+    // Handle newsletter subscription
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      const field = e.target.querySelector('select').value;
+      alert(`Thank you for subscribing with ${email}! You'll receive updates about ${field || 'postgraduate opportunities'}.`);
+      e.target.reset();
+    });
+    
+    // Progressive enhancement for career level animations
+    window.addEventListener('load', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const progressBars = entry.target.querySelectorAll('[style*="width"]');
+            progressBars.forEach(bar => {
+              bar.style.animation = 'progressFill 1s ease-out';
+            });
+          }
+        });
+      });
+      
+      const careerSection = document.querySelector('.bg-white\\/10.backdrop-blur-sm');
+      if (careerSection) {
+        observer.observe(careerSection);
+      }
+    });
+  </script>
+  
+  <style>
+    /* Custom animations */
+    @keyframes progressFill {
+      from { width: 0%; }
+      to { width: var(--final-width); }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .magazine-card {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    
+    /* Enhanced hover effects */
+    .group:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* Responsive design enhancements */
+    @media (max-width: 768px) {
+      .grid.grid-cols-1.lg\\:grid-cols-3 {
+        grid-template-columns: 1fr;
+      }
+      
+      .lg\\:col-span-2 {
+        grid-column: span 1;
+      }
+      
+      .lg\\:row-span-2 {
+        grid-row: span 1;
+      }
+    }
+    
+    /* Accessibility improvements */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    /* Focus states */
+    button:focus,
+    a:focus,
+    input:focus,
+    select:focus {
+      outline: 2px solid #8b5cf6;
+      outline-offset: 2px;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #8b5cf6;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7c3aed;
+    }
+  </style>
+</BaseLayout>

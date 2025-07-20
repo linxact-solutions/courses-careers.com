@@ -1,0 +1,379 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Student Finance - Courses & Careers">
+  <div class="bg-gradient-to-br from-red-50 to-rose-100 min-h-screen">
+    <!-- Header Section -->
+    <div class="bg-red-600 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Student Finance</h1>
+          <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto">
+            Complete guide to funding your education, managing student loans, and making smart financial decisions
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white py-4 border-b">
+      <div class="container mx-auto px-4">
+        <nav class="text-sm text-gray-600">
+          <a href="/" class="hover:text-red-600">Home</a>
+          <span class="mx-2">></span>
+          <a href="/student-advice" class="hover:text-red-600">Student Advice</a>
+          <span class="mx-2">></span>
+          <span class="text-red-600">Student Finance</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-lg text-gray-700 mb-8">
+            Understanding student finance is crucial for making informed decisions about your education. With tuition fees at £9,250 per year and living costs averaging £12,667 annually, proper financial planning is essential for every student.
+          </p>
+          
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-red-600 mb-4">Quick Finance Calculator</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="bg-red-100 rounded-lg p-4 mb-2">
+                  <span class="text-2xl font-bold text-red-600">3 years</span>
+                </div>
+                <p class="text-gray-600">Course Duration</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-red-100 rounded-lg p-4 mb-2">
+                  <span class="text-2xl font-bold text-red-600">£65,751</span>
+                </div>
+                <p class="text-gray-600">Total Cost</p>
+              </div>
+              <div class="text-center">
+                <div class="bg-red-100 rounded-lg p-4 mb-2">
+                  <span class="text-2xl font-bold text-red-600">£45,000</span>
+                </div>
+                <p class="text-gray-600">Available Funding</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Sections -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">Essential Finance Topics</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Student Loans -->
+          <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Student Loans</h3>
+            <p class="text-gray-600 mb-6 text-center">
+              Everything you need to know about applying for, managing, and repaying student loans.
+            </p>
+            <div class="space-y-3">
+              <a href="/student-advice/student-finance/student-loans-guide" class="block text-red-600 hover:text-red-800 transition duration-300">• Complete guide to student loans</a>
+              <a href="/student-advice/student-finance/loan-repayment-calculator" class="block text-red-600 hover:text-red-800 transition duration-300">• Loan repayment calculator</a>
+              <a href="/student-advice/student-finance/interest-rates-explained" class="block text-red-600 hover:text-red-800 transition duration-300">• Interest rates explained</a>
+            </div>
+          </div>
+
+          <!-- Tuition Fees -->
+          <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Tuition Fees & Costs</h3>
+            <p class="text-gray-600 mb-6 text-center">
+              Understand the true cost of higher education and how to budget effectively.
+            </p>
+            <div class="space-y-3">
+              <a href="/student-advice/student-finance/7235-the-cost-of-higher-education" class="block text-red-600 hover:text-red-800 transition duration-300">• The cost of higher education</a>
+              <a href="/student-advice/student-finance/tuition-fee-changes" class="block text-red-600 hover:text-red-800 transition duration-300">• 2025 tuition fee changes</a>
+              <a href="/student-advice/student-finance/hidden-costs" class="block text-red-600 hover:text-red-800 transition duration-300">• Hidden costs to consider</a>
+            </div>
+          </div>
+
+          <!-- Living Costs -->
+          <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2v0"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Living Costs</h3>
+            <p class="text-gray-600 mb-6 text-center">
+              Budget for accommodation, food, transport, and other essential living expenses.
+            </p>
+            <div class="space-y-3">
+              <a href="/student-advice/student-finance/7165-student-accommodation-guide" class="block text-red-600 hover:text-red-800 transition duration-300">• Student accommodation guide</a>
+              <a href="/student-advice/student-finance/budgeting-tips" class="block text-red-600 hover:text-red-800 transition duration-300">• Budgeting tips for students</a>
+              <a href="/student-advice/student-finance/cost-of-living-calculator" class="block text-red-600 hover:text-red-800 transition duration-300">• Cost of living calculator</a>
+            </div>
+          </div>
+
+          <!-- Bursaries & Scholarships -->
+          <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Bursaries & Scholarships</h3>
+            <p class="text-gray-600 mb-6 text-center">
+              Discover funding opportunities that don't need to be repaid.
+            </p>
+            <div class="space-y-3">
+              <a href="/student-advice/student-finance/7167-bursaries-and-scholarships" class="block text-red-600 hover:text-red-800 transition duration-300">• Bursaries and scholarships guide</a>
+              <a href="/student-advice/student-finance/scholarship-search" class="block text-red-600 hover:text-red-800 transition duration-300">• Scholarship search tool</a>
+              <a href="/student-advice/student-finance/merit-based-funding" class="block text-red-600 hover:text-red-800 transition duration-300">• Merit-based funding</a>
+            </div>
+          </div>
+
+          <!-- Research Funding -->
+          <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Research Funding</h3>
+            <p class="text-gray-600 mb-6 text-center">
+              Specialized funding for postgraduate research students.
+            </p>
+            <div class="space-y-3">
+              <a href="/student-advice/student-finance/7264-research-council-funding" class="block text-red-600 hover:text-red-800 transition duration-300">• Research council funding</a>
+              <a href="/student-advice/student-finance/phd-funding" class="block text-red-600 hover:text-red-800 transition duration-300">• PhD funding options</a>
+              <a href="/student-advice/student-finance/research-grants" class="block text-red-600 hover:text-red-800 transition duration-300">• Research grants guide</a>
+            </div>
+          </div>
+
+          <!-- Financial Support -->
+          <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+            <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Financial Support</h3>
+            <p class="text-gray-600 mb-6 text-center">
+              Get help if you're struggling financially during your studies.
+            </p>
+            <div class="space-y-3">
+              <a href="/student-advice/student-finance/emergency-funds" class="block text-red-600 hover:text-red-800 transition duration-300">• Emergency funding</a>
+              <a href="/student-advice/student-finance/hardship-funds" class="block text-red-600 hover:text-red-800 transition duration-300">• Hardship funds</a>
+              <a href="/student-advice/student-finance/financial-counselling" class="block text-red-600 hover:text-red-800 transition duration-300">• Financial counselling</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Financial Planning Tools -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">Financial Planning Tools</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Budget Calculator -->
+          <div class="bg-red-50 rounded-lg p-8 text-center">
+            <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Budget Calculator</h3>
+            <p class="text-gray-600 mb-6">
+              Calculate your monthly budget and track your expenses throughout your studies.
+            </p>
+            <a href="/student-advice/student-finance/budget-calculator" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300">
+              Use Calculator
+            </a>
+          </div>
+
+          <!-- Loan Repayment Calculator -->
+          <div class="bg-red-50 rounded-lg p-8 text-center">
+            <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Loan Repayment Calculator</h3>
+            <p class="text-gray-600 mb-6">
+              Estimate your monthly loan repayments based on your expected salary.
+            </p>
+            <a href="/student-advice/student-finance/loan-calculator" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300">
+              Calculate Repayments
+            </a>
+          </div>
+
+          <!-- Cost Comparison Tool -->
+          <div class="bg-red-50 rounded-lg p-8 text-center">
+            <div class="bg-red-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Cost Comparison Tool</h3>
+            <p class="text-gray-600 mb-6">
+              Compare the total cost of studying at different universities and cities.
+            </p>
+            <a href="/student-advice/student-finance/cost-comparison" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300">
+              Compare Costs
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Articles -->
+    <section class="py-16 bg-red-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">Essential Reading</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Managing Your Money</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="/student-advice/student-finance/7180-student-debt-and-graduate-earnings" class="text-red-600 hover:text-red-800 transition duration-300 font-semibold">
+                  Student debt and graduate earnings
+                </a>
+                <p class="text-gray-600 text-sm mt-1">Understanding the relationship between student debt and future earning potential</p>
+              </li>
+              <li>
+                <a href="/student-advice/student-finance/avoiding-debt-trap" class="text-red-600 hover:text-red-800 transition duration-300 font-semibold">
+                  Avoiding the student debt trap
+                </a>
+                <p class="text-gray-600 text-sm mt-1">Smart strategies to minimize your student debt burden</p>
+              </li>
+              <li>
+                <a href="/student-advice/student-finance/money-management-tips" class="text-red-600 hover:text-red-800 transition duration-300 font-semibold">
+                  Essential money management tips
+                </a>
+                <p class="text-gray-600 text-sm mt-1">Practical advice for managing your finances as a student</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Getting Support</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="/student-advice/student-finance/7409-advice-on-changing-your-degree-course-" class="text-red-600 hover:text-red-800 transition duration-300 font-semibold">
+                  Advice on changing your degree course
+                </a>
+                <p class="text-gray-600 text-sm mt-1">Financial implications of changing your course or university</p>
+              </li>
+              <li>
+                <a href="/student-advice/student-finance/8016-protect-yourself-against-student-crime" class="text-red-600 hover:text-red-800 transition duration-300 font-semibold">
+                  Protect yourself against student crime
+                </a>
+                <p class="text-gray-600 text-sm mt-1">Keep your finances safe from fraud and scams</p>
+              </li>
+              <li>
+                <a href="/student-advice/student-finance/financial-difficulties" class="text-red-600 hover:text-red-800 transition duration-300 font-semibold">
+                  What to do if you're struggling financially
+                </a>
+                <p class="text-gray-600 text-sm mt-1">Support available if you're facing financial hardship</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2025 Updates -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">2025 Student Finance Updates</h2>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-red-50 rounded-lg p-8 mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Key Changes for 2025</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>Tuition fees remain capped at £9,250 per year for UK students</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>Maximum maintenance loan increased to £12,667 for students living away from home</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>Repayment threshold remains at £27,295 per year</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>Interest rate on student loans set at 7.6% for 2025</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-red-600 mr-2">•</span>
+                <span>New mental health support funding available</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="text-center">
+            <p class="text-gray-600 mb-6">
+              Stay updated with the latest changes to student finance policies and regulations.
+            </p>
+            <a href="/student-advice/student-finance/2025-updates" class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition duration-300">
+              View All 2025 Updates
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</Layout>
+
+<style>
+  /* Red color scheme styling */
+  .bg-red-gradient {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  }
+  
+  .text-red-primary {
+    color: #dc2626;
+  }
+  
+  .border-red-primary {
+    border-color: #dc2626;
+  }
+  
+  /* Hover effects */
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Card styling */
+  .card-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card-shadow:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+</style>

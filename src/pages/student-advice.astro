@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { courseCategories } from '../data/courseCategories';
+---
+
+<Layout title="Student Advice - Courses & Careers">
+  <div class="bg-gradient-to-br from-red-50 to-rose-100 min-h-screen">
+    <!-- Header Section -->
+    <div class="bg-red-600 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Student Advice</h1>
+          <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto">
+            Everything you need to know about student life, finance, and making the most of your university experience
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <p class="text-lg text-gray-700 mb-8">
+            The university or college experience is often regarded as one of life's best. For many it's the first time living away from home, and with that comes fantastic freedom. By the end of it you've not just gained a valuable qualification but you've become self-sufficient and dealt with all the good - and sometimes bad - things that life throws at you.
+          </p>
+          
+          <div class="bg-white rounded-lg shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-red-600 mb-4">UCAS Clearing Process</h2>
+            <p class="text-gray-700 mb-4">
+              Read our quick overview of the UCAS process and find out more about your eligibility to use the service, how to submit your application and some points to consider before making your final decision.
+            </p>
+            <a href="/student-advice/student-finance/ucas-clearing-process" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300">
+              Learn About UCAS Clearing
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Sections -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          
+          <!-- Just Looking Section -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="bg-red-600 text-white px-4 py-2 rounded-t-lg -mx-8 -mt-8 mb-6">
+              <h3 class="text-xl font-bold">Just Looking</h3>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-700 mb-4">
+                There is lots to think about and many decisions to make when considering further education:
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li><a href="/student-advice/student-finance/benefits-of-university-education" class="text-red-600 hover:text-red-800 transition duration-300">Benefits of a university education</a></li>
+                <li><a href="/student-advice/student-finance/choosing-a-degree-course" class="text-red-600 hover:text-red-800 transition duration-300">Choosing a degree course</a></li>
+                <li><a href="/student-advice/student-finance/degree-course-checklist" class="text-red-600 hover:text-red-800 transition duration-300">Degree course checklist</a></li>
+                <li><a href="/student-advice/student-finance/7180-student-debt-and-graduate-earnings" class="text-red-600 hover:text-red-800 transition duration-300">Student debt and graduate earnings</a></li>
+              </ul>
+              <p class="text-gray-700 mt-6 mb-4">
+                Or perhaps you are considering delaying a year:
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li><a href="/student-advice/student-finance/thinking-about-gap-year" class="text-red-600 hover:text-red-800 transition duration-300">Thinking about a gap year?</a></li>
+                <li><a href="/student-advice/student-finance/why-take-gap-year" class="text-red-600 hover:text-red-800 transition duration-300">Why take a gap year?</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Funding Advice Section -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="bg-red-600 text-white px-4 py-2 rounded-t-lg -mx-8 -mt-8 mb-6">
+              <h3 class="text-xl font-bold">Funding Advice</h3>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-700 mb-4">
+                Going to university can be an expensive business and land you in debt for years. But do not worry, check out our advice:
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li><a href="/student-advice/student-finance/student-loan-repayment" class="text-red-600 hover:text-red-800 transition duration-300">How long will it take to pay off my student loan?</a></li>
+                <li><a href="/student-advice/student-finance/student-loans-guide" class="text-red-600 hover:text-red-800 transition duration-300">All you need to know about student loans</a></li>
+                <li><a href="/student-advice/student-finance/7235-the-cost-of-higher-education" class="text-red-600 hover:text-red-800 transition duration-300">The cost of higher education</a></li>
+                <li><a href="/student-advice/student-finance/avoiding-debt-trap" class="text-red-600 hover:text-red-800 transition duration-300">Avoiding the student debt trap</a></li>
+                <li><a href="/student-advice/student-finance/7167-bursaries-and-scholarships" class="text-red-600 hover:text-red-800 transition duration-300">Bursaries and scholarships</a></li>
+                <li><a href="/student-advice/student-finance/bursary-searcher" class="text-red-600 hover:text-red-800 transition duration-300">The bursary searcher</a></li>
+                <li><a href="/student-advice/student-finance/7264-research-council-funding" class="text-red-600 hover:text-red-800 transition duration-300">Research Council Funding</a></li>
+                <li><a href="/student-advice/student-finance/student-loans-overview" class="text-red-600 hover:text-red-800 transition duration-300">Student loans overview</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Accommodation Section -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="bg-red-600 text-white px-4 py-2 rounded-t-lg -mx-8 -mt-8 mb-6">
+              <h3 class="text-xl font-bold">Accommodation</h3>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-700 mb-4">
+                As you fly the nest to start further education you have to consider your living arrangements. Should you go in to a hall of residence or a shared house and what just is a spin cycle anyway? We can offer a little bit of help:
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li><a href="/student-advice/student-finance/living-in-halls" class="text-red-600 hover:text-red-800 transition duration-300">Living in halls of residence at university</a></li>
+                <li><a href="/student-advice/student-finance/7165-student-accommodation-guide" class="text-red-600 hover:text-red-800 transition duration-300">Student accommodation guide</a></li>
+                <li><a href="/student-advice/student-finance/private-accommodation" class="text-red-600 hover:text-red-800 transition duration-300">Private accommodation options</a></li>
+                <li><a href="/student-advice/student-finance/accommodation-costs" class="text-red-600 hover:text-red-800 transition duration-300">Understanding accommodation costs</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- New Students Section -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="bg-red-600 text-white px-4 py-2 rounded-t-lg -mx-8 -mt-8 mb-6">
+              <h3 class="text-xl font-bold">New Students</h3>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-700 mb-4">
+                It can be a little overwhelming when you first start your course. We have put together a few articles to help ease you in:
+              </p>
+              <ul class="space-y-3 text-gray-700">
+                <li><a href="/student-advice/student-finance/7409-advice-on-changing-your-degree-course-" class="text-red-600 hover:text-red-800 transition duration-300">Advice on changing your degree course</a></li>
+                <li><a href="/student-advice/student-finance/national-union-students" class="text-red-600 hover:text-red-800 transition duration-300">National Union of Students (NUS)</a></li>
+                <li><a href="/student-advice/student-finance/freshers-week" class="text-red-600 hover:text-red-800 transition duration-300">Freshers week</a></li>
+                <li><a href="/student-advice/student-finance/learning-styles" class="text-red-600 hover:text-red-800 transition duration-300">How do you learn best?</a></li>
+                <li><a href="/student-advice/student-finance/8016-protect-yourself-against-student-crime" class="text-red-600 hover:text-red-800 transition duration-300">Protect yourself against student crime</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Statistics Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">Key Student Statistics 2025</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="text-center">
+            <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl font-bold text-red-600">£9,250</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Annual Tuition Fees</h3>
+            <p class="text-gray-600">Maximum tuition fees for UK students in 2025</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl font-bold text-red-600">£12,667</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Living Costs</h3>
+            <p class="text-gray-600">Average annual living costs for students</p>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl font-bold text-red-600">£37,000</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Graduate Salary</h3>
+            <p class="text-gray-600">Average starting salary for graduates</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="py-16 bg-red-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">Quick Links</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Student Finance -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="flex items-center mb-6">
+              <div class="bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">Student Finance</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Comprehensive guides on funding your education, managing money, and understanding student loans.
+            </p>
+            <a href="/student-advice/student-finance" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300 inline-block">
+              Explore Student Finance
+            </a>
+          </div>
+
+          <!-- UK City Guide -->
+          <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="flex items-center mb-6">
+              <div class="bg-red-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">UK City Guide</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Discover the best student cities in the UK, from living costs to social life and career opportunities.
+            </p>
+            <a href="/student-advice/uk-city-guide" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition duration-300 inline-block">
+              Explore UK Cities
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Support Resources Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">Support Resources</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="text-center">
+            <div class="bg-red-100 rounded-lg p-6 mb-4">
+              <svg class="w-12 h-12 text-red-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Student Support</h3>
+              <p class="text-gray-600">Get help with academic, personal, and financial challenges</p>
+            </div>
+            <a href="/student-advice/support-services" class="text-red-600 hover:text-red-800 transition duration-300">Learn More</a>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-red-100 rounded-lg p-6 mb-4">
+              <svg class="w-12 h-12 text-red-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Health & Wellbeing</h3>
+              <p class="text-gray-600">Mental health resources and wellness tips for students</p>
+            </div>
+            <a href="/student-advice/health-wellbeing" class="text-red-600 hover:text-red-800 transition duration-300">Learn More</a>
+          </div>
+
+          <div class="text-center">
+            <div class="bg-red-100 rounded-lg p-6 mb-4">
+              <svg class="w-12 h-12 text-red-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Career Services</h3>
+              <p class="text-gray-600">Job search support and career guidance for students</p>
+            </div>
+            <a href="/jobs-and-careers" class="text-red-600 hover:text-red-800 transition duration-300">Learn More</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+</Layout>
+
+<style>
+  /* Red color scheme styling */
+  .bg-red-gradient {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  }
+  
+  .text-red-primary {
+    color: #dc2626;
+  }
+  
+  .border-red-primary {
+    border-color: #dc2626;
+  }
+  
+  /* Hover effects */
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Card styling */
+  .card-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card-shadow:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+</style>

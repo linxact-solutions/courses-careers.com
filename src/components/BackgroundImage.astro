@@ -1,0 +1,192 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+export interface Props {
+  src: string | ImageMetadata;
+  alt?: string;
+  class?: string;
+  overlay?: boolean;
+  overlayColor?: string;
+  overlayOpacity?: number;
+  position?: string;
+  attachment?: 'fixed' | 'local' | 'scroll';
+  loading?: 'eager' | 'lazy';
+}
+
+const {
+  src,
+  alt = '',
+  class: className,
+  overlay = false,
+  overlayColor = 'rgba(0, 0, 0, 0.5)',
+  overlayOpacity = 0.5,
+  position = 'center center',
+  attachment = 'scroll',
+  loading = 'lazy',
+} = Astro.props;
+
+let optimizedBackground = null;
+let backgroundUrl = '';
+
+// Process image if it's an imported asset
+if (typeof src === 'object' && 'src' in src) {
+  try {
+    optimizedBackground = await getImage({
+      src: src,
+      format: 'webp',
+      quality: 85,
+      width: 1920,
+    });
+    backgroundUrl = optimizedBackground.src;
+  } catch (e) {
+    console.error('Error optimizing background image:', e);
+    backgroundUrl = src.src;
+  }
+} else if (typeof src === 'string') {
+  backgroundUrl = src;
+} else {
+  // Placeholder background
+  backgroundUrl = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1920' height='1080'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234f46e5;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237c3aed;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3C/svg%3E`;
+}
+
+const overlayStyle = overlay
+  ? `--overlay-color: ${overlayColor}; --overlay-opacity: ${overlayOpacity};`
+  : '';
+---
+
+<div
+  class={`background-image-container ${className || ''} ${overlay ? 'has-overlay' : ''}`}
+  style={`--bg-image: url('${backgroundUrl}'); --bg-position: ${position}; --bg-attachment: ${attachment}; ${overlayStyle}`}
+  data-loading={loading}
+>
+  <div class="background-image" role="img" aria-label={alt}></div>
+  {overlay && <div class="background-overlay"></div>}
+  <div class="background-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .background-image-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+  }
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-image);
+    background-position: var(--bg-position);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: var(--bg-attachment);
+    z-index: 1;
+    will-change: transform;
+  }
+
+  /* Lazy loading animation */
+  .background-image-container[data-loading="lazy"] .background-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .background-image-container[data-loading="lazy"].loaded .background-image {
+    opacity: 1;
+  }
+
+  .background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+    opacity: var(--overlay-opacity);
+    z-index: 2;
+  }
+
+  .background-content {
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Parallax effect support */
+  @supports (background-attachment: fixed) {
+    .background-image-container.parallax .background-image {
+      background-attachment: fixed;
+    }
+  }
+
+  /* Loading skeleton */
+  .background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      #f3f4f6 25%,
+      #e5e7eb 25%,
+      #e5e7eb 50%,
+      #f3f4f6 50%,
+      #f3f4f6 75%,
+      #e5e7eb 75%,
+      #e5e7eb
+    );
+    background-size: 20px 20px;
+    animation: backgroundPattern 1s linear infinite;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  .background-image-container.loaded .background-image::before {
+    opacity: 0;
+  }
+
+  @keyframes backgroundPattern {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 20px 20px;
+    }
+  }
+</style>
+
+<script>
+  // Handle lazy loading for background images
+  document.addEventListener('DOMContentLoaded', () => {
+    const backgroundContainers = document.querySelectorAll('.background-image-container[data-loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const container = entry.target;
+            container.classList.add('loaded');
+            imageObserver.unobserve(container);
+          }
+        });
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.01
+      });
+
+      backgroundContainers.forEach((container) => {
+        imageObserver.observe(container);
+      });
+    } else {
+      // Fallback for browsers that don't support IntersectionObserver
+      backgroundContainers.forEach((container) => {
+        container.classList.add('loaded');
+      });
+    }
+  });
+</script>

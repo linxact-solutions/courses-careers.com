@@ -1,0 +1,410 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+const structuredData = {
+  type: 'university',
+  university: {
+    name: 'Loughborough University',
+    description: 'World-class engineering research and postgraduate programs with cutting-edge facilities and outstanding research opportunities.',
+    location: 'Loughborough, Leicestershire',
+    founded: '1966',
+    website: 'https://www.lboro.ac.uk',
+    logo: '/images/stories/college-images/loughborough-chemical/logo.gif'
+  },
+  course: {
+    name: 'Engineering Research Programs',
+    description: 'Advanced postgraduate research opportunities in engineering disciplines',
+    provider: 'Loughborough University',
+    level: 'Postgraduate',
+    subject: 'Engineering'
+  }
+};
+---
+
+<Layout 
+	title="Loughborough University - Research Engineers and Postgraduate Programs"
+	description="Discover Loughborough University's world-class engineering research and postgraduate programs. Learn about cutting-edge facilities, research opportunities, and career prospects."
+	keywords="Loughborough University, research engineers, postgraduate engineering, UK engineering university, research opportunities, engineering masters"
+	section="postgraduate"
+	structuredData={structuredData}
+>
+	<!-- Breadcrumb -->
+	<nav class="bg-gray-50 py-3" aria-label="Breadcrumb">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-blue-600 hover:text-blue-800">Home</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li><a href="/postgraduate" class="text-blue-600 hover:text-blue-800">Postgraduate</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li><a href="/postgraduate/university-profiles" class="text-blue-600 hover:text-blue-800">University Profiles</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li class="text-gray-900">Loughborough University</li>
+			</ol>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<div class="flex items-center justify-center mb-6">
+					<OptimizedImage 
+						src="/images/stories/college-images/loughborough-chemical/logo.gif"
+						alt="Loughborough University logo"
+						width={200}
+						height={120}
+						class="bg-white rounded-lg p-4"
+					/>
+				</div>
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Loughborough University
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+					Research Engineers and World-Class Postgraduate Programs
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<section class="py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+				<!-- Main Content -->
+				<div class="lg:col-span-2">
+					<div class="bg-white rounded-lg shadow-sm p-8">
+						<h2 class="text-2xl font-bold text-gray-900 mb-6">Excellence in Engineering Research</h2>
+						
+						<p class="text-gray-700 mb-4">
+							Loughborough University stands as one of the UK's premier institutions for engineering research and education. With a proud history spanning over 50 years, the university has established itself as a world leader in engineering innovation, consistently ranking among the top universities globally for engineering and technology programs.
+						</p>
+
+						<p class="text-gray-700 mb-4">
+							The university's School of Engineering is renowned for its cutting-edge research facilities, world-class academic staff, and strong industry partnerships. Our research engineers work on some of the most challenging problems facing society today, from sustainable energy solutions to advanced manufacturing technologies.
+						</p>
+
+						<p class="text-gray-700 mb-6">
+							At Loughborough, we believe in the power of interdisciplinary research to solve complex engineering challenges. Our postgraduate programs are designed to provide students with both theoretical depth and practical experience, preparing them for leadership roles in industry and academia.
+						</p>
+
+						<!-- Research Areas -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Key Research Areas</h3>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Advanced Materials</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Composite materials and manufacturing</li>
+										<li>• Nanomaterials and nanotechnology</li>
+										<li>• Smart materials and structures</li>
+										<li>• Biomaterials and medical devices</li>
+									</ul>
+								</div>
+								
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Sustainable Engineering</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Renewable energy systems</li>
+										<li>• Energy storage technologies</li>
+										<li>• Environmental engineering</li>
+										<li>• Sustainable manufacturing</li>
+									</ul>
+								</div>
+								
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Digital Engineering</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Artificial intelligence in engineering</li>
+										<li>• Internet of Things (IoT)</li>
+										<li>• Digital twins and simulation</li>
+										<li>• Cyber-physical systems</li>
+									</ul>
+								</div>
+								
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Transport Technology</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Automotive engineering</li>
+										<li>• Electric vehicle technology</li>
+										<li>• Aerospace systems</li>
+										<li>• Railway engineering</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Postgraduate Programs -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Postgraduate Programs</h3>
+							<div class="space-y-4">
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">MSc Engineering Programs</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Comprehensive taught programs covering all major engineering disciplines.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• Mechanical Engineering</li>
+										<li>• Civil Engineering</li>
+										<li>• Chemical Engineering</li>
+										<li>• Electronic and Electrical Engineering</li>
+										<li>• Materials Engineering</li>
+									</ul>
+								</div>
+								
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">MRes Research Programs</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Research-focused programs for students preparing for PhD study or research careers.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• Individual research projects</li>
+										<li>• Advanced research methods training</li>
+										<li>• Industry collaboration opportunities</li>
+										<li>• Publication and presentation skills</li>
+									</ul>
+								</div>
+								
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">PhD Programs</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Cutting-edge research programs leading to original contributions to engineering knowledge.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• 3-4 year research programs</li>
+										<li>• World-class supervision</li>
+										<li>• State-of-the-art facilities</li>
+										<li>• International research collaborations</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Facilities and Resources -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">World-Class Facilities</h3>
+							<div class="bg-gray-50 rounded-lg p-6">
+								<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+									<div>
+										<h4 class="font-semibold text-gray-900 mb-2">Research Laboratories</h4>
+										<ul class="text-sm text-gray-700 space-y-1">
+											<li>• Advanced Manufacturing Laboratory</li>
+											<li>• Materials Characterization Suite</li>
+											<li>• Renewable Energy Laboratory</li>
+											<li>• Digital Engineering Hub</li>
+										</ul>
+									</div>
+									
+									<div>
+										<h4 class="font-semibold text-gray-900 mb-2">Specialized Equipment</h4>
+										<ul class="text-sm text-gray-700 space-y-1">
+											<li>• Electron microscopy facilities</li>
+											<li>• 3D printing and additive manufacturing</li>
+											<li>• High-performance computing clusters</li>
+											<li>• Environmental testing chambers</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Industry Partnerships -->
+						<div class="bg-blue-50 rounded-lg p-6">
+							<h3 class="text-xl font-semibold text-blue-800 mb-4">Industry Partnerships</h3>
+							<p class="text-gray-700 mb-4">
+								Loughborough University maintains strong partnerships with leading engineering companies, providing students with invaluable industry experience and career opportunities.
+							</p>
+							<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Manufacturing</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Rolls-Royce</li>
+										<li>• Jaguar Land Rover</li>
+										<li>• Caterpillar</li>
+										<li>• Siemens</li>
+									</ul>
+								</div>
+								
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Energy</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• National Grid</li>
+										<li>• Shell</li>
+										<li>• Ørsted</li>
+										<li>• E.ON</li>
+									</ul>
+								</div>
+								
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Technology</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• IBM</li>
+										<li>• Microsoft</li>
+										<li>• ARM</li>
+										<li>• Dyson</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div class="lg:col-span-1">
+					<!-- Quick Facts -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Quick Facts</h3>
+						<div class="space-y-3">
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Founded:</span>
+								<span class="text-sm font-medium">1966</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Location:</span>
+								<span class="text-sm font-medium">Loughborough, UK</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Students:</span>
+								<span class="text-sm font-medium">19,000+</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Research Rating:</span>
+								<span class="text-sm font-medium">4* (REF 2021)</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Rankings -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Rankings & Recognition</h3>
+						<ul class="space-y-2 text-sm">
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>#7 in UK for Engineering (Guardian 2024)</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>#1 for Student Experience (Times 2024)</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>Top 10 Globally for Sports Science</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>Gold Teaching Excellence Framework</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Application Information -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Application Information</h3>
+						<div class="space-y-3">
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Entry Requirements</h4>
+								<p class="text-xs text-gray-600">2:1 degree in engineering or related field</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Application Deadline</h4>
+								<p class="text-xs text-gray-600">Rolling admissions for most programs</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">English Requirements</h4>
+								<p class="text-xs text-gray-600">IELTS 6.5 overall (6.0 in each component)</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Tuition Fees</h4>
+								<p class="text-xs text-gray-600">£26,500 per year (international)</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Contact Information -->
+					<div class="bg-white rounded-lg shadow-sm p-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Contact Information</h3>
+						<div class="space-y-3">
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">Admissions Office</h4>
+								<p class="text-xs text-gray-600">admissions@lboro.ac.uk</p>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">School of Engineering</h4>
+								<p class="text-xs text-gray-600">engineering@lboro.ac.uk</p>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">International Office</h4>
+								<p class="text-xs text-gray-600">international@lboro.ac.uk</p>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">Address</h4>
+								<p class="text-xs text-gray-600">
+									Loughborough University<br/>
+									Loughborough<br/>
+									Leicestershire LE11 3TU<br/>
+									United Kingdom
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Student Success Stories -->
+	<section class="bg-gray-50 py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-2xl font-bold text-center mb-8">Student Success Stories</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="flex items-start gap-4">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+							<span class="text-blue-600 font-bold text-xl">SJ</span>
+						</div>
+						<div>
+							<h3 class="font-semibold text-gray-900 mb-1">Sarah Johnson</h3>
+							<p class="text-sm text-gray-600 mb-2">MSc Advanced Manufacturing Engineering</p>
+							<p class="text-sm text-gray-700">
+								"The research opportunities at Loughborough were incredible. I worked on a project with Rolls-Royce that led to a full-time position after graduation. The facilities and support from faculty were world-class."
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="flex items-start gap-4">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+							<span class="text-blue-600 font-bold text-xl">MP</span>
+						</div>
+						<div>
+							<h3 class="font-semibold text-gray-900 mb-1">Michael Patel</h3>
+							<p class="text-sm text-gray-600 mb-2">PhD Sustainable Energy Systems</p>
+							<p class="text-sm text-gray-700">
+								"The interdisciplinary approach at Loughborough allowed me to work across different departments. My research on battery technology has been published in top-tier journals and caught the attention of industry leaders."
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="bg-blue-600 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-2xl font-bold mb-4">Ready to Join Our Research Community?</h2>
+			<p class="text-xl mb-8 max-w-2xl mx-auto">
+				Discover how Loughborough University can help you achieve your engineering research goals and advance your career.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="#" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+					Apply Now
+				</a>
+				<a href="#" class="inline-block bg-blue-500 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-400 transition-colors">
+					Request Information
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>

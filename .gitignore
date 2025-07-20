@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+dist/
+.astro/
+
+# Local env files
+.env
+.env.local
+.env.production.local
+.env.development.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Build logs
+build.log
+test.log
+
+# Lighthouse reports
+lighthouse-report.json
+.lighthouseci/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Package manager locks (keep package-lock.json)
+yarn.lock
+pnpm-lock.yaml

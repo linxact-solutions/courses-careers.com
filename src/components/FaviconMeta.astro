@@ -1,0 +1,67 @@
+---
+/**
+ * Complete Favicon Meta Tags Component
+ * Provides comprehensive favicon support for all devices and browsers
+ */
+---
+
+<!-- SVG favicon for modern browsers (highest priority) -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Primary favicon files for legacy browsers -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+
+<!-- Apple Touch Icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<!-- Additional PNG sizes for various devices -->
+<link rel="icon" type="image/png" sizes="48x48" href="/icon-48x48.png" />
+<link rel="icon" type="image/png" sizes="64x64" href="/icon-64x64.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/icon-96x96.png" />
+<link rel="icon" type="image/png" sizes="128x128" href="/icon-128x128.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="/icon-512x512.png" />
+
+<!-- Web App Manifest -->
+<link rel="manifest" href="/site.webmanifest" />
+
+<!-- Microsoft Tiles Configuration -->
+<meta name="msapplication-TileColor" content="#3B82F6" />
+<meta name="msapplication-config" content="/browserconfig.xml" />
+
+<!-- Theme Colors for different color schemes -->
+<meta name="theme-color" content="#3B82F6" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#1E40AF" media="(prefers-color-scheme: dark)" />
+
+<!-- Mask icon for Safari pinned tab -->
+<link rel="mask-icon" href="/favicon.svg" color="#3B82F6" />
+
+<!-- Additional meta tags for better app representation -->
+<meta name="application-name" content="Courses & Careers" />
+<meta name="apple-mobile-web-app-title" content="C&C" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="mobile-web-app-capable" content="yes" />
+
+<!-- Social media and sharing meta tags -->
+<meta property="og:site_name" content="Courses & Careers" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Structured data for rich snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Courses & Careers",
+  "description": "Your Path to Success - Professional courses and career guidance",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "/icon-512x512.png",
+    "width": 512,
+    "height": 512
+  }
+}
+</script>

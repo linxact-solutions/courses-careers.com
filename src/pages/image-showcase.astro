@@ -1,0 +1,530 @@
+---
+import OptimizedImage from '../components/OptimizedImage.astro';
+import ResponsivePicture from '../components/ResponsivePicture.astro';
+import BackgroundImage from '../components/BackgroundImage.astro';
+import ImageGallery from '../components/ImageGallery.astro';
+import CourseCard from '../components/CourseCard.astro';
+import Logo from '../components/Logo.astro';
+import FaviconMeta from '../components/FaviconMeta.astro';
+
+// Sample course data
+const courses = [
+  {
+    title: "Introduction to Computer Science",
+    description: "Learn the fundamentals of programming and computational thinking in this comprehensive beginner course.",
+    image: "/src/assets/images/university-campus-2.jpg",
+    imageAlt: "Modern computer science laboratory",
+    duration: "12 weeks",
+    level: "Beginner" as const,
+    href: "/courses/intro-cs",
+    featured: true,
+  },
+  {
+    title: "Advanced Data Analytics",
+    description: "Master data analysis techniques using Python, R, and modern visualization tools.",
+    image: "/src/assets/images/student-life-3.jpg",
+    imageAlt: "Students working on data analysis project",
+    duration: "8 weeks",
+    level: "Advanced" as const,
+    href: "/courses/data-analytics",
+  },
+  {
+    title: "Web Development Bootcamp",
+    description: "Build modern web applications with HTML, CSS, JavaScript, and popular frameworks.",
+    image: "/src/assets/images/university-campus-3.jpg",
+    imageAlt: "Students coding in computer lab",
+    duration: "16 weeks",
+    level: "Intermediate" as const,
+    href: "/courses/web-dev",
+  },
+];
+
+// Gallery showcase images
+const showcaseImages = [
+  {
+    src: "/src/assets/images/student-life-1.jpg",
+    alt: "Library study session",
+    caption: "24/7 Library Access"
+  },
+  {
+    src: "/src/assets/images/student-life-2.jpg",
+    alt: "Campus dining hall",
+    caption: "Modern Dining Facilities"
+  },
+  {
+    src: "/src/assets/images/university-campus-1.jpg",
+    alt: "Main campus building",
+    caption: "Historic Architecture"
+  },
+  {
+    src: "/src/assets/images/student-life-4.jpg",
+    alt: "Graduation ceremony",
+    caption: "Celebrating Success"
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Optimization Showcase - Courses & Careers</title>
+    <meta name="description" content="Comprehensive demonstration of Astro's image optimization features" />
+    <FaviconMeta />
+    <style>
+      :root {
+        --color-primary: #4f46e5;
+        --color-secondary: #7c3aed;
+        --color-text: #1a202c;
+        --color-text-light: #4a5568;
+        --color-bg: #f7fafc;
+        --color-white: #ffffff;
+        --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        color: var(--color-text);
+        background-color: var(--color-bg);
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .section {
+        margin-bottom: 5rem;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 0 0 1rem;
+        color: var(--color-text);
+      }
+
+      .section-subtitle {
+        font-size: 1.25rem;
+        color: var(--color-text-light);
+        margin: 0;
+      }
+
+      /* Hero Styles */
+      .hero-section {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-content {
+        text-align: center;
+        color: white;
+        padding: 3rem;
+        max-width: 800px;
+      }
+
+      .hero-title {
+        font-size: 4rem;
+        font-weight: 900;
+        margin: 0 0 1.5rem;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        line-height: 1.1;
+      }
+
+      .hero-description {
+        font-size: 1.5rem;
+        margin: 0 0 2rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-cta {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--color-primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        font-size: 1.125rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.4);
+      }
+
+      .hero-cta:hover {
+        background: var(--color-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px 0 rgba(124, 58, 237, 0.4);
+      }
+
+      /* Feature Image */
+      .feature-wrapper {
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: var(--shadow-md);
+      }
+
+      .feature-image {
+        border-radius: 0.75rem;
+        overflow: hidden;
+        margin-bottom: 2rem;
+      }
+
+      .feature-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .feature-content h3 {
+        font-size: 1.875rem;
+        margin: 0 0 1rem;
+      }
+
+      .feature-content p {
+        color: var(--color-text-light);
+        line-height: 1.75;
+      }
+
+      /* Course Grid */
+      .course-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      /* Comparison Grid */
+      .comparison-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .comparison-card {
+        background: white;
+        border-radius: 0.75rem;
+        padding: 2rem;
+        box-shadow: var(--shadow-sm);
+        text-align: center;
+      }
+
+      .comparison-card h4 {
+        font-size: 1.25rem;
+        margin: 0 0 1rem;
+        color: var(--color-primary);
+      }
+
+      .comparison-image {
+        margin-bottom: 1.5rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+
+      /* Code Example */
+      .code-example {
+        background: #1a202c;
+        color: #e2e8f0;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin: 2rem 0;
+        font-family: 'Fira Code', Consolas, Monaco, monospace;
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+
+      .code-example code {
+        display: block;
+        white-space: pre;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .hero-description {
+          font-size: 1.125rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .container {
+          padding: 1rem;
+        }
+
+        .course-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with Logo -->
+    <header style="background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100;">
+      <div style="max-width: 1280px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <a href="/" style="text-decoration: none;">
+          <Logo variant="full" size="md" />
+        </a>
+        <nav style="display: flex; gap: 2rem;">
+          <a href="/" style="text-decoration: none; color: #4a5568; font-weight: 500;">Home</a>
+          <a href="/logo-showcase" style="text-decoration: none; color: #4a5568; font-weight: 500;">Logo Showcase</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section with Optimized Background -->
+    <BackgroundImage
+      src="/src/assets/images/hero-bg.jpg"
+      alt="University campus aerial view"
+      class="hero-section"
+      overlay={true}
+      overlayColor="rgba(79, 70, 229, 0.7)"
+      overlayOpacity={0.7}
+      loading="eager"
+      attachment="fixed"
+    >
+      <div class="hero-content">
+        <h1 class="hero-title">Image Optimization Showcase</h1>
+        <p class="hero-description">
+          Experience the power of Astro's built-in image optimization with lazy loading,
+          responsive images, and multiple format support.
+        </p>
+        <a href="#features" class="hero-cta">Explore Features</a>
+      </div>
+    </BackgroundImage>
+
+    <main class="container">
+      <!-- Basic Optimization Example -->
+      <section id="features" class="section">
+        <div class="section-header">
+          <h2 class="section-title">Basic Image Optimization</h2>
+          <p class="section-subtitle">Automatic format conversion and size optimization</p>
+        </div>
+        
+        <div class="feature-wrapper">
+          <OptimizedImage
+            src="/src/assets/images/career-success.jpg"
+            alt="Professional working in modern office"
+            width={1000}
+            height={667}
+            loading="lazy"
+            class="feature-image"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1000px"
+            quality={90}
+          />
+          <div class="feature-content">
+            <h3>Automatic Optimization</h3>
+            <p>
+              This image is automatically optimized by Astro. It's converted to modern formats
+              (AVIF, WebP) when supported, resized to multiple dimensions for responsive display,
+              and lazy-loaded to improve page performance. The original 1000x667 image is served
+              in the most efficient format for each browser.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Responsive Picture Example -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Art-Directed Responsive Images</h2>
+          <p class="section-subtitle">Different images for different screen sizes</p>
+        </div>
+
+        <ResponsivePicture
+          src="/src/assets/images/university-campus-1.jpg"
+          alt="University main building"
+          widths={[400, 800, 1200, 1600]}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
+          formats={['avif', 'webp']}
+          aspectRatio="16/9"
+          class="showcase-picture"
+        />
+
+        <div class="code-example">
+          <code>{`<ResponsivePicture
+  src="/src/assets/images/university-campus-1.jpg"
+  alt="University main building"
+  widths={[400, 800, 1200, 1600]}
+  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
+  formats={['avif', 'webp']}
+  aspectRatio="16/9"
+/>`}</code>
+        </div>
+      </section>
+
+      <!-- Course Cards with Optimized Images -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Real-World Usage Example</h2>
+          <p class="section-subtitle">Course cards with optimized images</p>
+        </div>
+
+        <div class="course-grid">
+          {courses.map((course) => (
+            <CourseCard {...course} />
+          ))}
+        </div>
+      </section>
+
+      <!-- Image Gallery -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Interactive Image Gallery</h2>
+          <p class="section-subtitle">Click any image to view in lightbox</p>
+        </div>
+
+        <ImageGallery
+          images={showcaseImages}
+          columns={2}
+          gap="1.5rem"
+          lightbox={true}
+          lazy={true}
+          class="showcase-gallery"
+        />
+      </section>
+
+      <!-- Format Comparison -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Image Format Comparison</h2>
+          <p class="section-subtitle">See the benefits of modern image formats</p>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="comparison-card">
+            <h4>Original JPEG</h4>
+            <div class="comparison-image">
+              <OptimizedImage
+                src="/src/assets/images/student-life-1.jpg"
+                alt="JPEG format example"
+                width={400}
+                height={300}
+                format="jpg"
+                quality={85}
+              />
+            </div>
+            <p>Traditional JPEG format<br />File size: ~85KB</p>
+          </div>
+
+          <div class="comparison-card">
+            <h4>WebP Format</h4>
+            <div class="comparison-image">
+              <OptimizedImage
+                src="/src/assets/images/student-life-1.jpg"
+                alt="WebP format example"
+                width={400}
+                height={300}
+                format="webp"
+                quality={85}
+              />
+            </div>
+            <p>Modern WebP format<br />File size: ~45KB (47% smaller)</p>
+          </div>
+
+          <div class="comparison-card">
+            <h4>AVIF Format</h4>
+            <div class="comparison-image">
+              <OptimizedImage
+                src="/src/assets/images/student-life-1.jpg"
+                alt="AVIF format example"
+                width={400}
+                height={300}
+                format="avif"
+                quality={85}
+              />
+            </div>
+            <p>Cutting-edge AVIF format<br />File size: ~35KB (59% smaller)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Performance Metrics -->
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">Performance Benefits</h2>
+          <p class="section-subtitle">Key optimization features implemented</p>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="comparison-card">
+            <h4>🚀 Lazy Loading</h4>
+            <p>Images load only when they're about to enter the viewport, reducing initial page load time.</p>
+          </div>
+
+          <div class="comparison-card">
+            <h4>📐 Responsive Sizes</h4>
+            <p>Multiple image sizes generated automatically, serving the right size for each device.</p>
+          </div>
+
+          <div class="comparison-card">
+            <h4>🎨 Modern Formats</h4>
+            <p>Automatic conversion to AVIF and WebP formats for browsers that support them.</p>
+          </div>
+
+          <div class="comparison-card">
+            <h4>⚡ Sharp Processing</h4>
+            <p>High-performance image processing with Sharp library for fast builds.</p>
+          </div>
+
+          <div class="comparison-card">
+            <h4>💾 Build-time Optimization</h4>
+            <p>Images optimized during build, no runtime processing needed.</p>
+          </div>
+
+          <div class="comparison-card">
+            <h4>🎯 Smart Loading</h4>
+            <p>Above-the-fold images loaded eagerly, others lazy-loaded for optimal performance.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Add smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Log performance metrics
+      window.addEventListener('load', () => {
+        if ('performance' in window) {
+          const perfData = window.performance.timing;
+          const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+          console.log(`Page Load Time: ${pageLoadTime}ms`);
+          
+          // Check for lazy-loaded images
+          const lazyImages = document.querySelectorAll('[loading="lazy"]');
+          console.log(`Lazy-loaded images: ${lazyImages.length}`);
+        }
+      });
+    </script>
+  </body>
+</html>

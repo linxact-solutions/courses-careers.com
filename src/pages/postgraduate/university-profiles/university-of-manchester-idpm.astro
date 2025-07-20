@@ -1,0 +1,627 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+
+const structuredData = {
+  type: 'university',
+  university: {
+    name: 'University of Manchester - IDPM',
+    description: 'The Institute for Development Policy and Management (IDPM) at the University of Manchester - a global leader in development studies, public policy, and international development education.',
+    location: 'Manchester, Greater Manchester',
+    founded: '1958',
+    website: 'https://www.manchester.ac.uk/idpm',
+    logo: '/images/stories/college-images/manchester-idpm/logo.gif'
+  },
+  course: {
+    name: 'Development Policy and Management Programs',
+    description: 'World-class postgraduate programs in international development, public policy, and governance',
+    provider: 'University of Manchester IDPM',
+    level: 'Postgraduate',
+    subject: 'Development Studies'
+  }
+};
+---
+
+<Layout 
+	title="University of Manchester IDPM - Institute for Development Policy and Management"
+	description="Explore the University of Manchester's Institute for Development Policy and Management (IDPM). Leading postgraduate programs in international development, public policy, governance, and social change."
+	keywords="University of Manchester IDPM, development studies, international development, public policy, governance, development management, Manchester university"
+	section="postgraduate"
+	structuredData={structuredData}
+>
+	<!-- Breadcrumb -->
+	<nav class="bg-gray-50 py-3" aria-label="Breadcrumb">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-blue-600 hover:text-blue-800">Home</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li><a href="/postgraduate" class="text-blue-600 hover:text-blue-800">Postgraduate</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li><a href="/postgraduate/university-profiles" class="text-blue-600 hover:text-blue-800">University Profiles</a></li>
+				<li><span class="text-gray-500">/</span></li>
+				<li class="text-gray-900">University of Manchester IDPM</li>
+			</ol>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<div class="flex items-center justify-center mb-6">
+					<OptimizedImage 
+						src="/images/stories/college-images/manchester-idpm/logo.gif"
+						alt="University of Manchester IDPM logo"
+						width={200}
+						height={120}
+						class="bg-white rounded-lg p-4"
+					/>
+				</div>
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Institute for Development Policy and Management
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+					University of Manchester - Shaping Global Development Leaders Since 1958
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<section class="py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+				<!-- Main Content -->
+				<div class="lg:col-span-2">
+					<div class="bg-white rounded-lg shadow-sm p-8">
+						<h2 class="text-2xl font-bold text-gray-900 mb-6">Global Excellence in Development Studies</h2>
+						
+						<p class="text-gray-700 mb-4">
+							The Institute for Development Policy and Management (IDPM) at the University of Manchester is one of the world's leading centers for research and teaching in international development. With over 60 years of experience, IDPM has trained thousands of development professionals who now work in governments, international organizations, NGOs, and research institutions across the globe.
+						</p>
+
+						<p class="text-gray-700 mb-4">
+							As part of the Global Development Institute (GDI) - Europe's largest research and teaching institute dedicated to international development - IDPM combines rigorous academic scholarship with practical policy engagement. The institute's work addresses the most pressing challenges facing developing countries, from poverty reduction and sustainable development to governance reform and social justice.
+						</p>
+
+						<p class="text-gray-700 mb-6">
+							Located in Manchester, one of the UK's most vibrant and diverse cities, IDPM benefits from the University of Manchester's position as a global research powerhouse. The institute's unique approach integrates insights from economics, politics, sociology, anthropology, and management to provide comprehensive understanding of development challenges.
+						</p>
+
+						<!-- History and Heritage -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">History and Evolution</h3>
+							<div class="bg-blue-50 rounded-lg p-6">
+								<p class="text-gray-700 mb-4">
+									IDPM was established in 1958 as one of the first institutions dedicated to development administration training. Over the decades, it has evolved to become a comprehensive center for development research and education.
+								</p>
+								<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+									<div>
+										<h4 class="font-semibold text-blue-800 mb-2">Key Milestones</h4>
+										<ul class="text-sm text-gray-700 space-y-1">
+											<li>• 1958: Founded as Development Administration Group</li>
+											<li>• 1987: Became Institute for Development Policy and Management</li>
+											<li>• 2004: Merged with Institute for Development Research</li>
+											<li>• 2016: Became part of Global Development Institute</li>
+											<li>• 2020: Launched new interdisciplinary programs</li>
+										</ul>
+									</div>
+									<div>
+										<h4 class="font-semibold text-blue-800 mb-2">Research Impact</h4>
+										<ul class="text-sm text-gray-700 space-y-1">
+											<li>• 200+ active research projects</li>
+											<li>• Work in over 50 countries</li>
+											<li>• £40+ million research funding</li>
+											<li>• 100+ academic staff and researchers</li>
+											<li>• 5,000+ alumni worldwide</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Academic Programs -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Postgraduate Programs</h3>
+							<div class="space-y-4">
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">MSc Development Studies</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Comprehensive program examining theories and practices of international development.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• Development theory and policy</li>
+										<li>• Poverty analysis and reduction</li>
+										<li>• Gender and development</li>
+										<li>• Environmental sustainability</li>
+										<li>• Research methods and fieldwork</li>
+									</ul>
+								</div>
+								
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">MSc International Development</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Specialized pathways in public policy, governance, environment, and politics.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• Public Policy and Management</li>
+										<li>• Governance and Political Development</li>
+										<li>• Environment, Climate Change and Development</li>
+										<li>• Globalisation, Trade and Industry</li>
+										<li>• Poverty, Inequality and Development</li>
+									</ul>
+								</div>
+								
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">MSc Management and Implementation of Development Projects</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Practical skills for managing development interventions and projects.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• Project planning and design</li>
+										<li>• Monitoring and evaluation</li>
+										<li>• Financial management</li>
+										<li>• Stakeholder engagement</li>
+										<li>• Risk assessment and management</li>
+									</ul>
+								</div>
+
+								<div class="border border-gray-200 rounded-lg p-4">
+									<h4 class="text-lg font-semibold text-blue-600 mb-2">PhD Programs</h4>
+									<p class="text-gray-700 text-sm mb-2">
+										Advanced research degrees with world-class supervision.
+									</p>
+									<ul class="text-sm text-gray-600 space-y-1">
+										<li>• PhD in Development Policy and Management</li>
+										<li>• PhD in Development Studies</li>
+										<li>• Professional Doctorate in Development Policy</li>
+										<li>• 1+3 ESRC funded pathways</li>
+										<li>• Distance learning PhD options</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Research Excellence -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Research Centers and Groups</h3>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<div class="bg-gray-50 rounded-lg p-4">
+									<h4 class="font-semibold text-gray-900 mb-2">Research Centers</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Effective States and Inclusive Development</li>
+										<li>• Centre for Digital Development</li>
+										<li>• Humanitarian and Conflict Response Institute</li>
+										<li>• Manchester Urban Institute</li>
+										<li>• Brooks World Poverty Institute</li>
+									</ul>
+								</div>
+								
+								<div class="bg-gray-50 rounded-lg p-4">
+									<h4 class="font-semibold text-gray-900 mb-2">Research Themes</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Politics, governance and public policy</li>
+										<li>• Urban development and planning</li>
+										<li>• Technology and digital development</li>
+										<li>• Climate change and sustainability</li>
+										<li>• Conflict, humanitarian response and peace</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Global Engagement -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Global Partnerships and Impact</h3>
+							<p class="text-gray-700 mb-4">
+								IDPM maintains extensive partnerships with governments, international organizations, and research institutions worldwide. These collaborations enhance both research impact and student learning opportunities.
+							</p>
+							<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">International Partners</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• United Nations agencies</li>
+										<li>• World Bank</li>
+										<li>• DFID/FCDO</li>
+										<li>• African Development Bank</li>
+										<li>• Oxfam International</li>
+									</ul>
+								</div>
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Research Networks</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• ESRC research consortia</li>
+										<li>• European development networks</li>
+										<li>• South-South cooperation platforms</li>
+										<li>• Policy research institutes</li>
+										<li>• Academic partnerships</li>
+									</ul>
+								</div>
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Field Locations</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Sub-Saharan Africa</li>
+										<li>• South and Southeast Asia</li>
+										<li>• Latin America</li>
+										<li>• Middle East</li>
+										<li>• Pacific Islands</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Faculty Expertise -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">World-Class Faculty</h3>
+							<div class="bg-gray-50 rounded-lg p-6">
+								<p class="text-gray-700 mb-4">
+									IDPM's faculty includes leading scholars and practitioners in development studies, many of whom serve as advisors to governments and international organizations.
+								</p>
+								<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+									<div>
+										<h4 class="font-semibold text-gray-900 mb-2">Academic Excellence</h4>
+										<ul class="text-sm text-gray-700 space-y-1">
+											<li>• 50+ full-time academic staff</li>
+											<li>• Authors of influential development texts</li>
+											<li>• Regular contributors to policy debates</li>
+											<li>• Award-winning researchers</li>
+											<li>• Extensive field experience</li>
+										</ul>
+									</div>
+									
+									<div>
+										<h4 class="font-semibold text-gray-900 mb-2">Areas of Expertise</h4>
+										<ul class="text-sm text-gray-700 space-y-1">
+											<li>• Poverty and inequality analysis</li>
+											<li>• Governance and institutions</li>
+											<li>• Social protection systems</li>
+											<li>• Technology for development</li>
+											<li>• Environmental sustainability</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Student Experience -->
+						<div class="mb-8">
+							<h3 class="text-xl font-semibold text-gray-900 mb-4">Student Life at IDPM</h3>
+							<p class="text-gray-700 mb-4">
+								Studying at IDPM offers a unique experience combining rigorous academic training with practical development skills. Our diverse student body represents over 50 countries, creating a truly international learning environment.
+							</p>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Learning Opportunities</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Small group seminars and workshops</li>
+										<li>• Guest lectures by practitioners</li>
+										<li>• Field study opportunities</li>
+										<li>• Research methods training</li>
+										<li>• Policy simulation exercises</li>
+									</ul>
+								</div>
+								<div class="bg-blue-50 rounded-lg p-4">
+									<h4 class="font-semibold text-blue-800 mb-2">Student Activities</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Development Society events</li>
+										<li>• Annual development conference</li>
+										<li>• Cultural celebrations</li>
+										<li>• Policy debate forums</li>
+										<li>• Career networking events</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Manchester Location -->
+						<div class="bg-blue-50 rounded-lg p-6">
+							<h3 class="text-xl font-semibold text-blue-800 mb-4">Manchester: The Original Modern City</h3>
+							<p class="text-gray-700 mb-4">
+								Manchester offers an ideal location for studying development, combining historic industrial heritage with contemporary urban innovation and cultural diversity.
+							</p>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">City Advantages</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Major international transport hub</li>
+										<li>• Diverse multicultural population</li>
+										<li>• Thriving arts and culture scene</li>
+										<li>• Affordable cost of living</li>
+										<li>• Strong job market</li>
+									</ul>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Campus Features</h4>
+									<ul class="text-sm text-gray-700 space-y-1">
+										<li>• Purpose-built Arthur Lewis Building</li>
+										<li>• State-of-the-art learning facilities</li>
+										<li>• Dedicated postgraduate spaces</li>
+										<li>• Easy access to main library</li>
+										<li>• Central campus location</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div class="lg:col-span-1">
+					<!-- Quick Facts -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Quick Facts</h3>
+						<div class="space-y-3">
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Founded:</span>
+								<span class="text-sm font-medium">1958</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Location:</span>
+								<span class="text-sm font-medium">Manchester, UK</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Students:</span>
+								<span class="text-sm font-medium">350+ postgraduate</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Academic Staff:</span>
+								<span class="text-sm font-medium">50+</span>
+							</div>
+							<div class="flex justify-between">
+								<span class="text-sm text-gray-600">Alumni Network:</span>
+								<span class="text-sm font-medium">5,000+ worldwide</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Rankings -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Rankings & Recognition</h3>
+						<ul class="space-y-2 text-sm">
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>#1 in UK for Development Studies (QS 2024)</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>#5 Globally for Development Studies</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>REF 2021: 93% research world-leading</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>Queen's Anniversary Prize recipient</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								<span>ESRC Doctoral Training Partnership</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Application Information -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Application Information</h3>
+						<div class="space-y-3">
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Entry Requirements</h4>
+								<p class="text-xs text-gray-600">2:1 degree or international equivalent</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">English Language</h4>
+								<p class="text-xs text-gray-600">IELTS 7.0 overall (writing 7.0, others 6.5)</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Application Deadlines</h4>
+								<p class="text-xs text-gray-600">Multiple rounds: Dec, Mar, May, July</p>
+							</div>
+							<div class="border-l-4 border-blue-600 pl-4">
+								<h4 class="font-semibold text-gray-900 text-sm">Tuition Fees 2024/25</h4>
+								<p class="text-xs text-gray-600">UK: £13,000 | International: £26,000</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Funding Opportunities -->
+					<div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Funding & Scholarships</h3>
+						<ul class="space-y-2 text-sm">
+							<li class="flex items-start gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full mt-1.5"></div>
+								<span>Global Development Scholarships</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full mt-1.5"></div>
+								<span>Commonwealth Scholarships</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full mt-1.5"></div>
+								<span>Chevening Scholarships</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full mt-1.5"></div>
+								<span>Manchester Alumni Scholarships</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<div class="w-2 h-2 bg-blue-600 rounded-full mt-1.5"></div>
+								<span>ESRC PhD Studentships</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Contact Information -->
+					<div class="bg-white rounded-lg shadow-sm p-6">
+						<h3 class="text-lg font-semibold text-blue-800 mb-4">Contact Information</h3>
+						<div class="space-y-3">
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">General Enquiries</h4>
+								<p class="text-xs text-gray-600">gdi@manchester.ac.uk</p>
+								<p class="text-xs text-gray-600">+44 (0)161 275 0815</p>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">Admissions</h4>
+								<p class="text-xs text-gray-600">pg-gdi@manchester.ac.uk</p>
+							</div>
+							<div>
+								<h4 class="font-semibold text-gray-900 text-sm">Address</h4>
+								<p class="text-xs text-gray-600">
+									Global Development Institute<br/>
+									Arthur Lewis Building<br/>
+									University of Manchester<br/>
+									Oxford Road<br/>
+									Manchester M13 9PL<br/>
+									United Kingdom
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Alumni Success Stories -->
+	<section class="bg-gray-50 py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-2xl font-bold text-center mb-8">Alumni Making Global Impact</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="flex items-start gap-4">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+							<span class="text-blue-600 font-bold text-xl">AK</span>
+						</div>
+						<div>
+							<h3 class="font-semibold text-gray-900 mb-1">Dr. Amina Khatun</h3>
+							<p class="text-sm text-gray-600 mb-2">MSc Development Studies, 2015</p>
+							<p class="text-sm text-gray-700">
+								"IDPM gave me the analytical tools to understand complex development challenges. Now leading policy reform at the Bangladesh Planning Commission."
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="flex items-start gap-4">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+							<span class="text-blue-600 font-bold text-xl">JM</span>
+						</div>
+						<div>
+							<h3 class="font-semibold text-gray-900 mb-1">John Mwangi</h3>
+							<p class="text-sm text-gray-600 mb-2">PhD Development Policy, 2018</p>
+							<p class="text-sm text-gray-700">
+								"The research training at IDPM was exceptional. My work on digital financial inclusion now influences policy across East Africa."
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-sm p-6">
+					<div class="flex items-start gap-4">
+						<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+							<span class="text-blue-600 font-bold text-xl">MR</span>
+						</div>
+						<div>
+							<h3 class="font-semibold text-gray-900 mb-1">Maria Rodriguez</h3>
+							<p class="text-sm text-gray-600 mb-2">MSc International Development, 2020</p>
+							<p class="text-sm text-gray-700">
+								"The practical skills from project management modules helped me secure a role with UNDP. The global network has been invaluable."
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Career Outcomes -->
+	<section class="bg-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-2xl font-bold text-center mb-8">Career Pathways</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Where Our Graduates Work</h3>
+					<div class="space-y-4">
+						<div class="bg-gray-50 rounded-lg p-4">
+							<h4 class="font-semibold text-gray-900 mb-2">International Organizations</h4>
+							<ul class="text-sm text-gray-700 grid grid-cols-2 gap-2">
+								<li>• United Nations</li>
+								<li>• World Bank</li>
+								<li>• IMF</li>
+								<li>• WHO</li>
+								<li>• UNDP</li>
+								<li>• UNICEF</li>
+							</ul>
+						</div>
+						<div class="bg-gray-50 rounded-lg p-4">
+							<h4 class="font-semibold text-gray-900 mb-2">Other Sectors</h4>
+							<ul class="text-sm text-gray-700 space-y-1">
+								<li>• Government ministries and agencies</li>
+								<li>• International NGOs (Oxfam, Save the Children)</li>
+								<li>• Development consultancies</li>
+								<li>• Research institutes and think tanks</li>
+								<li>• Private sector development initiatives</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Career Support Services</h3>
+					<div class="bg-blue-50 rounded-lg p-6">
+						<p class="text-gray-700 mb-4">
+							IDPM provides comprehensive career support to help students transition into development careers:
+						</p>
+						<ul class="space-y-3">
+							<li class="flex items-start gap-3">
+								<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+									<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Career Workshops</h4>
+									<p class="text-sm text-gray-600">CV writing, interview skills, and sector-specific guidance</p>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+									<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Networking Events</h4>
+									<p class="text-sm text-gray-600">Regular meetings with alumni and development professionals</p>
+								</div>
+							</li>
+							<li class="flex items-start gap-3">
+								<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mt-0.5">
+									<div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+								</div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Internship Support</h4>
+									<p class="text-sm text-gray-600">Connections with partner organizations worldwide</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="bg-blue-600 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-2xl font-bold mb-4">Shape the Future of Global Development</h2>
+			<p class="text-xl mb-8 max-w-2xl mx-auto">
+				Join IDPM and become part of a community dedicated to creating positive change in the world's most challenging contexts.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="#" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors">
+					Apply Now
+				</a>
+				<a href="#" class="inline-block bg-blue-500 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-400 transition-colors">
+					Download Prospectus
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>

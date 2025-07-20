@@ -1,0 +1,553 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="London Student Guide - Courses & Careers">
+  <div class="bg-gradient-to-br from-red-50 to-rose-100 min-h-screen">
+    <!-- Header Section -->
+    <div class="bg-red-600 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">London Student Guide</h1>
+          <p class="text-xl md:text-2xl text-red-100 max-w-3xl mx-auto">
+            The UK's capital city - a global hub for education, culture, and career opportunities
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white py-4 border-b">
+      <div class="container mx-auto px-4">
+        <nav class="text-sm text-gray-600">
+          <a href="/" class="hover:text-red-600">Home</a>
+          <span class="mx-2">></span>
+          <a href="/student-advice" class="hover:text-red-600">Student Advice</a>
+          <span class="mx-2">></span>
+          <a href="/student-advice/uk-city-guide" class="hover:text-red-600">UK City Guide</a>
+          <span class="mx-2">></span>
+          <span class="text-red-600">London</span>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- City Overview -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">City Overview</h2>
+            <p class="text-gray-700 mb-4">
+              London is one of the world's most dynamic and diverse cities, home to over 400,000 students from more than 200 countries. As the UK's capital, it offers unparalleled opportunities for education, culture, and career development.
+            </p>
+            <p class="text-gray-700 mb-4">
+              With a population of nearly 9 million, London is a truly global city where ancient history meets cutting-edge innovation. From the historic Tower of London to the modern skyscrapers of Canary Wharf, the city offers endless opportunities for exploration and growth.
+            </p>
+            <div class="bg-red-50 rounded-lg p-6 mt-6">
+              <h3 class="text-xl font-bold text-red-600 mb-3">Student Population</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li>• Total students: 400,000+</li>
+                <li>• International students: 125,000+</li>
+                <li>• Universities and colleges: 40+</li>
+                <li>• Student satisfaction rate: 82%</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Universities and Colleges -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Universities and Colleges</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Russell Group Universities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Imperial College London</strong> - World-renowned for science, engineering, medicine and business</li>
+                  <li>• <strong>University College London (UCL)</strong> - Multidisciplinary research university ranked among world's top 10</li>
+                  <li>• <strong>King's College London</strong> - One of England's oldest universities, strong in humanities and sciences</li>
+                  <li>• <strong>London School of Economics (LSE)</strong> - Leading social science institution</li>
+                  <li>• <strong>Queen Mary University of London</strong> - Research-intensive university in East London</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Other Major Universities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>City, University of London</strong> - Strong business and journalism programs</li>
+                  <li>• <strong>Brunel University London</strong> - Campus university in West London</li>
+                  <li>• <strong>University of Westminster</strong> - Central London locations, media and arts focus</li>
+                  <li>• <strong>London Metropolitan University</strong> - Diverse student body, practical courses</li>
+                  <li>• <strong>University of East London</strong> - Modern university with professional focus</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Specialist Institutions</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Royal College of Art</strong> - World's top art and design university</li>
+                  <li>• <strong>Central Saint Martins</strong> - Famous for fashion and design</li>
+                  <li>• <strong>London Business School</strong> - Top-ranked business school</li>
+                  <li>• <strong>Royal Academy of Music</strong> - Elite conservatoire</li>
+                  <li>• <strong>London School of Hygiene & Tropical Medicine</strong> - Public health specialty</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Cost of Living -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Cost of Living Breakdown</h2>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b border-gray-200">
+                    <th class="text-left py-3 px-4 font-bold text-gray-800">Category</th>
+                    <th class="text-left py-3 px-4 font-bold text-gray-800">Monthly Cost</th>
+                    <th class="text-left py-3 px-4 font-bold text-gray-800">Annual Cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Accommodation (shared)</td>
+                    <td class="py-3 px-4">£600-£900</td>
+                    <td class="py-3 px-4">£7,200-£10,800</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Accommodation (studio)</td>
+                    <td class="py-3 px-4">£900-£1,400</td>
+                    <td class="py-3 px-4">£10,800-£16,800</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Food & Groceries</td>
+                    <td class="py-3 px-4">£200-£300</td>
+                    <td class="py-3 px-4">£2,400-£3,600</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Transport (Student Oyster)</td>
+                    <td class="py-3 px-4">£90-£150</td>
+                    <td class="py-3 px-4">£1,080-£1,800</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Entertainment & Social</td>
+                    <td class="py-3 px-4">£100-£200</td>
+                    <td class="py-3 px-4">£1,200-£2,400</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Books & Supplies</td>
+                    <td class="py-3 px-4">£40-£60</td>
+                    <td class="py-3 px-4">£480-£720</td>
+                  </tr>
+                  <tr class="border-b border-gray-100">
+                    <td class="py-3 px-4">Personal & Miscellaneous</td>
+                    <td class="py-3 px-4">£50-£100</td>
+                    <td class="py-3 px-4">£600-£1,200</td>
+                  </tr>
+                  <tr class="font-bold">
+                    <td class="py-3 px-4">Total</td>
+                    <td class="py-3 px-4 text-red-600">£1,080-£1,810</td>
+                    <td class="py-3 px-4 text-red-600">£12,960-£21,720</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bg-yellow-50 rounded-lg p-4 mt-6">
+              <p class="text-sm text-yellow-800">
+                <strong>Note:</strong> These are estimated costs. Actual expenses may vary based on lifestyle and location within London.
+              </p>
+            </div>
+          </section>
+
+          <!-- Student Accommodation -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Student Accommodation Areas</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Central London (Zone 1)</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Bloomsbury:</strong> Near UCL and SOAS, £800-£1,200/month</li>
+                  <li>• <strong>South Kensington:</strong> Close to Imperial, £900-£1,400/month</li>
+                  <li>• <strong>King's Cross:</strong> Well-connected, student-friendly, £750-£1,100/month</li>
+                  <li>• <strong>Holborn:</strong> Central location, near LSE, £850-£1,300/month</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">East London (Zones 2-3)</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Stratford:</strong> Olympic legacy area, excellent transport, £600-£900/month</li>
+                  <li>• <strong>Mile End:</strong> Near Queen Mary, vibrant area, £650-£950/month</li>
+                  <li>• <strong>Bethnal Green:</strong> Trendy area, good nightlife, £700-£1,000/month</li>
+                  <li>• <strong>Hackney:</strong> Creative hub, popular with students, £650-£950/month</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">North London (Zones 2-3)</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Camden:</strong> Alternative scene, great markets, £700-£1,050/month</li>
+                  <li>• <strong>Finsbury Park:</strong> Multicultural, affordable, £600-£850/month</li>
+                  <li>• <strong>Holloway:</strong> Student-friendly, good value, £650-£900/month</li>
+                  <li>• <strong>Archway:</strong> Quieter area, good transport, £600-£850/month</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">South London (Zones 2-3)</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>New Cross:</strong> Near Goldsmiths, artistic area, £550-£800/month</li>
+                  <li>• <strong>Elephant & Castle:</strong> Regenerating area, central, £650-£950/month</li>
+                  <li>• <strong>Brixton:</strong> Vibrant culture, great nightlife, £650-£900/month</li>
+                  <li>• <strong>Clapham:</strong> Popular with young professionals, £700-£1,000/month</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Transport -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Transport Links and Getting Around</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Public Transport</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>London Underground (Tube):</strong> 11 lines covering 270 stations</li>
+                  <li>• <strong>Buses:</strong> Extensive network, 24-hour service on many routes</li>
+                  <li>• <strong>Overground & DLR:</strong> Additional rail networks</li>
+                  <li>• <strong>Thames Clippers:</strong> River bus services</li>
+                  <li>• <strong>Santander Cycles:</strong> Bike hire scheme across the city</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Student Travel Discounts</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>18+ Student Oyster Card:</strong> 30% off adult Travelcards and Bus & Tram Pass season tickets</li>
+                  <li>• <strong>16-25 Railcard:</strong> 1/3 off most rail fares in Britain</li>
+                  <li>• <strong>TOTUM Card:</strong> Various transport discounts</li>
+                  <li>• <strong>Citymapper App:</strong> Essential for navigating London</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Airport Connections</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Heathrow:</strong> Piccadilly Line, Heathrow Express (15-60 mins)</li>
+                  <li>• <strong>Gatwick:</strong> Gatwick Express, Thameslink (30-45 mins)</li>
+                  <li>• <strong>Stansted:</strong> Stansted Express (45 mins)</li>
+                  <li>• <strong>Luton:</strong> Thameslink trains (35-50 mins)</li>
+                  <li>• <strong>City Airport:</strong> DLR (20 mins to central London)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Student Life -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Student Life and Nightlife</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Popular Student Areas</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Shoreditch:</strong> Hipster central with trendy bars and clubs</li>
+                  <li>• <strong>Camden:</strong> Alternative music venues and markets</li>
+                  <li>• <strong>Soho:</strong> LGBTQ+ scene, theaters, and restaurants</li>
+                  <li>• <strong>Brixton:</strong> Live music venues and Caribbean culture</li>
+                  <li>• <strong>Dalston:</strong> Underground clubs and late-night venues</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Student-Friendly Venues</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Student Unions:</strong> Most universities have bars with cheap drinks</li>
+                  <li>• <strong>O2 Academy venues:</strong> Student discounts on live music</li>
+                  <li>• <strong>Ministry of Sound:</strong> Famous superclub with student nights</li>
+                  <li>• <strong>XOYO:</strong> Popular club in Shoreditch</li>
+                  <li>• <strong>Fabric:</strong> Legendary electronic music venue</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Free & Cheap Activities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Museums:</strong> Most major museums are free entry</li>
+                  <li>• <strong>Parks:</strong> Hyde Park, Regent's Park, Hampstead Heath</li>
+                  <li>• <strong>Markets:</strong> Borough, Camden, Brick Lane, Portobello Road</li>
+                  <li>• <strong>Walking tours:</strong> Many free options available</li>
+                  <li>• <strong>Student cinema:</strong> Discounted tickets at most chains</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Employment -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Part-time Work Opportunities</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Common Student Jobs</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Retail:</strong> £9-12/hour at shops and department stores</li>
+                  <li>• <strong>Hospitality:</strong> £10-15/hour + tips in restaurants/bars</li>
+                  <li>• <strong>Campus jobs:</strong> £11-15/hour at university facilities</li>
+                  <li>• <strong>Tutoring:</strong> £20-40/hour for private lessons</li>
+                  <li>• <strong>Events staff:</strong> £12-15/hour at concerts/exhibitions</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Work Regulations</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>UK/EU students:</strong> No restrictions on working hours</li>
+                  <li>• <strong>International students:</strong> Usually 20 hours/week during term</li>
+                  <li>• <strong>Minimum wage (21-22):</strong> £10.18/hour (as of 2024)</li>
+                  <li>• <strong>Minimum wage (23+):</strong> £10.42/hour (as of 2024)</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Career Opportunities</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Internships:</strong> Abundant in finance, tech, media, and consulting</li>
+                  <li>• <strong>Graduate schemes:</strong> Major employers recruit from London unis</li>
+                  <li>• <strong>Networking:</strong> Unparalleled access to industry events</li>
+                  <li>• <strong>Start-up scene:</strong> Tech City (Silicon Roundabout) opportunities</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Safety -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Safety Information</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">General Safety Tips</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• London is generally safe but stay alert in crowded areas</li>
+                  <li>• Avoid displaying expensive items like phones/laptops openly</li>
+                  <li>• Use licensed black cabs or pre-booked minicabs/Uber</li>
+                  <li>• Keep bags zipped and in front of you on public transport</li>
+                  <li>• Trust your instincts - if something feels wrong, move away</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Areas to Be Cautious</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• Some parts of East and South London late at night</li>
+                  <li>• Quiet side streets after dark - stick to main roads</li>
+                  <li>• Around major tourist attractions (pickpocket hotspots)</li>
+                  <li>• Unlicensed minicabs - never accept rides from strangers</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Emergency Contacts</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Emergency Services:</strong> 999 or 112</li>
+                  <li>• <strong>Non-emergency police:</strong> 101</li>
+                  <li>• <strong>NHS Direct:</strong> 111 for health advice</li>
+                  <li>• <strong>TfL Travel Info:</strong> 0343 222 1234</li>
+                  <li>• <strong>Victim Support:</strong> 0808 168 9111</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- Weather -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Weather and Climate</h2>
+            <div class="space-y-4">
+              <p class="text-gray-700">
+                London has a temperate oceanic climate with mild temperatures year-round. Rain is common but usually light, so always carry an umbrella!
+              </p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-blue-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Spring</h4>
+                  <p class="text-2xl font-bold text-blue-600">11-15°C</p>
+                  <p class="text-sm text-gray-600">March - May</p>
+                </div>
+                <div class="bg-yellow-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Summer</h4>
+                  <p class="text-2xl font-bold text-yellow-600">18-23°C</p>
+                  <p class="text-sm text-gray-600">June - August</p>
+                </div>
+                <div class="bg-orange-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Autumn</h4>
+                  <p class="text-2xl font-bold text-orange-600">11-15°C</p>
+                  <p class="text-sm text-gray-600">Sept - November</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 text-center">
+                  <h4 class="font-bold text-gray-800">Winter</h4>
+                  <p class="text-2xl font-bold text-gray-600">2-7°C</p>
+                  <p class="text-sm text-gray-600">Dec - February</p>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 rounded-lg p-4 mt-4">
+                <p class="text-sm text-blue-800">
+                  <strong>Tip:</strong> London rarely experiences extreme weather. Layer your clothing and always have a light jacket or cardigan handy.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Cultural Attractions -->
+          <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-3xl font-bold text-red-600 mb-6">Cultural Attractions and Things to Do</h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Free Museums & Galleries</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>British Museum:</strong> World history and artifacts</li>
+                  <li>• <strong>National Gallery:</strong> European paintings 1250-1900</li>
+                  <li>• <strong>Tate Modern:</strong> Contemporary and modern art</li>
+                  <li>• <strong>Natural History Museum:</strong> Dinosaurs and nature exhibits</li>
+                  <li>• <strong>Science Museum:</strong> Interactive science and technology</li>
+                  <li>• <strong>V&A Museum:</strong> Art, design, and performance</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Iconic Landmarks</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>Tower Bridge:</strong> Victorian Gothic bridge (free to walk across)</li>
+                  <li>• <strong>Big Ben & Westminster:</strong> Houses of Parliament (tours available)</li>
+                  <li>• <strong>Buckingham Palace:</strong> Royal residence (summer tours)</li>
+                  <li>• <strong>Tower of London:</strong> Historic castle (student discount)</li>
+                  <li>• <strong>St Paul's Cathedral:</strong> Baroque masterpiece (student price)</li>
+                  <li>• <strong>London Eye:</strong> Giant observation wheel (book online for deals)</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Entertainment</h3>
+                <ul class="space-y-2 text-gray-700">
+                  <li>• <strong>West End Theatre:</strong> Day seats and student standby tickets</li>
+                  <li>• <strong>Shakespeare's Globe:</strong> £5 standing tickets</li>
+                  <li>• <strong>Live Music:</strong> From tiny pubs to massive arenas</li>
+                  <li>• <strong>Comedy Clubs:</strong> Famous circuit with new talent nights</li>
+                  <li>• <strong>Festivals:</strong> Notting Hill Carnival, Winter Wonderland, more</li>
+                  <li>• <strong>Sports:</strong> Football, rugby, cricket at world-famous venues</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-1">
+          <!-- Quick Facts -->
+          <div class="bg-white rounded-lg shadow-lg p-6 mb-6 sticky top-4">
+            <h3 class="text-xl font-bold text-red-600 mb-4">Quick Facts</h3>
+            <dl class="space-y-3">
+              <div>
+                <dt class="font-semibold text-gray-700">Population</dt>
+                <dd class="text-gray-600">8.9 million</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Students</dt>
+                <dd class="text-gray-600">400,000+</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Universities</dt>
+                <dd class="text-gray-600">40+</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Average Rent</dt>
+                <dd class="text-gray-600">£750-£1,200/month</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Transport Zones</dt>
+                <dd class="text-gray-600">9 zones</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Time Zone</dt>
+                <dd class="text-gray-600">GMT/BST</dd>
+              </div>
+              <div>
+                <dt class="font-semibold text-gray-700">Emergency</dt>
+                <dd class="text-gray-600">999 or 112</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- Cost Calculator -->
+          <div class="bg-red-50 rounded-lg shadow-lg p-6 mb-6">
+            <h3 class="text-xl font-bold text-red-600 mb-4">Monthly Budget Calculator</h3>
+            <div class="space-y-3">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Accommodation Type</label>
+                <select class="w-full p-2 border border-gray-300 rounded">
+                  <option>Shared Room (£600)</option>
+                  <option>Single Room (£800)</option>
+                  <option>Studio (£1,200)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Lifestyle</label>
+                <select class="w-full p-2 border border-gray-300 rounded">
+                  <option>Budget (£400)</option>
+                  <option>Moderate (£600)</option>
+                  <option>Comfortable (£800)</option>
+                </select>
+              </div>
+              <div class="pt-3 border-t border-red-200">
+                <p class="text-lg font-bold text-red-600">Estimated Total: £1,000-£2,000/month</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- University Links -->
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h3 class="text-xl font-bold text-red-600 mb-4">University Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://www.imperial.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  Imperial College London →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.ucl.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  University College London →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.kcl.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  King's College London →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lse.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  London School of Economics →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.qmul.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  Queen Mary University →
+                </a>
+              </li>
+              <li>
+                <a href="https://www.city.ac.uk" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  City, University of London →
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* Sticky sidebar on desktop */
+  @media (min-width: 1024px) {
+    .sticky {
+      position: sticky;
+      top: 1rem;
+    }
+  }
+</style>

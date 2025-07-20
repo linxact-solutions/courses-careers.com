@@ -1,0 +1,502 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import InfoSection from '../../components/InfoSection.astro';
+import CourseCard from '../../components/CourseCard.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<Layout title="A-Level Courses Guide | Further Education" description="Complete guide to A-Level courses including subjects, entry requirements, assessment methods, and progression routes to university">
+  <Hero 
+    title="A-Level Courses Guide"
+    subtitle="Your pathway to university and professional careers"
+    backgroundImage="/images/further-education-bg.jpg"
+    theme="green"
+  />
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-green-800 mb-6">What are A-Levels?</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          A-Levels (Advanced Level qualifications) are subject-based qualifications that can lead to university, further study, training, or work. They're typically studied over two years and are the most common qualification for university entry in the UK.
+        </p>
+
+        <div class="bg-green-50 border-l-4 border-green-600 p-6 mb-8">
+          <p class="text-green-800 font-semibold">
+            Most students choose 3-4 A-Level subjects to study in depth, allowing them to specialise in areas they're passionate about and that align with their future career goals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Course Structure and Content"
+    theme="green"
+  >
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Popular A-Level Subjects</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Sciences:</strong> Biology, Chemistry, Physics, Psychology
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Mathematics:</strong> Maths, Further Maths, Statistics
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Humanities:</strong> History, Geography, Sociology, Politics
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Languages:</strong> English Literature, French, Spanish, German
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Arts:</strong> Art & Design, Music, Drama, Media Studies
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Business:</strong> Economics, Business Studies, Accounting
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Course Duration</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Standard Route:</strong> 2 years full-time study
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>AS Level:</strong> First year only (standalone qualification)
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Intensive:</strong> 1 year for mature students or resits
+            </div>
+          </li>
+        </ul>
+        
+        <h3 class="text-xl font-bold text-green-800 mb-4 mt-6">Study Hours</h3>
+        <p class="text-gray-700">
+          Expect to spend approximately 15 hours per week per subject, including:
+        </p>
+        <ul class="mt-2 space-y-2">
+          <li>• 4-5 hours of taught lessons</li>
+          <li>• 5-6 hours of independent study</li>
+          <li>• 4-5 hours of homework and coursework</li>
+        </ul>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Entry Requirements</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Typical Requirements</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">▸</span>
+              <div>
+                <strong>Minimum GCSEs:</strong> Usually 5 GCSEs at grade 4/C or above, including English and Maths
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">▸</span>
+              <div>
+                <strong>Subject-Specific:</strong> Grade 6/B or above in subjects you want to study at A-Level
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">▸</span>
+              <div>
+                <strong>Science/Maths:</strong> Often require grade 7/A in relevant GCSE subjects
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">▸</span>
+              <div>
+                <strong>New Subjects:</strong> Some A-Levels don't require prior study (e.g., Psychology, Sociology)
+              </div>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-green-50 rounded">
+            <p class="text-green-800">
+              <strong>Note:</strong> Entry requirements vary between colleges and sixth forms. Some institutions may have higher or more flexible requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Assessment Methods"
+    theme="green"
+  >
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Examination Structure</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Linear A-Levels:</strong> All exams taken at the end of the 2-year course
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Exam Papers:</strong> Usually 2-3 papers per subject
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Duration:</strong> Papers typically 1.5-3 hours each
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Question Types:</strong> Mix of multiple choice, short answer, and essays
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Coursework & Practicals</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Sciences:</strong> Practical endorsement (pass/fail)
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Art/Design:</strong> Portfolio assessment (up to 60%)
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>English:</strong> Coursework component (20%)
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Geography:</strong> Fieldwork investigation (20%)
+            </div>
+          </li>
+        </ul>
+        
+        <h3 class="text-xl font-bold text-green-800 mb-4 mt-6">Grading System</h3>
+        <p class="text-gray-700">A-Levels are graded A*-E, with U (ungraded) for fails:</p>
+        <ul class="mt-2 space-y-1">
+          <li>• A* = 90%+ (in A2 modules)</li>
+          <li>• A = 80%+</li>
+          <li>• B = 70%+</li>
+          <li>• C = 60%+</li>
+          <li>• D = 50%+</li>
+          <li>• E = 40%+</li>
+        </ul>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Progression Routes</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <CourseCard 
+          title="University"
+          description="The primary progression route for A-Level students"
+          features={[
+            "UCAS applications with predicted grades",
+            "Typical offers: AAA to CCC depending on course/uni",
+            "Russell Group unis often require A*AA-AAB",
+            "Some courses have specific subject requirements"
+          ]}
+          theme="green"
+        />
+        <CourseCard 
+          title="Degree Apprenticeships"
+          description="Earn while you learn at degree level"
+          features={[
+            "Combine work with university study",
+            "No student debt",
+            "Usually require 3 A-Levels at BBC or above",
+            "Available in engineering, business, IT, and more"
+          ]}
+          theme="green"
+        />
+        <CourseCard 
+          title="Employment"
+          description="Direct entry to professional roles"
+          features={[
+            "School leaver programmes",
+            "Management trainee schemes",
+            "Professional services opportunities",
+            "Often with further training provided"
+          ]}
+          theme="green"
+        />
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Top Colleges & Sixth Forms"
+    theme="green"
+  >
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Outstanding Providers</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>Hills Road Sixth Form College</strong> - Cambridge
+              <br><span class="text-sm text-gray-600">Known for exceptional academic results</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>Greenhead College</strong> - Huddersfield
+              <br><span class="text-sm text-gray-600">Outstanding Ofsted rating, diverse subjects</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>Peter Symonds College</strong> - Winchester
+              <br><span class="text-sm text-gray-600">Large sixth form with excellent facilities</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>Brampton Manor Academy</strong> - London
+              <br><span class="text-sm text-gray-600">High Oxbridge success rate</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">What to Look For</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Results:</strong> Check average grades and value-added scores</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Subject Range:</strong> Ensure they offer your chosen combination</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Class Sizes:</strong> Smaller classes often mean more support</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Enrichment:</strong> Look for EPQ, sports, societies, work experience</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>UCAS Support:</strong> Help with personal statements and applications</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Facilities:</strong> Libraries, labs, study spaces, IT resources</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Skills Developed</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Academic Skills</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Critical thinking and analysis</li>
+            <li>• Research and evaluation</li>
+            <li>• Essay writing and communication</li>
+            <li>• Problem-solving abilities</li>
+            <li>• Data interpretation</li>
+            <li>• Theoretical understanding</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Study Skills</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Independent learning</li>
+            <li>• Time management</li>
+            <li>• Note-taking techniques</li>
+            <li>• Revision strategies</li>
+            <li>• Exam techniques</li>
+            <li>• Self-motivation</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Transferable Skills</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Presentation skills</li>
+            <li>• Teamwork (group projects)</li>
+            <li>• Digital literacy</li>
+            <li>• Attention to detail</li>
+            <li>• Meeting deadlines</li>
+            <li>• Adaptability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Career Prospects"
+    theme="green"
+  >
+    <div class="mb-8">
+      <p class="text-lg text-gray-700 mb-6">
+        A-Levels open doors to a wide range of career paths, primarily through university progression. The subjects you choose can influence your career options:
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Direct Career Paths</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>STEM A-Levels:</strong> Engineering, medicine, research, technology
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Business/Economics:</strong> Finance, consulting, management
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Humanities:</strong> Law, journalism, civil service, teaching
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Languages:</strong> Translation, international business, diplomacy
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Arts:</strong> Creative industries, media, design, performance
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Salary Expectations</h3>
+        <p class="text-gray-700 mb-4">
+          With A-Levels alone (no degree):
+        </p>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Entry-level roles: £18,000-£25,000</li>
+          <li>• School leaver programmes: £20,000-£30,000</li>
+          <li>• After experience: £25,000-£40,000+</li>
+        </ul>
+        
+        <p class="text-gray-700 mb-4 mt-6">
+          After university (with A-Levels + degree):
+        </p>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Graduate schemes: £25,000-£45,000</li>
+          <li>• Professional roles: £30,000-£60,000+</li>
+          <li>• Specialist careers: £40,000-£100,000+</li>
+        </ul>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Related Qualifications</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-lg font-bold text-green-800 mb-2">AS Levels</h3>
+          <p class="text-gray-700 text-sm">
+            Half an A-Level, can be taken as a fourth subject or standalone qualification
+          </p>
+        </div>
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-lg font-bold text-green-800 mb-2">EPQ</h3>
+          <p class="text-gray-700 text-sm">
+            Extended Project Qualification - independent research project worth half an A-Level
+          </p>
+        </div>
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-lg font-bold text-green-800 mb-2">Core Maths</h3>
+          <p class="text-gray-700 text-sm">
+            Level 3 mathematical studies for students not taking A-Level Maths
+          </p>
+        </div>
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-lg font-bold text-green-800 mb-2">International Baccalaureate</h3>
+          <p class="text-gray-700 text-sm">
+            Alternative to A-Levels, studying 6 subjects plus core components
+          </p>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <p class="text-gray-700 mb-4">
+          Some students combine A-Levels with other qualifications like BTECs or Cambridge Technicals for a mixed programme.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CTA 
+    title="Ready to Start Your A-Level Journey?"
+    description="Explore colleges, compare subjects, and plan your path to university and beyond."
+    buttonText="Find A-Level Courses"
+    buttonLink="/further-education/search"
+    theme="green"
+  />
+</Layout>

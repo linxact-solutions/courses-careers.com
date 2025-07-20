@@ -1,0 +1,43 @@
+Favicon Generation Instructions
+==============================
+
+Since we cannot generate actual image files in this environment, here are the steps to create the favicon files:
+
+1. Generate PNG files from SVG:
+   - Use the logo-icon.svg file located at: /src/assets/logo-icon.svg
+   - Generate PNG files in the following sizes:
+     * 16x16, 32x32, 48x48, 64x64, 70x70, 96x96, 128x128
+     * 150x150, 180x180, 192x192, 310x310, 512x512
+   - Save them in the /public directory with names like icon-16x16.png, etc.
+
+2. Create favicon.ico:
+   - Combine 16x16, 32x32, and 48x48 PNG files into a single ICO file
+   - Tools: Use online converters or command-line tools like ImageMagick:
+     convert icon-16x16.png icon-32x32.png icon-48x48.png favicon.ico
+
+3. Create Apple Touch Icon:
+   - Copy icon-180x180.png to apple-touch-icon.png
+
+4. Using the generation script:
+   a. Install dependencies:
+      npm install --save-dev sharp png-to-ico
+   
+   b. Uncomment and run the script:
+      node scripts/generate-favicons.js
+
+5. Manual generation with online tools:
+   - realfavicongenerator.net
+   - favicon.io
+   - cloudconvert.com/svg-to-ico
+
+6. Verify favicons:
+   - Test in different browsers
+   - Check with online favicon checkers
+   - Ensure manifest and browserconfig files are properly served
+
+The SVG logo has been designed with:
+- Education theme (book and upward arrow)
+- Professional color scheme
+- Light/dark theme support
+- Scalable design that works at all sizes
+- Clear iconography even at small sizes

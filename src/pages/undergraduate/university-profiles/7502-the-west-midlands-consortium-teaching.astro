@@ -1,0 +1,496 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const title = "The West Midlands Consortium Teaching - Collaborative Education Initiative";
+const description = "Learn about the West Midlands Consortium Teaching initiative, a collaborative approach to undergraduate education across multiple institutions.";
+const keywords = "West Midlands Consortium, teaching collaboration, undergraduate education, consortium teaching, collaborative learning, higher education";
+---
+
+<Layout 
+	title={title}
+	description={description}
+	keywords={keywords}
+	section="undergraduate"
+>
+	<!-- Breadcrumb Navigation -->
+	<nav class="bg-gray-100 py-4">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-gray-500 hover:text-orange-600">Home</a></li>
+				<li class="text-gray-400">/</li>
+				<li><a href="/undergraduate" class="text-gray-500 hover:text-orange-600">Undergraduate</a></li>
+				<li class="text-gray-400">/</li>
+				<li><a href="/undergraduate/university-profiles" class="text-gray-500 hover:text-orange-600">University Profiles</a></li>
+				<li class="text-gray-400">/</li>
+				<li class="text-orange-600 font-medium">West Midlands Consortium Teaching</li>
+			</ol>
+		</div>
+	</nav>
+
+	<!-- Consortium Header -->
+	<section class="py-16 bg-gradient-to-r from-orange-600 to-purple-600 text-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					The West Midlands Consortium Teaching
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 text-orange-100">
+					Collaborative Excellence in Higher Education
+				</p>
+				<div class="flex flex-col sm:flex-row justify-center gap-4">
+					<div class="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
+						<div class="text-2xl font-bold">15+</div>
+						<div class="text-sm text-orange-100">Partner Institutions</div>
+					</div>
+					<div class="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
+						<div class="text-2xl font-bold">50,000+</div>
+						<div class="text-sm text-orange-100">Students</div>
+					</div>
+					<div class="bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
+						<div class="text-2xl font-bold">200+</div>
+						<div class="text-sm text-orange-100">Course Options</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Consortium Overview -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+				<div>
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">About the Consortium</h2>
+					<p class="text-lg text-gray-700 mb-6">
+						The West Midlands Consortium Teaching represents a revolutionary approach to higher education, bringing together multiple institutions across the West Midlands region to provide collaborative, high-quality undergraduate education. This innovative partnership allows students to access a broader range of courses, facilities, and expertise than any single institution could offer alone.
+					</p>
+					<p class="text-gray-600 mb-6">
+						Established to maximize educational opportunities and resource sharing, the consortium enables students to study at multiple institutions, access diverse teaching methods, and benefit from the collective expertise of renowned academics across the region.
+					</p>
+					<div class="bg-orange-50 rounded-lg p-6">
+						<h3 class="text-xl font-semibold text-orange-900 mb-3">Key Benefits</h3>
+						<ul class="text-orange-800 space-y-2">
+							<li>• Access to multiple institutional resources</li>
+							<li>• Diverse teaching approaches and methodologies</li>
+							<li>• Enhanced course flexibility and options</li>
+							<li>• Collaborative learning environment</li>
+							<li>• Industry connections across the region</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="bg-gray-50 rounded-lg p-8">
+					<h3 class="text-2xl font-bold text-gray-900 mb-6">Consortium Facts</h3>
+					<div class="space-y-6">
+						<div class="border-l-4 border-orange-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Region</h4>
+							<p class="text-gray-600">West Midlands, England</p>
+						</div>
+						<div class="border-l-4 border-orange-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Partner Institutions</h4>
+							<p class="text-gray-600">15+ universities and colleges</p>
+						</div>
+						<div class="border-l-4 border-orange-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Student Base</h4>
+							<p class="text-gray-600">50,000+ undergraduate students</p>
+						</div>
+						<div class="border-l-4 border-orange-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Course Variety</h4>
+							<p class="text-gray-600">200+ undergraduate programmes</p>
+						</div>
+						<div class="border-l-4 border-orange-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Established</h4>
+							<p class="text-gray-600">2008 (expanding continuously)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Partner Institutions -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Partner Institutions</h2>
+				<p class="text-xl text-gray-600">Collaborative network of leading educational institutions</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<!-- University of Birmingham -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">University of Birmingham</h3>
+					<p class="text-gray-600 mb-4">Leading research university with strong emphasis on innovation and academic excellence.</p>
+					<div class="text-sm text-gray-500">
+						<strong>Specialties:</strong> Engineering, Medicine, Business, Arts
+					</div>
+				</div>
+
+				<!-- Birmingham City University -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Birmingham City University</h3>
+					<p class="text-gray-600 mb-4">Modern university focused on practical skills and industry connections.</p>
+					<div class="text-sm text-gray-500">
+						<strong>Specialties:</strong> Creative Arts, Technology, Health Sciences
+					</div>
+				</div>
+
+				<!-- Aston University -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Aston University</h3>
+					<p class="text-gray-600 mb-4">Specialist university with excellent industry links and graduate employment rates.</p>
+					<div class="text-sm text-gray-500">
+						<strong>Specialties:</strong> Business, Engineering, Life Sciences
+					</div>
+				</div>
+
+				<!-- University of Wolverhampton -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">University of Wolverhampton</h3>
+					<p class="text-gray-600 mb-4">Comprehensive university with strong community connections and diverse programs.</p>
+					<div class="text-sm text-gray-500">
+						<strong>Specialties:</strong> Education, Social Sciences, Technology
+					</div>
+				</div>
+
+				<!-- Staffordshire University -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Staffordshire University</h3>
+					<p class="text-gray-600 mb-4">Innovative university known for cutting-edge facilities and student support.</p>
+					<div class="text-sm text-gray-500">
+						<strong>Specialties:</strong> Digital Media, Sport, Health Sciences
+					</div>
+				</div>
+
+				<!-- Regional Colleges -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Regional Colleges</h3>
+					<p class="text-gray-600 mb-4">Network of specialist colleges providing vocational and applied learning.</p>
+					<div class="text-sm text-gray-500">
+						<strong>Specialties:</strong> Vocational Training, Applied Sciences
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- How It Works -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">How Consortium Teaching Works</h2>
+				<p class="text-xl text-gray-600">Flexible, collaborative approach to undergraduate education</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="text-center">
+					<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-2xl font-bold text-orange-600">1</span>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Enroll at Home Institution</h3>
+					<p class="text-gray-600">Students primarily enroll at their chosen home institution within the consortium.</p>
+				</div>
+				
+				<div class="text-center">
+					<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-2xl font-bold text-orange-600">2</span>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Access Shared Resources</h3>
+					<p class="text-gray-600">Students can access courses, facilities, and expertise from partner institutions.</p>
+				</div>
+				
+				<div class="text-center">
+					<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<span class="text-2xl font-bold text-orange-600">3</span>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Collaborative Learning</h3>
+					<p class="text-gray-600">Participate in joint projects, research initiatives, and cross-institutional activities.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Academic Programs -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Academic Programs</h2>
+				<p class="text-xl text-gray-600">Diverse range of collaborative undergraduate programs</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<!-- Joint Degree Programs -->
+				<div class="bg-white rounded-lg p-8 shadow-md">
+					<h3 class="text-2xl font-bold text-gray-900 mb-6">Joint Degree Programs</h3>
+					<div class="space-y-4">
+						<div class="border-l-4 border-orange-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Business & Technology</h4>
+							<p class="text-gray-600 text-sm">Combined program leveraging business expertise from multiple institutions</p>
+						</div>
+						<div class="border-l-4 border-orange-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Engineering & Design</h4>
+							<p class="text-gray-600 text-sm">Collaborative engineering program with design focus</p>
+						</div>
+						<div class="border-l-4 border-orange-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Health Sciences</h4>
+							<p class="text-gray-600 text-sm">Multi-institutional health sciences program</p>
+						</div>
+						<div class="border-l-4 border-orange-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Creative Arts</h4>
+							<p class="text-gray-600 text-sm">Collaborative arts program across multiple campuses</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Shared Modules -->
+				<div class="bg-white rounded-lg p-8 shadow-md">
+					<h3 class="text-2xl font-bold text-gray-900 mb-6">Shared Modules</h3>
+					<div class="space-y-4">
+						<div class="border-l-4 border-purple-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Research Methods</h4>
+							<p class="text-gray-600 text-sm">Advanced research methodology taught across institutions</p>
+						</div>
+						<div class="border-l-4 border-purple-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Digital Skills</h4>
+							<p class="text-gray-600 text-sm">Technology and digital literacy programs</p>
+						</div>
+						<div class="border-l-4 border-purple-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Entrepreneurship</h4>
+							<p class="text-gray-600 text-sm">Business innovation and startup modules</p>
+						</div>
+						<div class="border-l-4 border-purple-500 pl-4">
+							<h4 class="font-semibold text-gray-900">Sustainability</h4>
+							<p class="text-gray-600 text-sm">Environmental and social sustainability studies</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Student Experience -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Student Experience</h2>
+				<p class="text-xl text-gray-600">What makes consortium education unique</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+				<div>
+					<h3 class="text-2xl font-bold text-gray-900 mb-6">Unique Opportunities</h3>
+					<div class="space-y-6">
+						<div class="bg-blue-50 rounded-lg p-6">
+							<h4 class="text-lg font-semibold text-blue-900 mb-3">Cross-Institutional Projects</h4>
+							<p class="text-blue-800">Students work on collaborative projects with peers from different institutions, gaining diverse perspectives and skills.</p>
+						</div>
+						<div class="bg-green-50 rounded-lg p-6">
+							<h4 class="text-lg font-semibold text-green-900 mb-3">Shared Facilities</h4>
+							<p class="text-green-800">Access to specialized laboratories, libraries, and resources across all partner institutions.</p>
+						</div>
+						<div class="bg-purple-50 rounded-lg p-6">
+							<h4 class="text-lg font-semibold text-purple-900 mb-3">Industry Connections</h4>
+							<p class="text-purple-800">Enhanced networking opportunities through collective industry partnerships and placement programs.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div>
+					<h3 class="text-2xl font-bold text-gray-900 mb-6">Support Services</h3>
+					<div class="bg-gray-50 rounded-lg p-6">
+						<div class="space-y-4">
+							<div class="flex items-start">
+								<div class="w-2 h-2 bg-orange-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Academic Guidance</h4>
+									<p class="text-gray-600 text-sm">Specialized advisors help navigate multi-institutional programs</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="w-2 h-2 bg-orange-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Transportation Support</h4>
+									<p class="text-gray-600 text-sm">Shuttle services and transport coordination between campuses</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="w-2 h-2 bg-orange-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Unified Student Services</h4>
+									<p class="text-gray-600 text-sm">Coordinated support services across all institutions</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="w-2 h-2 bg-orange-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+								<div>
+									<h4 class="font-semibold text-gray-900">Career Development</h4>
+									<p class="text-gray-600 text-sm">Enhanced career services with broader industry connections</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Application Process -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Application Process</h2>
+				<p class="text-xl text-gray-600">How to apply for consortium programs</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-lg p-8 shadow-md">
+					<h3 class="text-2xl font-bold text-gray-900 mb-6">Application Steps</h3>
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+								<span class="text-orange-600 font-semibold">1</span>
+							</div>
+							<div class="ml-4">
+								<h4 class="font-semibold text-gray-900">Choose Primary Institution</h4>
+								<p class="text-gray-600 text-sm">Select your main institution from consortium partners</p>
+							</div>
+						</div>
+						<div class="flex items-start">
+							<div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+								<span class="text-orange-600 font-semibold">2</span>
+							</div>
+							<div class="ml-4">
+								<h4 class="font-semibold text-gray-900">Select Program Type</h4>
+								<p class="text-gray-600 text-sm">Choose between joint degrees or shared modules</p>
+							</div>
+						</div>
+						<div class="flex items-start">
+							<div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+								<span class="text-orange-600 font-semibold">3</span>
+							</div>
+							<div class="ml-4">
+								<h4 class="font-semibold text-gray-900">Submit UCAS Application</h4>
+								<p class="text-gray-600 text-sm">Apply through standard UCAS system</p>
+							</div>
+						</div>
+						<div class="flex items-start">
+							<div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+								<span class="text-orange-600 font-semibold">4</span>
+							</div>
+							<div class="ml-4">
+								<h4 class="font-semibold text-gray-900">Interview Process</h4>
+								<p class="text-gray-600 text-sm">Participate in consortium-specific interviews</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="bg-white rounded-lg p-8 shadow-md">
+					<h3 class="text-2xl font-bold text-gray-900 mb-6">Entry Requirements</h3>
+					<div class="space-y-4">
+						<div class="bg-orange-50 rounded-lg p-4">
+							<h4 class="font-semibold text-orange-900 mb-2">Academic Standards</h4>
+							<ul class="text-orange-800 text-sm space-y-1">
+								<li>• A-Levels: BBB-ABB (varies by program)</li>
+								<li>• BTEC: DDM-DDD</li>
+								<li>• International Baccalaureate: 30-34 points</li>
+								<li>• Access to Higher Education: Pass with Merit</li>
+							</ul>
+						</div>
+						<div class="bg-blue-50 rounded-lg p-4">
+							<h4 class="font-semibold text-blue-900 mb-2">Additional Requirements</h4>
+							<ul class="text-blue-800 text-sm space-y-1">
+								<li>• Portfolio (for creative programs)</li>
+								<li>• Work experience (for some courses)</li>
+								<li>• English language proficiency</li>
+								<li>• DBS check (for education programs)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Success Stories -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
+				<p class="text-xl text-gray-600">Graduate achievements and outcomes</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-orange-50 rounded-lg p-6 text-center">
+					<div class="text-3xl font-bold text-orange-600 mb-2">92%</div>
+					<div class="text-gray-700 font-semibold mb-2">Graduate Employment Rate</div>
+					<div class="text-sm text-gray-600">Within 6 months of graduation</div>
+				</div>
+				
+				<div class="bg-blue-50 rounded-lg p-6 text-center">
+					<div class="text-3xl font-bold text-blue-600 mb-2">15%</div>
+					<div class="text-gray-700 font-semibold mb-2">Higher Starting Salaries</div>
+					<div class="text-sm text-gray-600">Compared to single-institution graduates</div>
+				</div>
+				
+				<div class="bg-green-50 rounded-lg p-6 text-center">
+					<div class="text-3xl font-bold text-green-600 mb-2">85%</div>
+					<div class="text-gray-700 font-semibold mb-2">Student Satisfaction</div>
+					<div class="text-sm text-gray-600">National Student Survey rating</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Call to Action -->
+	<section class="py-16 bg-orange-600 text-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl font-bold mb-4">Ready to Experience Collaborative Education?</h2>
+			<p class="text-xl mb-8 text-orange-100">Join the innovative consortium approach to undergraduate education</p>
+			<div class="flex flex-col sm:flex-row justify-center gap-4">
+				<a href="#" class="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
+					Apply Now
+				</a>
+				<a href="#" class="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors">
+					Learn More
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Related Articles -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Related Articles</h2>
+				<p class="text-xl text-gray-600">Explore more university profiles and undergraduate information</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">
+						<a href="/undergraduate/university-profiles/7493-university-of-wales-aberystwyth.html" class="hover:text-orange-600">University of Wales, Aberystwyth</a>
+					</h3>
+					<p class="text-gray-600 mb-4">Comprehensive profile of this historic Welsh university and its programs.</p>
+					<a href="/undergraduate/university-profiles/7493-university-of-wales-aberystwyth.html" class="text-orange-600 font-medium hover:text-orange-700">Read More →</a>
+				</div>
+				
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">
+						<a href="/undergraduate/subject-guide" class="hover:text-orange-600">Browse Subject Guides</a>
+					</h3>
+					<p class="text-gray-600 mb-4">Explore comprehensive guides to undergraduate subjects and degree options.</p>
+					<a href="/undergraduate/subject-guide" class="text-orange-600 font-medium hover:text-orange-700">Browse All →</a>
+				</div>
+				
+				<div class="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">
+						<a href="/undergraduate/university-profiles" class="hover:text-orange-600">More University Profiles</a>
+					</h3>
+					<p class="text-gray-600 mb-4">Discover other UK universities and their undergraduate programs.</p>
+					<a href="/undergraduate/university-profiles" class="text-orange-600 font-medium hover:text-orange-700">View All →</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

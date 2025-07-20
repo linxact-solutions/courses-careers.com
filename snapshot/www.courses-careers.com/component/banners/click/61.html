@@ -1,0 +1,2668 @@
+<html>
+
+
+
+<head><script type="text/javascript" src="https://web-static.archive.org/_static/js/bundle-playback.js?v=1B2M2Y8A" charset="utf-8"></script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/wombat.js?v=1B2M2Y8A" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay":"on","unmuteOverlay":"hidden","showSwfDownload":true};</script>
+<script type="text/javascript" src="https://web-static.archive.org/_static/js/ruffle/ruffle.js"></script>
+<script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.polidesign.net:80/master/","20120208091925","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1328692765");
+</script>
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/banner-styles.css?v=1B2M2Y8A" />
+<link rel="stylesheet" type="text/css" href="https://web-static.archive.org/_static/css/iconochive.css?v=1B2M2Y8A" />
+<!-- End Wayback Rewrite JS Include -->
+
+
+
+
+<title>Master POLI.design</title>
+
+
+
+<link rel="stylesheet" type="text/css" href="/web/20120208091925cs_/http://www.polidesign.net/master/master.css"/>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+
+
+
+<title>master</title>
+
+
+
+<script language="JavaScript" type="text/javascript">
+
+
+
+<!--
+
+
+
+//v1.7
+
+
+
+// Flash Player Version Detection
+
+
+
+// Detect Client Browser type
+
+
+
+// Copyright 2005-2008 Adobe Systems Incorporated.  All rights reserved.
+
+
+
+var isIE  = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;
+
+
+
+var isWin = (navigator.appVersion.toLowerCase().indexOf("win") != -1) ? true : false;
+
+
+
+var isOpera = (navigator.userAgent.indexOf("Opera") != -1) ? true : false;
+
+
+
+function ControlVersion()
+
+
+
+{
+
+
+
+	var version;
+
+
+
+	var axo;
+
+
+
+	var e;
+
+
+
+	// NOTE : new ActiveXObject(strFoo) throws an exception if strFoo isn't in the registry
+
+
+
+	try {
+
+
+
+		// version will be set for 7.X or greater players
+
+
+
+		axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.7");
+
+
+
+		version = axo.GetVariable("$version");
+
+
+
+	} catch (e) {
+
+
+
+	}
+
+
+
+	if (!version)
+
+
+
+	{
+
+
+
+		try {
+
+
+
+			// version will be set for 6.X players only
+
+
+
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");
+
+
+
+			
+
+
+
+			// installed player is some revision of 6.0
+
+
+
+			// GetVariable("$version") crashes for versions 6.0.22 through 6.0.29,
+
+
+
+			// so we have to be careful. 
+
+
+
+			
+
+
+
+			// default to the first public version
+
+
+
+			version = "WIN 6,0,21,0";
+
+
+
+			// throws if AllowScripAccess does not exist (introduced in 6.0r47)		
+
+
+
+			axo.AllowScriptAccess = "always";
+
+
+
+			// safe to call for 6.0r47 or greater
+
+
+
+			version = axo.GetVariable("$version");
+
+
+
+		} catch (e) {
+
+
+
+		}
+
+
+
+	}
+
+
+
+	if (!version)
+
+
+
+	{
+
+
+
+		try {
+
+
+
+			// version will be set for 4.X or 5.X player
+
+
+
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.3");
+
+
+
+			version = axo.GetVariable("$version");
+
+
+
+		} catch (e) {
+
+
+
+		}
+
+
+
+	}
+
+
+
+	if (!version)
+
+
+
+	{
+
+
+
+		try {
+
+
+
+			// version will be set for 3.X player
+
+
+
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash.3");
+
+
+
+			version = "WIN 3,0,18,0";
+
+
+
+		} catch (e) {
+
+
+
+		}
+
+
+
+	}
+
+
+
+	if (!version)
+
+
+
+	{
+
+
+
+		try {
+
+
+
+			// version will be set for 2.X player
+
+
+
+			axo = new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+
+
+
+			version = "WIN 2,0,0,11";
+
+
+
+		} catch (e) {
+
+
+
+			version = -1;
+
+
+
+		}
+
+
+
+	}
+
+
+
+	
+
+
+
+	return version;
+
+
+
+}
+
+
+
+// JavaScript helper required to detect Flash Player PlugIn version information
+
+
+
+function GetSwfVer(){
+
+
+
+	// NS/Opera version >= 3 check for Flash plugin in plugin array
+
+
+
+	var flashVer = -1;
+
+
+
+	
+
+
+
+	if (navigator.plugins != null && navigator.plugins.length > 0) {
+
+
+
+		if (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]) {
+
+
+
+			var swVer2 = navigator.plugins["Shockwave Flash 2.0"] ? " 2.0" : "";
+
+
+
+			var flashDescription = navigator.plugins["Shockwave Flash" + swVer2].description;
+
+
+
+			var descArray = flashDescription.split(" ");
+
+
+
+			var tempArrayMajor = descArray[2].split(".");			
+
+
+
+			var versionMajor = tempArrayMajor[0];
+
+
+
+			var versionMinor = tempArrayMajor[1];
+
+
+
+			var versionRevision = descArray[3];
+
+
+
+			if (versionRevision == "") {
+
+
+
+				versionRevision = descArray[4];
+
+
+
+			}
+
+
+
+			if (versionRevision[0] == "d") {
+
+
+
+				versionRevision = versionRevision.substring(1);
+
+
+
+			} else if (versionRevision[0] == "r") {
+
+
+
+				versionRevision = versionRevision.substring(1);
+
+
+
+				if (versionRevision.indexOf("d") > 0) {
+
+
+
+					versionRevision = versionRevision.substring(0, versionRevision.indexOf("d"));
+
+
+
+				}
+
+
+
+			}
+
+
+
+			var flashVer = versionMajor + "." + versionMinor + "." + versionRevision;
+
+
+
+		}
+
+
+
+	}
+
+
+
+	// MSN/WebTV 2.6 supports Flash 4
+
+
+
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.6") != -1) flashVer = 4;
+
+
+
+	// WebTV 2.5 supports Flash 3
+
+
+
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv/2.5") != -1) flashVer = 3;
+
+
+
+	// older WebTV supports Flash 2
+
+
+
+	else if (navigator.userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 2;
+
+
+
+	else if ( isIE && isWin && !isOpera ) {
+
+
+
+		flashVer = ControlVersion();
+
+
+
+	}	
+
+
+
+	return flashVer;
+
+
+
+}
+
+
+
+// When called with reqMajorVer, reqMinorVer, reqRevision returns true if that version or greater is available
+
+
+
+function DetectFlashVer(reqMajorVer, reqMinorVer, reqRevision)
+
+
+
+{
+
+
+
+	versionStr = GetSwfVer();
+
+
+
+	if (versionStr == -1 ) {
+
+
+
+		return false;
+
+
+
+	} else if (versionStr != 0) {
+
+
+
+		if(isIE && isWin && !isOpera) {
+
+
+
+			// Given "WIN 2,0,0,11"
+
+
+
+			tempArray         = versionStr.split(" "); 	// ["WIN", "2,0,0,11"]
+
+
+
+			tempString        = tempArray[1];			// "2,0,0,11"
+
+
+
+			versionArray      = tempString.split(",");	// ['2', '0', '0', '11']
+
+
+
+		} else {
+
+
+
+			versionArray      = versionStr.split(".");
+
+
+
+		}
+
+
+
+		var versionMajor      = versionArray[0];
+
+
+
+		var versionMinor      = versionArray[1];
+
+
+
+		var versionRevision   = versionArray[2];
+
+
+
+        	// is the major.revision >= requested major.revision AND the minor version >= requested minor
+
+
+
+		if (versionMajor > parseFloat(reqMajorVer)) {
+
+
+
+			return true;
+
+
+
+		} else if (versionMajor == parseFloat(reqMajorVer)) {
+
+
+
+			if (versionMinor > parseFloat(reqMinorVer))
+
+
+
+				return true;
+
+
+
+			else if (versionMinor == parseFloat(reqMinorVer)) {
+
+
+
+				if (versionRevision >= parseFloat(reqRevision))
+
+
+
+					return true;
+
+
+
+			}
+
+
+
+		}
+
+
+
+		return false;
+
+
+
+	}
+
+
+
+}
+
+
+
+function AC_AddExtension(src, ext)
+
+
+
+{
+
+
+
+  if (src.indexOf('?') != -1)
+
+
+
+    return src.replace(/\?/, ext+'?'); 
+
+
+
+  else
+
+
+
+    return src + ext;
+
+
+
+}
+
+
+
+function AC_Generateobj(objAttrs, params, embedAttrs) 
+
+
+
+{ 
+
+
+
+  var str = '';
+
+
+
+  if (isIE && isWin && !isOpera)
+
+
+
+  {
+
+
+
+    str += '<object ';
+
+
+
+    for (var i in objAttrs)
+
+
+
+    {
+
+
+
+      str += i + '="' + objAttrs[i] + '" ';
+
+
+
+    }
+
+
+
+    str += '>';
+
+
+
+    for (var i in params)
+
+
+
+    {
+
+
+
+      str += '<param name="' + i + '" value="' + params[i] + '" /> ';
+
+
+
+    }
+
+
+
+    str += '</object>';
+
+
+
+  }
+
+
+
+  else
+
+
+
+  {
+
+
+
+    str += '<embed ';
+
+
+
+    for (var i in embedAttrs)
+
+
+
+    {
+
+
+
+      str += i + '="' + embedAttrs[i] + '" ';
+
+
+
+    }
+
+
+
+    str += '> </embed>';
+
+
+
+  }
+
+
+
+  document.write(str);
+
+
+
+}
+
+
+
+function AC_FL_RunContent(){
+
+
+
+  var ret = 
+
+
+
+    AC_GetArgs
+
+
+
+    (  arguments, ".swf", "movie", "clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+
+
+
+     , "application/x-shockwave-flash"
+
+
+
+    );
+
+
+
+  AC_Generateobj(ret.objAttrs, ret.params, ret.embedAttrs);
+
+
+
+}
+
+
+
+function AC_SW_RunContent(){
+
+
+
+  var ret = 
+
+
+
+    AC_GetArgs
+
+
+
+    (  arguments, ".dcr", "src", "clsid:166B1BCA-3F9C-11CF-8075-444553540000"
+
+
+
+     , null
+
+
+
+    );
+
+
+
+  AC_Generateobj(ret.objAttrs, ret.params, ret.embedAttrs);
+
+
+
+}
+
+
+
+function AC_GetArgs(args, ext, srcParamName, classid, mimeType){
+
+
+
+  var ret = new Object();
+
+
+
+  ret.embedAttrs = new Object();
+
+
+
+  ret.params = new Object();
+
+
+
+  ret.objAttrs = new Object();
+
+
+
+  for (var i=0; i < args.length; i=i+2){
+
+
+
+    var currArg = args[i].toLowerCase();    
+
+
+
+    switch (currArg){	
+
+
+
+      case "classid":
+
+
+
+        break;
+
+
+
+      case "pluginspage":
+
+
+
+        ret.embedAttrs[args[i]] = args[i+1];
+
+
+
+        break;
+
+
+
+      case "src":
+
+
+
+      case "movie":	
+
+
+
+        args[i+1] = AC_AddExtension(args[i+1], ext);
+
+
+
+        ret.embedAttrs["src"] = args[i+1];
+
+
+
+        ret.params[srcParamName] = args[i+1];
+
+
+
+        break;
+
+
+
+      case "onafterupdate":
+
+
+
+      case "onbeforeupdate":
+
+
+
+      case "onblur":
+
+
+
+      case "oncellchange":
+
+
+
+      case "onclick":
+
+
+
+      case "ondblclick":
+
+
+
+      case "ondrag":
+
+
+
+      case "ondragend":
+
+
+
+      case "ondragenter":
+
+
+
+      case "ondragleave":
+
+
+
+      case "ondragover":
+
+
+
+      case "ondrop":
+
+
+
+      case "onfinish":
+
+
+
+      case "onfocus":
+
+
+
+      case "onhelp":
+
+
+
+      case "onmousedown":
+
+
+
+      case "onmouseup":
+
+
+
+      case "onmouseover":
+
+
+
+      case "onmousemove":
+
+
+
+      case "onmouseout":
+
+
+
+      case "onkeypress":
+
+
+
+      case "onkeydown":
+
+
+
+      case "onkeyup":
+
+
+
+      case "onload":
+
+
+
+      case "onlosecapture":
+
+
+
+      case "onpropertychange":
+
+
+
+      case "onreadystatechange":
+
+
+
+      case "onrowsdelete":
+
+
+
+      case "onrowenter":
+
+
+
+      case "onrowexit":
+
+
+
+      case "onrowsinserted":
+
+
+
+      case "onstart":
+
+
+
+      case "onscroll":
+
+
+
+      case "onbeforeeditfocus":
+
+
+
+      case "onactivate":
+
+
+
+      case "onbeforedeactivate":
+
+
+
+      case "ondeactivate":
+
+
+
+      case "type":
+
+
+
+      case "codebase":
+
+
+
+      case "id":
+
+
+
+        ret.objAttrs[args[i]] = args[i+1];
+
+
+
+        break;
+
+
+
+      case "width":
+
+
+
+      case "height":
+
+
+
+      case "align":
+
+
+
+      case "vspace": 
+
+
+
+      case "hspace":
+
+
+
+      case "class":
+
+
+
+      case "title":
+
+
+
+      case "accesskey":
+
+
+
+      case "name":
+
+
+
+      case "tabindex":
+
+
+
+        ret.embedAttrs[args[i]] = ret.objAttrs[args[i]] = args[i+1];
+
+
+
+        break;
+
+
+
+      default:
+
+
+
+        ret.embedAttrs[args[i]] = ret.params[args[i]] = args[i+1];
+
+
+
+    }
+
+
+
+  }
+
+
+
+  ret.objAttrs["classid"] = classid;
+
+
+
+  if (mimeType) ret.embedAttrs["type"] = mimeType;
+
+
+
+  return ret;
+
+
+
+}
+
+
+
+// -->
+
+
+
+</script>
+
+
+
+</head>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+
+
+<div id="banner">
+
+
+
+<!--url's used in the movie-->
+
+
+
+<!--text used in the movie-->
+
+
+
+<!--
+
+
+
+<p align="left"><font face="standard 07_55_8pt_st" size="8" color="#ffffff" letterSpacing="0.000000" kerning="0">T +39 02 2399 5911</font></p><p align="left"><font face="standard 07_55_8pt_st" size="8" color="#ffffff" letterSpacing="0.000000" kerning="0">F +39 02 2399 7217</font></p><p align="left"><font face="standard 07_55_8pt_st" size="8" color="#ffffff" letterSpacing="0.000000" kerning="0"><a href="http://www.polidesign.net" target = "_blank">www.polidesign.net</a></font></p>
+
+
+
+<p align="left"><font face="standard 07_55_8pt_st" size="8" color="#000000" letterSpacing="0.000000" kerning="0"> </font></p><p align="left"></p><p align="left"><font face="standard 07_55_8pt_st" size="8" color="#000000" letterSpacing="0.000000" kerning="0"><a href="mailto:formazione@polidesign.net">formazione@polidesign.net</a></font></p>
+
+
+
+-->
+
+
+
+<!-- saved from url=(0013)about:internet -->
+
+
+
+<script language="JavaScript" type="text/javascript">
+
+
+
+	AC_FL_RunContent(
+
+
+
+		'codebase', 'https://web.archive.org/web/20120208091925/http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0',
+
+
+
+		'width', '900',
+
+
+
+		'height', '300',
+
+
+
+		'src', 'master',
+
+
+
+		'quality', 'high',
+
+
+
+		'pluginspage', 'https://web.archive.org/web/20120208091925/http://www.adobe.com/go/getflashplayer',
+
+
+
+		'align', 'middle',
+
+
+
+		'play', 'true',
+
+
+
+		'loop', 'true',
+
+
+
+		'scale', 'noborder',
+
+
+
+		'wmode', 'opaque',
+
+
+
+		'devicefont', 'false',
+
+
+
+		'id', 'master',
+
+
+
+		'bgcolor', '#ffffff',
+
+
+
+		'name', 'master',
+
+
+
+		'menu', 'true',
+
+
+
+		'allowFullScreen', 'false',
+
+
+
+		'allowScriptAccess','sameDomain',
+
+
+
+		'movie', 'master',
+
+
+
+		'salign', ''
+
+
+
+		); //end AC code
+
+
+
+</script>
+
+
+
+<noscript>
+
+
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://web.archive.org/web/20120208091925oe_/http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" id="master" align="middle" style="width:900px;height:300px;">
+
+
+
+<param name="allowScriptAccess" value="sameDomain"/>
+
+
+
+<param name="allowFullScreen" value="false"/>
+
+
+
+<param name="movie" value="master.swf"/>
+
+
+
+<param name="quality" value="high"/>
+
+
+
+<param name="scale" value="showall"/>
+
+
+
+<param name="wmode" value="opaque"/>
+
+
+
+<param name="bgcolor" value="#ffffff"/>
+
+
+
+<embed src="/web/20120208091925oe_/http://www.polidesign.net/master/master.swf" quality="best" scale="noborder" wmode="opaque" bgcolor="#ffffff" style="width:900px;height:300px;" name="master" align="middle" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer"/>
+
+
+
+</object>
+
+
+
+</noscript>
+
+
+
+</div>
+
+
+
+<div>
+
+
+
+<!--PAGE-->
+
+
+
+<table id="page">
+
+
+
+
+
+
+
+<!--SUBTITLE ITA-->
+
+
+
+<tr>
+
+
+
+<td colspan="2" id="subita">
+
+
+
+POLI.design gestisce i master universitari della Scuola di Design del Politecnico di Milano. Si tratta di percorsi formativi di perfezionamento scientifico e aggiornamento professionale successivi al conseguimento della laurea di primo e secondo livello, denominati Corsi di Master Universitari del Politecnico di Milano. Sono finalizzati alla formazione di figure professionali fortemente specializzate e/o caratterizzate da trasversalità delle competenze acquisite. Ogni Master dà diritto a 60 CFU (crediti formativi universitari) validati dal Politecnico di Milano Facoltà del Design e riconosciuti in tutta Europa.
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+
+<!--SUBTITLE ENG-->
+
+
+
+<tr>
+
+
+
+<td colspan="2" id="subeng">
+
+
+
+POLI.design manages university masters of the Design School of Politecnico di Milano. Called Courses of University Masters of Politecnico di Milano, they are a formative trek of scientific improvement and professional updating after graduation of first and second level. Masters are aimed to train high specialized and/or transversality characterized acquired skills professionals. Each master entitlement 60 CFU (university credits) validated by Politecnico di Milano School of Design and recognized all around Europe.
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+	
+
+
+
+<!--PRINCIPAL-->
+
+
+
+<tr>
+
+
+
+
+
+
+
+<!--NEWS COL-->
+
+
+
+<td id="leftcolvalign">
+
+
+
+<table id="leftcol">
+
+
+
+
+
+
+
+<!--	Link Corsi-->
+
+
+
+<tr>
+
+
+
+<td class="tdleftcol" height="35px">
+
+
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/corsi" target="blank">
+
+
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/corsi_link.png" onmouseover="this.src='img/1/corsi_link.png'" onmouseout="this.src='img/corsi_link.png'">
+
+
+
+</a>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+
+<!--	Social Networks-->
+
+
+
+<tr>
+
+
+
+<td class="tdleftcolpad" height="30px">
+
+
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://it-it.facebook.com/pages/POLIdesign-Consorzio-del-Politecnico-di-Milano/111271845824" target="blank">
+
+
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/facebook.png">
+
+
+
+</a>
+
+
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://www.flickr.com/photos/polidesign" target="blank">
+
+
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/flickr.png">
+
+
+
+</a>
+
+
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://www.linkedin.com/groups?about=&amp;gid=150021&amp;trk=anet_ug_grppro" target="blank">
+
+
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/linkedin.png">
+
+
+
+</a>
+
+
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://twitter.com/Poli_design" target="blank">
+
+
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/twitter.png">
+
+
+
+</a>
+
+
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://www.youtube.com/user/POLIdesign" target="blank">
+
+
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/youtube.png">
+
+
+
+</a>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+<!--	Sito-->
+
+
+
+<tr>
+
+
+
+<td class="tdleftcolpad" height="30px">
+
+
+
+<h2>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/" target="blank">www.polidesign.net</a><br><br>
+
+
+
+
+
+
+
+</h2>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--	NEWS-->
+
+
+
+<tr>
+
+
+
+<td class="tdleftcolpad">
+
+
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/news.png">
+
+
+
+<br>
+
+<p>
+
+<b>02.11.2011</b>
+
+<br>
+
+Open day - YACHT DESIGN - 25 NOVEMBRE
+
+</p>
+
+<p>
+
+<b>22.10.2011</b>
+
+<br>
+
+Open day - HOUSING - 14 dicembre
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+<!--	Where we are-->
+
+
+
+<tr>
+
+
+
+<td class="tdleftcol">
+
+
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://maps.google.com/maps?q=via+durando+38%2Fa+milano&amp;hl=en&amp;ll=45.505806,9.162716&amp;spn=0.00382,0.010568&amp;sll=37.0625,-95.677068&amp;sspn=35.357014,86.572266&amp;z=17" target="blank">
+
+
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/where.png" onmouseover="this.src='img/1/where.png'" onmouseout="this.src='img/where.png'">
+
+
+
+</a>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+<!--	CONTATTI-->
+
+
+
+<tr>
+
+
+
+<td class="tdleftcolpad">
+
+
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/contatti.png">
+
+
+
+<br>
+
+
+
+<p>
+
+
+
+Ufficio coordinamento Formazione <br>
+
+
+
+POLI.design, Consorzio del Politecnico di Milano
+
+
+
+</p>
+
+
+
+<p>
+
+
+
+via Durando 38/a <br>
+
+
+
+<b>T</b> +39 02 2399 5911<br>&nbsp;&nbsp;  +39 02 2399 5864<br> &nbsp;&nbsp;  +39 02 2399 7275<br> &nbsp;&nbsp;  +39 02 2399 7208 <br>
+
+
+
+<b>F</b> +39 02 2399 7217 <br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/mailto:formazione@polidesign.net" target="blank">
+
+
+
+formazione@polidesign.net
+
+
+
+</a>
+
+
+
+</p>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+
+<!--	partner-->
+
+
+
+<tr>
+
+
+
+<td class="tdleftcol">
+
+<br><br>
+
+<div style="margin-left:40px">Sono soci di POLI.DESIGN:</div><br>
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://www.adi-design.org/" target="_blank">
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/partner/adi.jpg" style="margin-left:40px">
+
+</a>
+
+
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://www.aipi.it/" target="_blank">
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/partner/aipi.jpg">
+
+</a>
+
+<br>
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://www.aiap.it/" target="_blank">
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/partner/aiap.jpg" style="margin-left:40px">
+
+</a>
+
+
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://www.aimat.net/" target="_blank">
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/partner/aimat.jpg">
+
+</a>
+
+<br><br><br><br>
+
+<div style="margin-left:40px">POLI.design è membro di:</div><br>
+
+<a class="imglink" href="https://web.archive.org/web/20120208091925/http://www.beda.org/" target="_blank">
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/partner/beda.jpg" style="margin-left:40px">
+
+</a>
+
+<br>
+
+</td>
+
+
+
+</tr>
+
+
+
+</table>
+
+
+
+</td>
+
+
+
+
+
+
+
+<!--MASTERS COL-->
+
+
+
+<td>
+
+
+
+<table id="masterx">
+
+
+
+<tr>
+
+
+
+
+
+
+
+<!--	MDSPI-->
+
+
+
+<tr>
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/mdspi" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/mdspi.png" onmouseover="this.src='img/1/mdspi.png'" onclick="this.src='img/2/mdspi.png'" onmouseout="this.src='img/mdspi.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: November 2011
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/mdspi" target="blank">www.polidesign.net/mdspi</a>
+
+
+
+</td>
+
+
+
+
+
+
+
+
+
+
+
+<!--	TAD-->
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/tad" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/tad.png" onmouseover="this.src='img/1/tad.png'" onclick="this.src='img/2/tad.png'" onmouseout="this.src='img/tad.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: March 2012
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/tad" target="blank">www.polidesign.net/tad</a>
+
+
+
+</td>
+
+
+
+
+
+
+
+
+
+
+
+<!--	MYD-->
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/myd" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/myd.png" onmouseover="this.src='img/1/myd.png'" onclick="this.src='img/2/myd.png'" onmouseout="this.src='img/myd.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: March 2012
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/myd" target="blank">www.polidesign.net/myd</a>
+
+
+
+</td>
+
+</tr>
+
+
+
+
+
+<!--	ID4A-->
+
+
+
+<tr>
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/id4a" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/id4a.png" onmouseover="this.src='img/1/id4a.png'" onclick="this.src='img/2/id4a.png'" onmouseout="this.src='img/id4a.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: February 2012
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/id4a" target="blank">www.polidesign.net/id4a</a>
+
+
+
+</td>
+
+
+
+<!--	EXHIBITION-->
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/exhibition" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/exhibition.png" onmouseover="this.src='img/1/exhibition.png'" onclick="this.src='img/2/exhibition.png'" onmouseout="this.src='img/exhibition.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: November 2011
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/exhibition" target="blank">www.polidesign.net/exhibition</a>
+
+
+
+</td>
+
+
+
+<!--LED -->
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/lighting" target="blank">
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/led.png" onmouseover="this.src='img/1/led.png'" onclick="this.src='img/2/led.png'" onmouseout="this.src='img/led.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: October 2011
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/lighting" target="blank">www.polidesign.net/lighting</a>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+<tr>
+
+<!--Art & Copy-->
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/mac" target="blank"><img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/art.png" onmouseover="this.src='img/1/art.png'" onclick="this.src='img/2/art.png'" onmouseout="this.src='img/art.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: April 2012
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/mac" target="blank">www.polidesign.net/mac</a>
+
+
+
+</td>
+
+
+
+
+
+
+
+<!--	Brand-->	
+
+
+
+
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/mbc" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/brand.png" onmouseover="this.src='img/1/brand.png'" onclick="this.src='img/2/brand.png'" onmouseout="this.src='img/brand.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: October 2011
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/mbc" target="blank">www.polidesign.net/mbc</a>
+
+
+
+</td>
+
+
+
+
+
+
+
+<!--	STRATEGIC-->
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/mds" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/mds.png" onmouseover="this.src='img/1/mds.png'" onclick="this.src='img/2/mds.png'" onmouseout="this.src='img/mds.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: October 2011
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/mds" target="blank">www.polidesign.net/mds</a>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--	RETAIL-->
+
+
+
+<tr><td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/retaildesign" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/retail.png" onmouseover="this.src='img/1/retail.png'" onclick="this.src='img/2/retail.png'" onmouseout="this.src='img/retail.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: September 2012
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/retaildesign" target="blank">www.polidesign.net/retaildesign</a>
+
+
+
+</td>
+
+
+
+
+
+
+
+<!--	INTERIOR-->
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.masterinterior.com/" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/interior.png" onmouseover="this.src='img/1/interior.png'" onclick="this.src='img/2/interior.png'" onmouseout="this.src='img/interior.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: February 2012
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.masterinterior.com/" target="blank">www.masterinterior.com</a>
+
+
+
+</td>
+
+
+
+
+
+
+
+
+
+
+
+<!--	CHINA-->
+
+
+
+<td class="tdmaster">
+
+
+
+<img src="/web/20120208091925im_/http://www.polidesign.net/master/img/china.png">
+
+
+
+<br>
+
+
+
+Si svolge in Cina in collaborazione con l'istituto Beijing Lantao Culture.
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr>
+
+
+
+<!--	ARTE-->
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/eventiarte" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/arte.png" onmouseover="this.src='img/1/arte.png'" onclick="this.src='img/2/arte.png'" onmouseout="this.src='img/arte.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: January 2012
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/eventinarte" target="blank">www.polidesign.net/eventiarte</a>
+
+
+
+</td>
+
+
+
+
+
+
+
+
+
+<!--	VUOTO	--
+
+
+
+
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="http://www.polidesign.net/mbc" target="blank">
+
+
+
+<img width="185px" height="185px"
+
+
+
+                   src="img/brand.png"
+
+
+
+ onMouseOver="this.src='img/1/brand.png'"
+
+
+
+     onClick="this.src='img/2/brand.png'"
+
+
+
+  onMouseOut="this.src='img/brand.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: October 2011
+
+
+
+<br>
+
+
+
+<a href="http://www.polidesign.net/mbc" target="blank">www.polidesign.net/mbc</a>
+
+
+
+</td>
+
+
+
+
+
+
+
+<!--	HOUSING -->
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/housing" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/housing.png" onmouseover="this.src='img/1/housing.png'" onclick="this.src='img/2/housing.png'" onmouseout="this.src='img/housing.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: March 2012
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/housing" target="blank">www.polidesign.net/housing</a>
+
+
+
+</td>
+
+<!--	TEXT -->
+
+
+
+<td class="tdmaster">
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/techstyledesign" target="blank">
+
+
+
+<img width="185px" height="185px" src="/web/20120208091925im_/http://www.polidesign.net/master/img/style1.png" onmouseover="this.src='img/1/style2.png'" onclick="this.src='img/2/style2.png'" onmouseout="this.src='img/style1.png'"></a>
+
+
+
+<br>
+
+
+
+Starting date: September 2012
+
+
+
+<br>
+
+
+
+<a href="https://web.archive.org/web/20120208091925/http://www.polidesign.net/techstyledesign" " target="blank">www.polidesign.net/techstyledesign </a>
+
+
+
+</td>
+
+</tr>
+<tr>
+  <td class="tdmaster"><a href="https://web.archive.org/web/20120208091925/http://www.snid.eu/" target="_blank"><img src="/web/20120208091925im_/http://www.polidesign.net/master/img/snid.png" width="185" height="185" longdesc="http://blog.snid.eu"></a><br>
+
+
+
+Starting date: January 2013
+
+<br>
+
+<a href="https://web.archive.org/web/20120208091925/http://www.snid.eu/" target="blank">www.snid.eu</a></td>
+  <td class="tdmaster">&nbsp;</td>
+  <td class="tdmaster">&nbsp;</td>
+</tr>
+
+
+
+
+
+
+
+
+
+</table>
+
+
+
+</td>
+
+
+
+</tr>
+
+
+
+
+
+
+
+<!--FOOTER-->
+
+
+
+<tr>
+
+
+
+<td id="footer" colspan="2">
+
+
+
+Consorzio POLI.design - 38/a, via Durando - 20158 Milano - Italy
+
+
+
+</td>
+
+
+
+</tr>		
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+<script type="text/javascript">
+
+
+
+  var _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-16315957-1']);
+
+  _gaq.push(['_trackPageview']);
+
+
+
+  (function() {
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+    ga.src = ('https:' == document.location.protocol ? 'https://web.archive.org/web/20120208091925/https://ssl' : 'https://web.archive.org/web/20120208091925/http://www') + '.google-analytics.com/ga.js';
+
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+  })();
+
+
+
+</script>
+
+
+
+</body>
+
+
+
+</html><!--
+     FILE ARCHIVED ON 09:19:25 Feb 08, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:06:35 Jun 25, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 1.651
+  exclusion.robots: 0.113
+  exclusion.robots.policy: 0.028
+  esindex: 0.02
+  cdx.remote: 71.002
+  LoadShardBlock: 607.241 (3)
+  PetaboxLoader3.datanode: 463.522 (5)
+  PetaboxLoader3.resolve: 401.26 (2)
+  load_resource: 490.088 (2)
+-->

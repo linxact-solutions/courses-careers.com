@@ -1,0 +1,310 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CourseCard from '../../components/CourseCard.astro';
+import OptimizedImage from '../../components/OptimizedImage.astro';
+---
+
+<Layout 
+	title="Postgraduate University Profiles - Leading UK Institutions"
+	description="Explore detailed profiles of UK universities offering postgraduate programs. Discover research opportunities, facilities, and specializations at leading institutions."
+	keywords="postgraduate universities, university profiles, UK universities, postgraduate programs, research opportunities, academic institutions"
+	section="postgraduate"
+>
+	<!-- Breadcrumb navigation removed -->
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					University Profiles
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+					Discover leading UK universities offering exceptional postgraduate programs. Explore research opportunities, facilities, and academic excellence.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- University Search Section -->
+	<section class="bg-white py-8">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-blue-50 rounded-lg p-6">
+				<h2 class="text-xl font-bold text-center mb-6 text-blue-800">Find Your Perfect University</h2>
+				<form class="max-w-4xl mx-auto">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+						<div>
+							<label for="location" class="block text-sm font-medium text-gray-700 mb-2">Location</label>
+							<select id="location" name="location" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<option value="">Any Location</option>
+								<option value="london">London</option>
+								<option value="manchester">Manchester</option>
+								<option value="birmingham">Birmingham</option>
+								<option value="scotland">Scotland</option>
+								<option value="north-west">North West</option>
+								<option value="south-east">South East</option>
+							</select>
+						</div>
+						<div>
+							<label for="university_type" class="block text-sm font-medium text-gray-700 mb-2">University Type</label>
+							<select id="university_type" name="university_type" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<option value="">Any Type</option>
+								<option value="russell-group">Russell Group</option>
+								<option value="research-intensive">Research Intensive</option>
+								<option value="modern">Modern University</option>
+								<option value="specialist">Specialist Institution</option>
+							</select>
+						</div>
+						<div>
+							<label for="subject_area" class="block text-sm font-medium text-gray-700 mb-2">Subject Area</label>
+							<select id="subject_area" name="subject_area" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<option value="">Any Subject</option>
+								<option value="business">Business</option>
+								<option value="engineering">Engineering</option>
+								<option value="science">Science</option>
+								<option value="arts">Arts & Humanities</option>
+								<option value="law">Law</option>
+								<option value="medicine">Medicine</option>
+							</select>
+						</div>
+					</div>
+					<div class="flex flex-col sm:flex-row gap-4">
+						<input 
+							type="text" 
+							placeholder="Search universities..." 
+							class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+						/>
+						<button 
+							type="submit" 
+							class="bg-blue-600 text-white px-8 py-2 rounded-md font-semibold hover:bg-blue-700 transition-colors"
+						>
+							Search Universities
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<section class="py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="mb-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">Featured University Profiles</h2>
+				<p class="text-gray-700 mb-8">
+					Explore comprehensive profiles of leading UK universities offering outstanding postgraduate programs. Each profile includes detailed information about research opportunities, facilities, and academic excellence.
+				</p>
+			</div>
+
+			<!-- University Profiles Grid -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<!-- Loughborough University -->
+				<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+					<div class="p-6">
+						<div class="flex items-center justify-center mb-4">
+							<OptimizedImage 
+								src="/images/stories/college-images/loughborough-chemical/logo.gif"
+								alt="Loughborough University logo"
+								width={150}
+								height={90}
+								class="object-contain"
+							/>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Loughborough University</h3>
+						<p class="text-gray-700 mb-4 text-center">Research Engineers</p>
+						<p class="text-gray-600 text-sm mb-4">
+							Discover excellence in engineering research at Loughborough University. Known for its cutting-edge research facilities and industry partnerships in engineering and technology.
+						</p>
+						<div class="text-center">
+							<a 
+								href="/postgraduate/university-profiles/7647-loughborough-university-research-engineers" 
+								class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+							>
+								View Profile
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- University of Manchester IDPM -->
+				<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+					<div class="p-6">
+						<div class="flex items-center justify-center mb-4">
+							<OptimizedImage 
+								src="/images/stories/college-images/manchester-idpm/logo.gif"
+								alt="University of Manchester IDPM logo"
+								width={150}
+								height={90}
+								class="object-contain"
+							/>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">University of Manchester</h3>
+						<p class="text-gray-700 mb-4 text-center">Institute for Development Policy and Management</p>
+						<p class="text-gray-600 text-sm mb-4">
+							Leading institute specializing in development studies, international development, and policy management with global recognition for research excellence.
+						</p>
+						<div class="text-center">
+							<a 
+								href="/postgraduate/university-profiles/7648-the-university-of-manchester-institute-for-development-policy-and-management" 
+								class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+							>
+								View Profile
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Newman University College -->
+				<div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+					<div class="p-6">
+						<div class="flex items-center justify-center mb-4">
+							<OptimizedImage 
+								src="/images/stories/college-images/newman-university-college/nm.jpg"
+								alt="Newman University College logo"
+								width={150}
+								height={90}
+								class="object-contain"
+							/>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Newman University College</h3>
+						<p class="text-gray-700 mb-4 text-center">Birmingham</p>
+						<p class="text-gray-600 text-sm mb-4">
+							A distinctive university college in Birmingham offering personalized postgraduate education with strong community values and academic excellence.
+						</p>
+						<div class="text-center">
+							<a 
+								href="/postgraduate/university-profiles/7649--newman-university-college-birmingham" 
+								class="inline-block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
+							>
+								View Profile
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- University Categories -->
+			<div class="mt-12">
+				<h3 class="text-2xl font-bold text-gray-900 mb-6">University Categories</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div class="bg-white rounded-lg shadow-sm p-6">
+						<h4 class="text-lg font-semibold text-blue-800 mb-4">Research-Intensive Universities</h4>
+						<p class="text-gray-700 mb-4">
+							Universities with strong research profiles offering excellent opportunities for postgraduate research and advanced study.
+						</p>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li>• Russell Group institutions</li>
+							<li>• High research output and funding</li>
+							<li>• PhD and research master's programs</li>
+							<li>• World-class facilities and equipment</li>
+						</ul>
+					</div>
+					
+					<div class="bg-white rounded-lg shadow-sm p-6">
+						<h4 class="text-lg font-semibold text-blue-800 mb-4">Teaching-Focused Universities</h4>
+						<p class="text-gray-700 mb-4">
+							Universities emphasizing excellent teaching quality and student experience in postgraduate education.
+						</p>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li>• Outstanding teaching awards</li>
+							<li>• Small class sizes and personal attention</li>
+							<li>• Industry-relevant curricula</li>
+							<li>• Strong graduate employment rates</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Choose These Universities -->
+	<section class="bg-blue-50 py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">Why Choose These Universities?</h2>
+				<p class="text-gray-700 max-w-3xl mx-auto">
+					Our featured universities represent the best of UK higher education, offering exceptional opportunities for postgraduate study.
+				</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+				<div class="bg-white rounded-lg shadow-sm p-6 text-center">
+					<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Academic Excellence</h3>
+					<p class="text-gray-600 text-sm">
+						High-quality education with outstanding academic reputation and research output.
+					</p>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6 text-center">
+					<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Research Opportunities</h3>
+					<p class="text-gray-600 text-sm">
+						Access to cutting-edge research facilities and opportunities to work with leading academics.
+					</p>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6 text-center">
+					<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Industry Connections</h3>
+					<p class="text-gray-600 text-sm">
+						Strong links with industry partners providing excellent career opportunities and networking.
+					</p>
+				</div>
+				
+				<div class="bg-white rounded-lg shadow-sm p-6 text-center">
+					<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+						</svg>
+					</div>
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">Support Services</h3>
+					<p class="text-gray-600 text-sm">
+						Comprehensive student support services to help you succeed in your postgraduate studies.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Application Tips -->
+	<section class="bg-white py-12">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-3xl mx-auto text-center">
+				<h2 class="text-2xl font-bold text-gray-900 mb-6">Application Tips</h2>
+				<div class="bg-blue-50 rounded-lg p-6">
+					<h3 class="text-lg font-semibold text-blue-800 mb-4">Getting Started with Your Application</h3>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+						<div class="text-center">
+							<div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2">1</div>
+							<p class="font-medium">Research Programs</p>
+							<p class="text-gray-600">Explore our university profiles to find the right fit for your goals.</p>
+						</div>
+						<div class="text-center">
+							<div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2">2</div>
+							<p class="font-medium">Prepare Requirements</p>
+							<p class="text-gray-600">Check entry requirements and prepare your application materials.</p>
+						</div>
+						<div class="text-center">
+							<div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-2">3</div>
+							<p class="font-medium">Submit Application</p>
+							<p class="text-gray-600">Complete your application and submit it before the deadline.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

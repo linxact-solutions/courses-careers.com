@@ -1,0 +1,327 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "University Profiles - Undergraduate Programs and Courses";
+const description = "Explore detailed profiles of UK universities offering undergraduate programs. Find information about courses, facilities, student life, and entry requirements.";
+const keywords = "university profiles, UK universities, undergraduate programs, university courses, higher education, university information";
+---
+
+<Layout 
+	title={title}
+	description={description}
+	keywords={keywords}
+	section="undergraduate"
+>
+	<!-- Breadcrumb Navigation -->
+	<nav class="bg-gray-100 py-4">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-gray-500 hover:text-orange-600">Home</a></li>
+				<li class="text-gray-400">/</li>
+				<li><a href="/undergraduate" class="text-gray-500 hover:text-orange-600">Undergraduate</a></li>
+				<li class="text-gray-400">/</li>
+				<li class="text-orange-600 font-medium">University Profiles</li>
+			</ol>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-r from-orange-600 to-orange-700 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					University Profiles
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 text-orange-100">
+					Discover UK universities and their undergraduate programs
+				</p>
+				<div class="max-w-2xl mx-auto">
+					<div class="bg-white rounded-lg p-4 shadow-lg">
+						<input 
+							type="text" 
+							placeholder="Search universities, locations, or courses..."
+							class="w-full px-4 py-2 text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Featured Universities -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Universities</h2>
+				<p class="text-xl text-gray-600">Explore detailed profiles of leading UK universities</p>
+			</div>
+			
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<!-- University of Wales, Aberystwyth -->
+				<div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+					<div class="p-8">
+						<div class="flex items-center mb-6">
+							<div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center">
+								<svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+								</svg>
+							</div>
+							<div class="ml-4">
+								<h3 class="text-2xl font-bold text-gray-900">University of Wales, Aberystwyth</h3>
+								<p class="text-gray-600">Wales, UK</p>
+							</div>
+						</div>
+						
+						<div class="space-y-4">
+							<div class="border-l-4 border-orange-500 pl-4">
+								<h4 class="font-semibold text-gray-900 mb-2">Key Features</h4>
+								<ul class="text-sm text-gray-600 space-y-1">
+									<li>• Historic university with strong academic traditions</li>
+									<li>• Beautiful coastal campus location</li>
+									<li>• Excellence in arts, humanities, and sciences</li>
+									<li>• Strong student support services</li>
+									<li>• Active student life and societies</li>
+								</ul>
+							</div>
+							
+							<div class="border-l-4 border-orange-500 pl-4">
+								<h4 class="font-semibold text-gray-900 mb-2">Popular Courses</h4>
+								<ul class="text-sm text-gray-600 space-y-1">
+									<li>• International Politics</li>
+									<li>• Computer Science</li>
+									<li>• Geography and Earth Sciences</li>
+									<li>• Welsh and Celtic Studies</li>
+									<li>• Psychology</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="mt-6 pt-6 border-t border-gray-200">
+							<a href="/undergraduate/university-profiles/7493-university-of-wales-aberystwyth.html" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+								View Full Profile
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- West Midlands Consortium -->
+				<div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+					<div class="p-8">
+						<div class="flex items-center mb-6">
+							<div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center">
+								<svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+								</svg>
+							</div>
+							<div class="ml-4">
+								<h3 class="text-2xl font-bold text-gray-900">West Midlands Consortium</h3>
+								<p class="text-gray-600">West Midlands, UK</p>
+							</div>
+						</div>
+						
+						<div class="space-y-4">
+							<div class="border-l-4 border-orange-500 pl-4">
+								<h4 class="font-semibold text-gray-900 mb-2">Key Features</h4>
+								<ul class="text-sm text-gray-600 space-y-1">
+									<li>• Collaborative teaching consortium</li>
+									<li>• Access to multiple institutions</li>
+									<li>• Diverse course offerings</li>
+									<li>• Strong industry connections</li>
+									<li>• Flexible learning options</li>
+								</ul>
+							</div>
+							
+							<div class="border-l-4 border-orange-500 pl-4">
+								<h4 class="font-semibold text-gray-900 mb-2">Popular Programs</h4>
+								<ul class="text-sm text-gray-600 space-y-1">
+									<li>• Teacher Training</li>
+									<li>• Business and Management</li>
+									<li>• Health and Social Care</li>
+									<li>• Engineering and Technology</li>
+									<li>• Creative Arts</li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="mt-6 pt-6 border-t border-gray-200">
+							<a href="/undergraduate/university-profiles/7502-the-west-midlands-consortium-teaching.html" class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
+								View Full Profile
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- University Features -->
+	<section class="py-16 bg-orange-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">What Our University Profiles Include</h2>
+				<p class="text-xl text-gray-600">Comprehensive information to help you choose the right university</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<!-- Academic Programs -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Academic Programs</h3>
+					<p class="text-gray-600">Detailed information about undergraduate degrees, course structure, and academic specializations available.</p>
+				</div>
+
+				<!-- Campus Life -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Campus & Facilities</h3>
+					<p class="text-gray-600">Information about campus facilities, libraries, laboratories, sports centers, and student accommodation options.</p>
+				</div>
+
+				<!-- Entry Requirements -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Entry Requirements</h3>
+					<p class="text-gray-600">Academic requirements, application deadlines, and admission criteria for different undergraduate programs.</p>
+				</div>
+
+				<!-- Student Support -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Student Support</h3>
+					<p class="text-gray-600">Details about student services, academic support, career guidance, and welfare provisions.</p>
+				</div>
+
+				<!-- Location -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Location & Environment</h3>
+					<p class="text-gray-600">Information about the university's location, local area, transport links, and surrounding amenities.</p>
+				</div>
+
+				<!-- Graduate Outcomes -->
+				<div class="bg-white rounded-lg p-6 shadow-md">
+					<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+						</svg>
+					</div>
+					<h3 class="text-xl font-semibold text-gray-900 mb-3">Graduate Outcomes</h3>
+					<p class="text-gray-600">Employment statistics, graduate destinations, and career prospects for students from different programs.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- How to Choose -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">How to Choose the Right University</h2>
+				<p class="text-xl text-gray-600">Key factors to consider when selecting your undergraduate institution</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+				<div class="space-y-6">
+					<div class="flex items-start">
+						<div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+							<span class="text-orange-600 font-semibold">1</span>
+						</div>
+						<div class="ml-4">
+							<h3 class="text-xl font-semibold text-gray-900 mb-2">Course Content & Quality</h3>
+							<p class="text-gray-600">Research the curriculum, teaching methods, and academic reputation of your chosen subject area.</p>
+						</div>
+					</div>
+					
+					<div class="flex items-start">
+						<div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+							<span class="text-orange-600 font-semibold">2</span>
+						</div>
+						<div class="ml-4">
+							<h3 class="text-xl font-semibold text-gray-900 mb-2">Location & Campus</h3>
+							<p class="text-gray-600">Consider the location, campus facilities, and whether the environment suits your lifestyle and preferences.</p>
+						</div>
+					</div>
+					
+					<div class="flex items-start">
+						<div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+							<span class="text-orange-600 font-semibold">3</span>
+						</div>
+						<div class="ml-4">
+							<h3 class="text-xl font-semibold text-gray-900 mb-2">Entry Requirements</h3>
+							<p class="text-gray-600">Ensure you meet or can achieve the academic requirements for your chosen courses.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="space-y-6">
+					<div class="flex items-start">
+						<div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+							<span class="text-orange-600 font-semibold">4</span>
+						</div>
+						<div class="ml-4">
+							<h3 class="text-xl font-semibold text-gray-900 mb-2">Student Life & Support</h3>
+							<p class="text-gray-600">Look into student societies, support services, and the overall student experience.</p>
+						</div>
+					</div>
+					
+					<div class="flex items-start">
+						<div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+							<span class="text-orange-600 font-semibold">5</span>
+						</div>
+						<div class="ml-4">
+							<h3 class="text-xl font-semibold text-gray-900 mb-2">Career Prospects</h3>
+							<p class="text-gray-600">Research graduate employment rates and career services available to help with your future career.</p>
+						</div>
+					</div>
+					
+					<div class="flex items-start">
+						<div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+							<span class="text-orange-600 font-semibold">6</span>
+						</div>
+						<div class="ml-4">
+							<h3 class="text-xl font-semibold text-gray-900 mb-2">Financial Considerations</h3>
+							<p class="text-gray-600">Consider tuition fees, living costs, and available financial support or scholarships.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 bg-orange-600 text-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl font-bold mb-4">Ready to Explore Universities?</h2>
+			<p class="text-xl mb-8 text-orange-100">Browse our comprehensive university profiles to find your perfect match</p>
+			<div class="flex flex-col sm:flex-row justify-center gap-4">
+				<a href="/undergraduate/subject-guide" class="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
+					Browse Subject Guides
+				</a>
+				<a href="/undergraduate" class="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors">
+					Back to Undergraduate
+				</a>
+			</div>
+		</div>
+	</section>
+</Layout>

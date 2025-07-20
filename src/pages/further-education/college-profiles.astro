@@ -1,0 +1,324 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const colleges = [
+	{
+		id: 1,
+		title: "The Institute of Chartered Accountants in England and Wales (ICAEW)",
+		link: "/further-education/college-profiles/8097-the-institute-of-chartered-accountants-in-england-and-wales-icaew.html"
+	},
+	{
+		id: 2,
+		title: "SHML Swiss College of Hospitality Management",
+		link: "/further-education/college-profiles/8091-shml-swiss-college-of-hospitality-management.html"
+	},
+	{
+		id: 3,
+		title: "Thompson Rivers University",
+		link: "/further-education/college-profiles/8089-thompson-rivers-university.html"
+	},
+	{
+		id: 4,
+		title: "uexcel",
+		link: "/further-education/college-profiles/8087-introducing-the-uexcel-program.html"
+	},
+	{
+		id: 5,
+		title: "Harrow International Business School",
+		link: "/further-education/college-profiles/8086-harrow-international-business-school.html"
+	},
+	{
+		id: 6,
+		title: "Schiller International University",
+		link: "/further-education/college-profiles/8064-schiller-international-university.html"
+	},
+	{
+		id: 7,
+		title: "International House Cairo (International Language Institute)",
+		link: "/further-education/college-profiles/8059-international-house-cairo-international-language-institute.html"
+	},
+	{
+		id: 8,
+		title: "Home Learning College",
+		link: "/further-education/college-profiles/8050-home-learning-college.html"
+	},
+	{
+		id: 9,
+		title: "South Thames College",
+		link: "/further-education/college-profiles/7487-south-thames-college.html"
+	},
+	{
+		id: 10,
+		title: "Bournemouth and Poole College",
+		link: "/further-education/college-profiles/7404-bournemouth-and-poole-college.html"
+	}
+];
+---
+
+<Layout title="College Profiles - Further Education - Courses and Careers">
+	<div class="bg-gradient-to-b from-green-50 to-white">
+		<!-- Breadcrumb -->
+		<nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+			<ol class="flex items-center space-x-2 text-sm">
+				<li><a href="/" class="text-blue-600 hover:text-blue-800">Home</a></li>
+				<li class="text-gray-500">></li>
+				<li><a href="/further-education" class="text-blue-600 hover:text-blue-800">Further Education</a></li>
+				<li class="text-gray-500">></li>
+				<li class="text-gray-900 font-medium">College Profiles</li>
+			</ol>
+		</nav>
+
+		<!-- Header -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+					Further Education College Profiles
+				</h1>
+				<p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+					Discover detailed profiles of colleges and institutions offering Further Education courses. 
+					Learn about their programs, facilities, and what makes each institution unique.
+				</p>
+			</div>
+		</section>
+
+		<!-- Course Search Section -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+			<div class="bg-white rounded-lg shadow-lg p-6">
+				<h2 class="text-xl font-semibold text-gray-900 mb-4">Find Your Ideal College</h2>
+				<form class="space-y-4">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+						<!-- Subject Area -->
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Subject Area</label>
+							<select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+								<option value="">All Subjects</option>
+								<option value="accountancy">Accountancy</option>
+								<option value="business">Business</option>
+								<option value="hospitality">Hospitality</option>
+								<option value="languages">Languages</option>
+								<option value="art_design">Art & Design</option>
+								<option value="engineering">Engineering</option>
+								<option value="health_beauty">Health & Beauty</option>
+								<option value="computing">Computing</option>
+								<option value="media">Media</option>
+								<option value="construction">Construction</option>
+							</select>
+						</div>
+
+						<!-- Location -->
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Location</label>
+							<select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+								<option value="">All Locations</option>
+								<option value="london">London</option>
+								<option value="birmingham">Birmingham</option>
+								<option value="manchester">Manchester</option>
+								<option value="leeds">Leeds</option>
+								<option value="bristol">Bristol</option>
+								<option value="edinburgh">Edinburgh</option>
+								<option value="cardiff">Cardiff</option>
+								<option value="liverpool">Liverpool</option>
+								<option value="international">International</option>
+							</select>
+						</div>
+
+						<!-- Institution Type -->
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Institution Type</label>
+							<select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+								<option value="">All Types</option>
+								<option value="college">College</option>
+								<option value="university">University</option>
+								<option value="private">Private Institution</option>
+								<option value="distance">Distance Learning</option>
+								<option value="professional">Professional Body</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Text Search -->
+					<div>
+						<input type="text" placeholder="Search colleges and institutions..." class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+					</div>
+
+					<!-- Search Button -->
+					<div>
+						<button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+							Search Colleges
+						</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<!-- Colleges List -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="bg-white rounded-lg shadow-lg">
+				<!-- Table Header -->
+				<div class="px-6 py-4 border-b border-gray-200">
+					<h2 class="text-xl font-semibold text-gray-900">College Profiles</h2>
+				</div>
+
+				<!-- Filter Controls -->
+				<div class="px-6 py-4 border-b border-gray-200 bg-gray-50">
+					<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+						<div class="flex items-center gap-4">
+							<label class="text-sm text-gray-700">Title Filter:</label>
+							<input type="text" placeholder="Filter by name..." class="px-3 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+						</div>
+						<div class="flex items-center gap-4">
+							<label class="text-sm text-gray-700">Display:</label>
+							<select class="px-3 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
+								<option value="10">10</option>
+								<option value="15">15</option>
+								<option value="20">20</option>
+								<option value="25">25</option>
+								<option value="50">50</option>
+								<option value="100">100</option>
+								<option value="0">All</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<!-- Colleges Table -->
+				<div class="overflow-x-auto">
+					<table class="w-full">
+						<thead class="bg-green-600 text-white">
+							<tr>
+								<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider w-16">#</th>
+								<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+									<button class="hover:text-green-200">College Name</button>
+								</th>
+							</tr>
+						</thead>
+						<tbody class="bg-white divide-y divide-gray-200">
+							{colleges.map((college, index) => (
+								<tr class={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+									<td class="px-6 py-4 text-sm text-gray-900 text-right">{college.id}</td>
+									<td class="px-6 py-4 text-sm">
+										<a href={college.link} class="text-green-600 hover:text-green-800 font-medium">
+											{college.title}
+										</a>
+									</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+
+				<!-- Pagination -->
+				<div class="px-6 py-4 border-t border-gray-200 bg-gray-50">
+					<div class="flex items-center justify-between">
+						<div class="text-sm text-gray-700">
+							Showing 1 to {colleges.length} of {colleges.length} colleges
+						</div>
+						<div class="flex items-center gap-2">
+							<button class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-100 disabled:opacity-50" disabled>
+								Previous
+							</button>
+							<button class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-100 disabled:opacity-50" disabled>
+								Next
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Featured Content -->
+		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<!-- Featured College -->
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Featured College</h3>
+					<div class="text-center mb-4">
+						<img src="/images/stories/college-images/bournemouth-poole/logo.gif" alt="Bournemouth and Poole College" class="mx-auto mb-4" />
+					</div>
+					<h4 class="font-semibold text-gray-900 mb-3">
+						<a href="/further-education/college-profiles/7404-bournemouth-and-poole-college" class="hover:text-green-600">Bournemouth and Poole College</a>
+					</h4>
+					<p class="text-gray-600 text-sm mb-4">
+						Aim higher with comprehensive further education programs at one of the UK's leading colleges.
+					</p>
+					<a href="/further-education/college-profiles/7404-bournemouth-and-poole-college" class="text-green-600 hover:text-green-800 font-medium text-sm">Learn more →</a>
+				</div>
+
+				<!-- College Types -->
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">Types of Institutions</h3>
+					<ul class="space-y-3 text-sm">
+						<li class="flex items-start gap-2">
+							<span class="text-green-600">🏫</span>
+							<div>
+								<div class="font-medium">Further Education Colleges</div>
+								<p class="text-gray-600">Comprehensive colleges offering a wide range of vocational and academic courses.</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-green-600">🎓</span>
+							<div>
+								<div class="font-medium">Professional Bodies</div>
+								<p class="text-gray-600">Institutions providing specialized professional qualifications and certifications.</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-green-600">💻</span>
+							<div>
+								<div class="font-medium">Distance Learning Providers</div>
+								<p class="text-gray-600">Flexible learning options for students who prefer to study from home.</p>
+							</div>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-green-600">🌍</span>
+							<div>
+								<div class="font-medium">International Institutions</div>
+								<p class="text-gray-600">Global colleges and universities offering UK-recognized qualifications.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- College Finder -->
+				<div class="bg-white rounded-lg shadow-lg p-6">
+					<h3 class="text-xl font-semibold text-gray-900 mb-4">College Finder</h3>
+					<p class="text-gray-600 text-sm mb-4">
+						Your guide to <a href="/further-education/subject-guide/guide-to-colleges" class="text-green-600 hover:text-green-800">finding your local college</a> so you can study what you want in your area.
+					</p>
+					<div class="space-y-3">
+						<div class="border-l-4 border-green-500 pl-4">
+							<h4 class="font-medium text-gray-900">Location-based Search</h4>
+							<p class="text-gray-600 text-sm">Find colleges near you with our location search tool.</p>
+						</div>
+						<div class="border-l-4 border-blue-500 pl-4">
+							<h4 class="font-medium text-gray-900">Subject Specialization</h4>
+							<p class="text-gray-600 text-sm">Discover institutions that excel in your chosen field.</p>
+						</div>
+						<div class="border-l-4 border-purple-500 pl-4">
+							<h4 class="font-medium text-gray-900">Course Comparison</h4>
+							<p class="text-gray-600 text-sm">Compare different programs to find the best fit for your goals.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call to Action -->
+		<section class="bg-green-600 text-white py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl font-bold mb-4">Find Your Perfect College</h2>
+				<p class="text-xl mb-8 max-w-2xl mx-auto">
+					Explore detailed profiles of colleges and institutions to find the right fit for your educational goals and career aspirations.
+				</p>
+				<div class="flex flex-wrap justify-center gap-4">
+					<a href="/further-education/subject-guide" class="bg-white text-green-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors">
+						Browse Subjects
+					</a>
+					<a href="/student-advice" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-3 rounded-lg font-medium transition-colors">
+						Get Advice
+					</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</Layout>

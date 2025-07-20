@@ -1,0 +1,580 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import InfoSection from '../../components/InfoSection.astro';
+import CourseCard from '../../components/CourseCard.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<Layout title="BTEC Courses Guide | Further Education" description="Complete guide to BTEC qualifications including levels, subjects, assessment methods, and career progression routes">
+  <Hero 
+    title="BTEC Courses Guide"
+    subtitle="Practical, career-focused qualifications for your future"
+    backgroundImage="/images/further-education-bg.jpg"
+    theme="green"
+  />
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-green-800 mb-6">What are BTECs?</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          BTECs (Business and Technology Education Council) are specialist work-related qualifications. They combine practical learning with subject and theory content, making them ideal for students who prefer coursework to exams and want to develop specific career skills.
+        </p>
+
+        <div class="bg-green-50 border-l-4 border-green-600 p-6 mb-8">
+          <p class="text-green-800 font-semibold">
+            BTECs are available at different levels and sizes, from Level 1 to Level 7, with Level 3 BTECs being equivalent to A-Levels and widely accepted by universities.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-green-800 mb-3">BTEC Certificate</h3>
+            <p class="text-gray-700">Equivalent to 1 A-Level<br>180 guided learning hours</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-green-800 mb-3">BTEC Diploma</h3>
+            <p class="text-gray-700">Equivalent to 2 A-Levels<br>360 guided learning hours</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-green-800 mb-3">BTEC Extended Diploma</h3>
+            <p class="text-gray-700">Equivalent to 3 A-Levels<br>540 guided learning hours</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Course Structure and Content"
+    theme="green"
+  >
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Popular BTEC Subjects</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Business:</strong> Business Studies, Enterprise & Entrepreneurship
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Health & Social Care:</strong> Health Studies, Childcare, Social Work
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Engineering:</strong> Mechanical, Electrical, Aerospace, Manufacturing
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>IT & Computing:</strong> IT, Computer Science, Digital Technologies
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Creative:</strong> Art & Design, Media, Music, Performing Arts
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Sport:</strong> Sport Science, Fitness, Coaching, Outdoor Activities
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Science:</strong> Applied Science, Forensic Science, Laboratory Skills
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Public Services:</strong> Uniformed Services, Criminal Justice
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Unit Structure</h3>
+        <p class="text-gray-700 mb-4">
+          BTECs are made up of units, each covering specific topics:
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Mandatory Units:</strong> Core content everyone must study
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Optional Units:</strong> Choose based on interests/career goals
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>External Units:</strong> Some assessed by exam (usually 1-2)
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Internal Units:</strong> Assessed through coursework/projects
+            </div>
+          </li>
+        </ul>
+        
+        <h3 class="text-xl font-bold text-green-800 mb-4 mt-6">Learning Style</h3>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Practical, hands-on learning</li>
+          <li>• Real-world case studies</li>
+          <li>• Work placements often included</li>
+          <li>• Industry-relevant projects</li>
+          <li>• Guest speakers and site visits</li>
+        </ul>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Entry Requirements</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Level 3 BTEC Requirements</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">▸</span>
+              <div>
+                <strong>Typical Entry:</strong> 4-5 GCSEs at grade 4/C or above
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">▸</span>
+              <div>
+                <strong>English & Maths:</strong> Usually required at grade 4/C minimum
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">▸</span>
+              <div>
+                <strong>Subject-Specific:</strong> Some courses need relevant GCSE subjects
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-600 mr-2">▸</span>
+              <div>
+                <strong>Alternative Entry:</strong> Level 2 BTEC Merit/Distinction in related subject
+              </div>
+            </li>
+          </ul>
+          
+          <div class="mt-6 p-4 bg-green-50 rounded">
+            <p class="text-green-800">
+              <strong>Note:</strong> BTECs often have more flexible entry requirements than A-Levels, focusing on your interest and commitment to the subject area.
+            </p>
+          </div>
+
+          <h3 class="text-xl font-bold text-green-800 mb-4 mt-6">Other BTEC Levels</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li><strong>Level 1:</strong> Basic introduction, minimal entry requirements</li>
+            <li><strong>Level 2:</strong> GCSE equivalent, requires some Level 1 qualifications</li>
+            <li><strong>Level 4/5:</strong> HNC/HND level, requires Level 3 qualification</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Assessment Methods"
+    theme="green"
+  >
+    <div class="mb-8">
+      <p class="text-lg text-gray-700">
+        BTECs use continuous assessment rather than final exams, making them ideal for students who perform better with coursework:
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Assessment Types</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Assignments:</strong> Research projects, reports, presentations
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Practical Work:</strong> Demonstrations, performances, creations
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Case Studies:</strong> Analyzing real business/industry scenarios
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Work Placement:</strong> Assessed practical experience
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>External Exams:</strong> Usually 1-2 units (varies by subject)
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Portfolios:</strong> Collection of work over time
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Grading System</h3>
+        <p class="text-gray-700 mb-4">
+          BTECs use a Pass, Merit, Distinction grading system:
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Pass (P):</strong> Achieved all pass criteria
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Merit (M):</strong> Achieved pass and merit criteria
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Distinction (D):</strong> Achieved all criteria to highest standard
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <div>
+              <strong>Distinction* (D*):</strong> Exceptional performance (Extended Diploma only)
+            </div>
+          </li>
+        </ul>
+        
+        <div class="mt-6 p-4 bg-green-50 rounded">
+          <h4 class="font-bold text-green-800 mb-2">UCAS Points (Level 3)</h4>
+          <ul class="text-sm space-y-1 text-gray-700">
+            <li>• D*D*D* = 168 points (A*A*A* equivalent)</li>
+            <li>• DDD = 144 points (AAA equivalent)</li>
+            <li>• MMM = 96 points (CCC equivalent)</li>
+            <li>• PPP = 48 points (EEE equivalent)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Progression Routes</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <CourseCard 
+          title="University"
+          description="BTECs are widely accepted by UK universities"
+          features={[
+            "95% of unis accept BTECs",
+            "Some prefer mixed BTEC/A-Level",
+            "Check specific course requirements",
+            "Strong for vocational degrees"
+          ]}
+          theme="green"
+        />
+        <CourseCard 
+          title="Higher/Degree Apprenticeships"
+          description="Excellent preparation for apprenticeships"
+          features={[
+            "Practical skills valued by employers",
+            "Work experience gives advantage",
+            "Direct progression to Level 4/5",
+            "No student debt route"
+          ]}
+          theme="green"
+        />
+        <CourseCard 
+          title="Direct Employment"
+          description="Industry-ready skills for immediate work"
+          features={[
+            "Sector-specific knowledge",
+            "Practical experience counts",
+            "Portfolio of work to show",
+            "Industry connections from course"
+          ]}
+          theme="green"
+        />
+      </div>
+      
+      <div class="mt-12 bg-green-50 p-8 rounded-lg">
+        <h3 class="text-2xl font-bold text-green-800 mb-4 text-center">Combining BTECs with Other Qualifications</h3>
+        <div class="grid md:grid-cols-2 gap-6 mt-6">
+          <div>
+            <h4 class="font-bold text-green-800 mb-2">BTEC + A-Levels</h4>
+            <p class="text-gray-700">
+              Many students take a BTEC Diploma (2 A-Level equivalent) plus 1 A-Level for a balanced programme.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-green-800 mb-2">BTEC + Work Experience</h4>
+            <p class="text-gray-700">
+              Extended work placements or part-time jobs complement BTEC practical learning perfectly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Top Colleges Offering BTECs"
+    theme="green"
+  >
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Leading BTEC Providers</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>City of Westminster College</strong> - London
+              <br><span class="text-sm text-gray-600">Excellent industry links, wide subject range</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>Manchester College</strong> - Manchester
+              <br><span class="text-sm text-gray-600">Outstanding facilities, strong employer partnerships</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>Birmingham Metropolitan College</strong> - Birmingham
+              <br><span class="text-sm text-gray-600">Specialist centres, excellent progression rates</span>
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">★</span>
+            <div>
+              <strong>Newcastle College</strong> - Newcastle
+              <br><span class="text-sm text-gray-600">Industry-standard facilities, high achievement rates</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Choosing the Right College</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Facilities:</strong> Check workshops, labs, studios for your subject</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Industry Links:</strong> Look for employer partnerships and guest speakers</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Work Placements:</strong> Quality and variety of placement opportunities</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Achievement Rates:</strong> Check pass, merit and distinction percentages</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Progression:</strong> Where do students go after - uni, apprenticeships, jobs?</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">✓</span>
+            <span><strong>Support:</strong> Additional learning support, career guidance</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Skills Developed</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Technical Skills</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Industry-specific knowledge</li>
+            <li>• Practical techniques</li>
+            <li>• Software/equipment use</li>
+            <li>• Health & safety awareness</li>
+            <li>• Quality control</li>
+            <li>• Technical documentation</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Professional Skills</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Project management</li>
+            <li>• Client communication</li>
+            <li>• Meeting deadlines</li>
+            <li>• Workplace behaviour</li>
+            <li>• Report writing</li>
+            <li>• Presentation skills</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-green-800 mb-4">Employability Skills</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Teamwork & collaboration</li>
+            <li>• Problem-solving</li>
+            <li>• Initiative & self-reliance</li>
+            <li>• Time management</li>
+            <li>• Adaptability</li>
+            <li>• Commercial awareness</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <InfoSection 
+    title="Career Prospects"
+    theme="green"
+  >
+    <div class="mb-8">
+      <p class="text-lg text-gray-700 mb-6">
+        BTEC qualifications are designed with employment in mind, providing direct routes into many careers:
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Career Examples by Subject</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Business BTEC:</strong> Marketing assistant, admin roles, retail management, HR assistant
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Engineering BTEC:</strong> Technician roles, CAD operator, maintenance engineer
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>IT BTEC:</strong> IT support, web developer, network technician, software tester
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Health & Social Care:</strong> Care assistant, support worker, healthcare assistant
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="text-green-600 mr-2">▸</span>
+            <div>
+              <strong>Creative Media:</strong> Junior designer, production assistant, content creator
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-green-800 mb-4">Salary Expectations</h3>
+        <p class="text-gray-700 mb-4">
+          Starting salaries with Level 3 BTEC:
+        </p>
+        <ul class="space-y-2 text-gray-700">
+          <li>• Entry-level technical roles: £18,000-£25,000</li>
+          <li>• Apprenticeships: £15,000-£22,000 (while training)</li>
+          <li>• Junior positions: £20,000-£28,000</li>
+          <li>• With experience (3-5 years): £25,000-£40,000</li>
+        </ul>
+        
+        <div class="mt-6 p-4 bg-green-50 rounded">
+          <p class="text-green-800">
+            <strong>Career Growth:</strong> Many BTEC graduates progress quickly due to their practical skills and work readiness, often reaching management positions within 5-10 years.
+          </p>
+        </div>
+      </div>
+    </div>
+  </InfoSection>
+
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-green-800 mb-8 text-center">Related Qualifications</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-lg font-bold text-green-800 mb-2">T Levels</h3>
+          <p class="text-gray-700 text-sm">
+            New technical qualifications with extended work placements (45+ days)
+          </p>
+        </div>
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-lg font-bold text-green-800 mb-2">City & Guilds</h3>
+          <p class="text-gray-700 text-sm">
+            Vocational qualifications often more trade-specific than BTECs
+          </p>
+        </div>
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-lg font-bold text-green-800 mb-2">NVQs</h3>
+          <p class="text-gray-700 text-sm">
+            Competence-based qualifications assessed in the workplace
+          </p>
+        </div>
+        <div class="bg-green-50 p-6 rounded-lg">
+          <h3 class="text-lg font-bold text-green-800 mb-2">Cambridge Technicals</h3>
+          <p class="text-gray-700 text-sm">
+            Similar to BTECs with mix of exams and coursework
+          </p>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <p class="text-gray-700">
+          BTECs remain one of the most popular vocational routes, offering flexibility and recognition across education and industry.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CTA 
+    title="Ready to Start Your BTEC Journey?"
+    description="Find the perfect BTEC course to launch your career in your chosen industry."
+    buttonText="Search BTEC Courses"
+    buttonLink="/further-education/search"
+    theme="green"
+  />
+</Layout>

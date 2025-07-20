@@ -1,0 +1,370 @@
+---
+import Logo from '../components/Logo.astro';
+import FaviconMeta from '../components/FaviconMeta.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logo Showcase - Courses & Careers</title>
+    <meta name="description" content="Logo and branding showcase for Courses & Careers" />
+    <FaviconMeta />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Courses & Careers - Logo Showcase</h1>
+      
+      <section class="showcase-section">
+        <h2>Full Logo Variations</h2>
+        
+        <div class="logo-grid">
+          <div class="logo-item">
+            <h3>Small</h3>
+            <div class="logo-box light">
+              <Logo variant="full" size="sm" />
+            </div>
+          </div>
+          
+          <div class="logo-item">
+            <h3>Medium</h3>
+            <div class="logo-box light">
+              <Logo variant="full" size="md" />
+            </div>
+          </div>
+          
+          <div class="logo-item">
+            <h3>Large</h3>
+            <div class="logo-box light">
+              <Logo variant="full" size="lg" />
+            </div>
+          </div>
+          
+          <div class="logo-item">
+            <h3>Extra Large</h3>
+            <div class="logo-box light">
+              <Logo variant="full" size="xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase-section">
+        <h2>Icon Variations</h2>
+        
+        <div class="logo-grid icons">
+          <div class="logo-item">
+            <h3>Small</h3>
+            <div class="logo-box light">
+              <Logo variant="icon" size="sm" />
+            </div>
+          </div>
+          
+          <div class="logo-item">
+            <h3>Medium</h3>
+            <div class="logo-box light">
+              <Logo variant="icon" size="md" />
+            </div>
+          </div>
+          
+          <div class="logo-item">
+            <h3>Large</h3>
+            <div class="logo-box light">
+              <Logo variant="icon" size="lg" />
+            </div>
+          </div>
+          
+          <div class="logo-item">
+            <h3>Extra Large</h3>
+            <div class="logo-box light">
+              <Logo variant="icon" size="xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase-section">
+        <h2>Dark Theme</h2>
+        
+        <div class="dark-theme-container dark">
+          <div class="logo-grid">
+            <div class="logo-item">
+              <h3>Full Logo</h3>
+              <div class="logo-box dark">
+                <Logo variant="full" size="lg" />
+              </div>
+            </div>
+            
+            <div class="logo-item">
+              <h3>Icon</h3>
+              <div class="logo-box dark">
+                <Logo variant="icon" size="lg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase-section">
+        <h2>Animation Demo</h2>
+        <p>Hover over the logos to see the animation effect:</p>
+        
+        <div class="animation-demo">
+          <div class="logo-box light large">
+            <Logo variant="full" size="xl" animated={true} />
+          </div>
+          
+          <div class="logo-box light">
+            <Logo variant="icon" size="xl" animated={true} />
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase-section">
+        <h2>Logo Usage Guidelines</h2>
+        
+        <div class="guidelines">
+          <div class="guideline-item">
+            <h3>Clear Space</h3>
+            <p>Maintain a clear space around the logo equal to the height of the "C" in "Courses"</p>
+            <div class="logo-box light with-guides">
+              <Logo variant="full" size="md" animated={false} />
+              <div class="clear-space-guide"></div>
+            </div>
+          </div>
+          
+          <div class="guideline-item">
+            <h3>Minimum Size</h3>
+            <p>The logo should never be displayed smaller than 120px wide for the full version, or 32px for the icon.</p>
+          </div>
+          
+          <div class="guideline-item">
+            <h3>Color Variations</h3>
+            <p>The logo adapts automatically to light and dark themes. Always ensure sufficient contrast with the background.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="showcase-section">
+        <h2>Brand Colors</h2>
+        
+        <div class="color-palette">
+          <div class="color-swatch">
+            <div class="swatch" style="background-color: #3B82F6;"></div>
+            <h4>Primary Blue</h4>
+            <code>#3B82F6</code>
+          </div>
+          
+          <div class="color-swatch">
+            <div class="swatch" style="background-color: #2563EB;"></div>
+            <h4>Deep Blue</h4>
+            <code>#2563EB</code>
+          </div>
+          
+          <div class="color-swatch">
+            <div class="swatch" style="background-color: #10B981;"></div>
+            <h4>Success Green</h4>
+            <code>#10B981</code>
+          </div>
+          
+          <div class="color-swatch">
+            <div class="swatch" style="background-color: #FCD34D;"></div>
+            <h4>Achievement Gold</h4>
+            <code>#FCD34D</code>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9fafb;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        color: #1a202c;
+      }
+
+      .showcase-section {
+        margin-bottom: 4rem;
+      }
+
+      .showcase-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #1a202c;
+      }
+
+      .showcase-section h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+        color: #4a5568;
+      }
+
+      .logo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .logo-grid.icons {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      .logo-item {
+        text-align: center;
+      }
+
+      .logo-box {
+        background: white;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 120px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .logo-box.dark {
+        background: #1f2937;
+        color: white;
+      }
+
+      .logo-box.large {
+        min-height: 200px;
+      }
+
+      .dark-theme-container {
+        background: #111827;
+        padding: 2rem;
+        border-radius: 0.75rem;
+        color: white;
+      }
+
+      .dark-theme-container h3 {
+        color: #e5e7eb;
+      }
+
+      .animation-demo {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .animation-demo .logo-box {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .guidelines {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .guideline-item {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .with-guides {
+        position: relative;
+      }
+
+      .clear-space-guide {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        right: 10%;
+        bottom: 10%;
+        border: 2px dashed #e5e7eb;
+        pointer-events: none;
+      }
+
+      .color-palette {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .color-swatch {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .swatch {
+        width: 100%;
+        height: 100px;
+        border-radius: 0.375rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .color-swatch h4 {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        color: #1a202c;
+      }
+
+      .color-swatch code {
+        font-family: 'Courier New', monospace;
+        background: #f3f4f6;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 2rem 1rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .showcase-section h2 {
+          font-size: 1.5rem;
+        }
+
+        .logo-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .animation-demo {
+          flex-direction: column;
+        }
+
+        .animation-demo .logo-box {
+          min-width: auto;
+        }
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+export interface Props {
+  src: string | ImageMetadata;
+  alt: string;
+  width?: number;
+  height?: number;
+  loading?: 'eager' | 'lazy';
+  class?: string;
+  sizes?: string;
+  widths?: number[];
+  quality?: number;
+  format?: 'avif' | 'webp' | 'png' | 'jpg' | 'jpeg';
+  placeholder?: 'blur' | 'dominantColor' | 'none';
+  aspectRatio?: string;
+  objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
+  objectPosition?: string;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  loading = 'lazy',
+  class: className,
+  sizes,
+  widths = [640, 768, 1024, 1280, 1536],
+  quality = 80,
+  format,
+  placeholder = 'blur',
+  aspectRatio,
+  objectFit = 'cover',
+  objectPosition = 'center',
+} = Astro.props;
+
+// Generate responsive sizes string if not provided
+const responsiveSizes = sizes || '(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1280px';
+
+// Helper function to check if src is an imported image
+const isImageMetadata = (src: any): src is ImageMetadata => {
+  return typeof src === 'object' && 'src' in src;
+};
+
+// For placeholder images when actual images aren't available
+const placeholderSrc = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='${width || 800}' height='${height || 600}'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='system-ui' font-size='24'%3EImage Placeholder%3C/text%3E%3C/svg%3E`;
+---
+
+<div class={`image-container ${className || ''}`} data-aspect-ratio={aspectRatio}>
+  {isImageMetadata(src) ? (
+    <Image
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={loading}
+      widths={widths}
+      sizes={responsiveSizes}
+      quality={quality}
+      format={format}
+      class="optimized-image"
+      style={`object-fit: ${objectFit}; object-position: ${objectPosition};`}
+    />
+  ) : typeof src === 'string' && src.startsWith('http') ? (
+    <img
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading={loading}
+      sizes={responsiveSizes}
+      class="optimized-image"
+      style={`object-fit: ${objectFit}; object-position: ${objectPosition};`}
+    />
+  ) : (
+    <img
+      src={placeholderSrc}
+      alt={alt}
+      width={width || 800}
+      height={height || 600}
+      loading={loading}
+      class="optimized-image placeholder"
+      style={`object-fit: ${objectFit}; object-position: ${objectPosition};`}
+    />
+  )}
+  <!-- noscript image removed to prevent display issues -->
+</div>
+
+<style>
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--image-placeholder-bg, #f3f4f6);
+  }
+
+  .image-container[data-aspect-ratio] {
+    aspect-ratio: var(--aspect-ratio);
+  }
+
+  .optimized-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .optimized-image.placeholder {
+    filter: blur(5px);
+    transform: scale(1.1);
+  }
+
+  .optimized-image:not(.placeholder) {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .noscript-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Skeleton loading state */
+  .image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 2s infinite;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .image-container.loading::before {
+    opacity: 1;
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+</style>
