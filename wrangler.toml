@@ -1,0 +1,8 @@
+name = "courses-careers-com"
+compatibility_date = "2025-07-20"
+
+[env.production]
+name = "courses-careers-com"
+
+# Pages configuration is handled via the deployment script
+# Custom domains will be configured automatically

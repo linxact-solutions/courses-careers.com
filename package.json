@@ -57,6 +57,7 @@
     "deploy:preview": "npm run build && netlify deploy --dir=dist",
     "deploy:vercel": "vercel --prod",
     "deploy:gh-pages": "gh-pages -d dist",
+    "deploy:cloudflare": "node scripts/deploy-cloudflare-pages.js",
     "lighthouse": "lighthouse http://localhost:4321 --output=json --output-path=./lighthouse-report.json --chrome-flags=\"--headless\"",
     "lighthouse:ci": "lhci autorun",
     "validate": "npm run validate:html && npm run validate:links && npm run validate:a11y",
