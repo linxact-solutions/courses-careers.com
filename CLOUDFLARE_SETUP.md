@@ -11,7 +11,7 @@ Before the automated deployment can work, you need to add the following secrets 
 ### Required Secrets:
 
 1. **CLOUDFLARE_API_TOKEN**
-   - Your API token: `Xd_U17sRU3Y4a_qY7CCgluaf9Xs4pl4eBILaIMGs`
+   - Your API token: `XX00Y8E70l_R2EvLhx4EjOrHfvpah0eynBaGNGdp`
    - This token needs "Cloudflare Pages:Edit" permissions
 
 2. **CLOUDFLARE_ACCOUNT_ID**
