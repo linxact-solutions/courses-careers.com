@@ -15,9 +15,7 @@ Before the automated deployment can work, you need to add the following secrets 
    - This token needs "Cloudflare Pages:Edit" permissions
 
 2. **CLOUDFLARE_ACCOUNT_ID**
-   - Find this in your Cloudflare dashboard
-   - Go to any domain in your account
-   - Look in the right sidebar for "Account ID"
+   - Your Account ID: `03b2b89689c35cf8f6e80326ef55cb22`
 
 ## Manual Cloudflare Pages Setup (Alternative)
 
