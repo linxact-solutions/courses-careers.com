@@ -1,0 +1,21 @@
+# Redirect www to non-www
+https://www.courses-careers.com/* https://courses-careers.com/:splat 301!
+
+# Handle trailing slashes
+/about/ /about 301
+/courses/ /courses 301
+/careers/ /careers 301
+/contact/ /contact 301
+/student-advice/ /student-advice 301
+/postgraduate/ /postgraduate 301
+/undergraduate/ /undergraduate 301
+/further-education/ /further-education 301
+/jobs-and-careers/ /jobs-and-careers 301
+/online-magazines/ /online-magazines 301
+
+# Legacy redirects
+/index.php /index.html 301
+/index.php?* / 301
+
+# Handle 404s with custom page
+/* /404.html 404
