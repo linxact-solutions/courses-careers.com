@@ -59,21 +59,6 @@ async function createProject() {
         body: JSON.stringify({
           name: PROJECT_NAME,
           production_branch: 'main',
-          build_config: {
-            build_command: 'npm run build',
-            destination_dir: 'dist',
-            root_dir: '',
-          },
-          source: {
-            type: 'github',
-            config: {
-              owner: 'linxact-solutions',
-              repo: 'courses-careers.com',
-              production_branch: 'main',
-              pr_comments_enabled: true,
-              deployments_enabled: true,
-            },
-          },
         }),
       }
     );
